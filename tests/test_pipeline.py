@@ -46,7 +46,7 @@ class LayoutTests(unittest.TestCase):
 
 class MatchTests(unittest.TestCase):
     def setUp(self):
-        self.valid = parse_layout(layout(' '.join(f'{d} 11:00 - 15:00' for d in '월화수목금토일'))
+        self.valid = parse_layout(layout(' '.join(f'{d} 11:00 - 15:00' for d in '월화수목금토일')))
         self.snapshot = {'places': [{'sid': '123456789', 'name': '소복소복',
                                      'roadAddress': '강원 동해시 평원5길 8-5 1층'}]}
 
