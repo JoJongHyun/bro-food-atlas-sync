@@ -55,12 +55,19 @@ def parse_layout(xml_text):
     raw = schedules[0]
     current = re.search(r'영업\s*(중|종료|전)|브레이크\s*타임', raw)
     result['displayedStatus'] = current.group(0) if current else None
-    for match in RULE.finditer(raw):
+    matches = list(RULE.finditer(raw))
+    breaks, last_orders = {}, {}
+    for index, match in enumerate(matches):
         day = DAYS[match['day']]
+        details = raw[match.end():matches[index + 1].start() if index + 1 < len(matches) else len(raw)]
         if day in result['weeklyHours']:
             result['reason'] = 'duplicate_weekday'
             return result
         if match['closed']:
+            # A monthly/nth-week closure is not a weekly closure.
+            if match['closed'] != '정기휴무' or re.search(r'매달|격주|임시|\d+번째', details):
+                result['reason'] = 'unsupported_conditional_closure'
+                return result
             result['weeklyHours'][day] = {'closed': True}
             continue
         start, end = match['start'], match['end']
@@ -70,8 +77,31 @@ def parse_layout(xml_text):
                 result['reason'] = 'invalid_time'
                 return result
         result['weeklyHours'][day] = {
-            'closed': False, 'open': start, 'close': end,
-            'closeNextDay': bool(match['next']) or end <= start}
+            'closed': False, 'open': start.zfill(5), 'close': end.zfill(5),
+            'closeNextDay': bool(match['next']) or tuple(map(int, end.split(':'))) <= tuple(map(int, start.split(':')))}
+        # Preserve explicit details, but refuse ambiguous multiple time ranges.
+        time_range = re.compile(r'(\d{1,2}:\d{2})\s*-\s*(?:다음\s*날\s*)?(\d{1,2}:\d{2})\s*브레이크\s*타임')
+        bt = time_range.search(details)
+        lo = re.search(r'(\d{1,2}:\d{2})\s*라스트\s*오더', details)
+        if bt:
+            values = [bt.group(1), bt.group(2)]
+            if any(int(v.split(':')[0]) >= 24 or int(v.split(':')[1]) >= 60 for v in values):
+                result['reason'] = 'invalid_break_time'
+                return result
+            breaks[day] = [v.zfill(5) for v in values]
+        if lo:
+            value = lo.group(1)
+            if int(value.split(':')[0]) >= 24 or int(value.split(':')[1]) >= 60:
+                result['reason'] = 'invalid_last_order'
+                return result
+            last_orders[day] = value.zfill(5)
+        remainder = time_range.sub('', details)
+        remainder = re.sub(r'\d{1,2}:\d{2}\s*라스트\s*오더', '', remainder)
+        if re.search(r'브레이크\s*타임|라스트\s*오더|임시\s*휴무|\d{1,2}:\d{2}', remainder):
+            result['reason'] = 'unsupported_hours_details'
+            return result
+    result['breakTimes'] = breaks or None
+    result['lastOrder'] = last_orders or None
     result['scheduleComplete'] = len(result['weeklyHours']) == 7
     if not result['scheduleComplete']:
         result['reason'] = 'fewer_than_seven_explicit_weekdays'
@@ -96,3 +126,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
