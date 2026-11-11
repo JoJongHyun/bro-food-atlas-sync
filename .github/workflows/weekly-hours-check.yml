@@ -22,6 +22,21 @@ jobs:
                   print('Response:',json.dumps(body,ensure_ascii=False)[:10000])
                   if not isinstance(body,list) or not body or body[0].get('errors') or not (body[0].get('data') or {}).get('placeDetail'):
                       raise ValueError('No valid place detail returned')
+          except urllib.error.HTTPError as e:
+              print('Request failed:',type(e).__name__,'HTTP',e.code)
+              print('HTTP error diagnostics (one request, no retry):')
+              for key in ('Date','Server','Content-Type','Retry-After','X-RateLimit-Limit','X-RateLimit-Remaining','X-RateLimit-Reset','X-Request-ID','X-Transaction-ID','Via'):
+                  value=e.headers.get(key)
+                  if value:
+                      print('  '+key+':',value[:200])
+              try:
+                  excerpt=e.read(800).decode('utf-8','replace')
+                  print('Error body excerpt:',excerpt[:500])
+              except Exception as read_error:
+                  print('Error body unreadable:',type(read_error).__name__)
+              if e.code==429:
+                  print('Rate limit or access throttling detected. Stopping; no retry or bypass.')
+              raise SystemExit(1)
           except Exception as e:
               print('Request failed:',type(e).__name__,str(e)[:200])
               raise SystemExit(1)
