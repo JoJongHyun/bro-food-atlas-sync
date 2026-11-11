@@ -1,0 +1,29 @@
+name: Check public place page once
+on:
+  push:
+    paths:
+      - .github/workflows/check-place-html.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Check HTTP and weekly hours
+        run: |
+          python3 - <<'PY'
+          import urllib.request, urllib.error
+          url = 'https://pcmap.place.naver.com/restaurant/1108255933/home'
+          try:
+              with urllib.request.urlopen(url, timeout=20) as response:
+                  body = response.read(2000000).decode('utf-8', 'replace')
+                  print('HTTP:', response.status)
+                  print('newBusinessHours present:', 'newBusinessHours' in body)
+                  print('WorkingHoursInfo present:', 'WorkingHoursInfo' in body)
+                  print('bytes:', len(body.encode()))
+          except Exception as exc:
+              print('Request failed:', type(exc).__name__, str(exc)[:200])
+              raise SystemExit(1)
+          PY
