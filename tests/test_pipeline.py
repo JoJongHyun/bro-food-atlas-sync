@@ -69,6 +69,14 @@ class MatchTests(unittest.TestCase):
         snapshot = {'places': [{'id': '12345', 'name': '소복소복', 'address': '강원 동해시 평원5길 8-5 1층'}]}
         self.assertEqual(reconcile(self.valid, snapshot)['reason'], 'matched_place_has_no_valid_sid')
 
+    def test_numeric_sid(self):
+        self.snapshot['places'][0]['sid'] = 123456789
+        self.assertEqual(reconcile(self.valid, self.snapshot)['sid'], '123456789')
+
+    def test_address_house_number_hyphen_significant(self):
+        self.snapshot['places'][0]['roadAddress'] = '강원 동해시 평원5길 85 1층'
+        self.assertEqual(reconcile(self.valid, self.snapshot)['reason'], 'no_exact_name_address_match')
+
     def test_claimed_sid_conflict(self):
         self.valid['sid'] = '999999'
         self.assertEqual(reconcile(self.valid, self.snapshot)['reason'], 'sid_conflict')
