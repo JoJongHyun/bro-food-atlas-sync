@@ -1,43 +1,33 @@
 name: Check weekly business hours
 on:
   workflow_dispatch:
+    inputs:
+      sid:
+        description: "Existing saved-place Naver SID to check"
+        required: false
+        default: "1053133212"
+
 permissions:
   contents: read
+
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
+    timeout-minutes: 3
     steps:
-      - name: Query one place
-        run: |
-          python3 - <<'PY'
-          import json, urllib.request, urllib.error
-          query = 'query getPlaceDetail($input: PlaceDetailInput!) { placeDetail(input: $input) { newBusinessHours { businessStatusDescription { description status } businessHours { day businessHours { start end } breakHours { start end } } } } }'
-          payload = [{'operationName':'getPlaceDetail','variables':{'input':{'id':'1053133212'}},'query':query}]
-          request = urllib.request.Request('https://pcmap-api.place.naver.com/place/graphql', data=json.dumps(payload).encode(), headers={'Content-Type':'application/json','Accept':'application/json'}, method='POST')
-          try:
-              with urllib.request.urlopen(request, timeout=20) as response:
-                  body=json.load(response)
-                  print('HTTP:',response.status)
-                  print('Response:',json.dumps(body,ensure_ascii=False)[:10000])
-                  if not isinstance(body,list) or not body or body[0].get('errors') or not (body[0].get('data') or {}).get('placeDetail'):
-                      raise ValueError('No valid place detail returned')
-          except urllib.error.HTTPError as e:
-              print('Request failed:',type(e).__name__,'HTTP',e.code)
-              print('HTTP error diagnostics (one request, no retry):')
-              for key in ('Date','Server','Content-Type','Retry-After','X-RateLimit-Limit','X-RateLimit-Remaining','X-RateLimit-Reset','X-Request-ID','X-Transaction-ID','Via'):
-                  value=e.headers.get(key)
-                  if value:
-                      print('  '+key+':',value[:200])
-              try:
-                  excerpt=e.read(800).decode('utf-8','replace')
-                  print('Error body excerpt:',excerpt[:500])
-              except Exception as read_error:
-                  print('Error body unreadable:',type(read_error).__name__)
-              if e.code==429:
-                  print('Rate limit or access throttling detected. Stopping; no retry or bypass.')
-              raise SystemExit(1)
-          except Exception as e:
-              print('Request failed:',type(e).__name__,str(e)[:200])
-              raise SystemExit(1)
-          PY
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Query one place with bounded rate-limit handling
+        env:
+          TARGET_SID: ${{ inputs.sid }}
+        run: python3 scripts/weekly_hours_check.py
+
+      - name: Store source-check checkpoint
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-hours-checkpoint-${{ github.run_id }}-${{ github.run_attempt }}
+          path: weekly-hours-checkpoint.json
+          if-no-files-found: ignore
+          retention-days: 7
