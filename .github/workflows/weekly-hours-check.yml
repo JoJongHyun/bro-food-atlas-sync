@@ -1,28 +1,114 @@
-name: Check weekly business hours
+name: Audit published weekly business hours
+
+# This diagnostic reads our own public API. It intentionally does not call
+# undocumented Naver GraphQL endpoints or modify live business-hours data.
 on:
   workflow_dispatch:
+    inputs:
+      sid:
+        description: "Naver Place SID to inspect in the published dataset"
+        required: false
+        default: "1053133212"
+
 permissions:
   contents: read
+
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
+    timeout-minutes: 3
+    env:
+      SITE_API_URL: https://bro-food-atlas.faseion0913.chatgpt.site/api/data
+      TARGET_SID: ${{ inputs.sid }}
     steps:
-      - name: Query one place
+      - name: Audit cached weekly hours (read-only)
+        shell: bash
         run: |
           python3 - <<'PY'
-          import json, urllib.request, urllib.error
-          query = 'query getPlaceDetail($input: PlaceDetailInput!) { placeDetail(input: $input) { newBusinessHours { businessStatusDescription { description status } businessHours { day businessHours { start end } breakHours { start end } } } } }'
-          payload = [{'operationName':'getPlaceDetail','variables':{'input':{'id':'1053133212'}},'query':query}]
-          request = urllib.request.Request('https://pcmap-api.place.naver.com/place/graphql', data=json.dumps(payload).encode(), headers={'Content-Type':'application/json','Accept':'application/json'}, method='POST')
+          import json
+          import os
+          import sys
+          import urllib.error
+          import urllib.request
+
+          url = os.environ["SITE_API_URL"]
+          sid = str(os.getenv("TARGET_SID", "")).strip()
+          summary_path = os.getenv("GITHUB_STEP_SUMMARY")
+
+          def report(text):
+              print(text)
+              if summary_path:
+                  with open(summary_path, "a", encoding="utf-8") as out:
+                      out.write(text + "\n")
+
+          report("## Read-only business-hours audit")
+          report("Source: published site API, not a live Naver hours feed.")
+          report("No Naver GraphQL calls, retries, or site writes are performed.")
+
+          request = urllib.request.Request(
+              url, headers={"Accept": "application/json"}, method="GET"
+          )
           try:
               with urllib.request.urlopen(request, timeout=20) as response:
-                  body=json.load(response)
-                  print('HTTP:',response.status)
-                  print('Response:',json.dumps(body,ensure_ascii=False)[:10000])
-                  if not isinstance(body,list) or not body or body[0].get('errors') or not (body[0].get('data') or {}).get('placeDetail'):
-                      raise ValueError('No valid place detail returned')
-          except Exception as e:
-              print('Request failed:',type(e).__name__,str(e)[:200])
-              raise SystemExit(1)
+                  document = json.load(response)
+                  http_status = response.status
+          except urllib.error.HTTPError as exc:
+              report(f"API HTTP {exc.code}; no data has been updated.")
+              if exc.code == 429:
+                  print("::warning::Rate-limited by the site API; no retry or bypass.")
+              sys.exit(1)
+          except (urllib.error.URLError, TimeoutError, ValueError, json.JSONDecodeError) as exc:
+              report(f"API unavailable or invalid JSON: {type(exc).__name__}: {str(exc)[:200]}")
+              sys.exit(1)
+
+          if not isinstance(document, dict):
+              report("Invalid API schema: expected a JSON object.")
+              sys.exit(1)
+
+          sync = document.get("sync") or {}
+          places = document.get("places")
+          coverage = document.get("hoursCoverage") or {}
+          if not isinstance(places, list):
+              report("Invalid API schema: places must be an array.")
+              sys.exit(1)
+
+          ids = [str(p.get("sid") or p.get("id") or "") for p in places if isinstance(p, dict)]
+          valid_ids = [item for item in ids if item]
+          report(f"HTTP: {http_status}")
+          report(f"updatedAt: {document.get('updatedAt')}")
+          report(f"sync.status: {sync.get('status')}")
+          report(f"sync.checkedAt: {sync.get('checkedAt')}")
+          report(f"places: {len(places)}; unique nonempty SIDs: {len(set(valid_ids))}")
+          report(f"hoursCoverage.verified: {coverage.get('verified')}")
+          report(f"hoursCoverage.total: {coverage.get('total')}")
+
+          sources_text = json.dumps(sync.get("sources", []), ensure_ascii=False)
+          for source in ("https://naver.me/5QswiSkp", "https://naver.me/FSv7ld5E"):
+              report(f"Source {source}: {'present' if source in sources_text else 'missing'}")
+
+          if sync.get("status") != "ok":
+              report("Site source synchronization is not healthy; this audit does not change data.")
+              sys.exit(1)
+
+          matching = next(
+              (p for p in places if isinstance(p, dict) and str(p.get("sid") or p.get("id") or "") == sid),
+              None,
+          )
+          if matching is None:
+              report(f"SID {sid}: not found in the current published dataset.")
+              print("::warning::SID not found; no hours verified.")
+              sys.exit(0)
+
+          hours = matching.get("hours") or {}
+          if not isinstance(hours, dict):
+              hours = {}
+          rules = hours.get("rules")
+          verified_at = hours.get("verifiedAt") or matching.get("verifiedAt")
+          report(f"SID {sid}: {matching.get('name') or matching.get('title') or '(unnamed)'}")
+          report(f"weekly rules present: {bool(rules)}; verifiedAt: {verified_at}")
+          if not rules:
+              report("PENDING: no complete published weekly schedule; no verification performed.")
+              print("::warning::No complete weekly rules in site data.")
+          else:
+              report("EXISTING DATA ONLY: verified hours were read, not refreshed from Naver.")
           PY
