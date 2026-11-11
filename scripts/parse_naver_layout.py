@@ -76,6 +76,9 @@ def parse_layout(xml_text):
             if h >= 24 or m >= 60:
                 result['reason'] = 'invalid_time'
                 return result
+        if tuple(map(int, start.split(':'))) == tuple(map(int, end.split(':'))) and not match['next']:
+            result['reason'] = 'ambiguous_equal_times'
+            return result
         result['weeklyHours'][day] = {
             'closed': False, 'open': start.zfill(5), 'close': end.zfill(5),
             'closeNextDay': bool(match['next']) or tuple(map(int, end.split(':'))) <= tuple(map(int, start.split(':')))}
