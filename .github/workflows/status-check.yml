@@ -1,0 +1,29 @@
+name: Check status source
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check one saved-place status
+        run: |
+          python3 - <<'PY'
+          import urllib.request, json
+          url = 'https://pages.map.naver.com/save-pages/api/place/place-summaries?ids=1053133212&lang=ko'
+          try:
+              request = urllib.request.Request(url, headers={'Accept':'application/json'})
+              with urllib.request.urlopen(request, timeout=20) as response:
+                  data = json.load(response)
+                  items = data.get('data', {}).get('placeList', {}).get('businesses', {}).get('items', [])
+                  print('HTTP:', response.status)
+                  print('Returned places:', len(items))
+                  for item in items:
+                      hours = item.get('businessHours') or {}
+                      print('Place:', item.get('id'), 'status:', hours.get('status'), 'fields:', ','.join(sorted(hours)))
+          except Exception as e:
+              print('Source check failed:', type(e).__name__, str(e)[:200])
+              raise SystemExit(1)
+          PY
