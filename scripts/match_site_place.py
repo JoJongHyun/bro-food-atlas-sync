@@ -17,7 +17,7 @@ def normalized(value):
         return ''
     value = unicodedata.normalize('NFKC', value).casefold()
     # Do not strip branch names, digits or address components.
-    return re.sub(r'[\s,().-]+', '', value)
+    return re.sub(r'[\s,.()]+', '', value)
 
 
 def pick_string(place, fields):
@@ -46,7 +46,7 @@ def reconcile(extraction, site):
         stored_address = pick_string(place, ('roadAddress', 'road_address', 'address'))
         if normalized(stored_name) != name or normalized(stored_address) != address:
             continue
-        sid = pick_string(place, ('sid', 'naverSid', 'naverPlaceId'))
+        sid = next((str(place[k]) for k in ('sid', 'naverSid', 'naverPlaceId') if isinstance(place.get(k), (str, int)) and str(place[k]).strip()), '')
         # Generic id can be an internal site identifier; never infer SID from it.
         if not sid.isdigit():
             return {'status': 'pending', 'reason': 'matched_place_has_no_valid_sid'}
