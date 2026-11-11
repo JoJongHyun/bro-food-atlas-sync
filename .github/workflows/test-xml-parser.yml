@@ -1,0 +1,28 @@
+name: Test Naver Map XML parsing and SID matching
+
+on:
+  push:
+    paths:
+      - 'scripts/parse_naver_layout.py'
+      - 'scripts/match_site_place.py'
+      - 'tests/test_pipeline.py'
+      - '.github/workflows/test-xml-parser.yml'
+  pull_request:
+    paths:
+      - 'scripts/parse_naver_layout.py'
+      - 'scripts/match_site_place.py'
+      - 'tests/test_pipeline.py'
+      - '.github/workflows/test-xml-parser.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Offline tests — never call Naver or modify the site
+        run: python3 -m unittest discover -s tests -v
