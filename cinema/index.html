@@ -22,7 +22,7 @@
 <header class="top"><div class="logo"><div class="logo-mark">▶</div><div><div class="brand">BRO CINEMA</div><div class="sub">HLS VIDEO PLAYER</div></div></div><div class="tools"><span class="tiny" id="status">목록 확인 중…</span><button class="btn" id="reload">⟳ 새로고침</button></div></header>
 <section class="hero"><h1>좋아하는 영상, 한곳에서.</h1><p>영화 · 한국영화 · 드라마 전용 화면과 광고 배너 없는 자체 플레이어, TV 전송 기능을 제공합니다.</p></section>
 <nav class="tabs" role="tablist"><button class="tab active" role="tab" aria-selected="true" data-cat="영화">🎬 영화</button><button class="tab" role="tab" aria-selected="false" data-cat="한국영화">🇰🇷 한국영화</button><button class="tab" role="tab" aria-selected="false" data-cat="드라마">📺 드라마</button></nav>
-<div class="row"><h2 id="count">영화 · 0편</h2><input class="search" id="search" type="search" placeholder="제목 검색" aria-label="제목 검색"></div>
+<div class="row"><div><h2 id="count">영화 · 0편</h2><span class="tiny">최신 개봉·방영순 · 날짜 미확인 작품은 연도 기준</span></div><input class="search" id="search" type="search" placeholder="제목 검색" aria-label="제목 검색"></div>
 <main id="grid" class="grid" aria-live="polite"></main>
 <p class="note">본 사이트는 자체 광고·팝업을 포함하지 않습니다. 영상 내 삽입 광고가 없는지는 콘텐츠 제공자에 따라 다릅니다. 승인된 HTTPS M3U8 스트림만 재생하며, 외부 사이트의 접근 제한·DRM·광고 시스템을 우회하지 않습니다.</p>
 </div>
@@ -50,7 +50,7 @@ async function getWikiTitles([category,language,categoryTitle]){
     if(!response.ok)throw new Error("Wiki fetch failed");
     const json=await response.json();
     return (json.query?.categorymembers||[]).filter(x=>x.ns===0&&typeof x.title==="string").map(x=>normalize({
-      id:"w-"+category+"-"+language+"-"+x.pageid,category,title:x.title,year:"공개 작품 정보",
+      id:"w-"+category+"-"+language+"-"+x.pageid,category,title:x.title,year:categoryTitle.match(/(?:19|20)\d{2}/)?.[0]||"",
       sourceUrl:"https://"+language+".wikipedia.org/wiki/"+encodeURIComponent(x.title.replaceAll(" ","_"))
     })).filter(Boolean);
   }finally{clearTimeout(timer)}
@@ -69,9 +69,25 @@ async function updateWikiTitles(){
   render();
 }
 
-function normalize(o){if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350)};}
-function render(){const q=$("search").value.trim().toLocaleLowerCase("ko");const filtered=items.filter(x=>x.category===cat&&x.title.toLocaleLowerCase("ko").includes(q));$("count").textContent=cat+" · "+filtered.length+"편";const root=$("grid");root.replaceChildren();if(!filtered.length){const box=el("div","empty");box.append(el("div","", "🎞️"),el("b","", "표시할 영상이 없습니다"),el("span","", q?"다른 검색어로 검색해보세요.":"사용이 허가된 HLS 영상이 연결되면 여기에 표시됩니다."));root.append(box);return;}
-for(const item of filtered){const card=el("button","tile");card.type="button";const art=el("div","art","▶");if(item.poster){const img=el("img");img.src=item.poster;img.alt="";img.loading="lazy";img.referrerPolicy="no-referrer";art.append(img)}art.append(el("span","tag",item.hls?"재생 가능":"제목 등록"));const cap=el("div","caption");cap.append(el("strong","",item.title),el("small","",(item.year||"")+(item.hls?" · 재생 가능":" · 영상 미연결")));card.append(art,cap);card.addEventListener("click",()=>item.hls?openVideo(item):showMissing(item));root.append(card);}}
+function validReleaseDate(value){
+  if(typeof value!=="string"||!/^\d{4}-(0[1-9]|1[0-2])-([0-2]\d|3[01])$/.test(value))return "";
+  const dt=new Date(value+"T00:00:00Z");
+  return Number.isNaN(dt.getTime())||dt.toISOString().slice(0,10)!==value?"":value;
+}
+function yearOf(item){
+  const match=String(item.releaseDate||item.year||"").match(/(?:19|20)\d{2}/);
+  return match?Number(match[0]):0;
+}
+function sortNewest(a,b){
+  const y=yearOf(b)-yearOf(a);
+  if(y)return y;
+  if(a.releaseDate&&b.releaseDate)return b.releaseDate.localeCompare(a.releaseDate);
+  if(a.releaseDate!==b.releaseDate)return a.releaseDate?-1:1;
+  return a.title.localeCompare(b.title,"ko");
+}
+function normalize(o){if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350),releaseDate:validReleaseDate(o.releaseDate||o.premiereDate)};}
+function render(){const q=$("search").value.trim().toLocaleLowerCase("ko");const filtered=items.filter(x=>x.category===cat&&x.title.toLocaleLowerCase("ko").includes(q)).sort(sortNewest);$("count").textContent=cat+" · "+filtered.length+"편";const root=$("grid");root.replaceChildren();if(!filtered.length){const box=el("div","empty");box.append(el("div","", "🎞️"),el("b","", "표시할 영상이 없습니다"),el("span","", q?"다른 검색어로 검색해보세요.":"사용이 허가된 HLS 영상이 연결되면 여기에 표시됩니다."));root.append(box);return;}
+for(const item of filtered){const card=el("button","tile");card.type="button";const art=el("div","art","▶");if(item.poster){const img=el("img");img.src=item.poster;img.alt="";img.loading="lazy";img.referrerPolicy="no-referrer";art.append(img)}art.append(el("span","tag",item.hls?"재생 가능":"제목 등록"));const cap=el("div","caption");cap.append(el("strong","",item.title),el("small","",(item.releaseDate||item.year||"날짜 미확인")+(item.hls?" · 재생 가능":" · 영상 미연결")));card.append(art,cap);card.addEventListener("click",()=>item.hls?openVideo(item):showMissing(item));root.append(card);}}
 async function sync(){const button=$("reload");button.disabled=true;$("status").textContent="목록 확인 중…";try{const response=await fetch("./catalog.json?ts="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const payload=await response.json();if(!Array.isArray(payload.items))throw Error("목록 형식 오류");seedItems=payload.items.map(normalize).filter(Boolean);items=seedItems;$("status").textContent="기본 작품 "+items.length+"개";render();await updateWikiTitles();}catch(e){$("status").textContent="목록 갱신 실패";console.error(e);if(!items.length)render();}finally{button.disabled=false;}}
 function showMissing(item){$("playing").textContent=item.title;$("notice").textContent="작품명만 등록되어 있습니다. 재생이 승인된 영상 주소가 아직 없습니다.";cleanup();video.poster="";dlg.showModal();}
 function cleanup(){if(hls){hls.destroy();hls=null}video.pause();video.removeAttribute("src");video.load();}
