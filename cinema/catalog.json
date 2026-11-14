@@ -391,7 +391,10 @@
       "category": "드라마",
       "title": "오징어 게임",
       "year": 2021,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/tv/thumb/tw_84448161812371.jpg",
+      "tvwikiPage": "https://tvwiki60.net/old_drama/1584",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-40",
@@ -407,21 +410,30 @@
       "category": "드라마",
       "title": "이상한 변호사 우영우",
       "year": 2022,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/tv/thumb/tw_17896740686294.jpg",
+      "tvwikiPage": "https://tvwiki60.net/old_drama/1466",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-42",
       "category": "드라마",
       "title": "사랑의 불시착",
       "year": 2019,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/tv/thumb/tw_10645810747490.jpg",
+      "tvwikiPage": "https://tvwiki60.net/old_drama/1536",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-43",
       "category": "드라마",
       "title": "눈물의 여왕",
       "year": 2024,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/file/drama/a03a6675fcfdc4bfcec5d5030e94be7c2aae5a60.jpg",
+      "tvwikiPage": "https://tvwiki60.net/drama/1283",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-44",
@@ -437,42 +449,60 @@
       "category": "드라마",
       "title": "선의의 경쟁",
       "year": 2025,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/file/drama/744075d8a0eef4223fb38fbf387e23b7ea394d3a.jpg",
+      "tvwikiPage": "https://tvwiki60.net/drama/1871",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-46",
       "category": "드라마",
       "title": "스터디그룹",
       "year": 2025,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/file/drama/e8b7f146ef6734ee0dbbb111d682982b91868087.jpg",
+      "tvwikiPage": "https://tvwiki60.net/drama/1829",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-47",
       "category": "드라마",
       "title": "폭싹 속았수다",
       "year": 2025,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/file/drama/7538bde2c9053a6b0bded5d5833cd2581bfb0d53.jpg",
+      "tvwikiPage": "https://tvwiki60.net/drama/1984",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-48",
       "category": "드라마",
       "title": "약한영웅 Class 2",
       "year": 2025,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/peakl/thumb/b7ecde3d4ab16437dc52da09c559512a955ceeb2.webp",
+      "tvwikiPage": "https://tvwiki60.net/drama/2149",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-49",
       "category": "드라마",
       "title": "뉴토피아",
       "year": 2025,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/file/drama/39c615297bf9c75fee451f43abcc52a48f6b5570.jpg",
+      "tvwikiPage": "https://tvwiki60.net/drama/1862",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-50",
       "category": "드라마",
       "title": "언더커버 하이스쿨",
       "year": 2025,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/file/drama/beec7152b717e2553c676c4e848d8134931187a9.jpg",
+      "tvwikiPage": "https://tvwiki60.net/drama/1931",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-51",
