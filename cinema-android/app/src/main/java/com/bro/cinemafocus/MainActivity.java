@@ -20,6 +20,12 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.content.res.Configuration;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import java.util.ArrayList;
 import java.io.ByteArrayInputStream;
 import java.util.Locale;
 
@@ -30,6 +36,11 @@ public final class MainActivity extends Activity {
     private LinearLayout viewerPanel;
     private WebView catalog, viewer;
     private Button focusButton;
+    private LinearLayout episodeBox;
+    private TextView seriesLabel;
+    private final ArrayList<String> episodeUrls=new ArrayList<>();
+    private final ArrayList<String> episodeLabels=new ArrayList<>();
+    private int playingEpisode=-1;
     private boolean focusEnabled=true;
     private View fullscreenView;
     private WebChromeClient.CustomViewCallback fullscreenCallback;
@@ -40,6 +51,19 @@ public final class MainActivity extends Activity {
             Uri u=Uri.parse(address);
             String host=u.getHost();
             return "https".equalsIgnoreCase(u.getScheme())&&("tvwiki60.net".equals(host)||"tvwiki59.net".equals(host));
+        }catch(Exception e){return false;}
+    }
+    private boolean isSourceEpisode(String address){
+        if(!isTvwiki(address))return false;
+        try{
+            String path=Uri.parse(address).getPath();
+            return path!=null&&path.matches("^/(?:drama|old_drama|movie|kor_movie)/[0-9]+(?:/[0-9]+)?$");
+        }catch(Exception e){return false;}
+    }
+    private boolean isNativeLink(String address){
+        try{
+            Uri u=Uri.parse(address);
+            return "https".equals(u.getScheme())&&"bro-cinema-hls.onrender.com".equals(u.getHost())&&"/__native_watch".equals(u.getPath());
         }catch(Exception e){return false;}
     }
     private boolean isAllowedView(String address){
@@ -103,11 +127,97 @@ public final class MainActivity extends Activity {
         bar.addView(tool("새로고침",()->viewer.reload()),new LinearLayout.LayoutParams(0,-1,1f));
         focusButton=tool("영상만 보기 ✓",this::toggleFocus);
         bar.addView(focusButton,new LinearLayout.LayoutParams(0,-1,1.7f));
-        viewerPanel.addView(viewer,new LinearLayout.LayoutParams(-1,0,1));
+        viewer.setVerticalScrollBarEnabled(false);
+        viewer.setHorizontalScrollBarEnabled(false);
+        viewerPanel.addView(viewer,new LinearLayout.LayoutParams(-1,dp(210)));
+        seriesLabel=new TextView(this);
+        seriesLabel.setTextColor(Color.rgb(227,238,255));seriesLabel.setTextSize(15);seriesLabel.setText("회차 선택");
+        seriesLabel.setPadding(dp(16),dp(14),dp(16),dp(8));
+        seriesLabel.setBackgroundColor(Color.rgb(16,27,46));
+        viewerPanel.addView(seriesLabel,new LinearLayout.LayoutParams(-1,dp(53)));
+        ScrollView scroll=new ScrollView(this);
+        scroll.setFillViewport(true);scroll.setBackgroundColor(Color.rgb(13,23,40));
+        episodeBox=new LinearLayout(this);episodeBox.setOrientation(LinearLayout.VERTICAL);
+        episodeBox.setPadding(dp(10),dp(6),dp(10),dp(20));
+        scroll.addView(episodeBox,new ScrollView.LayoutParams(-1,-2));
+        viewerPanel.addView(scroll,new LinearLayout.LayoutParams(-1,0,1));
+        resizeViewer();
         fullscreenHost=new FrameLayout(this);
         fullscreenHost.setBackgroundColor(Color.BLACK);fullscreenHost.setVisibility(View.GONE);
         root.addView(fullscreenHost,new FrameLayout.LayoutParams(-1,-1));
         catalog.loadUrl(HOME);
+    }
+    private void resizeViewer(){
+        if(viewer==null)return;
+        int fullWidth=getResources().getDisplayMetrics().widthPixels;
+        int maxHeight=getResources().getDisplayMetrics().heightPixels-dp(180);
+        int h=Math.max(dp(130),Math.min(fullWidth*9/16,maxHeight));
+        viewer.getLayoutParams().height=h;
+        viewer.requestLayout();
+    }
+    @Override public void onConfigurationChanged(Configuration config){
+        super.onConfigurationChanged(config);
+        resizeViewer();
+    }
+    private void displayNativeEpisodes(){
+        episodeBox.removeAllViews();
+        if(episodeUrls.isEmpty()){
+            seriesLabel.setText("BRO CINEMA · 원본 영상 화면");
+            return;
+        }
+        for(int i=0;i<episodeUrls.size();i+=3){
+            LinearLayout row=new LinearLayout(this);
+            row.setOrientation(LinearLayout.HORIZONTAL);
+            for(int j=0;j<3;j++){
+                final int index=i+j;
+                if(index>=episodeUrls.size()){
+                    View spacer=new View(this);
+                    row.addView(spacer,new LinearLayout.LayoutParams(0,dp(47),1));continue;
+                }
+                Button b=tool(episodeLabels.get(index),()->openEpisode(index));
+                b.setBackgroundTintList(android.content.res.ColorStateList.valueOf(index==playingEpisode?Color.rgb(58,106,235):Color.rgb(34,49,78)));
+                LinearLayout.LayoutParams p=new LinearLayout.LayoutParams(0,dp(47),1);
+                p.setMargins(dp(3),dp(3),dp(3),dp(3));
+                row.addView(b,p);
+            }
+            episodeBox.addView(row,new LinearLayout.LayoutParams(-1,-2));
+        }
+    }
+    private void openEpisode(int i){
+        if(i<0||i>=episodeUrls.size())return;
+        String url=episodeUrls.get(i);
+        if(!isSourceEpisode(url))return;
+        playingEpisode=i;
+        displayNativeEpisodes();
+        viewer.loadUrl(url);
+    }
+    private void openNativeWatch(Uri route){
+        try{
+            final String url=route.getQueryParameter("episode");
+            final String title=route.getQueryParameter("title");
+            final String raw=route.getQueryParameter("items");
+            if(url==null||!isSourceEpisode(url)||raw==null||raw.length()>22000)return;
+            JSONArray data=new JSONArray(raw);
+            if(data.length()>100)return;
+            episodeUrls.clear();episodeLabels.clear();
+            int active=-1;
+            for(int i=0;i<data.length();i++){
+                JSONObject ep=data.optJSONObject(i);if(ep==null)continue;
+                String link=ep.optString("url","");
+                if(!isSourceEpisode(link))continue;
+                String label=ep.optString("label","회차").trim();
+                if(label.length()>24)label=label.substring(0,24);
+                if(link.equals(url))active=episodeUrls.size();
+                episodeUrls.add(link);episodeLabels.add(label);
+            }
+            if(episodeUrls.isEmpty()){episodeUrls.add(url);episodeLabels.add("영상 보기");active=0;}
+            if(active<0)active=0;
+            final String safeTitle=title==null?"작품":title.substring(0,Math.min(50,title.length()));
+            seriesLabel.setText(safeTitle+" · 회차 선택");
+            viewerPanel.setVisibility(View.VISIBLE);
+            resizeViewer();
+            openEpisode(active);
+        }catch(Exception ignored){}
     }
     private void toggleFocus(){
         focusEnabled=!focusEnabled;
@@ -135,6 +245,10 @@ public final class MainActivity extends Activity {
                 if(playback){
                     if(blockedAd(Uri.parse(target)))return true;
                     return !isAllowedView(target);
+                }
+                if(isNativeLink(target)){
+                    openNativeWatch(Uri.parse(target));
+                    return true;
                 }
                 if(isAllowedView(target)){openViewer(target);return true;}
                 return !target.startsWith(HOME);
@@ -210,10 +324,15 @@ public final class MainActivity extends Activity {
     }
     private void openViewer(String url){
         if(!isAllowedView(url))return;
+        episodeUrls.clear();episodeLabels.clear();playingEpisode=-1;
+        displayNativeEpisodes();
         viewerPanel.setVisibility(View.VISIBLE);
+        resizeViewer();
         viewer.loadUrl(url);
     }
     private void leaveViewer(){
+        episodeUrls.clear();episodeLabels.clear();playingEpisode=-1;
+        displayNativeEpisodes();
         if(fullscreenView!=null)hideFullscreen();
         viewer.loadUrl("about:blank");
         viewerPanel.setVisibility(View.GONE);
