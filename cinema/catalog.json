@@ -509,56 +509,80 @@
       "category": "드라마",
       "title": "언젠가는 슬기로울 전공의생활",
       "year": 2025,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/file/drama/a18e5464895a718920db2893257e51a0aa6b44db.jpg",
+      "tvwikiPage": "https://tvwiki60.net/drama/2105",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-52",
       "category": "드라마",
       "title": "귀궁",
       "year": 2025,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/file/drama/2c91a83a47589c3e3435b714b0214f91377b5c37.jpg",
+      "tvwikiPage": "https://tvwiki60.net/drama/2124",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-53",
       "category": "드라마",
       "title": "미지의 서울",
       "year": 2025,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/file/drama/10820261505d855f0c35ebb7c9516bab06d61f35.jpg",
+      "tvwikiPage": "https://tvwiki60.net/drama/2202",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-54",
       "category": "드라마",
       "title": "굿보이",
       "year": 2025,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/file/drama/547822154532479d9122574c30d735681daa3e2d.jpg",
+      "tvwikiPage": "https://tvwiki60.net/drama/2222",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-55",
       "category": "드라마",
       "title": "악연",
       "year": 2025,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/file/drama/8905eae3df0db7d126a5664a9ef9eafb0b6166c9.jpg",
+      "tvwikiPage": "https://tvwiki60.net/drama/2084",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-56",
       "category": "드라마",
       "title": "나인 퍼즐",
       "year": 2025,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/file/drama/566745b8ffa305961695aaca7ffd796022ca35e6.jpg",
+      "tvwikiPage": "https://tvwiki60.net/drama/2193",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-57",
       "category": "드라마",
       "title": "이태원 클라쓰",
       "year": 2020,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/tv/thumb/tw_23762989663012.jpg",
+      "tvwikiPage": "https://tvwiki60.net/old_drama/1538",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-58",
       "category": "드라마",
       "title": "비밀의 숲",
       "year": 2017,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/tv/thumb/tw_63201475630163.jpg",
+      "tvwikiPage": "https://tvwiki60.net/old_drama/1530",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "new-2026-drama-1",
@@ -568,7 +592,10 @@
       "releaseDate": "2026-11-14",
       "description": "KBS2 · 2026-11-14 첫 공개/방송",
       "sourceUrl": "https://www.esquirekorea.co.kr/article/1911919",
-      "releaseAt": "2026-11-14T21:20:00+09:00"
+      "releaseAt": "2026-11-14T21:20:00+09:00",
+      "poster": "https://image.tmdb.org/t/p/w500/wVpTtPknLaYCeXnRKO6p2dQle5Z.jpg",
+      "tvwikiPage": "https://tvwiki60.net/drama/12640",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "new-2026-drama-2",
