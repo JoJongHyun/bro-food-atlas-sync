@@ -245,7 +245,10 @@
       "category": "한국영화",
       "title": "파묘",
       "year": 2024,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/peakl/thumb/b2bcb4fdd73b6653adc5ce607406f2c62014659f.jpg",
+      "tvwikiPage": "https://tvwiki60.net/kor_movie/18028",
+      "posterSource": "TVWiki 파묘(4K) listing matched against film synopsis"
     },
     {
       "id": "movie-info-25",
@@ -805,5 +808,5 @@
       "posterSource": "TVWiki public search title match"
     }
   ],
-  "posterSourceNote": "Public title-matched posters verified from TVWiki listing and detail-page #bo_v_poster sections where available; fallback to Wikimedia or a text-only cover."
+  "posterSourceNote": "Verified per-title cover URLs from public TVWiki listings, search results, and detail-page bo_v_poster. Missing or unavailable posters fall back to Wikimedia or a text cover; works with no verified match are not guessed."
 }
