@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
     steps:
       - name: Checkout branch
         uses: actions/checkout@v4
@@ -39,3 +39,13 @@ jobs:
           name: bro-cinema-focus-apk
           path: cinema-android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
+      - name: Publish stable direct APK download
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp cinema-android/app/build/outputs/apk/debug/app-debug.apk BRO_CINEMA_Focus_0.1.0.apk
+          if gh release view bro-cinema-focus-latest >/dev/null 2>&1; then
+            gh release upload bro-cinema-focus-latest BRO_CINEMA_Focus_0.1.0.apk --clobber
+          else
+            gh release create bro-cinema-focus-latest BRO_CINEMA_Focus_0.1.0.apk --target "$GITHUB_SHA" --title "BRO CINEMA 집중보기 APK (시험판)" --notes "Android 시험용 WebView 집중보기 앱. 영상 재생 및 광고 차단 효과는 기기와 원본 사이트에 따라 달라집니다. 최초 설치 전 파일 출처를 확인하세요." --prerelease
+          fi
