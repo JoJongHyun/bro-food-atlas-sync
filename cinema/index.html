@@ -268,15 +268,33 @@ function render(){
   }
 }
 async function sync(){const button=$("reload");button.disabled=true;$("status").textContent="목록 확인 중…";try{const response=await fetch("./catalog.json?ts="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const payload=await response.json();if(!Array.isArray(payload.items))throw Error("목록 형식 오류");seedItems=payload.items.map(normalize).filter(Boolean);items=seedItems;$("status").textContent="기본 작품 "+items.length+"개";render();await updateWikiTitles();}catch(e){$("status").textContent="목록 갱신 실패";console.error(e);if(!items.length)render();}finally{button.disabled=false;}}
+function fitTvwikiFrame(){
+  const frame=$("tvwikiFrame");
+  const wrap=frame.closest(".tvwiki-frame-wrap");
+  if(!frame||!wrap||!selected||$("tvwikiViewer").hidden||!dlg.open)return;
+  const width=wrap.getBoundingClientRect().width;
+  if(!width)return;
+  // Mobile original page: playerArea is about 906px down at a 376px viewport.
+  // Crop the top-level document within the 16:9 viewport instead of relying
+  // on #playerArea fragment scrolling, which varies between mobile browsers.
+  const crop=width<600;
+  const offset=Math.max(0,Math.round(642.5+0.70*width));
+  frame.style.top=crop?"-"+offset+"px":"0";
+  frame.style.height=crop?"calc(100% + "+offset+"px)":"100%";
+  frame.dataset.focusMode=crop?"crop":"anchor";
+  frame.dataset.focusOffset=crop?String(offset):"0";
+}
+window.addEventListener("resize",()=>{if(selected&&!$("tvwikiViewer").hidden)fitTvwikiFrame()});
 function setTvwikiEpisode(item,url,label){
   if(!validTvwikiPage(url))return;
   rememberWatch(item,url);
   const frame=$("tvwikiFrame");
-  // The source page remains inside an iframe; its #playerArea anchor is used
-  // only to focus the original page's visible player section. Never infer video access.
-  frame.src=url+"#playerArea";
+  fitTvwikiFrame();
+  // Browser-compatible visual cropping only: no session changes, stream extraction,
+  // or cross-origin document scripting. Desktop uses the original anchor.
+  frame.src=frame.dataset.focusMode==="crop"?url:url+"#playerArea";
   frame.title=item.title+" "+label+" 원본 영상 영역";
-  $("tvwikiStatus").textContent=label+" · 원본 영상 연결 시도 중 (외부 재생이 차단될 수 있음)";
+  $("tvwikiStatus").textContent=label+" · 영상 영역 맞춤 (영상 제공자가 외부 재생을 차단할 수 있음)";
   for(const button of $("tvwikiEpisodeButtons").querySelectorAll("button")){
     button.setAttribute("aria-pressed",String(button.dataset.src===url));
   }
@@ -315,12 +333,12 @@ function showMissing(item){
     button.addEventListener("click",()=>setTvwikiEpisode(item,ep.pageUrl,ep.label));
     buttons.append(button);
   }
+  if(!dlg.open)dlg.showModal();
   if(hasEpisode){
     const stored=lastWatched[favKey(item)];
     const first=episodes.find(ep=>ep.pageUrl===stored)||episodes[0];
     setTvwikiEpisode(item,first.pageUrl,first.label);
   }
-  if(!dlg.open)dlg.showModal();
 }
 function cleanup(){
   if(hls){hls.destroy();hls=null}
