@@ -1,0 +1,14 @@
+{
+  "updatedAt": "2026-11-14T07:00:00Z",
+  "items": [
+    {
+      "id": "apple-hls-demo",
+      "category": "영화",
+      "title": "공개 HLS 영상 재생 테스트 (영화 아님)",
+      "year": "테스트",
+      "description": "Apple 개발자용 공개 샘플 HLS 영상",
+      "poster": "",
+      "hls": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8"
+    }
+  ]
+}
