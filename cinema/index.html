@@ -16,7 +16,12 @@
 .caption{padding:14px}.caption strong{font-size:14px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.caption small{color:var(--dim);display:block;margin-top:7px}.empty{grid-column:1/-1;min-height:230px;border:1px dashed #46506c;border-radius:17px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px;color:var(--dim);gap:9px}.empty b{color:white}
 .note{font-size:12px;line-height:1.8;color:#9daac0;margin-top:26px}dialog{width:min(900px,calc(100vw - 22px));max-width:none;border:1px solid #34445e;border-radius:17px;background:#121b2c;color:white;padding:0;box-shadow:0 30px 100px #0009}dialog::backdrop{background:#000c;backdrop-filter:blur(5px)}
 .detail-hero{display:flex;align-items:flex-start;gap:18px;padding:18px;background:#101b2d;border-block:1px solid #35405a}.detail-hero[hidden]{display:none}.detail-art{width:142px;min-width:142px;aspect-ratio:2/3;overflow:hidden;border-radius:9px;background:linear-gradient(145deg,#294769,#151c35);display:grid;place-items:center;text-align:center;font-weight:750;padding:10px;word-break:keep-all}.detail-art img{width:100%;height:100%;object-fit:cover}.detail-text{flex:1;min-width:0}.detail-text h3{margin:0 0 9px;font-size:21px}.detail-text p{font-size:13px;line-height:1.6;color:#aebcd5;margin:8px 0}.detail-category{color:#8faafe;font-size:12px;font-weight:700}@media(max-width:580px){.detail-art{width:108px;min-width:108px}.detail-text h3{font-size:17px}.detail-hero{gap:12px;padding:12px}}
-.modalhead{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:15px 18px}.modalhead h2{margin:0;font-size:16px}.x{background:#32405a;color:white;border:0;border-radius:10px;font-size:21px;width:36px;height:36px}.stage{background:#000;aspect-ratio:16/9;display:flex}.stage video{height:100%;width:100%;background:#000}.modaltools{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:14px}.help{font-size:12px;color:#b3c0d9;margin:0;padding:0 16px 17px;line-height:1.65}.notice{font-size:12px;color:#b8c9ef;flex:1;min-width:150px}google-cast-launcher{width:20px;height:20px;display:inline-block;--connected-color:#7297ff;--disconnected-color:#f4f7ff}
+.modalhead{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:15px 18px}.modalhead h2{margin:0;font-size:16px}.x{background:#32405a;color:white;border:0;border-radius:10px;font-size:21px;width:36px;height:36px}.stage{background:#000;aspect-ratio:16/9;display:flex}.stage video,.stage iframe{height:100%;width:100%;background:#000;border:0}
+.playereditor{padding:12px 16px;border-top:1px solid #34445e;background:#10192a}
+.playereditor details summary{font-size:13px;color:#bcd2ff;cursor:pointer;font-weight:650}
+.editorrow{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.editorrow input{flex:1;min-width:210px;background:#0a1221;color:#f4f7ff;border:1px solid #556481;border-radius:9px;font-size:13px;padding:10px}
+.editorhint{font-size:11px;color:#94a8c9;line-height:1.55;margin:8px 0 0}.modaltools{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:14px}.help{font-size:12px;color:#b3c0d9;margin:0;padding:0 16px 17px;line-height:1.65}.notice{font-size:12px;color:#b8c9ef;flex:1;min-width:150px}google-cast-launcher{width:20px;height:20px;display:inline-block;--connected-color:#7297ff;--disconnected-color:#f4f7ff}
 @media(max-width:860px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:580px){.shell{padding:15px 12px 40px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.caption{padding:11px}.tabs{gap:3px}.tab{padding:10px 13px;font-size:13px}.row{margin:19px 0 14px}.search{width:100%}.hero{margin:24px 0 19px}}
 </style></head>
 <body><div class="shell">
@@ -27,11 +32,39 @@
 <main id="grid" class="grid" aria-live="polite"></main><p class="note">매칭된 작품 포스터는 TV위키의 공개 상세·검색 목록에 표시된 이미지 URL을 사용합니다(실제 이미지는 TMDB 또는 다른 이미지 제공처에서 표시될 수 있습니다). 해당 이미지가 제공되지 않으면 Wikimedia 이미지 또는 제목형 표지를 표시합니다. BRO CINEMA는 해당 제공처와 제휴하지 않습니다. 즐겨찾기는 현재 브라우저에 저장되어 다른 기기와 자동 동기화되지 않습니다.</p>
 <p class="note">본 사이트는 자체 광고·팝업을 포함하지 않습니다. 영상 내 삽입 광고가 없는지는 콘텐츠 제공자에 따라 다릅니다. 승인된 HTTPS M3U8 스트림만 재생하며, 외부 사이트의 접근 제한·DRM·광고 시스템을 우회하지 않습니다.</p>
 </div>
-<dialog id="dlg"><div class="modalhead"><h2 id="playing">영상 재생</h2><button class="x" id="close" aria-label="닫기">×</button></div><div id="detailHero" class="detail-hero" hidden></div><div class="stage" id="videoStage"><video id="video" controls playsinline x-webkit-airplay="allow" preload="metadata" crossorigin="anonymous"></video></div><div id="episodeLinks" style="padding:12px 16px;display:none;flex-wrap:wrap;gap:8px"></div><div class="modaltools"><button class="btn primary" id="cast">▣ TV 전송</button><button class="btn" id="airplay">AirPlay</button><button class="btn" id="share">↗ 공유</button><span id="notice" class="notice">영상을 선택하세요.</span></div><p class="help">Chromecast 지원 TV와 동일한 Wi-Fi 연결이 필요합니다. 삼성 TV는 휴대전화 Smart View 화면 미러링을 사용할 수도 있습니다. TV가 재생할 수 있는 스트림 주소여야 합니다.</p></dialog>
+<dialog id="dlg"><div class="modalhead"><h2 id="playing">영상 재생</h2><button class="x" id="close" aria-label="닫기">×</button></div><div id="detailHero" class="detail-hero" hidden></div><div class="stage" id="videoStage"><video id="video" controls playsinline x-webkit-airplay="allow" preload="metadata" crossorigin="anonymous"></video><iframe id="embedPlayer" title="공식 영상 플레이어" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen hidden></iframe></div><div id="episodeLinks" style="padding:12px 16px;display:none;flex-wrap:wrap;gap:8px"></div><section class="playereditor" id="playerEditor"><details id="playerEditorDetails"><summary>재생 권한이 있는 영상 주소 등록</summary><div class="editorrow"><input id="personalMediaUrl" type="url" inputmode="url" placeholder="https://.../playlist.m3u8 또는 공식 임베드 URL" aria-label="허가된 영상 주소"/><button class="btn primary" id="saveMedia" type="button">저장하고 재생</button><button class="btn" id="clearMedia" type="button">삭제</button></div><p class="editorhint">재생·임베드 권한이 있는 HTTPS HLS·MP4 또는 Bunny Stream/YouTube/Vimeo 공식 임베드 주소만 등록하세요. 이 브라우저에만 저장됩니다. TV위키 인증·서명 우회 주소는 지원하지 않습니다.</p></details></section><div class="modaltools"><button class="btn primary" id="cast">▣ TV 전송</button><button class="btn" id="airplay">AirPlay</button><button class="btn" id="share">↗ 공유</button><span id="notice" class="notice">영상을 선택하세요.</span></div><p class="help">Chromecast 지원 TV와 동일한 Wi-Fi 연결이 필요합니다. 삼성 TV는 휴대전화 Smart View 화면 미러링을 사용할 수도 있습니다. TV가 재생할 수 있는 스트림 주소여야 합니다.</p></dialog>
 <script>
 "use strict";
 const $=id=>document.getElementById(id),validCats=new Set(["영화","한국영화","드라마"]);
 let items=[],seedItems=[],cat="영화",selected=null,hls=null,castReady=false;
+const USERMEDIAKEY="bro-cinema-custom-source-v1";let customSources={};
+try{const d=JSON.parse(localStorage.getItem(USERMEDIAKEY)||"{}");if(d&&typeof d==="object"&&!Array.isArray(d))customSources=d;}catch{}
+function verifyMediaURL(text){
+  try{
+    const u=new URL(String(text||"").trim());
+    if(u.protocol!=="https:"||u.username||u.password)return null;
+    if(/\.m3u8$/i.test(u.pathname))return {kind:"hls",url:u.href};
+    if(/\.mp4$/i.test(u.pathname))return {kind:"mp4",url:u.href};
+    if(["player.mediadelivery.net","iframe.mediadelivery.net"].includes(u.hostname)&&/^\/embed\/\d+\/[0-9a-f-]{32,36}$/i.test(u.pathname))return {kind:"embed",url:u.href};
+    if(["www.youtube-nocookie.com","www.youtube.com"].includes(u.hostname)&&/^\/embed\/[a-zA-Z0-9_-]{11}$/.test(u.pathname))return {kind:"embed",url:u.href};
+    if(u.hostname==="player.vimeo.com"&&/^\/video\/\d+$/.test(u.pathname))return {kind:"embed",url:u.href};
+    return null;
+  }catch{return null}
+}
+function resolvedMedia(item){
+  const own=customSources[favKey(item)];
+  if(own){const v=verifyMediaURL(own);if(v)return v}
+  if(item.embedUrl){const v=verifyMediaURL(item.embedUrl);if(v?.kind==="embed")return v}
+  if(item.hls){const v=verifyMediaURL(item.hls);if(v&&v.kind!=="embed")return v}
+  return null;
+}
+function setupMediaEditor(item){
+  const owned=customSources[favKey(item)]||"";
+  $("personalMediaUrl").value=owned;
+  $("playerEditorDetails").open=false;
+  $("clearMedia").disabled=!owned;
+}
+
 const FAVKEY="bro-cinema-v1-favorites",IMGKEY="bro-cinema-v1-posters";
 let favorites=new Set(),posterCache={},lookedUp=new Set(),posterObserver=null;
 try{favorites=new Set(JSON.parse(localStorage.getItem(FAVKEY)||"[]"));if(!Array.isArray([...favorites]))favorites=new Set()}catch{favorites=new Set()}
@@ -132,7 +165,7 @@ function sortNewest(a,b){
   if(a.releaseDate!==b.releaseDate)return a.releaseDate?-1:1;
   return a.title.localeCompare(b.title,"ko");
 }
-function normalize(o){if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350),sourceUrl:validUrl(o.sourceUrl)?o.sourceUrl:"",releaseAt:typeof o.releaseAt==="string"&&!Number.isNaN(Date.parse(o.releaseAt))?o.releaseAt:"",releaseDate:validReleaseDate(o.releaseDate||o.premiereDate),tvwikiPage:validTvwikiPage(o.tvwikiPage)?o.tvwikiPage:"",episodes:Array.isArray(o.episodes)?o.episodes.filter(x=>x&&Number.isInteger(x.number)&&x.number>0&&x.number<10000&&validUrl(x.pageUrl)).slice(0,200).map(x=>({number:x.number,label:String(x.label||x.number+"화").slice(0,80),pageUrl:x.pageUrl})):[],officialLinks:Array.isArray(o.officialLinks)?o.officialLinks.filter(x=>x&&typeof x.label==="string"&&validUrl(x.url)).slice(0,12).map(x=>({label:x.label.slice(0,85),url:x.url})):[]};}
+function normalize(o){if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",embedUrl:verifyMediaURL(o.embedUrl)?.kind==="embed"?o.embedUrl:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350),sourceUrl:validUrl(o.sourceUrl)?o.sourceUrl:"",releaseAt:typeof o.releaseAt==="string"&&!Number.isNaN(Date.parse(o.releaseAt))?o.releaseAt:"",releaseDate:validReleaseDate(o.releaseDate||o.premiereDate),tvwikiPage:validTvwikiPage(o.tvwikiPage)?o.tvwikiPage:"",episodes:Array.isArray(o.episodes)?o.episodes.filter(x=>x&&Number.isInteger(x.number)&&x.number>0&&x.number<10000&&validUrl(x.pageUrl)).slice(0,200).map(x=>({number:x.number,label:String(x.label||x.number+"화").slice(0,80),pageUrl:x.pageUrl})):[],officialLinks:Array.isArray(o.officialLinks)?o.officialLinks.filter(x=>x&&typeof x.label==="string"&&validUrl(x.url)).slice(0,12).map(x=>({label:x.label.slice(0,85),url:x.url})):[]};}
 function render(){
   const q=$("search").value.trim().toLocaleLowerCase("ko");
   const filtered=items.filter(item=>(cat==="즐겨찾기"?favorites.has(favKey(item)):item.category===cat)&&item.title.toLocaleLowerCase("ko").includes(q)).sort(sortNewest);
