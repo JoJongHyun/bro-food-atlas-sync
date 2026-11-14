@@ -88,12 +88,13 @@ function setupMediaEditor(item){
 const FAVKEY="bro-cinema-v1-favorites",IMGKEY="bro-cinema-v1-posters";
 const WATCHKEY="bro-cinema-watch-browser-v1",LASTWATCHKEY="bro-cinema-last-episode-v1";
 const ANDROID=/android/i.test(navigator.userAgent);
+const BRO_ANDROID_APP=/BroCinemaFocus\/\d+(?:\.\d+)*/i.test(navigator.userAgent);
 let watchBrowser="brave",lastWatched={};
 try{const v=localStorage.getItem(WATCHKEY);if(["brave","firefox","default"].includes(v))watchBrowser=v}catch{}
 try{const v=JSON.parse(localStorage.getItem(LASTWATCHKEY)||"{}");if(v&&typeof v==="object"&&!Array.isArray(v))lastWatched=v}catch{}
 function browserLaunchUrl(pageUrl,mode=watchBrowser,android=ANDROID){
   if(!validTvwikiPage(pageUrl))return null;
-  if(!android||mode==="default")return pageUrl;
+  if(BRO_ANDROID_APP||!android||mode==="default")return pageUrl;
   const packages={brave:"com.brave.browser",firefox:"org.mozilla.firefox"};
   const ids={brave:"com.brave.browser",firefox:"org.mozilla.firefox"};
   const pkg=packages[mode];if(!pkg)return pageUrl;
@@ -109,10 +110,12 @@ function rememberWatch(item,link){
 function syncWatchPanel(item){
   $("watchPanel").style.display=item.tvwikiPage||item.episodes?.some(e=>validTvwikiPage(e.pageUrl))?"block":"none";
   $("watchBrowser").value=watchBrowser;
-  $("braveInstall").style.display=watchBrowser==="brave"?"inline-flex":"none";
-  $("firefoxGuide").style.display=watchBrowser==="firefox"?"inline-flex":"none";
+  $("watchBrowser").disabled=BRO_ANDROID_APP;
+  $("watchBrowser").style.display=BRO_ANDROID_APP?"none":"";
+  $("braveInstall").style.display=!BRO_ANDROID_APP&&watchBrowser==="brave"?"inline-flex":"none";
+  $("firefoxGuide").style.display=!BRO_ANDROID_APP&&watchBrowser==="firefox"?"inline-flex":"none";
   const name={brave:"Brave",firefox:"Firefox",default:"기본 브라우저"}[watchBrowser];
-  $("watchInfo").textContent=ANDROID?
+  $("watchInfo").textContent=BRO_ANDROID_APP?"BRO CINEMA 앱 안에서 TV위키 원본 영상 페이지를 열어요. 앱 상단의 ‘영상만 보기’로 메뉴·광고 영역을 가릴 수 있어요. 재생 가능 여부와 광고 차단 효과는 원본 사이트에 따라 달라집니다.":ANDROID?
     name+"에서 회차 원본 페이지를 열어요. 브라우저 앱이 없으면 설치 화면으로 이동할 수 있어요. 광고 차단은 보장되지 않으며, 영상은 TV위키에서 재생됩니다.":
     "PC에서는 선택한 브라우저로 강제 전환하지 못합니다. 광고 차단을 설정한 브라우저에서 BRO CINEMA를 열어 이용하세요.";
 }
@@ -280,7 +283,7 @@ function showMissing(item){
     if(!validTvwikiPage(url))return;
     const a=el("a",cls,label);
     a.href=browserLaunchUrl(url);
-    if(!ANDROID||watchBrowser==="default"){a.target="_blank";a.rel="noopener noreferrer"}
+    if(!BRO_ANDROID_APP&&(!ANDROID||watchBrowser==="default")){a.target="_blank";a.rel="noopener noreferrer"}
     else{a.rel="noopener"}
     a.addEventListener("click",()=>rememberWatch(item,url));
     list.append(a);
