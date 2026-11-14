@@ -173,7 +173,7 @@ function getEpisodeMedia(item,url){
 }
 function resetEpisodeMedia(){
   if(episodeHls){episodeHls.destroy();episodeHls=null}
-  const v=$("episodeVideo");v.pause();v.removeAttribute("src");v.load();v.hidden=true;
+  const v=$("episodeVideo");v.onloadedmetadata=null;v.onplaying=null;v.onerror=null;v.pause();v.removeAttribute("src");v.load();v.hidden=true;
   const f=$("episodeEmbed");f.removeAttribute("src");f.hidden=true;
   $("episodeNativeStage").hidden=true;
 }
@@ -194,6 +194,15 @@ function playAuthorizedEpisode(media,label){
   }
   const player=$("episodeVideo");player.hidden=false;
   $("tvwikiStatus").textContent=label+" · 영상 연결 중…";
+  player.onloadedmetadata=()=>{
+    if(!$("episodeNativeStage").hidden)$("tvwikiStatus").textContent=label+" · 영상 준비 완료";
+  };
+  player.onplaying=()=>{
+    if(!$("episodeNativeStage").hidden)$("tvwikiStatus").textContent=label+" · 자체 플레이어 재생 중";
+  };
+  player.onerror=()=>{
+    if(!$("episodeNativeStage").hidden)$("tvwikiStatus").textContent=label+" · 영상 파일에 접근할 수 없습니다";
+  };
   try{
     if(media.kind==="mp4"||player.canPlayType("application/vnd.apple.mpegurl"))player.src=media.url;
     else if(window.Hls&&Hls.isSupported()){
