@@ -34,6 +34,21 @@
 .modaltools{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:14px}.help{font-size:12px;color:#b3c0d9;margin:0;padding:0 16px 17px;line-height:1.65}.notice{font-size:12px;color:#b8c9ef;flex:1;min-width:150px}google-cast-launcher{width:20px;height:20px;display:inline-block;--connected-color:#7297ff;--disconnected-color:#f4f7ff}
 @media(max-width:860px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:580px){.top{flex-wrap:nowrap;gap:6px;padding-bottom:15px}.top .logo{gap:7px;min-width:0}.top .logo-mark{width:38px;height:38px;border-radius:10px;font-size:19px}.top .brand{font-size:16px;white-space:nowrap}.top .sub{font-size:10px}.tools{flex-wrap:nowrap;gap:6px}.tools .tiny{display:none}.tools #reload{padding:7px 8px;min-height:36px;font-size:11px;white-space:nowrap}.tools #appInstall{padding:7px 9px;min-height:36px;font-size:12px}.shell{padding:15px 12px 40px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.caption{padding:11px}.tabs{gap:3px}.tab{padding:10px 13px;font-size:13px}.row{margin:19px 0 14px}.search{width:100%}.hero{margin:24px 0 19px}}
 @media(max-width:375px){.tools #reload{display:none}.top .brand{font-size:15px}}
+
+.tvwiki-viewer{background:#101a2c;border-top:1px solid #30415e}
+.tvwiki-frame-wrap{width:100%;aspect-ratio:16/9;position:relative;background:#000;overflow:hidden;isolation:isolate}
+.tvwiki-frame-wrap iframe{position:absolute;inset:0;width:100%;height:100%;display:block;background:#000;border:0;overflow:hidden;touch-action:manipulation}
+.tvwiki-frame-caption{display:flex;align-items:center;justify-content:flex-start;padding:10px 17px;color:#aebddb;font-size:12px;min-height:38px}
+.tvwiki-episode-area{padding:13px 16px 19px;border-top:1px solid #30415e}
+.tvwiki-episode-head{display:flex;align-items:center;gap:9px;margin-bottom:12px;font-size:15px}
+.tvwiki-episode-head span{font-size:12px;color:#a9b9d7}
+.tvwiki-episode-buttons{display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:9px}
+.tvwiki-ep{min-height:43px;background:#1d2b46;color:#e9f0ff;border:1px solid #475b7c;border-radius:10px;padding:10px 8px;font-weight:700;font-size:13px}
+.tvwiki-ep[aria-pressed="true"]{background:#3f70ed;border-color:#7399ff;box-shadow:0 0 0 1px #87a9ff3b;color:#fff}
+.tvwiki-ep:focus-visible{outline:2px solid #b5caff;outline-offset:2px}
+.tvwiki-limit{margin:0;padding:2px 17px 17px;color:#8396b6;font-size:11px;line-height:1.6}
+@media(max-width:580px){.tvwiki-episode-buttons{grid-template-columns:repeat(3,minmax(0,1fr))}.tvwiki-episode-area{padding:12px}.tvwiki-limit{padding:2px 12px 14px}}
+
 </style></head>
 <body><div class="shell">
 <header class="top"><div class="logo"><div class="logo-mark">▶</div><div><div class="brand">BRO CINEMA</div><div class="sub">HLS VIDEO PLAYER</div></div></div><div class="tools"><span class="tiny" id="status">목록 확인 중…</span><button class="btn" id="reload">⟳ 새로고침</button><a class="btn primary app-install" id="appInstall" href="https://github.com/JoJongHyun/bro-food-atlas-sync/releases/download/bro-cinema-focus-latest/BRO_CINEMA_Focus_0.1.0.apk" title="안드로이드 BRO CINEMA 집중보기 시험판 APK 다운로드" aria-label="안드로이드 앱 설치 파일 다운로드">📲 앱 설치</a></div></header>
@@ -43,17 +58,18 @@
 <main id="grid" class="grid" aria-live="polite"></main><p class="note">매칭된 작품 포스터는 TV위키의 공개 상세·검색 목록에 표시된 이미지 URL을 사용합니다(실제 이미지는 TMDB 또는 다른 이미지 제공처에서 표시될 수 있습니다). 해당 이미지가 제공되지 않으면 Wikimedia 이미지 또는 제목형 표지를 표시합니다. BRO CINEMA는 해당 제공처와 제휴하지 않습니다. 즐겨찾기는 현재 브라우저에 저장되어 다른 기기와 자동 동기화되지 않습니다.</p>
 <p class="note">본 사이트는 별도 재생 출처를 저장한 경우에만 해당 영상의 직접 재생을 시도합니다. TV위키 플레이어는 다른 도메인의 임베드를 차단하므로 원본 사이트로 이동합니다. 본 사이트는 자체 광고·팝업을 포함하지 않습니다. 영상 내 삽입 광고가 없는지는 콘텐츠 제공자에 따라 다릅니다. 승인된 HTTPS M3U8 스트림만 재생하며, 외부 사이트의 접근 제한·DRM·광고 시스템을 우회하지 않습니다.</p>
 </div>
-<dialog id="dlg"><div class="modalhead"><h2 id="playing">영상 재생</h2><button class="x" id="close" aria-label="닫기">×</button></div><div id="detailHero" class="detail-hero" hidden></div><div class="stage" id="videoStage"><video id="video" controls playsinline x-webkit-airplay="allow" preload="metadata" crossorigin="anonymous"></video><iframe id="embedPlayer" title="공식 영상 플레이어" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen hidden></iframe></div><section id="watchPanel" class="watch-panel">
-  <div class="watch-head"><strong>🛡️ 광고 차단 간편 시청</strong>
-  <select id="watchBrowser" aria-label="회차를 열 브라우저 선택">
-    <option value="brave">Brave · 광고 차단 권장</option>
-    <option value="firefox">Firefox · uBlock 설치 후</option>
-    <option value="default">기본 브라우저</option>
-  </select></div>
-  <p id="watchInfo">회차를 누르면 선택한 브라우저로 원본 페이지를 열어요. 영상 복제나 사이트 내 재생은 아니며, 원본 광고가 완전히 사라지지는 않을 수 있습니다.</p>
-  <div class="watch-links"><a id="braveInstall" class="btn watch-link-secondary" href="https://play.google.com/store/apps/details?id=com.brave.browser" target="_blank" rel="noopener noreferrer">Brave 설치</a><a id="firefoxGuide" class="btn watch-link-secondary" href="https://addons.mozilla.org/en-US/android/addon/ublock-origin/" target="_blank" rel="noopener noreferrer" style="display:none">Firefox 광고 차단 설치</a></div>
+<dialog id="dlg"><div class="modalhead"><h2 id="playing">영상 재생</h2><button class="x" id="close" aria-label="닫기">×</button></div><div id="detailHero" class="detail-hero" hidden></div><div class="stage" id="videoStage"><video id="video" controls playsinline x-webkit-airplay="allow" preload="metadata" crossorigin="anonymous"></video><iframe id="embedPlayer" title="공식 영상 플레이어" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen hidden></iframe></div><section id="tvwikiViewer" class="tvwiki-viewer" hidden>
+  <div class="tvwiki-frame-wrap">
+    <iframe id="tvwikiFrame" title="회차 영상 화면" scrolling="no" loading="eager" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="tvwiki-frame-caption"><span id="tvwikiStatus" aria-live="polite">영상 연결 대기</span></div>
+  <div class="tvwiki-episode-area">
+    <div class="tvwiki-episode-head"><strong>회차 선택</strong><span id="tvwikiEpisodeCount"></span></div>
+    <div id="tvwikiEpisodeButtons" class="tvwiki-episode-buttons" role="group" aria-label="드라마 회차 선택"></div>
+  </div>
+  <p class="tvwiki-limit">TV위키 원본 영상 영역을 표시하는 시험 기능입니다. 영상 제공자가 외부 재생을 차단하면 이 화면에서 재생되지 않을 수 있습니다. 영상 화면의 크기는 고정되며 회차는 아래에서 선택하세요.</p>
 </section>
-<div id="episodeLinks" style="padding:12px 16px;display:none;flex-wrap:wrap;gap:8px"></div><section class="playereditor" id="playerEditor"><details id="playerEditorDetails"><summary>재생 권한이 있는 영상 주소 등록</summary><div class="editorrow"><input id="personalMediaUrl" type="url" inputmode="url" placeholder="https://.../playlist.m3u8 또는 공식 임베드 URL" aria-label="허가된 영상 주소"/><button class="btn primary" id="saveMedia" type="button">저장하고 재생</button><button class="btn" id="clearMedia" type="button">삭제</button></div><p class="editorhint">재생·임베드 권한이 있는 HTTPS HLS·MP4 또는 Bunny Stream/YouTube/Vimeo 공식 임베드 주소만 등록하세요. 이 브라우저에만 저장됩니다. TV위키 인증·서명 우회 주소는 지원하지 않습니다.</p></details></section><div class="modaltools"><button class="btn primary" id="cast">▣ TV 전송</button><button class="btn" id="airplay">AirPlay</button><button class="btn" id="share">↗ 공유</button><span id="notice" class="notice">영상을 선택하세요.</span></div><p class="help">Chromecast 지원 TV와 동일한 Wi-Fi 연결이 필요합니다. 삼성 TV는 휴대전화 Smart View 화면 미러링을 사용할 수도 있습니다. TV가 재생할 수 있는 스트림 주소여야 합니다.</p></dialog>
+<section class="playereditor" id="playerEditor"><details id="playerEditorDetails"><summary>재생 권한이 있는 영상 주소 등록</summary><div class="editorrow"><input id="personalMediaUrl" type="url" inputmode="url" placeholder="https://.../playlist.m3u8 또는 공식 임베드 URL" aria-label="허가된 영상 주소"/><button class="btn primary" id="saveMedia" type="button">저장하고 재생</button><button class="btn" id="clearMedia" type="button">삭제</button></div><p class="editorhint">재생·임베드 권한이 있는 HTTPS HLS·MP4 또는 Bunny Stream/YouTube/Vimeo 공식 임베드 주소만 등록하세요. 이 브라우저에만 저장됩니다. TV위키 인증·서명 우회 주소는 지원하지 않습니다.</p></details></section><div class="modaltools"><button class="btn primary" id="cast">▣ TV 전송</button><button class="btn" id="airplay">AirPlay</button><button class="btn" id="share">↗ 공유</button><span id="notice" class="notice">영상을 선택하세요.</span></div><p class="help">Chromecast 지원 TV와 동일한 Wi-Fi 연결이 필요합니다. 삼성 TV는 휴대전화 Smart View 화면 미러링을 사용할 수도 있습니다. TV가 재생할 수 있는 스트림 주소여야 합니다.</p></dialog>
 <script>
 "use strict";
 const $=id=>document.getElementById(id),validCats=new Set(["영화","한국영화","드라마"]);
@@ -252,69 +268,66 @@ function render(){
   }
 }
 async function sync(){const button=$("reload");button.disabled=true;$("status").textContent="목록 확인 중…";try{const response=await fetch("./catalog.json?ts="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const payload=await response.json();if(!Array.isArray(payload.items))throw Error("목록 형식 오류");seedItems=payload.items.map(normalize).filter(Boolean);items=seedItems;$("status").textContent="기본 작품 "+items.length+"개";render();await updateWikiTitles();}catch(e){$("status").textContent="목록 갱신 실패";console.error(e);if(!items.length)render();}finally{button.disabled=false;}}
+function setTvwikiEpisode(item,url,label){
+  if(!validTvwikiPage(url))return;
+  rememberWatch(item,url);
+  const frame=$("tvwikiFrame");
+  // The source page remains inside an iframe; its #playerArea anchor is used
+  // only to focus the original page's visible player section. Never infer video access.
+  frame.src=url+"#playerArea";
+  frame.title=item.title+" "+label+" 원본 영상 영역";
+  $("tvwikiStatus").textContent=label+" · 원본 영상 연결 시도 중 (외부 재생이 차단될 수 있음)";
+  for(const button of $("tvwikiEpisodeButtons").querySelectorAll("button")){
+    button.setAttribute("aria-pressed",String(button.dataset.src===url));
+  }
+}
 function showMissing(item){
-  selected=item;
-  cleanup();setupMediaEditor(item);
-  const hero=$("detailHero");
-  hero.replaceChildren();
+  selected=item;cleanup();setupMediaEditor(item);
+  const hero=$("detailHero");hero.replaceChildren();
   const cover=el("div","detail-art",item.title);
   const img=item.poster||posterCache[favKey(item)];
   if(img&&validUrl(img)){
     const photo=el("img");photo.alt=item.title+" 포스터";photo.loading="lazy";photo.referrerPolicy="no-referrer";
-    photo.onerror=()=>cover.replaceChildren(document.createTextNode(item.title));photo.src=img;cover.replaceChildren(photo);
+    photo.onerror=()=>cover.replaceChildren(document.createTextNode(item.title));
+    photo.src=img;cover.replaceChildren(photo);
   }
   const body=el("div","detail-text");
   body.append(el("span","detail-category",item.category),el("h3","",item.title),el("p","",String(item.releaseDate||item.year||"날짜 미확인")));
   if(item.description)body.append(el("p","",item.description));
   hero.append(cover,body);hero.hidden=false;
   $("playing").textContent=item.title;
-  const hasTvwiki=Boolean(item.tvwikiPage||item.episodes?.length);
-  syncWatchPanel(item);
-  $("notice").textContent=hasTvwiki?"광고 차단 브라우저로 선택한 회차를 열 수 있어요. 원본 사이트의 팝업·광고는 완전히 차단되지 않을 수 있습니다.":item.officialLinks?.length?"공식 시청 페이지에서 재생할 수 있습니다. 이용권이나 로그인이 필요할 수 있습니다.":"확인된 영상 링크가 없습니다.";
+  const episodes=(item.episodes||[]).filter(e=>validTvwikiPage(e.pageUrl)).sort((a,b)=>a.number-b.number);
+  if(!episodes.length&&validTvwikiPage(item.tvwikiPage))episodes.push({number:1,label:"영상 보기",pageUrl:item.tvwikiPage});
+  const hasEpisode=episodes.length>0;
+  $("tvwikiViewer").hidden=!hasEpisode;
   $("videoStage").style.display="none";
+  $("playerEditor").style.display=hasEpisode?"none":"";
+  document.querySelector(".modaltools").style.display=hasEpisode?"none":"";
+  document.querySelector("p.help").style.display=hasEpisode?"none":"";
   $("cast").style.display="none";$("airplay").style.display="none";
-  const list=$("episodeLinks");list.replaceChildren();
-  function rawLink(label,url,cls="btn"){
-    if(!validUrl(url))return;
-    const a=el("a",cls,label+" ↗");
-    a.href=url;a.target="_blank";a.rel="noopener noreferrer";
-    list.append(a);
+  $("notice").textContent=hasEpisode?"영상 제공자가 외부 재생을 허용할 때만 재생됩니다.":"영상이 연결되지 않았습니다.";
+  const buttons=$("tvwikiEpisodeButtons");buttons.replaceChildren();
+  $("tvwikiEpisodeCount").textContent=episodes.length+"개";
+  for(const ep of episodes){
+    const button=el("button","tvwiki-ep",ep.label);
+    button.type="button";button.dataset.src=ep.pageUrl;
+    button.setAttribute("aria-pressed","false");
+    button.addEventListener("click",()=>setTvwikiEpisode(item,ep.pageUrl,ep.label));
+    buttons.append(button);
   }
-  function sourceLink(label,url,cls="btn"){
-    if(!validTvwikiPage(url))return;
-    const a=el("a",cls,label);
-    a.href=browserLaunchUrl(url);
-    if(!BRO_ANDROID_APP&&(!ANDROID||watchBrowser==="default")){a.target="_blank";a.rel="noopener noreferrer"}
-    else{a.rel="noopener"}
-    a.addEventListener("click",()=>rememberWatch(item,url));
-    list.append(a);
+  if(hasEpisode){
+    const stored=lastWatched[favKey(item)];
+    const first=episodes.find(ep=>ep.pageUrl===stored)||episodes[0];
+    setTvwikiEpisode(item,first.pageUrl,first.label);
   }
-  if(item.tvwikiPage){
-    sourceLink("▶ TV위키 작품 페이지 · 간편 시청",item.tvwikiPage,"btn watch-link-primary");
-    rawLink("원본 링크",item.tvwikiPage,"btn watch-link-secondary");
-  }
-  const eps=(item.episodes||[]).filter(e=>validTvwikiPage(e.pageUrl)).sort((a,b)=>a.number-b.number);
-  if(eps.length){
-    const heading=el("div","watch-divider","회차 선택 · "+eps.length+"개");
-    list.append(heading);
-    const last=lastWatched[favKey(item)];
-    if(last&&eps.some(e=>e.pageUrl===last))sourceLink("▶ 최근 선택한 회차 다시 열기",last,"btn watch-link-primary");
-    for(const ep of eps){
-      sourceLink("▶ "+ep.label+" 간편 시청",ep.pageUrl,"btn");
-    }
-  }
-  if(item.officialLinks?.length){
-    list.append(el("div","watch-divider","정식 다시보기"));
-    for(const v of item.officialLinks)rawLink(v.label,v.url,"btn");
-  }
-  list.style.display=list.childElementCount?"flex":"none";
-  dlg.showModal();
+  if(!dlg.open)dlg.showModal();
 }
 function cleanup(){
   if(hls){hls.destroy();hls=null}
   video.pause();
   video.removeAttribute("src");
   video.load();
+  $("tvwikiFrame").removeAttribute("src");
   $("embedPlayer").removeAttribute("src");
   $("embedPlayer").hidden=true;
   video.hidden=false;
@@ -322,8 +335,9 @@ function cleanup(){
 async function openVideo(item){
   const media=resolvedMedia(item);
   if(!media){showMissing(item);return}
-  selected=item;cleanup();setupMediaEditor(item);$("watchPanel").style.display="none";
-  $("detailHero").hidden=true;$("videoStage").style.display="flex";$("episodeLinks").style.display="none";
+  selected=item;cleanup();setupMediaEditor(item);$("tvwikiViewer").hidden=true;
+  $("playerEditor").style.display="";document.querySelector(".modaltools").style.display="";document.querySelector("p.help").style.display="";
+  $("detailHero").hidden=true;$("videoStage").style.display="flex";
   $("cast").style.display=media.kind==="embed"?"none":"";
   $("airplay").style.display=media.kind==="embed"?"none":"";
   $("playing").textContent=item.title;$("notice").textContent="영상 준비 중…";
@@ -353,17 +367,11 @@ async function openVideo(item){
     if(p)p.catch(()=>$("notice").textContent="화면의 ▶ 버튼을 눌러주세요.");
   }catch(e){$("notice").textContent=e.message}
 }
-function closeVideo(){cleanup();selected=null;$("watchPanel").style.display="none";$("detailHero").hidden=true;$("videoStage").style.display="flex";$("episodeLinks").style.display="none";dlg.close();const u=new URL(location.href);u.searchParams.delete("play");history.replaceState(null,"",u);}
+function closeVideo(){cleanup();selected=null;$("tvwikiViewer").hidden=true;$("detailHero").hidden=true;$("videoStage").style.display="flex";$("playerEditor").style.display="";document.querySelector(".modaltools").style.display="";document.querySelector("p.help").style.display="";dlg.close();const u=new URL(location.href);u.searchParams.delete("play");history.replaceState(null,"",u);}
 window.__onGCastApiAvailable=function(ok){if(!ok)return;try{cast.framework.CastContext.getInstance().setOptions({receiverApplicationId:chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,autoJoinPolicy:chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED});castReady=true;}catch(e){console.warn(e)}};
 $("cast").addEventListener("click",async()=>{if(!selected)return;if(!castReady){$("notice").textContent="Cast를 사용할 수 없습니다. Chrome과 TV 연결을 확인하세요.";return}try{const ctx=cast.framework.CastContext.getInstance();let session=ctx.getCurrentSession();if(!session){await ctx.requestSession();session=ctx.getCurrentSession()}if(!session)throw Error("TV 연결 실패");const info=new chrome.cast.media.MediaInfo(selected.hls,"application/x-mpegURL");const metadata=new chrome.cast.media.GenericMediaMetadata();metadata.title=selected.title;info.metadata=metadata;await session.loadMedia(new chrome.cast.media.LoadRequest(info));$("notice").textContent="TV 재생 요청 완료";}catch(e){$("notice").textContent="TV 전송 실패 · 기기 또는 HLS 접근 권한을 확인하세요.";console.warn(e)}});
 $("airplay").addEventListener("click",()=>{if(typeof video.webkitShowPlaybackTargetPicker==="function")video.webkitShowPlaybackTargetPicker();else $("notice").textContent="AirPlay는 지원되는 Safari에서 이용 가능합니다.";});
 $("share").addEventListener("click",async()=>{if(!selected)return;try{if(navigator.share)await navigator.share({title:selected.title,url:location.href});else{await navigator.clipboard.writeText(location.href);$("notice").textContent="영상 페이지 링크 복사 완료";}}catch(e){if(e.name!=="AbortError")$("notice").textContent="공유 불가";}});
-$("watchBrowser").addEventListener("change",()=>{
-  watchBrowser=["brave","firefox","default"].includes($("watchBrowser").value)?$("watchBrowser").value:"brave";
-  try{localStorage.setItem(WATCHKEY,watchBrowser)}catch{}
-  if(selected&&!resolvedMedia(selected))showMissing(selected);
-  else if(selected)syncWatchPanel(selected);
-});
 $("saveMedia").addEventListener("click",()=>{
   if(!selected)return;
   const media=verifyMediaURL($("personalMediaUrl").value);
