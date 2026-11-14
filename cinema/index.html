@@ -96,8 +96,8 @@
     <iframe id="tvwikiFrame" title="회차 원본 페이지 미리보기" scrolling="no" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen hidden></iframe>
     <div id="tvwikiPlaceholder" class="tvwiki-playback-status">
       <div class="tvwiki-playback-symbol" aria-hidden="true">▶</div>
-      <strong>영상 연결 확인 필요</strong>
-      <span>원본 페이지의 상·하단 프레임은 표시하지 않습니다.<br>허용된 영상 주소를 연결하면 여기에서 재생합니다.</span>
+      <strong>원본 화면이 숨겨졌습니다</strong>
+      <span>원본 다시 연결을 누르면 회차 페이지가 표시됩니다.<br>별도로 허용된 영상 주소를 연결해 자체 재생할 수도 있습니다.</span>
     </div>
     <div id="episodeNativeStage" class="tvwiki-native-media" hidden>
       <video id="episodeVideo" controls playsinline preload="metadata" crossorigin="anonymous" hidden></video>
@@ -118,7 +118,7 @@
     </div>
     <p>선택한 회차에만 저장하며 내 기기에서만 적용됩니다. 권한 있는 MP4·HLS 또는 공식 Bunny Stream·YouTube·Vimeo 임베드만 지원합니다. 재생 제한을 우회하거나 TV위키 영상을 복제하지 않습니다.</p>
   </details>
-  <p class="tvwiki-limit">TV위키 원본 페이지에는 광고·상단 메뉴와 외부 재생 제한이 있어 기본 영상창에는 넣지 않습니다. 원본 화면 확인 버튼은 선택적으로 제공하며, 영상 재생을 보장하지 않습니다. 회차별로 재생 권한이 있는 MP4·HLS·공식 임베드 주소를 연결하면 BRO CINEMA의 자체 플레이어에서 재생합니다.</p>
+  <p class="tvwiki-limit">선택한 회차의 TV위키 원본 페이지를 영상창 안에 표시합니다. 원본 사이트의 상단 프레임·광고 또는 외부 재생 제한이 남을 수 있으며 실제 본편 재생은 보장되지 않습니다. 문제가 있으면 원본 화면 숨기기를 누르거나, 허용된 영상 주소를 등록해 자체 플레이어를 이용할 수 있습니다.</p>
 </section>
 <section class="playereditor" id="playerEditor"><details id="playerEditorDetails"><summary>재생 권한이 있는 영상 주소 등록</summary><div class="editorrow"><input id="personalMediaUrl" type="url" inputmode="url" placeholder="https://.../playlist.m3u8 또는 공식 임베드 URL" aria-label="허가된 영상 주소"/><button class="btn primary" id="saveMedia" type="button">저장하고 재생</button><button class="btn" id="clearMedia" type="button">삭제</button></div><p class="editorhint">재생·임베드 권한이 있는 HTTPS HLS·MP4 또는 Bunny Stream/YouTube/Vimeo 공식 임베드 주소만 등록하세요. 이 브라우저에만 저장됩니다. TV위키 인증·서명 우회 주소는 지원하지 않습니다.</p></details></section><div class="modaltools"><button class="btn primary" id="cast">▣ TV 전송</button><button class="btn" id="airplay">AirPlay</button><button class="btn" id="share">↗ 공유</button><span id="notice" class="notice">영상을 선택하세요.</span></div><p class="help">Chromecast 지원 TV와 동일한 Wi-Fi 연결이 필요합니다. 삼성 TV는 휴대전화 Smart View 화면 미러링을 사용할 수도 있습니다. TV가 재생할 수 있는 스트림 주소여야 합니다.</p></dialog>
 <script>
@@ -475,15 +475,16 @@ function setTvwikiEpisode(item,url,label,launchNative=false){
     return;
   }
   resetEpisodeMedia();
-  frame.hidden=true;
-  frame.removeAttribute("src");
-  $("tvwikiPlaceholder").hidden=false;
+  // Restore original in-page episode connection by default, as requested.
+  // TVWiki keeps control of its own player and can restrict embedded playback.
+  frame.hidden=false;
+  $("tvwikiPlaceholder").hidden=true;
   $("tvwikiPreviewToggle").hidden=false;
-  $("tvwikiPreviewToggle").textContent="원본 페이지 확인";
-  $("tvwikiStatus").textContent=label+" · 원본 영상의 사이트 내 재생은 확인되지 않았습니다.";
-  // A PWA cannot remove a provider's own page chrome or override cross-origin
-  // video playback rules. Avoid loading a misleading ads/menu-only iframe.
-  // The optional source preview explicitly requires a user click.
+  $("tvwikiPreviewToggle").textContent="원본 화면 숨기기";
+  fitTvwikiFrame();
+  frame.src=url+"#playerArea";
+  frame.title=item.title+" "+label+" 원본 영상 페이지";
+  $("tvwikiStatus").textContent=label+" · 원본 회차 연결됨 (실제 본편 재생은 제공자 제한에 따름)";
   for(const button of $("tvwikiEpisodeButtons").querySelectorAll("button")){
     button.setAttribute("aria-pressed",String(button.dataset.src===url));
   }
@@ -495,11 +496,11 @@ $("tvwikiPreviewToggle").addEventListener("click",()=>{
     f.hidden=false;placeholder.hidden=true;
     fitTvwikiFrame();
     f.src=activeEpisodePage+"#playerArea";
-    toggle.textContent="원본 화면 닫기";
+    toggle.textContent="원본 화면 숨기기";
     $("tvwikiStatus").textContent="원본 페이지 미리보기 · 외부 재생 제한과 광고·메뉴가 있을 수 있습니다.";
   }else{
     f.removeAttribute("src");f.hidden=true;placeholder.hidden=false;
-    toggle.textContent="원본 페이지 확인";
+    toggle.textContent="원본 다시 연결";
     $("tvwikiStatus").textContent="회차 화면 · 재생 가능한 영상 주소가 연결되지 않았습니다.";
   }
 });
