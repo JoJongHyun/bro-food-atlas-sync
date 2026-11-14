@@ -671,7 +671,17 @@
         }
       ],
       "poster": "https://image.tmdb.org/t/p/w500/up1YBgPq6lC0ut2JvjguNwLiXw4.jpg",
-      "posterSource": "TVWiki public listing"
+      "posterSource": "TVWiki public listing",
+      "officialLinks": [
+        {
+          "label": "MBC 공식 다시보기 · 1회",
+          "url": "https://playvod.imbc.com/Vod/VodPlay?broadcastId=1006930100033100000"
+        },
+        {
+          "label": "웨이브 공식 다시보기 · 전체 회차",
+          "url": "https://deep.wavve.com/content/M_T60533G?contentType=vod"
+        }
+      ]
     },
     {
       "id": "new-2026-drama-8",
