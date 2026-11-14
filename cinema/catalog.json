@@ -290,7 +290,9 @@
       "category": "드라마",
       "title": "더 글로리",
       "year": 2022,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/file/drama/69baa33643b92f45caaa90fb42026621175246cc.jpg",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "movie-info-41",
@@ -318,7 +320,9 @@
       "category": "드라마",
       "title": "중증외상센터",
       "year": 2025,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/file/drama/3eabd62a5eb9ed1db52f99a0714986b26e6f4cf8.jpg",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "movie-info-45",
@@ -633,5 +637,5 @@
       "sourceUrl": "https://gamtrend.tmhub.co.kr/article/ott-broadcast-new-releases-november-first-week-2026"
     }
   ],
-  "posterSourceNote": "Verified source URLs from publicly shown TVWiki category thumbnail listings, also including TMDB image CDN. Other titles use Wikimedia or title cover fallback."
+  "posterSourceNote": "Public title-matched posters verified from TVWiki listing and detail-page #bo_v_poster sections where available; fallback to Wikimedia or a text-only cover."
 }
