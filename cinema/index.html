@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0b0d17"><meta name="description" content="BRO CINEMA: 영화, 한국영화, 드라마 전용 HLS 플레이어.">
+<meta name="theme-color" content="#0b0d17">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="BRO CINEMA"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icons/icon-192.png"><link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png"><meta name="description" content="BRO CINEMA: 영화, 한국영화, 드라마 전용 HLS 플레이어.">
 <title>BRO CINEMA · 영화 · 한국영화 · 드라마</title>
 <style>
 :root{color-scheme:dark;font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;--bg:#080b13;--panel:#131b2a;--line:#303c54;--dim:#a3aec5;--text:#f5f7ff;--indigo:#7190ff}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% -20%,#263863 0,transparent 52%),var(--bg);color:var(--text);min-height:100vh}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:2px solid #a9bdff;outline-offset:2px}
 .shell{max-width:1150px;margin:auto;padding:23px 18px 60px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:23px;border-bottom:1px solid #273349}.logo{display:flex;align-items:center;gap:12px}.logo-mark{background:linear-gradient(125deg,#658cff,#9773e8);border-radius:15px;width:49px;height:49px;display:grid;place-items:center;font-size:24px}.brand{font-size:22px;font-weight:850;letter-spacing:-.9px}.sub,.tiny{font-size:12px;color:var(--dim)}
-.tools{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}.app-install{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;text-decoration:none;box-shadow:0 0 0 1px #8b9fff33}.app-install:hover{background:#7894ff}.btn{background:#233049;color:#f4f7ff;border:1px solid #41516e;border-radius:11px;padding:10px 13px;min-height:41px;font-weight:650;font-size:13px}.btn:hover{background:#304366}.btn.primary{background:#597eff;border-color:#597eff}.btn:disabled{opacity:.45;cursor:wait}
+.tools{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}.app-install{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;text-decoration:none;box-shadow:0 0 0 1px #8b9fff33}.app-install[hidden]{display:none!important}.app-install:hover{background:#7894ff}.btn{background:#233049;color:#f4f7ff;border:1px solid #41516e;border-radius:11px;padding:10px 13px;min-height:41px;font-weight:650;font-size:13px}.btn:hover{background:#304366}.btn.primary{background:#597eff;border-color:#597eff}.btn:disabled{opacity:.45;cursor:wait}
 .hero{margin:30px 0 22px}.hero h1{font-size:clamp(25px,4vw,38px);line-height:1.25;letter-spacing:-1.1px;margin:0 0 10px}.hero p{margin:0;color:var(--dim);font-size:14px;line-height:1.6}
 .tabs{display:flex;gap:8px;border-bottom:1px solid #334158;padding-bottom:12px;overflow-x:auto}.tab{border:1px solid transparent;border-radius:10px;padding:11px 16px;color:#b5c0d5;background:transparent;white-space:nowrap;font-weight:700}.tab.active{color:white;background:#283958;border-color:#44618e}
 .row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:25px 0 17px}.row h2{margin:0;font-size:18px}.search{background:#151e2f;border:1px solid #37455f;color:white;padding:12px 14px;border-radius:11px;width:min(320px,100%)}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
@@ -49,15 +51,31 @@
 .tvwiki-limit{margin:0;padding:2px 17px 17px;color:#8396b6;font-size:11px;line-height:1.6}
 @media(max-width:580px){.tvwiki-episode-buttons{grid-template-columns:repeat(3,minmax(0,1fr))}.tvwiki-episode-area{padding:12px}.tvwiki-limit{padding:2px 12px 14px}}
 
+.install-help{width:min(440px,calc(100vw - 30px));max-width:none;border:1px solid #496080;border-radius:17px;background:#111c30;color:#fff;padding:0;box-shadow:0 25px 100px #000b}
+.install-help::backdrop{background:#000d}
+.install-help-body{padding:22px;display:flex;flex-direction:column;gap:16px}
+.install-help-title{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.install-help-title h2{font-size:18px;margin:0}
+.install-help-body p{color:#c0cde5;font-size:13px;line-height:1.7;margin:0}
+.install-steps{padding:14px;border:1px solid #435b83;border-radius:12px;background:#172742;color:#f5f8ff;font-weight:650;font-size:14px;line-height:1.9;white-space:pre-line}
+.install-help-done{align-self:stretch}
+.install-help-note{font-size:12px!important;color:#9faed0!important}
 </style></head>
 <body><div class="shell">
-<header class="top"><div class="logo"><div class="logo-mark">▶</div><div><div class="brand">BRO CINEMA</div><div class="sub">HLS VIDEO PLAYER</div></div></div><div class="tools"><span class="tiny" id="status">목록 확인 중…</span><button class="btn" id="reload">⟳ 새로고침</button><a class="btn primary app-install" id="appInstall" href="https://github.com/JoJongHyun/bro-food-atlas-sync/releases/download/bro-cinema-focus-latest/BRO_CINEMA_Focus_0.1.0.apk" title="안드로이드 BRO CINEMA 집중보기 시험판 APK 다운로드" aria-label="안드로이드 앱 설치 파일 다운로드">📲 앱 설치</a></div></header>
+<header class="top"><div class="logo"><div class="logo-mark">▶</div><div><div class="brand">BRO CINEMA</div><div class="sub">HLS VIDEO PLAYER</div></div></div><div class="tools"><span class="tiny" id="status">목록 확인 중…</span><button class="btn" id="reload">⟳ 새로고침</button><button class="btn primary app-install" id="appInstall" type="button" aria-label="BRO CINEMA를 홈 화면에 앱처럼 설치">📲 앱 설치</button></div></header>
 <section class="hero"><h1>좋아하는 영상, 한곳에서.</h1><p>영화 · 한국영화 · 드라마 전용 화면과 광고 배너 없는 자체 플레이어, TV 전송 기능을 제공합니다.</p></section>
 <nav class="tabs" role="tablist"><button class="tab active" role="tab" aria-selected="true" data-cat="영화">🎬 영화</button><button class="tab" role="tab" aria-selected="false" data-cat="한국영화">🇰🇷 한국영화</button><button class="tab" role="tab" aria-selected="false" data-cat="드라마">📺 드라마</button><button class="tab" role="tab" aria-selected="false" data-cat="즐겨찾기">♥ 즐겨찾기 <span id="favCount">0</span></button></nav>
 <div class="row"><div><h2 id="count">영화 · 0편</h2><span class="tiny">최근 개봉·첫방송순 · 방영 예정작은 뒤로 정렬</span></div><input class="search" id="search" type="search" placeholder="제목 검색" aria-label="제목 검색"></div>
 <main id="grid" class="grid" aria-live="polite"></main><p class="note">매칭된 작품 포스터는 TV위키의 공개 상세·검색 목록에 표시된 이미지 URL을 사용합니다(실제 이미지는 TMDB 또는 다른 이미지 제공처에서 표시될 수 있습니다). 해당 이미지가 제공되지 않으면 Wikimedia 이미지 또는 제목형 표지를 표시합니다. BRO CINEMA는 해당 제공처와 제휴하지 않습니다. 즐겨찾기는 현재 브라우저에 저장되어 다른 기기와 자동 동기화되지 않습니다.</p>
 <p class="note">본 사이트는 별도 재생 출처를 저장한 경우에만 해당 영상의 직접 재생을 시도합니다. TV위키 플레이어는 다른 도메인의 임베드를 차단하므로 원본 사이트로 이동합니다. 본 사이트는 자체 광고·팝업을 포함하지 않습니다. 영상 내 삽입 광고가 없는지는 콘텐츠 제공자에 따라 다릅니다. 승인된 HTTPS M3U8 스트림만 재생하며, 외부 사이트의 접근 제한·DRM·광고 시스템을 우회하지 않습니다.</p>
 </div>
+<dialog id="installHelp" class="install-help" aria-labelledby="installHelpTitle"><div class="install-help-body">
+  <div class="install-help-title"><h2 id="installHelpTitle">📲 BRO CINEMA 홈 화면에 추가</h2><button class="x" type="button" id="installHelpClose" aria-label="설치 안내 닫기">×</button></div>
+  <p>앱스토어나 APK 설치 없이, 지금 열려 있는 사이트를 휴대전화 홈 화면에 추가할 수 있어요.</p>
+  <div id="installSteps" class="install-steps"></div>
+  <p class="install-help-note">홈 화면 아이콘을 누르면 BRO CINEMA가 앱처럼 열립니다. 영상 연결과 콘텐츠는 웹사이트와 동일하며 인터넷 연결이 필요합니다.</p>
+  <button class="btn primary install-help-done" type="button" id="installHelpDone">확인</button>
+</div></dialog>
 <dialog id="dlg"><div class="modalhead"><h2 id="playing">영상 재생</h2><button class="x" id="close" aria-label="닫기">×</button></div><div id="detailHero" class="detail-hero" hidden></div><div class="stage" id="videoStage"><video id="video" controls playsinline x-webkit-airplay="allow" preload="metadata" crossorigin="anonymous"></video><iframe id="embedPlayer" title="공식 영상 플레이어" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen hidden></iframe></div><section id="tvwikiViewer" class="tvwiki-viewer" hidden>
   <div class="tvwiki-frame-wrap">
     <iframe id="tvwikiFrame" title="회차 영상 화면" scrolling="no" loading="eager" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen></iframe>
@@ -73,6 +91,53 @@
 <script>
 "use strict";
 const $=id=>document.getElementById(id),validCats=new Set(["영화","한국영화","드라마"]);
+let pendingInstallPrompt=null;
+const isStandalone=()=>window.matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;
+function updateInstallButton(){
+  $("appInstall").hidden=isStandalone();
+}
+window.addEventListener("beforeinstallprompt",event=>{
+  event.preventDefault();
+  pendingInstallPrompt=event;
+  updateInstallButton();
+});
+window.addEventListener("appinstalled",()=>{
+  pendingInstallPrompt=null;
+  updateInstallButton();
+});
+function showInstallInstructions(){
+  const ua=navigator.userAgent;
+  const ios=/iPhone|iPad|iPod/i.test(ua);
+  const samsung=/SamsungBrowser/i.test(ua);
+  const android=/Android/i.test(ua);
+  $("installSteps").textContent=ios
+    ?"1. 브라우저의 공유 버튼(□↑)을 누르세요.\n2. '홈 화면에 추가'를 선택하세요.\n3. '추가'를 누르세요."
+    :samsung
+      ?"1. 삼성 인터넷 메뉴(≡)를 여세요.\n2. '현재 페이지 추가' → '홈 화면'을 선택하세요.\n3. 이름을 확인하고 '추가'를 누르세요."
+      :android
+        ?"1. Chrome 오른쪽 위 ⋮ 메뉴를 누르세요.\n2. '홈 화면에 추가' 또는 '앱 설치'를 선택하세요.\n3. '설치' 또는 '추가'를 누르세요."
+        :"Chrome 또는 Edge 주소창의 설치 아이콘을 누르거나, ⋮ 메뉴에서 '앱 설치'를 선택하세요.\n지원되지 않는 브라우저라면 즐겨찾기로 저장하세요.";
+  $("installHelp").showModal();
+}
+$("appInstall").addEventListener("click",async()=>{
+  if(isStandalone())return;
+  if(pendingInstallPrompt){
+    const prompt=pendingInstallPrompt;
+    pendingInstallPrompt=null;
+    try{
+      prompt.prompt();
+      await prompt.userChoice;
+    }catch(e){showInstallInstructions();}
+  }else showInstallInstructions();
+});
+$("installHelpClose").addEventListener("click",()=>$("installHelp").close());
+$("installHelpDone").addEventListener("click",()=>$("installHelp").close());
+$("installHelp").addEventListener("click",event=>{if(event.target===$("installHelp"))$("installHelp").close()});
+updateInstallButton();
+if("serviceWorker" in navigator){
+  window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js",{scope:"./"}).catch(e=>console.warn("홈 화면 앱 준비 실패",e)));
+}
+
 let items=[],seedItems=[],cat="영화",selected=null,hls=null,castReady=false;
 const USERMEDIAKEY="bro-cinema-custom-source-v1";let customSources={};
 try{const d=JSON.parse(localStorage.getItem(USERMEDIAKEY)||"{}");if(d&&typeof d==="object"&&!Array.isArray(d))customSources=d;}catch{}
