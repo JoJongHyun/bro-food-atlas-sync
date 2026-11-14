@@ -11,8 +11,8 @@
 .hero{margin:30px 0 22px}.hero h1{font-size:clamp(25px,4vw,38px);line-height:1.25;letter-spacing:-1.1px;margin:0 0 10px}.hero p{margin:0;color:var(--dim);font-size:14px;line-height:1.6}
 .tabs{display:flex;gap:8px;border-bottom:1px solid #334158;padding-bottom:12px;overflow-x:auto}.tab{border:1px solid transparent;border-radius:10px;padding:11px 16px;color:#b5c0d5;background:transparent;white-space:nowrap;font-weight:700}.tab.active{color:white;background:#283958;border-color:#44618e}
 .row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:25px 0 17px}.row h2{margin:0;font-size:18px}.search{background:#151e2f;border:1px solid #37455f;color:white;padding:12px 14px;border-radius:11px;width:min(320px,100%)}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.tile{background:var(--panel);border:1px solid var(--line);padding:0;text-align:left;color:var(--text);border-radius:16px;overflow:hidden;min-width:0}.tile:hover{border-color:#7190ff;transform:translateY(-2px);transition:.15s}
-.art{aspect-ratio:16/10;background:linear-gradient(125deg,#2f3e60,#151e31);position:relative;display:grid;place-items:center;font-size:32px}.art img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.tag{position:absolute;left:10px;bottom:9px;background:#0a1026d9;color:#dde7ff;font-size:11px;padding:4px 7px;border-radius:7px;border:1px solid #6476977f}
+.tile{background:var(--panel);border:1px solid var(--line);padding:0;text-align:left;color:var(--text);border-radius:16px;overflow:hidden;min-width:0;position:relative}.tile:hover{border-color:#7190ff;transform:translateY(-2px);transition:.15s}
+.art{aspect-ratio:2/3;background:linear-gradient(145deg,#314a68,#19253d);position:relative;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center;padding:20px 12px 27px;overflow:hidden}.art:before{content:"";position:absolute;inset:13%;border:1px solid #ffffff20;border-radius:50%;transform:rotate(-27deg);box-shadow:0 0 0 24px #ffffff08,0 0 0 47px #ffffff04}.art img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;z-index:1}.cover-head{font-size:11px;font-weight:700;letter-spacing:.13em;color:#d9e4fd;position:relative}.cover-name{font-weight:850;font-size:clamp(16px,2.6vw,24px);letter-spacing:-.04em;line-height:1.32;overflow-wrap:anywhere;word-break:keep-all;text-shadow:0 2px 7px #0005;position:relative}.cover-year{font-size:12px;color:#d1daea;position:relative}.tile-open{display:block;width:100%;height:100%;border:none;background:none;color:inherit;padding:0;text-align:left}.fav-heart{position:absolute;z-index:5;top:9px;right:9px;width:38px;height:38px;border:1px solid #ffffff7a;border-radius:50%;background:#0d1423e6;color:white;font-size:23px;display:grid;place-items:center;line-height:1}.fav-heart[aria-pressed="true"]{color:#ff729f;border-color:#ff729f;background:#2b192adf}.fav-heart:hover{border-color:#ff98ba}.tile:hover .fav-heart{opacity:1}.tag{position:absolute;left:10px;bottom:9px;background:#0a1026d9;color:#dde7ff;font-size:11px;padding:4px 7px;border-radius:7px;border:1px solid #6476977f;z-index:2}
 .caption{padding:14px}.caption strong{font-size:14px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.caption small{color:var(--dim);display:block;margin-top:7px}.empty{grid-column:1/-1;min-height:230px;border:1px dashed #46506c;border-radius:17px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px;color:var(--dim);gap:9px}.empty b{color:white}
 .note{font-size:12px;line-height:1.8;color:#9daac0;margin-top:26px}dialog{width:min(900px,calc(100vw - 22px));max-width:none;border:1px solid #34445e;border-radius:17px;background:#121b2c;color:white;padding:0;box-shadow:0 30px 100px #0009}dialog::backdrop{background:#000c;backdrop-filter:blur(5px)}
 .modalhead{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:15px 18px}.modalhead h2{margin:0;font-size:16px}.x{background:#32405a;color:white;border:0;border-radius:10px;font-size:21px;width:36px;height:36px}.stage{background:#000;aspect-ratio:16/9;display:flex}.stage video{height:100%;width:100%;background:#000}.modaltools{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:14px}.help{font-size:12px;color:#b3c0d9;margin:0;padding:0 16px 17px;line-height:1.65}.notice{font-size:12px;color:#b8c9ef;flex:1;min-width:150px}google-cast-launcher{width:20px;height:20px;display:inline-block;--connected-color:#7297ff;--disconnected-color:#f4f7ff}
@@ -21,9 +21,9 @@
 <body><div class="shell">
 <header class="top"><div class="logo"><div class="logo-mark">▶</div><div><div class="brand">BRO CINEMA</div><div class="sub">HLS VIDEO PLAYER</div></div></div><div class="tools"><span class="tiny" id="status">목록 확인 중…</span><button class="btn" id="reload">⟳ 새로고침</button></div></header>
 <section class="hero"><h1>좋아하는 영상, 한곳에서.</h1><p>영화 · 한국영화 · 드라마 전용 화면과 광고 배너 없는 자체 플레이어, TV 전송 기능을 제공합니다.</p></section>
-<nav class="tabs" role="tablist"><button class="tab active" role="tab" aria-selected="true" data-cat="영화">🎬 영화</button><button class="tab" role="tab" aria-selected="false" data-cat="한국영화">🇰🇷 한국영화</button><button class="tab" role="tab" aria-selected="false" data-cat="드라마">📺 드라마</button></nav>
+<nav class="tabs" role="tablist"><button class="tab active" role="tab" aria-selected="true" data-cat="영화">🎬 영화</button><button class="tab" role="tab" aria-selected="false" data-cat="한국영화">🇰🇷 한국영화</button><button class="tab" role="tab" aria-selected="false" data-cat="드라마">📺 드라마</button><button class="tab" role="tab" aria-selected="false" data-cat="즐겨찾기">♥ 즐겨찾기 <span id="favCount">0</span></button></nav>
 <div class="row"><div><h2 id="count">영화 · 0편</h2><span class="tiny">최근 개봉·첫방송순 · 방영 예정작은 뒤로 정렬</span></div><input class="search" id="search" type="search" placeholder="제목 검색" aria-label="제목 검색"></div>
-<main id="grid" class="grid" aria-live="polite"></main>
+<main id="grid" class="grid" aria-live="polite"></main><p class="note">이미지는 공개된 Wikimedia 작품 이미지를 조회해 표시하며, 조회되지 않는 작품은 제목형 표지로 표시합니다. 즐겨찾기는 현재 브라우저에 저장되어 다른 기기와 자동 동기화되지 않습니다.</p>
 <p class="note">본 사이트는 자체 광고·팝업을 포함하지 않습니다. 영상 내 삽입 광고가 없는지는 콘텐츠 제공자에 따라 다릅니다. 승인된 HTTPS M3U8 스트림만 재생하며, 외부 사이트의 접근 제한·DRM·광고 시스템을 우회하지 않습니다.</p>
 </div>
 <dialog id="dlg"><div class="modalhead"><h2 id="playing">영상 재생</h2><button class="x" id="close" aria-label="닫기">×</button></div><div class="stage" id="videoStage"><video id="video" controls playsinline x-webkit-airplay="allow" preload="metadata" crossorigin="anonymous"></video></div><div id="episodeLinks" style="padding:12px 16px;display:none;flex-wrap:wrap;gap:8px"></div><div class="modaltools"><button class="btn primary" id="cast">▣ TV 전송</button><button class="btn" id="airplay">AirPlay</button><button class="btn" id="share">↗ 공유</button><span id="notice" class="notice">영상을 선택하세요.</span></div><p class="help">Chromecast 지원 TV와 동일한 Wi-Fi 연결이 필요합니다. 삼성 TV는 휴대전화 Smart View 화면 미러링을 사용할 수도 있습니다. TV가 재생할 수 있는 스트림 주소여야 합니다.</p></dialog>
@@ -31,6 +31,43 @@
 "use strict";
 const $=id=>document.getElementById(id),validCats=new Set(["영화","한국영화","드라마"]);
 let items=[],seedItems=[],cat="영화",selected=null,hls=null,castReady=false;
+const FAVKEY="bro-cinema-v1-favorites",IMGKEY="bro-cinema-v1-posters";
+let favorites=new Set(),posterCache={},lookedUp=new Set(),posterObserver=null;
+try{favorites=new Set(JSON.parse(localStorage.getItem(FAVKEY)||"[]"));if(!Array.isArray([...favorites]))favorites=new Set()}catch{favorites=new Set()}
+try{posterCache=JSON.parse(localStorage.getItem(IMGKEY)||"{}");if(!posterCache||typeof posterCache!=="object"||Array.isArray(posterCache))posterCache={}}catch{posterCache={}}
+function favKey(item){return item.category+"|"+item.title.trim().toLocaleLowerCase("ko")}
+function rememberFav(){try{localStorage.setItem(FAVKEY,JSON.stringify([...favorites]))}catch{}}
+function switchFav(item){const key=favKey(item);if(favorites.has(key))favorites.delete(key);else favorites.add(key);rememberFav();render()}
+function paintCover(art,url){if(!validUrl(url))return;const old=art.querySelector("img");if(old)old.remove();const img=el("img");img.src=url;img.alt="";img.loading="lazy";img.referrerPolicy="no-referrer";img.addEventListener("error",()=>img.remove(),{once:true});art.append(img)}
+async function resolveWikimediaImage(item,art){
+  const key=favKey(item);
+  if(typeof posterCache[key]==="string"){if(posterCache[key])paintCover(art,posterCache[key]);return}
+  if(lookedUp.has(key))return;
+  lookedUp.add(key);
+  try{
+    const params=new URLSearchParams({action:"query",format:"json",prop:"pageimages",piprop:"thumbnail",pithumbsize:"440",redirects:"1",titles:item.title,origin:"*"});
+    const lang=item.sourceUrl?.startsWith("https://en.wikipedia.org/")?"en":"ko";
+    const res=await fetch("https://"+lang+".wikipedia.org/w/api.php?"+params);
+    if(!res.ok)return;
+    const data=await res.json(),pages=Object.values(data.query?.pages||{});
+    const matching=pages.find(p=>typeof p.title==="string"&&(p.title===item.title||p.title.startsWith(item.title+" (")));
+    const url=matching?.thumbnail?.source;
+    if(validUrl(url)){
+      posterCache[key]=url;
+      if(Object.keys(posterCache).length>300)posterCache={};
+      try{localStorage.setItem(IMGKEY,JSON.stringify(posterCache))}catch{}
+      if(art.isConnected)paintCover(art,url);
+    }
+  }catch(e){console.info("Poster unavailable",item.title)}
+}
+function observePoster(item,art){
+  const img=item.poster||posterCache[favKey(item)];
+  if(img){paintCover(art,img);return}
+  if(!posterObserver)posterObserver=new IntersectionObserver(entries=>{
+    for(const x of entries)if(x.isIntersecting){posterObserver.unobserve(x.target);const data=x.target._posterData;if(data)resolveWikimediaImage(data.item,x.target)}
+  },{rootMargin:"240px"});
+  art._posterData={item};posterObserver.observe(art);
+}
 const video=$("video"),dlg=$("dlg");
 function validUrl(s){try{const u=new URL(s);return u.protocol==="https:"&&!u.username&&!u.password;}catch{return false;}}
 function el(tag,cls,str){const x=document.createElement(tag);if(cls)x.className=cls;if(str!==undefined)x.textContent=str;return x;}
@@ -94,8 +131,36 @@ function sortNewest(a,b){
   return a.title.localeCompare(b.title,"ko");
 }
 function normalize(o){if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350),sourceUrl:validUrl(o.sourceUrl)?o.sourceUrl:"",releaseAt:typeof o.releaseAt==="string"&&!Number.isNaN(Date.parse(o.releaseAt))?o.releaseAt:"",releaseDate:validReleaseDate(o.releaseDate||o.premiereDate),episodes:Array.isArray(o.episodes)?o.episodes.filter(x=>x&&Number.isInteger(x.number)&&x.number>0&&x.number<10000&&validUrl(x.pageUrl)).slice(0,200).map(x=>({number:x.number,label:String(x.label||x.number+"화").slice(0,80),pageUrl:x.pageUrl})):[]};}
-function render(){const q=$("search").value.trim().toLocaleLowerCase("ko");const filtered=items.filter(x=>x.category===cat&&x.title.toLocaleLowerCase("ko").includes(q)).sort(sortNewest);$("count").textContent=cat+" · "+filtered.length+"편";const root=$("grid");root.replaceChildren();if(!filtered.length){const box=el("div","empty");box.append(el("div","", "🎞️"),el("b","", "표시할 영상이 없습니다"),el("span","", q?"다른 검색어로 검색해보세요.":"사용이 허가된 HLS 영상이 연결되면 여기에 표시됩니다."));root.append(box);return;}
-for(const item of filtered){const card=el("button","tile");card.type="button";const art=el("div","art",item.hls?"▶":item.category==="드라마"?"📺":"🎬");if(item.poster){const img=el("img");img.src=item.poster;img.alt="";img.loading="lazy";img.referrerPolicy="no-referrer";art.append(img)}art.append(el("span","tag",isUpcoming(item)?"방영 예정":item.hls?"재생 가능":item.releaseDate?"작품 정보":"제목 등록"));const cap=el("div","caption");cap.append(el("strong","",item.title),el("small","",(item.releaseDate||item.year||"날짜 미확인")+(isUpcoming(item)?" · 공개 예정":item.hls?" · 재생 가능":" · 영상 미연결")));card.append(art,cap);card.addEventListener("click",()=>item.hls?openVideo(item):showMissing(item));root.append(card);}}
+function render(){
+  const q=$("search").value.trim().toLocaleLowerCase("ko");
+  const filtered=items.filter(item=>(cat==="즐겨찾기"?favorites.has(favKey(item)):item.category===cat)&&item.title.toLocaleLowerCase("ko").includes(q)).sort(sortNewest);
+  $("count").textContent=cat+" · "+filtered.length+"편";
+  $("favCount").textContent=String(favorites.size);
+  const root=$("grid");root.replaceChildren();
+  if(!filtered.length){
+    const box=el("div","empty");
+    box.append(el("div","","🎞️"),el("b","",cat==="즐겨찾기"?"저장된 작품이 없습니다":"표시할 작품이 없습니다"),el("span","",cat==="즐겨찾기"?"영화나 드라마 카드의 ♥ 버튼을 눌러 저장해보세요.":q?"다른 검색어로 검색해보세요.":"작품 정보가 추가되면 이곳에 표시됩니다."));
+    root.append(box);return;
+  }
+  for(const item of filtered){
+    const card=el("div","tile"),open=el("button","tile-open");open.type="button";open.setAttribute("aria-label",item.title+" 상세");
+    const art=el("div","art");
+    art.append(el("span","cover-head",item.category==="드라마"?"BRO SERIES":"BRO CINEMA"),
+               el("span","cover-name",item.title),
+               el("span","cover-year",String(item.releaseDate||item.year||"")));
+    observePoster(item,art);
+    art.append(el("span","tag",isUpcoming(item)?"공개 예정":item.hls?"재생 가능":item.episodes?.length?"회차 링크":item.releaseDate?"작품 정보":"제목 등록"));
+    const cap=el("div","caption");
+    cap.append(el("strong","",item.title),el("small","",(item.releaseDate||item.year||"날짜 미확인")+(isUpcoming(item)?" · 공개 예정":item.hls?" · 재생 가능":" · 영상 미연결")));
+    open.append(art,cap);
+    open.addEventListener("click",()=>item.hls?openVideo(item):showMissing(item));
+    const star=el("button","fav-heart",favorites.has(favKey(item))?"♥":"♡");
+    star.type="button";star.setAttribute("aria-label",favorites.has(favKey(item))?item.title+" 즐겨찾기 해제":item.title+" 즐겨찾기 저장");
+    star.setAttribute("aria-pressed",String(favorites.has(favKey(item))));
+    star.addEventListener("click",()=>switchFav(item));
+    card.append(open,star);root.append(card);
+  }
+}
 async function sync(){const button=$("reload");button.disabled=true;$("status").textContent="목록 확인 중…";try{const response=await fetch("./catalog.json?ts="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const payload=await response.json();if(!Array.isArray(payload.items))throw Error("목록 형식 오류");seedItems=payload.items.map(normalize).filter(Boolean);items=seedItems;$("status").textContent="기본 작품 "+items.length+"개";render();await updateWikiTitles();}catch(e){$("status").textContent="목록 갱신 실패";console.error(e);if(!items.length)render();}finally{button.disabled=false;}}
 function showMissing(item){
   selected=item;
