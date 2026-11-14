@@ -489,7 +489,13 @@ function fitTvwikiFrame(){
   frame.dataset.focusMode="desktop-viewport";
   frame.dataset.virtualWidth=String(virtualWidth);
 }
-window.addEventListener("resize",()=>{if(selected&&!$("tvwikiViewer").hidden)fitTvwikiFrame()});
+window.addEventListener("resize",()=>{
+  const stage=$("tvwikiFrameWrap");
+  if(document.fullscreenElement===stage){
+    stage.classList.toggle("landscape-fallback",innerHeight>innerWidth);
+  }
+  if(selected&&!$("tvwikiViewer").hidden)fitTvwikiFrame();
+});
 function openNativeEpisode(item,url){
   if(!BRO_ANDROID_APP||!validTvwikiPage(url))return false;
   const episodes=(item.episodes||[]).filter(e=>validTvwikiPage(e.pageUrl)).sort((a,b)=>a.number-b.number).slice(0,100);
@@ -584,6 +590,7 @@ $("tvwikiFullscreen").addEventListener("click",async()=>{
       if(screen.orientation&&typeof screen.orientation.lock==="function"){
         await screen.orientation.lock("landscape");
         cinemaOrientationLocked=true;
+        target.classList.toggle("landscape-fallback",innerHeight>innerWidth);
       }else throw Error("방향 잠금 미지원");
     }catch(e){
       // Orientation lock is restricted by some browsers / Galaxy settings.
@@ -604,10 +611,13 @@ function currentEpisodeTVMedia(){
 }
 function showTVConnectionHelp(message){
   $("tvConnectMessage").textContent=message;
-  $("tvConnectRetry").hidden=!(currentEpisodeTVMedia()&&castReady);
+  const player=$("episodeVideo");
+  const canTry=Boolean(currentEpisodeTVMedia()&&(castReady||(!player.hidden&&player.remote&&typeof player.remote.prompt==="function")||(!player.hidden&&typeof player.webkitShowPlaybackTargetPicker==="function")));
+  $("tvConnectRetry").hidden=!canTry;
+  $("tvConnectRetry").textContent=castReady?"Chromecast 연결 시도":"TV 기기 찾기";
   if(!$("tvConnectHelp").open)$("tvConnectHelp").showModal();
 }
-async function sendEpisodeToTV(){
+async function sendEpisodeToTV(fromRetry=false){
   if(!selected)return;
   const media=currentEpisodeTVMedia();
   if(!media){
@@ -633,6 +643,10 @@ async function sendEpisodeToTV(){
     }
   }
   const player=$("episodeVideo");
+  if(!fromRetry&&(!player.hidden&&((player.remote&&typeof player.remote.prompt==="function")||typeof player.webkitShowPlaybackTargetPicker==="function"))){
+    showTVConnectionHelp("재생 가능한 영상 주소가 연결돼 있습니다. 아래 ‘TV 기기 찾기’를 눌러 지원되는 TV를 선택하거나 Smart View로 화면을 미러링할 수 있어요.");
+    return;
+  }
   if(!player.hidden&&player.remote&&typeof player.remote.prompt==="function"){
     try{
       await player.remote.prompt();
@@ -648,7 +662,7 @@ async function sendEpisodeToTV(){
 $("tvwikiTVConnect").addEventListener("click",sendEpisodeToTV);
 $("tvConnectRetry").addEventListener("click",async()=>{
   $("tvConnectHelp").close();
-  await sendEpisodeToTV();
+  await sendEpisodeToTV(true);
 });
 $("tvConnectClose").addEventListener("click",()=>$("tvConnectHelp").close());
 $("tvConnectDone").addEventListener("click",()=>$("tvConnectHelp").close());
