@@ -1,0 +1,28 @@
+{
+  "id": "/",
+  "name": "BRO CINEMA",
+  "short_name": "BRO CINEMA",
+  "description": "영화와 드라마를 한곳에서 관리하고 회차를 선택하는 BRO CINEMA 홈 화면 앱",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#080b13",
+  "theme_color": "#0b0d17",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "prefer_related_applications": false
+}
