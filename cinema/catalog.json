@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T17:22:33.714Z",
+  "updatedAt": "2026-11-14T17:25:44.620Z",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -2073,6 +2073,11 @@
           "number": 5,
           "label": "5화",
           "pageUrl": "https://tvwiki60.net/drama/12555/406791908"
+        },
+        {
+          "number": 6,
+          "label": "6화",
+          "pageUrl": "https://tvwiki60.net/drama/12555/406792037"
         }
       ],
       "poster": "https://image.tmdb.org/t/p/w500/up1YBgPq6lC0ut2JvjguNwLiXw4.jpg",
@@ -2087,7 +2092,7 @@
           "url": "https://deep.wavve.com/content/M_T60533G?contentType=vod"
         }
       ],
-      "tvwikiPage": "https://tvwiki60.net/drama/12555/406791908"
+      "tvwikiPage": "https://tvwiki60.net/drama/12555/406792037"
     },
     {
       "id": "new-2026-drama-8",
