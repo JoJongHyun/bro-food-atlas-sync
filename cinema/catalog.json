@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T17:25:44.620Z",
+  "updatedAt": "2026-11-14T17:26:18.218Z",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -2104,7 +2104,7 @@
       "sourceUrl": "https://opobull.tistory.com/225",
       "poster": "https://image.tmdb.org/t/p/w500/zNSBXSIOMZWFZ5dqtm7tFBKFMrk.jpg",
       "posterSource": "TVWiki public listing",
-      "tvwikiPage": "https://tvwiki60.net/drama/12480/406790420",
+      "tvwikiPage": "https://tvwiki60.net/drama/12480/406792041",
       "episodes": [
         {
           "number": 1,
@@ -2135,6 +2135,11 @@
           "number": 6,
           "label": "6화",
           "pageUrl": "https://tvwiki60.net/drama/12480/406790420"
+        },
+        {
+          "number": 7,
+          "label": "7화",
+          "pageUrl": "https://tvwiki60.net/drama/12480/406792041"
         }
       ]
     },
@@ -2271,7 +2276,7 @@
       "sourceUrl": "https://www.hani.co.kr/arti/culture/culture_general/1284262.html",
       "poster": "https://image.tmdb.org/t/p/w500/xYFTiwC7Tl0xOUFiVFUPWXHTHnr.jpg",
       "posterSource": "TVWiki public listing",
-      "tvwikiPage": "https://tvwiki60.net/drama/12394/406791910",
+      "tvwikiPage": "https://tvwiki60.net/drama/12394/406792033",
       "episodes": [
         {
           "number": 1,
@@ -2327,6 +2332,11 @@
           "number": 11,
           "label": "11화",
           "pageUrl": "https://tvwiki60.net/drama/12394/406791910"
+        },
+        {
+          "number": 12,
+          "label": "12화",
+          "pageUrl": "https://tvwiki60.net/drama/12394/406792033"
         }
       ]
     },
