@@ -322,42 +322,60 @@
       "category": "한국영화",
       "title": "밀수",
       "year": 2023,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/tv/thumb/tw_31880215745667.jpg",
+      "tvwikiPage": "https://tvwiki60.net/kor_movie/15090",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-33",
       "category": "한국영화",
       "title": "헤어질 결심",
       "year": 2022,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/peakl/thumb/66274564192673.jpg",
+      "tvwikiPage": "https://tvwiki60.net/kor_movie/1863",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-34",
       "category": "한국영화",
       "title": "모가디슈",
       "year": 2021,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/peakl/thumb/43350359434360.jpg",
+      "tvwikiPage": "https://tvwiki60.net/kor_movie/3303",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-35",
       "category": "한국영화",
       "title": "프로젝트 Y",
       "year": 2026,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/peakl/thumb/88077cec8629d513ee972d627732c4c7ae0972ba.webp",
+      "tvwikiPage": "https://tvwiki60.net/kor_movie/30181",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-36",
       "category": "한국영화",
       "title": "호프",
       "year": 2026,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/peakl/thumb/7568920341088983c03ba57dbde52b7ce4c67306.webp",
+      "tvwikiPage": "https://tvwiki60.net/movie/24439",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-37",
       "category": "한국영화",
       "title": "하트맨",
       "year": 2026,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://api1115.apisvc10.com/data/peakl/thumb/f3f6061fe09408b01f82f27355fc762551ebe7d1.webp",
+      "tvwikiPage": "https://tvwiki60.net/kor_movie/30194",
+      "posterSource": "TVWiki public search title match"
     },
     {
       "id": "movie-info-38",
@@ -724,7 +742,10 @@
       "year": 2026,
       "releaseDate": "2026-11-06",
       "description": "2026년 11월 6일 넷플릭스 공개 · 영화",
-      "sourceUrl": "https://gamtrend.tmhub.co.kr/article/ott-broadcast-new-releases-november-first-week-2026"
+      "sourceUrl": "https://gamtrend.tmhub.co.kr/article/ott-broadcast-new-releases-november-first-week-2026",
+      "poster": "https://image.tmdb.org/t/p/w500/tnwFaR8oaRMW85iKmYxRtbuKx09.jpg",
+      "tvwikiPage": "https://tvwiki60.net/kor_movie/35767",
+      "posterSource": "TVWiki public search title match"
     }
   ],
   "posterSourceNote": "Public title-matched posters verified from TVWiki listing and detail-page #bo_v_poster sections where available; fallback to Wikimedia or a text-only cover."
