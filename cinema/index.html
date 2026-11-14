@@ -415,23 +415,25 @@ function fitTvwikiFrame(){
   if(!frame||!wrap||!selected||$("tvwikiViewer").hidden||!dlg.open)return;
   const width=wrap.getBoundingClientRect().width;
   if(!width)return;
-  // Use the source's #playerArea anchor for vertical alignment, NOT a fixed
-  // pixel offset: the site's ad-banner height varies between visits.
-  // The 160px additional iframe viewport moves the original site's
-  // fixed-position mobile bottom toolbar below our clipped 16:9 window.
-  // The 10px source-site side gutters are compensated on mobile.
-  const narrow=width<600;
-  const gutter=narrow?10:0;
-  const footerSpace=narrow?160:0;
+  // TVWiki has viewport-fixed #header_wrap (70px) and #float (69px) at
+  // narrow widths. Source width >= 1200 switches both to desktop behavior:
+  // its header is in document flow and bottom bar is hidden. Anchor scrolling
+  // brings #playerArea to the top without either overlay, then scale its
+  // original 1180x663.75 player to fit BRO CINEMA's 16:9 window.
+  // Visual viewport layout only; no stream extraction or authorization change.
+  const viewport=1200,sourcePlayerWidth=1180,sourceGutter=10;
+  const scale=width/sourcePlayerWidth;
   frame.style.inset="auto";
-  frame.style.left="-"+gutter+"px";
   frame.style.top="0";
-  frame.style.width=gutter?"calc(100% + "+gutter*2+"px)":"100%";
-  frame.style.height=footerSpace?"calc(100% + "+footerSpace+"px)":"100%";
-  frame.dataset.focusMode="anchor";
+  frame.style.left=(-sourceGutter*scale)+"px";
+  frame.style.width=viewport+"px";
+  frame.style.height="850px";
+  frame.style.transformOrigin="0 0";
+  frame.style.transform="scale("+scale+")";
+  frame.dataset.focusMode="desktop-viewport";
   frame.dataset.focusOffset="0";
-  frame.dataset.focusGutter=String(gutter);
-  frame.dataset.footerSpace=String(footerSpace);
+  frame.dataset.focusGutter=String(sourceGutter);
+  frame.dataset.virtualWidth=String(viewport);
 }
 window.addEventListener("resize",()=>{if(selected&&!$("tvwikiViewer").hidden)fitTvwikiFrame()});
 function openNativeEpisode(item,url){
