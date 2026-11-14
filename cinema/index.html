@@ -30,7 +30,7 @@
 <nav class="tabs" role="tablist"><button class="tab active" role="tab" aria-selected="true" data-cat="영화">🎬 영화</button><button class="tab" role="tab" aria-selected="false" data-cat="한국영화">🇰🇷 한국영화</button><button class="tab" role="tab" aria-selected="false" data-cat="드라마">📺 드라마</button><button class="tab" role="tab" aria-selected="false" data-cat="즐겨찾기">♥ 즐겨찾기 <span id="favCount">0</span></button></nav>
 <div class="row"><div><h2 id="count">영화 · 0편</h2><span class="tiny">최근 개봉·첫방송순 · 방영 예정작은 뒤로 정렬</span></div><input class="search" id="search" type="search" placeholder="제목 검색" aria-label="제목 검색"></div>
 <main id="grid" class="grid" aria-live="polite"></main><p class="note">매칭된 작품 포스터는 TV위키의 공개 상세·검색 목록에 표시된 이미지 URL을 사용합니다(실제 이미지는 TMDB 또는 다른 이미지 제공처에서 표시될 수 있습니다). 해당 이미지가 제공되지 않으면 Wikimedia 이미지 또는 제목형 표지를 표시합니다. BRO CINEMA는 해당 제공처와 제휴하지 않습니다. 즐겨찾기는 현재 브라우저에 저장되어 다른 기기와 자동 동기화되지 않습니다.</p>
-<p class="note">본 사이트는 자체 광고·팝업을 포함하지 않습니다. 영상 내 삽입 광고가 없는지는 콘텐츠 제공자에 따라 다릅니다. 승인된 HTTPS M3U8 스트림만 재생하며, 외부 사이트의 접근 제한·DRM·광고 시스템을 우회하지 않습니다.</p>
+<p class="note">본 사이트는 별도 재생 출처를 저장한 경우에만 해당 영상의 직접 재생을 시도합니다. TV위키 플레이어는 다른 도메인의 임베드를 차단하므로 원본 사이트로 이동합니다. 본 사이트는 자체 광고·팝업을 포함하지 않습니다. 영상 내 삽입 광고가 없는지는 콘텐츠 제공자에 따라 다릅니다. 승인된 HTTPS M3U8 스트림만 재생하며, 외부 사이트의 접근 제한·DRM·광고 시스템을 우회하지 않습니다.</p>
 </div>
 <dialog id="dlg"><div class="modalhead"><h2 id="playing">영상 재생</h2><button class="x" id="close" aria-label="닫기">×</button></div><div id="detailHero" class="detail-hero" hidden></div><div class="stage" id="videoStage"><video id="video" controls playsinline x-webkit-airplay="allow" preload="metadata" crossorigin="anonymous"></video><iframe id="embedPlayer" title="공식 영상 플레이어" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen hidden></iframe></div><div id="episodeLinks" style="padding:12px 16px;display:none;flex-wrap:wrap;gap:8px"></div><section class="playereditor" id="playerEditor"><details id="playerEditorDetails"><summary>재생 권한이 있는 영상 주소 등록</summary><div class="editorrow"><input id="personalMediaUrl" type="url" inputmode="url" placeholder="https://.../playlist.m3u8 또는 공식 임베드 URL" aria-label="허가된 영상 주소"/><button class="btn primary" id="saveMedia" type="button">저장하고 재생</button><button class="btn" id="clearMedia" type="button">삭제</button></div><p class="editorhint">재생·임베드 권한이 있는 HTTPS HLS·MP4 또는 Bunny Stream/YouTube/Vimeo 공식 임베드 주소만 등록하세요. 이 브라우저에만 저장됩니다. TV위키 인증·서명 우회 주소는 지원하지 않습니다.</p></details></section><div class="modaltools"><button class="btn primary" id="cast">▣ TV 전송</button><button class="btn" id="airplay">AirPlay</button><button class="btn" id="share">↗ 공유</button><span id="notice" class="notice">영상을 선택하세요.</span></div><p class="help">Chromecast 지원 TV와 동일한 Wi-Fi 연결이 필요합니다. 삼성 TV는 휴대전화 Smart View 화면 미러링을 사용할 수도 있습니다. TV가 재생할 수 있는 스트림 주소여야 합니다.</p></dialog>
 <script>
@@ -184,11 +184,11 @@ function render(){
                el("span","cover-name",item.title),
                el("span","cover-year",String(item.releaseDate||item.year||"")));
     observePoster(item,art);
-    art.append(el("span","tag",isUpcoming(item)?"공개 예정":item.hls?"재생 가능":item.tvwikiPage?"TV위키 링크":item.officialLinks?.length?"공식 보기":item.episodes?.length?"회차 링크":item.releaseDate?"작품 정보":"제목 등록"));
+    art.append(el("span","tag",isUpcoming(item)?"공개 예정":resolvedMedia(item)?"사이트 내 재생":item.tvwikiPage?"TV위키 링크":item.officialLinks?.length?"공식 보기":item.episodes?.length?"회차 링크":item.releaseDate?"작품 정보":"제목 등록"));
     const cap=el("div","caption");
-    cap.append(el("strong","",item.title),el("small","",(item.releaseDate||item.year||"날짜 미확인")+(isUpcoming(item)?" · 공개 예정":item.hls?" · 재생 가능":" · 영상 미연결")));
+    cap.append(el("strong","",item.title),el("small","",(item.releaseDate||item.year||"날짜 미확인")+(isUpcoming(item)?" · 공개 예정":resolvedMedia(item)?" · 재생 가능":" · 영상 미연결")));
     open.append(art,cap);
-    open.addEventListener("click",()=>item.hls?openVideo(item):showMissing(item));
+    open.addEventListener("click",()=>resolvedMedia(item)?openVideo(item):showMissing(item));
     const star=el("button","fav-heart",favorites.has(favKey(item))?"♥":"♡");
     star.type="button";star.setAttribute("aria-label",favorites.has(favKey(item))?item.title+" 즐겨찾기 해제":item.title+" 즐겨찾기 저장");
     star.setAttribute("aria-pressed",String(favorites.has(favKey(item))));
@@ -289,9 +289,24 @@ window.__onGCastApiAvailable=function(ok){if(!ok)return;try{cast.framework.CastC
 $("cast").addEventListener("click",async()=>{if(!selected)return;if(!castReady){$("notice").textContent="Cast를 사용할 수 없습니다. Chrome과 TV 연결을 확인하세요.";return}try{const ctx=cast.framework.CastContext.getInstance();let session=ctx.getCurrentSession();if(!session){await ctx.requestSession();session=ctx.getCurrentSession()}if(!session)throw Error("TV 연결 실패");const info=new chrome.cast.media.MediaInfo(selected.hls,"application/x-mpegURL");const metadata=new chrome.cast.media.GenericMediaMetadata();metadata.title=selected.title;info.metadata=metadata;await session.loadMedia(new chrome.cast.media.LoadRequest(info));$("notice").textContent="TV 재생 요청 완료";}catch(e){$("notice").textContent="TV 전송 실패 · 기기 또는 HLS 접근 권한을 확인하세요.";console.warn(e)}});
 $("airplay").addEventListener("click",()=>{if(typeof video.webkitShowPlaybackTargetPicker==="function")video.webkitShowPlaybackTargetPicker();else $("notice").textContent="AirPlay는 지원되는 Safari에서 이용 가능합니다.";});
 $("share").addEventListener("click",async()=>{if(!selected)return;try{if(navigator.share)await navigator.share({title:selected.title,url:location.href});else{await navigator.clipboard.writeText(location.href);$("notice").textContent="영상 페이지 링크 복사 완료";}}catch(e){if(e.name!=="AbortError")$("notice").textContent="공유 불가";}});
+$("saveMedia").addEventListener("click",()=>{
+  if(!selected)return;
+  const media=verifyMediaURL($("personalMediaUrl").value);
+  if(!media){$("notice").textContent="지원하지 않는 주소입니다. HTTPS M3U8·MP4 또는 공식 Bunny/YouTube/Vimeo 임베드 주소를 사용하세요.";return}
+  customSources[favKey(selected)]=media.url;
+  try{localStorage.setItem(USERMEDIAKEY,JSON.stringify(customSources))}catch{}
+  const item=selected;render();openVideo(item);
+});
+$("clearMedia").addEventListener("click",()=>{
+  if(!selected)return;
+  delete customSources[favKey(selected)];
+  try{localStorage.setItem(USERMEDIAKEY,JSON.stringify(customSources))}catch{}
+  const item=selected;render();
+  if(resolvedMedia(item))openVideo(item);else showMissing(item);
+});
 $("close").addEventListener("click",closeVideo);dlg.addEventListener("cancel",e=>{e.preventDefault();closeVideo()});$("reload").addEventListener("click",sync);$("search").addEventListener("input",render);
 document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{cat=b.dataset.cat;document.querySelectorAll(".tab").forEach(x=>{x.classList.toggle("active",x===b);x.setAttribute("aria-selected",String(x===b))});$("search").value="";render()}));
-sync().then(()=>{const play=new URLSearchParams(location.search).get("play");if(play){const item=items.find(x=>x.id===play);if(item && item.hls){document.querySelector('.tab[data-cat="'+item.category+'"]').click();openVideo(item)}}});
+sync().then(()=>{const play=new URLSearchParams(location.search).get("play");if(play){const item=items.find(x=>x.id===play);if(item && resolvedMedia(item)){document.querySelector('.tab[data-cat="'+item.category+'"]').click();openVideo(item)}}});
 setInterval(()=>{if(document.visibilityState==="visible")sync()},60*60*1000);
 </script>
 <script defer src="https://cdn.jsdelivr.net/npm/hls.js@1.6.15/dist/hls.min.js"></script>
