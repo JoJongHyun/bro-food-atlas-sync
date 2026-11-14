@@ -131,7 +131,7 @@ function sortNewest(a,b){
   if(a.releaseDate!==b.releaseDate)return a.releaseDate?-1:1;
   return a.title.localeCompare(b.title,"ko");
 }
-function normalize(o){if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350),sourceUrl:validUrl(o.sourceUrl)?o.sourceUrl:"",releaseAt:typeof o.releaseAt==="string"&&!Number.isNaN(Date.parse(o.releaseAt))?o.releaseAt:"",releaseDate:validReleaseDate(o.releaseDate||o.premiereDate),episodes:Array.isArray(o.episodes)?o.episodes.filter(x=>x&&Number.isInteger(x.number)&&x.number>0&&x.number<10000&&validUrl(x.pageUrl)).slice(0,200).map(x=>({number:x.number,label:String(x.label||x.number+"화").slice(0,80),pageUrl:x.pageUrl})):[]};}
+function normalize(o){if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350),sourceUrl:validUrl(o.sourceUrl)?o.sourceUrl:"",releaseAt:typeof o.releaseAt==="string"&&!Number.isNaN(Date.parse(o.releaseAt))?o.releaseAt:"",releaseDate:validReleaseDate(o.releaseDate||o.premiereDate),episodes:Array.isArray(o.episodes)?o.episodes.filter(x=>x&&Number.isInteger(x.number)&&x.number>0&&x.number<10000&&validUrl(x.pageUrl)).slice(0,200).map(x=>({number:x.number,label:String(x.label||x.number+"화").slice(0,80),pageUrl:x.pageUrl})):[],officialLinks:Array.isArray(o.officialLinks)?o.officialLinks.filter(x=>x&&typeof x.label==="string"&&validUrl(x.url)).slice(0,12).map(x=>({label:x.label.slice(0,85),url:x.url})):[]};}
 function render(){
   const q=$("search").value.trim().toLocaleLowerCase("ko");
   const filtered=items.filter(item=>(cat==="즐겨찾기"?favorites.has(favKey(item)):item.category===cat)&&item.title.toLocaleLowerCase("ko").includes(q)).sort(sortNewest);
@@ -150,7 +150,7 @@ function render(){
                el("span","cover-name",item.title),
                el("span","cover-year",String(item.releaseDate||item.year||"")));
     observePoster(item,art);
-    art.append(el("span","tag",isUpcoming(item)?"공개 예정":item.hls?"재생 가능":item.episodes?.length?"회차 링크":item.releaseDate?"작품 정보":"제목 등록"));
+    art.append(el("span","tag",isUpcoming(item)?"공개 예정":item.hls?"재생 가능":item.officialLinks?.length?"공식 보기":item.episodes?.length?"회차 링크":item.releaseDate?"작품 정보":"제목 등록"));
     const cap=el("div","caption");
     cap.append(el("strong","",item.title),el("small","",(item.releaseDate||item.year||"날짜 미확인")+(isUpcoming(item)?" · 공개 예정":item.hls?" · 재생 가능":" · 영상 미연결")));
     open.append(art,cap);
@@ -179,27 +179,29 @@ function showMissing(item){
   if(item.description)body.append(el("p","",item.description));
   hero.append(cover,body);hero.hidden=false;
   $("playing").textContent=item.title;
-  $("notice").textContent="영상 스트림은 확인되지 않았습니다. 아래 링크는 외부 페이지이며 광고가 표시될 수 있습니다.";
+  $("notice").textContent=item.officialLinks?.length?"방송사·OTT 공식 페이지에서 시청할 수 있어요. 로그인, 이용권 또는 인증이 필요할 수 있습니다.":item.episodes?.length?"영상 스트림은 미확인 상태입니다. 외부 페이지에서는 광고가 나타날 수 있습니다.":"재생이 승인된 영상 링크가 아직 연결되지 않았습니다.";
   $("videoStage").style.display="none";
-  const list=$("episodeLinks");
-  list.replaceChildren();
-  if(item.episodes?.length){
-    list.style.display="flex";
-    for(const ep of item.episodes){
-      const a=el("a","btn",ep.label+" · 외부 페이지");
-      a.href=ep.pageUrl;
-      a.target="_blank";
-      a.rel="noopener noreferrer";
-      list.append(a);
+  $("cast").style.display="none";$("airplay").style.display="none";
+  const list=$("episodeLinks");list.replaceChildren();
+  if(item.officialLinks?.length){
+    for(const source of item.officialLinks){
+      const link=el("a","btn primary",source.label+" ↗");
+      link.href=source.url;link.target="_blank";link.rel="noopener noreferrer";
+      list.append(link);
     }
-  }else{
-    list.style.display="none";
-    $("notice").textContent="재생 권한이 확인된 영상이 연결되지 않았습니다.";
   }
+  if(item.episodes?.length){
+    for(const ep of item.episodes){
+      const link=el("a","btn",ep.label+" · 외부 사이트 ↗");
+      link.href=ep.pageUrl;link.target="_blank";link.rel="noopener noreferrer";
+      list.append(link);
+    }
+  }
+  list.style.display=list.childElementCount?"flex":"none";
   dlg.showModal();
 }
 function cleanup(){if(hls){hls.destroy();hls=null}video.pause();video.removeAttribute("src");video.load();}
-async function openVideo(item){selected=item;$("detailHero").hidden=true;$("videoStage").style.display="flex";$("episodeLinks").style.display="none";cleanup();if(validUrl(item.poster))video.poster=item.poster;else video.removeAttribute("poster");$("playing").textContent=item.title;$("notice").textContent="영상 준비 중…";dlg.showModal();const u=new URL(location.href);u.searchParams.set("play",item.id);history.replaceState(null,"",u);
+async function openVideo(item){selected=item;$("cast").style.display="";$("airplay").style.display="";$("detailHero").hidden=true;$("videoStage").style.display="flex";$("episodeLinks").style.display="none";cleanup();if(validUrl(item.poster))video.poster=item.poster;else video.removeAttribute("poster");$("playing").textContent=item.title;$("notice").textContent="영상 준비 중…";dlg.showModal();const u=new URL(location.href);u.searchParams.set("play",item.id);history.replaceState(null,"",u);
 try{if(video.canPlayType("application/vnd.apple.mpegurl"))video.src=item.hls;else if(window.Hls&&Hls.isSupported()){hls=new Hls();hls.loadSource(item.hls);hls.attachMedia(video);hls.on(Hls.Events.ERROR,(_e,d)=>{if(d.fatal)$("notice").textContent="재생 오류 · CORS/접근 권한을 확인하세요."})}else throw Error("이 브라우저는 HLS를 지원하지 않습니다");$("notice").textContent="재생 준비 완료";const p=video.play();if(p)p.catch(()=>$("notice").textContent="화면의 ▶ 버튼을 눌러주세요.");}catch(e){$("notice").textContent=e.message;}}
 function closeVideo(){cleanup();selected=null;$("detailHero").hidden=true;$("videoStage").style.display="flex";$("episodeLinks").style.display="none";dlg.close();const u=new URL(location.href);u.searchParams.delete("play");history.replaceState(null,"",u);}
 window.__onGCastApiAvailable=function(ok){if(!ok)return;try{cast.framework.CastContext.getInstance().setOptions({receiverApplicationId:chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,autoJoinPolicy:chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED});castReady=true;}catch(e){console.warn(e)}};
