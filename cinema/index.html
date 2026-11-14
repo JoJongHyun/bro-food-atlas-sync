@@ -106,7 +106,7 @@
     </div>
     <p>선택한 회차에만 저장하며 내 기기에서만 적용됩니다. 권한 있는 MP4·HLS 또는 공식 Bunny Stream·YouTube·Vimeo 임베드만 지원합니다. 재생 제한을 우회하거나 TV위키 영상을 복제하지 않습니다.</p>
   </details>
-  <p class="tvwiki-limit">APK 분석에서 독립적인 영상 파일은 확인되지 않았습니다. TV위키 원본 화면은 외부 재생이 제한될 수 있으며, 허용된 영상 주소가 연결된 회차에 한해 자체 플레이어로 재생합니다.</p>
+  <p class="tvwiki-limit">TV위키 페이지의 상단·하단 영역과 좌우 여백을 제외해 영상 영역에 맞춘 화면입니다. 외부 재생 제한으로 영상이 나오지 않을 수 있습니다. 허용된 영상 주소를 등록한 회차는 자체 플레이어에서 재생합니다.</p>
 </section>
 <section class="playereditor" id="playerEditor"><details id="playerEditorDetails"><summary>재생 권한이 있는 영상 주소 등록</summary><div class="editorrow"><input id="personalMediaUrl" type="url" inputmode="url" placeholder="https://.../playlist.m3u8 또는 공식 임베드 URL" aria-label="허가된 영상 주소"/><button class="btn primary" id="saveMedia" type="button">저장하고 재생</button><button class="btn" id="clearMedia" type="button">삭제</button></div><p class="editorhint">재생·임베드 권한이 있는 HTTPS HLS·MP4 또는 Bunny Stream/YouTube/Vimeo 공식 임베드 주소만 등록하세요. 이 브라우저에만 저장됩니다. TV위키 인증·서명 우회 주소는 지원하지 않습니다.</p></details></section><div class="modaltools"><button class="btn primary" id="cast">▣ TV 전송</button><button class="btn" id="airplay">AirPlay</button><button class="btn" id="share">↗ 공유</button><span id="notice" class="notice">영상을 선택하세요.</span></div><p class="help">Chromecast 지원 TV와 동일한 Wi-Fi 연결이 필요합니다. 삼성 TV는 휴대전화 Smart View 화면 미러링을 사용할 수도 있습니다. TV가 재생할 수 있는 스트림 주소여야 합니다.</p></dialog>
 <script>
@@ -411,19 +411,26 @@ function render(){
 async function sync(){const button=$("reload");button.disabled=true;$("status").textContent="목록 확인 중…";try{const response=await fetch("./catalog.json?ts="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const payload=await response.json();if(!Array.isArray(payload.items))throw Error("목록 형식 오류");seedItems=payload.items.map(normalize).filter(Boolean);items=seedItems;$("status").textContent="기본 작품 "+items.length+"개";render();await updateWikiTitles();}catch(e){$("status").textContent="목록 갱신 실패";console.error(e);if(!items.length)render();}finally{button.disabled=false;}}
 function fitTvwikiFrame(){
   const frame=$("tvwikiFrame");
-  const wrap=frame.closest(".tvwiki-frame-wrap");
+  const wrap=frame?.closest(".tvwiki-frame-wrap");
   if(!frame||!wrap||!selected||$("tvwikiViewer").hidden||!dlg.open)return;
   const width=wrap.getBoundingClientRect().width;
   if(!width)return;
-  // Mobile original page: playerArea is about 906px down at a 376px viewport.
-  // Crop the top-level document within the 16:9 viewport instead of relying
-  // on #playerArea fragment scrolling, which varies between mobile browsers.
+  // Source site's mobile #playerArea uses a 10px gutter on BOTH sides,
+  // with its video rectangle below the page header/ads.
+  // Match all four video edges within BRO CINEMA's fixed 16:9 window.
+  // These are measured layout offsets, not media access or session bypasses.
   const crop=width<600;
-  const offset=Math.max(0,Math.round(642.5+0.70*width));
-  frame.style.top=crop?"-"+offset+"px":"0";
-  frame.style.height=crop?"calc(100% + "+offset+"px)":"100%";
+  const gutter=crop?10:0;
+  const sourceWidth=width+gutter*2;
+  const header=Math.max(0,Math.round(642.5+sourceWidth*0.70));
+  frame.style.inset="auto";
+  frame.style.left=crop?"-"+gutter+"px":"0";
+  frame.style.top=crop?"-"+header+"px":"0";
+  frame.style.width=crop?"calc(100% + "+gutter*2+"px)":"100%";
+  frame.style.height=crop?"calc(100% + "+header+"px)":"100%";
   frame.dataset.focusMode=crop?"crop":"anchor";
-  frame.dataset.focusOffset=crop?String(offset):"0";
+  frame.dataset.focusOffset=crop?String(header):"0";
+  frame.dataset.focusGutter=String(gutter);
 }
 window.addEventListener("resize",()=>{if(selected&&!$("tvwikiViewer").hidden)fitTvwikiFrame()});
 function openNativeEpisode(item,url){
