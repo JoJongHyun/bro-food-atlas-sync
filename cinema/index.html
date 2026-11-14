@@ -23,7 +23,7 @@
 <section class="hero"><h1>좋아하는 영상, 한곳에서.</h1><p>영화 · 한국영화 · 드라마 전용 화면과 광고 배너 없는 자체 플레이어, TV 전송 기능을 제공합니다.</p></section>
 <nav class="tabs" role="tablist"><button class="tab active" role="tab" aria-selected="true" data-cat="영화">🎬 영화</button><button class="tab" role="tab" aria-selected="false" data-cat="한국영화">🇰🇷 한국영화</button><button class="tab" role="tab" aria-selected="false" data-cat="드라마">📺 드라마</button><button class="tab" role="tab" aria-selected="false" data-cat="즐겨찾기">♥ 즐겨찾기 <span id="favCount">0</span></button></nav>
 <div class="row"><div><h2 id="count">영화 · 0편</h2><span class="tiny">최근 개봉·첫방송순 · 방영 예정작은 뒤로 정렬</span></div><input class="search" id="search" type="search" placeholder="제목 검색" aria-label="제목 검색"></div>
-<main id="grid" class="grid" aria-live="polite"></main><p class="note">이미지는 공개된 Wikimedia 작품 이미지를 조회해 표시하며, 조회되지 않는 작품은 제목형 표지로 표시합니다. 즐겨찾기는 현재 브라우저에 저장되어 다른 기기와 자동 동기화되지 않습니다.</p>
+<main id="grid" class="grid" aria-live="polite"></main><p class="note">일부 작품 포스터는 TV위키 공개 목록의 이미지 URL을 사용합니다(실제 이미지는 TMDB 또는 다른 이미지 제공처에서 표시될 수 있습니다). 해당 이미지가 제공되지 않으면 Wikimedia 이미지 또는 제목형 표지를 표시합니다. BRO CINEMA는 해당 제공처와 제휴하지 않습니다. 즐겨찾기는 현재 브라우저에 저장되어 다른 기기와 자동 동기화되지 않습니다.</p>
 <p class="note">본 사이트는 자체 광고·팝업을 포함하지 않습니다. 영상 내 삽입 광고가 없는지는 콘텐츠 제공자에 따라 다릅니다. 승인된 HTTPS M3U8 스트림만 재생하며, 외부 사이트의 접근 제한·DRM·광고 시스템을 우회하지 않습니다.</p>
 </div>
 <dialog id="dlg"><div class="modalhead"><h2 id="playing">영상 재생</h2><button class="x" id="close" aria-label="닫기">×</button></div><div class="stage" id="videoStage"><video id="video" controls playsinline x-webkit-airplay="allow" preload="metadata" crossorigin="anonymous"></video></div><div id="episodeLinks" style="padding:12px 16px;display:none;flex-wrap:wrap;gap:8px"></div><div class="modaltools"><button class="btn primary" id="cast">▣ TV 전송</button><button class="btn" id="airplay">AirPlay</button><button class="btn" id="share">↗ 공유</button><span id="notice" class="notice">영상을 선택하세요.</span></div><p class="help">Chromecast 지원 TV와 동일한 Wi-Fi 연결이 필요합니다. 삼성 TV는 휴대전화 Smart View 화면 미러링을 사용할 수도 있습니다. TV가 재생할 수 있는 스트림 주소여야 합니다.</p></dialog>
@@ -38,7 +38,7 @@ try{posterCache=JSON.parse(localStorage.getItem(IMGKEY)||"{}");if(!posterCache||
 function favKey(item){return item.category+"|"+item.title.trim().toLocaleLowerCase("ko")}
 function rememberFav(){try{localStorage.setItem(FAVKEY,JSON.stringify([...favorites]))}catch{}}
 function switchFav(item){const key=favKey(item);if(favorites.has(key))favorites.delete(key);else favorites.add(key);rememberFav();render()}
-function paintCover(art,url){if(!validUrl(url))return;const old=art.querySelector("img");if(old)old.remove();const img=el("img");img.src=url;img.alt="";img.loading="lazy";img.referrerPolicy="no-referrer";img.addEventListener("error",()=>img.remove(),{once:true});art.append(img)}
+function paintCover(art,url,onError){if(!validUrl(url))return;const old=art.querySelector("img");if(old)old.remove();const img=el("img");img.alt="";img.loading="lazy";img.referrerPolicy="no-referrer";img.addEventListener("error",()=>{img.remove();if(onError)onError()},{once:true});img.src=url;art.append(img)}
 async function resolveWikimediaImage(item,art){
   const key=favKey(item);
   if(typeof posterCache[key]==="string"){if(posterCache[key])paintCover(art,posterCache[key]);return}
@@ -62,7 +62,7 @@ async function resolveWikimediaImage(item,art){
 }
 function observePoster(item,art){
   const img=item.poster||posterCache[favKey(item)];
-  if(img){paintCover(art,img);return}
+  if(img){paintCover(art,img,item.poster?()=>resolveWikimediaImage(item,art):undefined);return}
   if(!posterObserver)posterObserver=new IntersectionObserver(entries=>{
     for(const x of entries)if(x.isIntersecting){posterObserver.unobserve(x.target);const data=x.target._posterData;if(data)resolveWikimediaImage(data.item,x.target)}
   },{rootMargin:"240px"});
