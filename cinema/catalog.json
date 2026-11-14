@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T08:41:00Z",
+  "updatedAt": "2026-11-14T11:15:00Z",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -274,7 +274,9 @@
       "category": "한국영화",
       "title": "경주기행",
       "year": 2026,
-      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
+      "poster": "https://image.tmdb.org/t/p/w500/2dAd2APyFUyJ6qEv9VFHdHQtQI6.jpg",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "movie-info-39",
@@ -433,7 +435,9 @@
       "year": 2026,
       "releaseDate": "2026-11-11",
       "description": "tvN · 2026-11-11 첫 공개/방송",
-      "sourceUrl": "https://www.esquirekorea.co.kr/article/1911919"
+      "sourceUrl": "https://www.esquirekorea.co.kr/article/1911919",
+      "poster": "https://image.tmdb.org/t/p/w500/dJa6CReOqtLDsYdwBS0hW8NgDlD.jpg",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "new-2026-drama-3",
@@ -442,7 +446,9 @@
       "year": 2026,
       "releaseDate": "2026-11-11",
       "description": "MBN · 2026-11-11 첫 공개/방송",
-      "sourceUrl": "https://www.esquirekorea.co.kr/article/1911919"
+      "sourceUrl": "https://www.esquirekorea.co.kr/article/1911919",
+      "poster": "https://image.tmdb.org/t/p/w500/ldqsRIHnjdCf72TRtXtdlaWlbsI.jpg",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "new-2026-drama-4",
@@ -451,7 +457,9 @@
       "year": 2026,
       "releaseDate": "2026-11-09",
       "description": "TVING · 2026-11-09 첫 공개/방송",
-      "sourceUrl": "https://www.esquirekorea.co.kr/article/1911919"
+      "sourceUrl": "https://www.esquirekorea.co.kr/article/1911919",
+      "poster": "https://image.tmdb.org/t/p/w500/pLIfcH8cZC5O8VtgbiqcrOFyy0h.jpg",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "new-2026-drama-5",
@@ -460,7 +468,9 @@
       "year": 2026,
       "releaseDate": "2026-11-06",
       "description": "Wavve · 2026-11-06 첫 공개/방송",
-      "sourceUrl": "https://www.esquirekorea.co.kr/article/1911919"
+      "sourceUrl": "https://www.esquirekorea.co.kr/article/1911919",
+      "poster": "https://image.tmdb.org/t/p/w500/sAds5i0s8SUTWb0uoL7zWOTvEc2.jpg",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "new-2026-drama-6",
@@ -469,7 +479,9 @@
       "year": 2026,
       "releaseDate": "2026-11-04",
       "description": "Disney+ · 2026-11-04 첫 공개/방송",
-      "sourceUrl": "https://www.esquirekorea.co.kr/article/1911919"
+      "sourceUrl": "https://www.esquirekorea.co.kr/article/1911919",
+      "poster": "https://image.tmdb.org/t/p/w500/9mVhSAIZERTDw7dWbbGuJegCDjl.jpg",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "new-2026-drama-7",
@@ -485,7 +497,9 @@
           "label": "1화 원본 페이지",
           "pageUrl": "https://tvwiki59.net/drama/12555/406788522"
         }
-      ]
+      ],
+      "poster": "https://image.tmdb.org/t/p/w500/up1YBgPq6lC0ut2JvjguNwLiXw4.jpg",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "new-2026-drama-8",
@@ -494,7 +508,9 @@
       "year": 2026,
       "releaseDate": "2026-10-24",
       "description": "JTBC · 2026-10-24 첫 공개/방송",
-      "sourceUrl": "https://opobull.tistory.com/225"
+      "sourceUrl": "https://opobull.tistory.com/225",
+      "poster": "https://image.tmdb.org/t/p/w500/zNSBXSIOMZWFZ5dqtm7tFBKFMrk.jpg",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "new-2026-drama-9",
@@ -503,7 +519,9 @@
       "year": 2026,
       "releaseDate": "2026-10-19",
       "description": "tvN · 2026-10-19 첫 공개/방송",
-      "sourceUrl": "https://tvn.cjenm.com/ko/Love-in-Disguise/"
+      "sourceUrl": "https://tvn.cjenm.com/ko/Love-in-Disguise/",
+      "poster": "https://image.tmdb.org/t/p/w500/psv95lgfw9poTHzI04AIsoThHA7.jpg",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "new-2026-drama-10",
@@ -512,7 +530,9 @@
       "year": 2026,
       "releaseDate": "2026-10-10",
       "description": "tvN · 2026-10-10 첫 공개/방송",
-      "sourceUrl": "https://opobull.tistory.com/225"
+      "sourceUrl": "https://opobull.tistory.com/225",
+      "poster": "https://api1115.apisvc10.com/data/peakl/thumb/b0ffa164e68babed0ed6d25705a18deeebc6d4dc.webp",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "new-2026-drama-11",
@@ -521,7 +541,9 @@
       "year": 2026,
       "releaseDate": "2026-10-09",
       "description": "SBS · 2026-10-09 첫 공개/방송",
-      "sourceUrl": "https://www.hani.co.kr/arti/culture/culture_general/1284262.html"
+      "sourceUrl": "https://www.hani.co.kr/arti/culture/culture_general/1284262.html",
+      "poster": "https://image.tmdb.org/t/p/w500/xYFTiwC7Tl0xOUFiVFUPWXHTHnr.jpg",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "new-2026-drama-12",
@@ -530,7 +552,9 @@
       "year": 2026,
       "releaseDate": "2026-10-09",
       "description": "Netflix · 2026-10-09 첫 공개/방송",
-      "sourceUrl": "https://opobull.tistory.com/225"
+      "sourceUrl": "https://opobull.tistory.com/225",
+      "poster": "https://image.tmdb.org/t/p/w500/p5UJ0xS2NVmqtUfy9i0DMIJ1Lf3.jpg",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "new-2026-drama-13",
@@ -539,7 +563,9 @@
       "year": 2026,
       "releaseDate": "2026-10-06",
       "description": "채널A · 2026-10-06 첫 공개/방송",
-      "sourceUrl": "https://opobull.tistory.com/225"
+      "sourceUrl": "https://opobull.tistory.com/225",
+      "poster": "https://image.tmdb.org/t/p/w500/uTr0dWaVwCVagjLNpZSBkZNTD2m.jpg",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "new-2026-drama-14",
@@ -548,7 +574,9 @@
       "year": 2026,
       "releaseDate": "2026-10-05",
       "description": "ENA · 2026-10-05 첫 공개/방송",
-      "sourceUrl": "https://www.mt.co.kr/entertainment/2026/10/27/2026102710127257177"
+      "sourceUrl": "https://www.mt.co.kr/entertainment/2026/10/27/2026102710127257177",
+      "poster": "https://image.tmdb.org/t/p/w500/vyrpZOFIZJkQG8ZWTezmlNGav8R.jpg",
+      "posterSource": "TVWiki public listing"
     },
     {
       "id": "new-2026-drama-15",
@@ -604,5 +632,6 @@
       "description": "2026년 11월 6일 넷플릭스 공개 · 영화",
       "sourceUrl": "https://gamtrend.tmhub.co.kr/article/ott-broadcast-new-releases-november-first-week-2026"
     }
-  ]
+  ],
+  "posterSourceNote": "Verified source URLs from publicly shown TVWiki category thumbnail listings, also including TMDB image CDN. Other titles use Wikimedia or title cover fallback."
 }
