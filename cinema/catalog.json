@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T17:21:00.081Z",
+  "updatedAt": "2026-11-14T17:21:33.219Z",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -1132,8 +1132,50 @@
       "year": 2025,
       "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
       "poster": "https://api1115.apisvc10.com/data/file/drama/39c615297bf9c75fee451f43abcc52a48f6b5570.jpg",
-      "tvwikiPage": "https://tvwiki60.net/drama/1862",
-      "posterSource": "TVWiki public search title match"
+      "tvwikiPage": "https://tvwiki60.net/drama/1862/406486021",
+      "posterSource": "TVWiki public search title match",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화",
+          "pageUrl": "https://tvwiki60.net/drama/1862/406445276"
+        },
+        {
+          "number": 2,
+          "label": "2화",
+          "pageUrl": "https://tvwiki60.net/drama/1862/406445277"
+        },
+        {
+          "number": 3,
+          "label": "3화",
+          "pageUrl": "https://tvwiki60.net/drama/1862/406452598"
+        },
+        {
+          "number": 4,
+          "label": "4화",
+          "pageUrl": "https://tvwiki60.net/drama/1862/406460568"
+        },
+        {
+          "number": 5,
+          "label": "5화",
+          "pageUrl": "https://tvwiki60.net/drama/1862/406466990"
+        },
+        {
+          "number": 6,
+          "label": "6화",
+          "pageUrl": "https://tvwiki60.net/drama/1862/406474804"
+        },
+        {
+          "number": 7,
+          "label": "7화",
+          "pageUrl": "https://tvwiki60.net/drama/1862/406480415"
+        },
+        {
+          "number": 8,
+          "label": "8화",
+          "pageUrl": "https://tvwiki60.net/drama/1862/406486021"
+        }
+      ]
     },
     {
       "id": "movie-info-50",
@@ -1142,8 +1184,70 @@
       "year": 2025,
       "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
       "poster": "https://api1115.apisvc10.com/data/file/drama/beec7152b717e2553c676c4e848d8134931187a9.jpg",
-      "tvwikiPage": "https://tvwiki60.net/drama/1931",
-      "posterSource": "TVWiki public search title match"
+      "tvwikiPage": "https://tvwiki60.net/drama/1931/406492336",
+      "posterSource": "TVWiki public search title match",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화",
+          "pageUrl": "https://tvwiki60.net/drama/1931/406461997"
+        },
+        {
+          "number": 2,
+          "label": "2화",
+          "pageUrl": "https://tvwiki60.net/drama/1931/406461998"
+        },
+        {
+          "number": 3,
+          "label": "3화",
+          "pageUrl": "https://tvwiki60.net/drama/1931/406467075"
+        },
+        {
+          "number": 4,
+          "label": "4화",
+          "pageUrl": "https://tvwiki60.net/drama/1931/406468237"
+        },
+        {
+          "number": 5,
+          "label": "5화",
+          "pageUrl": "https://tvwiki60.net/drama/1931/406474944"
+        },
+        {
+          "number": 6,
+          "label": "6화",
+          "pageUrl": "https://tvwiki60.net/drama/1931/406475903"
+        },
+        {
+          "number": 7,
+          "label": "7화",
+          "pageUrl": "https://tvwiki60.net/drama/1931/406480517"
+        },
+        {
+          "number": 8,
+          "label": "8화",
+          "pageUrl": "https://tvwiki60.net/drama/1931/406481403"
+        },
+        {
+          "number": 9,
+          "label": "9화",
+          "pageUrl": "https://tvwiki60.net/drama/1931/406486160"
+        },
+        {
+          "number": 10,
+          "label": "10화",
+          "pageUrl": "https://tvwiki60.net/drama/1931/406487050"
+        },
+        {
+          "number": 11,
+          "label": "11화",
+          "pageUrl": "https://tvwiki60.net/drama/1931/406491682"
+        },
+        {
+          "number": 12,
+          "label": "12화",
+          "pageUrl": "https://tvwiki60.net/drama/1931/406492336"
+        }
+      ]
     },
     {
       "id": "movie-info-51",
@@ -1152,8 +1256,70 @@
       "year": 2025,
       "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
       "poster": "https://api1115.apisvc10.com/data/file/drama/a18e5464895a718920db2893257e51a0aa6b44db.jpg",
-      "tvwikiPage": "https://tvwiki60.net/drama/2105",
-      "posterSource": "TVWiki public search title match"
+      "tvwikiPage": "https://tvwiki60.net/drama/2105/406670620",
+      "posterSource": "TVWiki public search title match",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화",
+          "pageUrl": "https://tvwiki60.net/drama/2105/406670609"
+        },
+        {
+          "number": 2,
+          "label": "2화",
+          "pageUrl": "https://tvwiki60.net/drama/2105/406670610"
+        },
+        {
+          "number": 3,
+          "label": "3화",
+          "pageUrl": "https://tvwiki60.net/drama/2105/406670611"
+        },
+        {
+          "number": 4,
+          "label": "4화",
+          "pageUrl": "https://tvwiki60.net/drama/2105/406670612"
+        },
+        {
+          "number": 5,
+          "label": "5화",
+          "pageUrl": "https://tvwiki60.net/drama/2105/406670613"
+        },
+        {
+          "number": 6,
+          "label": "6화",
+          "pageUrl": "https://tvwiki60.net/drama/2105/406670614"
+        },
+        {
+          "number": 7,
+          "label": "7화",
+          "pageUrl": "https://tvwiki60.net/drama/2105/406670615"
+        },
+        {
+          "number": 8,
+          "label": "8화",
+          "pageUrl": "https://tvwiki60.net/drama/2105/406670616"
+        },
+        {
+          "number": 9,
+          "label": "9화",
+          "pageUrl": "https://tvwiki60.net/drama/2105/406670617"
+        },
+        {
+          "number": 10,
+          "label": "10화",
+          "pageUrl": "https://tvwiki60.net/drama/2105/406670618"
+        },
+        {
+          "number": 11,
+          "label": "11화",
+          "pageUrl": "https://tvwiki60.net/drama/2105/406670619"
+        },
+        {
+          "number": 12,
+          "label": "12화",
+          "pageUrl": "https://tvwiki60.net/drama/2105/406670620"
+        }
+      ]
     },
     {
       "id": "movie-info-52",
@@ -1162,8 +1328,90 @@
       "year": 2025,
       "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
       "poster": "https://api1115.apisvc10.com/data/file/drama/2c91a83a47589c3e3435b714b0214f91377b5c37.jpg",
-      "tvwikiPage": "https://tvwiki60.net/drama/2124",
-      "posterSource": "TVWiki public search title match"
+      "tvwikiPage": "https://tvwiki60.net/drama/2124/406615472",
+      "posterSource": "TVWiki public search title match",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615457"
+        },
+        {
+          "number": 2,
+          "label": "2화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615458"
+        },
+        {
+          "number": 3,
+          "label": "3화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615459"
+        },
+        {
+          "number": 4,
+          "label": "4화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615460"
+        },
+        {
+          "number": 5,
+          "label": "5화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615461"
+        },
+        {
+          "number": 6,
+          "label": "6화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615462"
+        },
+        {
+          "number": 7,
+          "label": "7화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615463"
+        },
+        {
+          "number": 8,
+          "label": "8화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615464"
+        },
+        {
+          "number": 9,
+          "label": "9화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615465"
+        },
+        {
+          "number": 10,
+          "label": "10화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615466"
+        },
+        {
+          "number": 11,
+          "label": "11화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615467"
+        },
+        {
+          "number": 12,
+          "label": "12화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615468"
+        },
+        {
+          "number": 13,
+          "label": "13화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615469"
+        },
+        {
+          "number": 14,
+          "label": "14화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615470"
+        },
+        {
+          "number": 15,
+          "label": "15화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615471"
+        },
+        {
+          "number": 16,
+          "label": "16화",
+          "pageUrl": "https://tvwiki60.net/drama/2124/406615472"
+        }
+      ]
     },
     {
       "id": "movie-info-53",
@@ -1172,8 +1420,70 @@
       "year": 2025,
       "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
       "poster": "https://api1115.apisvc10.com/data/file/drama/10820261505d855f0c35ebb7c9516bab06d61f35.jpg",
-      "tvwikiPage": "https://tvwiki60.net/drama/2202",
-      "posterSource": "TVWiki public search title match"
+      "tvwikiPage": "https://tvwiki60.net/drama/2202/406554931",
+      "posterSource": "TVWiki public search title match",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화",
+          "pageUrl": "https://tvwiki60.net/drama/2202/406531798"
+        },
+        {
+          "number": 2,
+          "label": "2화",
+          "pageUrl": "https://tvwiki60.net/drama/2202/406532187"
+        },
+        {
+          "number": 3,
+          "label": "3화",
+          "pageUrl": "https://tvwiki60.net/drama/2202/406536225"
+        },
+        {
+          "number": 4,
+          "label": "4화",
+          "pageUrl": "https://tvwiki60.net/drama/2202/406536752"
+        },
+        {
+          "number": 5,
+          "label": "5화",
+          "pageUrl": "https://tvwiki60.net/drama/2202/406540628"
+        },
+        {
+          "number": 6,
+          "label": "6화",
+          "pageUrl": "https://tvwiki60.net/drama/2202/406541227"
+        },
+        {
+          "number": 7,
+          "label": "7화",
+          "pageUrl": "https://tvwiki60.net/drama/2202/406545218"
+        },
+        {
+          "number": 8,
+          "label": "8화",
+          "pageUrl": "https://tvwiki60.net/drama/2202/406545877"
+        },
+        {
+          "number": 9,
+          "label": "9화",
+          "pageUrl": "https://tvwiki60.net/drama/2202/406549760"
+        },
+        {
+          "number": 10,
+          "label": "10화",
+          "pageUrl": "https://tvwiki60.net/drama/2202/406550354"
+        },
+        {
+          "number": 11,
+          "label": "11화",
+          "pageUrl": "https://tvwiki60.net/drama/2202/406554195"
+        },
+        {
+          "number": 12,
+          "label": "12화",
+          "pageUrl": "https://tvwiki60.net/drama/2202/406554931"
+        }
+      ]
     },
     {
       "id": "movie-info-54",
@@ -1182,8 +1492,90 @@
       "year": 2025,
       "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
       "poster": "https://api1115.apisvc10.com/data/file/drama/547822154532479d9122574c30d735681daa3e2d.jpg",
-      "tvwikiPage": "https://tvwiki60.net/drama/2222",
-      "posterSource": "TVWiki public search title match"
+      "tvwikiPage": "https://tvwiki60.net/drama/2222/406568318",
+      "posterSource": "TVWiki public search title match",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406536267"
+        },
+        {
+          "number": 2,
+          "label": "2화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406536759"
+        },
+        {
+          "number": 3,
+          "label": "3화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406540633"
+        },
+        {
+          "number": 4,
+          "label": "4화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406541239"
+        },
+        {
+          "number": 5,
+          "label": "5화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406545227"
+        },
+        {
+          "number": 6,
+          "label": "6화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406545881"
+        },
+        {
+          "number": 7,
+          "label": "7화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406549765"
+        },
+        {
+          "number": 8,
+          "label": "8화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406550360"
+        },
+        {
+          "number": 9,
+          "label": "9화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406554198"
+        },
+        {
+          "number": 10,
+          "label": "10화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406554937"
+        },
+        {
+          "number": 11,
+          "label": "11화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406559019"
+        },
+        {
+          "number": 12,
+          "label": "12화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406559813"
+        },
+        {
+          "number": 13,
+          "label": "13화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406563321"
+        },
+        {
+          "number": 14,
+          "label": "14화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406564050"
+        },
+        {
+          "number": 15,
+          "label": "15화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406567644"
+        },
+        {
+          "number": 16,
+          "label": "16화",
+          "pageUrl": "https://tvwiki60.net/drama/2222/406568318"
+        }
+      ]
     },
     {
       "id": "movie-info-55",
@@ -1192,8 +1584,40 @@
       "year": 2025,
       "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
       "poster": "https://api1115.apisvc10.com/data/file/drama/8905eae3df0db7d126a5664a9ef9eafb0b6166c9.jpg",
-      "tvwikiPage": "https://tvwiki60.net/drama/2084",
-      "posterSource": "TVWiki public search title match"
+      "tvwikiPage": "https://tvwiki60.net/drama/2084/406497020",
+      "posterSource": "TVWiki public search title match",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화",
+          "pageUrl": "https://tvwiki60.net/drama/2084/406497015"
+        },
+        {
+          "number": 2,
+          "label": "2화",
+          "pageUrl": "https://tvwiki60.net/drama/2084/406497016"
+        },
+        {
+          "number": 3,
+          "label": "3화",
+          "pageUrl": "https://tvwiki60.net/drama/2084/406497017"
+        },
+        {
+          "number": 4,
+          "label": "4화",
+          "pageUrl": "https://tvwiki60.net/drama/2084/406497018"
+        },
+        {
+          "number": 5,
+          "label": "5화",
+          "pageUrl": "https://tvwiki60.net/drama/2084/406497019"
+        },
+        {
+          "number": 6,
+          "label": "6화",
+          "pageUrl": "https://tvwiki60.net/drama/2084/406497020"
+        }
+      ]
     },
     {
       "id": "movie-info-56",
@@ -1202,8 +1626,65 @@
       "year": 2025,
       "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
       "poster": "https://api1115.apisvc10.com/data/file/drama/566745b8ffa305961695aaca7ffd796022ca35e6.jpg",
-      "tvwikiPage": "https://tvwiki60.net/drama/2193",
-      "posterSource": "TVWiki public search title match"
+      "tvwikiPage": "https://tvwiki60.net/drama/2193/406539826",
+      "posterSource": "TVWiki public search title match",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화",
+          "pageUrl": "https://tvwiki60.net/drama/2193/406530020"
+        },
+        {
+          "number": 2,
+          "label": "2화",
+          "pageUrl": "https://tvwiki60.net/drama/2193/406530021"
+        },
+        {
+          "number": 3,
+          "label": "3화",
+          "pageUrl": "https://tvwiki60.net/drama/2193/406530022"
+        },
+        {
+          "number": 4,
+          "label": "4화",
+          "pageUrl": "https://tvwiki60.net/drama/2193/406530023"
+        },
+        {
+          "number": 5,
+          "label": "5화",
+          "pageUrl": "https://tvwiki60.net/drama/2193/406530024"
+        },
+        {
+          "number": 6,
+          "label": "6화",
+          "pageUrl": "https://tvwiki60.net/drama/2193/406530025"
+        },
+        {
+          "number": 7,
+          "label": "7화",
+          "pageUrl": "https://tvwiki60.net/drama/2193/406534268"
+        },
+        {
+          "number": 8,
+          "label": "8화",
+          "pageUrl": "https://tvwiki60.net/drama/2193/406534269"
+        },
+        {
+          "number": 9,
+          "label": "9화",
+          "pageUrl": "https://tvwiki60.net/drama/2193/406534270"
+        },
+        {
+          "number": 10,
+          "label": "10화",
+          "pageUrl": "https://tvwiki60.net/drama/2193/406539825"
+        },
+        {
+          "number": 11,
+          "label": "11화",
+          "pageUrl": "https://tvwiki60.net/drama/2193/406539826"
+        }
+      ]
     },
     {
       "id": "movie-info-57",
@@ -1212,8 +1693,90 @@
       "year": 2020,
       "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
       "poster": "https://api1115.apisvc10.com/data/tv/thumb/tw_23762989663012.jpg",
-      "tvwikiPage": "https://tvwiki60.net/old_drama/1538",
-      "posterSource": "TVWiki public search title match"
+      "tvwikiPage": "https://tvwiki60.net/old_drama/1538/318725",
+      "posterSource": "TVWiki public search title match",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318684"
+        },
+        {
+          "number": 2,
+          "label": "2화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318687"
+        },
+        {
+          "number": 3,
+          "label": "3화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318690"
+        },
+        {
+          "number": 4,
+          "label": "4화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318693"
+        },
+        {
+          "number": 5,
+          "label": "5화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318696"
+        },
+        {
+          "number": 6,
+          "label": "6화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318699"
+        },
+        {
+          "number": 7,
+          "label": "7화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318701"
+        },
+        {
+          "number": 8,
+          "label": "8화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318703"
+        },
+        {
+          "number": 9,
+          "label": "9화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318706"
+        },
+        {
+          "number": 10,
+          "label": "10화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318708"
+        },
+        {
+          "number": 11,
+          "label": "11화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318711"
+        },
+        {
+          "number": 12,
+          "label": "12화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318714"
+        },
+        {
+          "number": 13,
+          "label": "13화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318716"
+        },
+        {
+          "number": 14,
+          "label": "14화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318720"
+        },
+        {
+          "number": 15,
+          "label": "15화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318722"
+        },
+        {
+          "number": 16,
+          "label": "16화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1538/318725"
+        }
+      ]
     },
     {
       "id": "movie-info-58",
@@ -1222,8 +1785,90 @@
       "year": 2017,
       "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다.",
       "poster": "https://api1115.apisvc10.com/data/tv/thumb/tw_63201475630163.jpg",
-      "tvwikiPage": "https://tvwiki60.net/old_drama/1530",
-      "posterSource": "TVWiki public search title match"
+      "tvwikiPage": "https://tvwiki60.net/old_drama/1530/406627405",
+      "posterSource": "TVWiki public search title match",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627390"
+        },
+        {
+          "number": 2,
+          "label": "2화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627391"
+        },
+        {
+          "number": 3,
+          "label": "3화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627392"
+        },
+        {
+          "number": 4,
+          "label": "4화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627393"
+        },
+        {
+          "number": 5,
+          "label": "5화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627394"
+        },
+        {
+          "number": 6,
+          "label": "6화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627395"
+        },
+        {
+          "number": 7,
+          "label": "7화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627396"
+        },
+        {
+          "number": 8,
+          "label": "8화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627397"
+        },
+        {
+          "number": 9,
+          "label": "9화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627398"
+        },
+        {
+          "number": 10,
+          "label": "10화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627399"
+        },
+        {
+          "number": 11,
+          "label": "11화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627400"
+        },
+        {
+          "number": 12,
+          "label": "12화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627401"
+        },
+        {
+          "number": 13,
+          "label": "13화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627402"
+        },
+        {
+          "number": 14,
+          "label": "14화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627403"
+        },
+        {
+          "number": 15,
+          "label": "15화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627404"
+        },
+        {
+          "number": 16,
+          "label": "16화",
+          "pageUrl": "https://tvwiki60.net/old_drama/1530/406627405"
+        }
+      ]
     },
     {
       "id": "new-2026-drama-1",
