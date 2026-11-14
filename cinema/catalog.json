@@ -478,7 +478,14 @@
       "year": 2026,
       "releaseDate": "2026-10-30",
       "description": "MBC · 2026-10-30 첫 공개/방송",
-      "sourceUrl": "https://enews.imbc.com/News/RetrieveNewsInfo/522220"
+      "sourceUrl": "https://enews.imbc.com/News/RetrieveNewsInfo/522220",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화 원본 페이지",
+          "pageUrl": "https://tvwiki59.net/drama/12555/406788522"
+        }
+      ]
     },
     {
       "id": "new-2026-drama-8",
