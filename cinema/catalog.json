@@ -1,14 +1,420 @@
 {
-  "updatedAt": "2026-11-14T07:00:00Z",
+  "updatedAt": "2026-11-14T08:00:00Z",
+  "description": "기본 작품명과 허가된 공개 테스트 스트림. 작품명 동적 갱신은 위키피디아 문서 분류 이용.",
   "items": [
     {
       "id": "apple-hls-demo",
       "category": "영화",
-      "title": "공개 HLS 영상 재생 테스트 (영화 아님)",
-      "year": "테스트",
-      "description": "Apple 개발자용 공개 샘플 HLS 영상",
-      "poster": "",
+      "title": "[재생 테스트] 공개 HLS 샘플 (실제 영화 아님)",
+      "year": "데모",
+      "description": "Apple 개발자용 공개 테스트 HLS",
       "hls": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8"
+    },
+    {
+      "id": "movie-info-1",
+      "category": "영화",
+      "title": "인터스텔라",
+      "year": 2014,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-2",
+      "category": "영화",
+      "title": "인셉션",
+      "year": 2010,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-3",
+      "category": "영화",
+      "title": "오펜하이머",
+      "year": 2023,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-4",
+      "category": "영화",
+      "title": "듄: 파트 2",
+      "year": 2024,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-5",
+      "category": "영화",
+      "title": "바비",
+      "year": 2023,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-6",
+      "category": "영화",
+      "title": "조커",
+      "year": 2019,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-7",
+      "category": "영화",
+      "title": "어벤져스: 엔드게임",
+      "year": 2019,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-8",
+      "category": "영화",
+      "title": "아바타: 물의 길",
+      "year": 2022,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-9",
+      "category": "영화",
+      "title": "매드 맥스: 분노의 도로",
+      "year": 2015,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-10",
+      "category": "영화",
+      "title": "라라랜드",
+      "year": 2016,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-11",
+      "category": "영화",
+      "title": "탑건: 매버릭",
+      "year": 2022,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-12",
+      "category": "영화",
+      "title": "위플래쉬",
+      "year": 2014,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-13",
+      "category": "영화",
+      "title": "그래비티",
+      "year": 2013,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-14",
+      "category": "영화",
+      "title": "쇼생크 탈출",
+      "year": 1994,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-15",
+      "category": "영화",
+      "title": "어바웃 타임",
+      "year": 2013,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-16",
+      "category": "영화",
+      "title": "스파이더맨: 노 웨이 홈",
+      "year": 2021,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-17",
+      "category": "한국영화",
+      "title": "기생충",
+      "year": 2019,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-18",
+      "category": "한국영화",
+      "title": "부산행",
+      "year": 2016,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-19",
+      "category": "한국영화",
+      "title": "범죄도시",
+      "year": 2017,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-20",
+      "category": "한국영화",
+      "title": "범죄도시 2",
+      "year": 2022,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-21",
+      "category": "한국영화",
+      "title": "범죄도시 3",
+      "year": 2023,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-22",
+      "category": "한국영화",
+      "title": "범죄도시 4",
+      "year": 2024,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-23",
+      "category": "한국영화",
+      "title": "서울의 봄",
+      "year": 2023,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-24",
+      "category": "한국영화",
+      "title": "파묘",
+      "year": 2024,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-25",
+      "category": "한국영화",
+      "title": "베테랑",
+      "year": 2015,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-26",
+      "category": "한국영화",
+      "title": "베테랑 2",
+      "year": 2024,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-27",
+      "category": "한국영화",
+      "title": "극한직업",
+      "year": 2019,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-28",
+      "category": "한국영화",
+      "title": "명량",
+      "year": 2014,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-29",
+      "category": "한국영화",
+      "title": "택시운전사",
+      "year": 2017,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-30",
+      "category": "한국영화",
+      "title": "신과함께-죄와 벌",
+      "year": 2017,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-31",
+      "category": "한국영화",
+      "title": "콘크리트 유토피아",
+      "year": 2023,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-32",
+      "category": "한국영화",
+      "title": "밀수",
+      "year": 2023,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-33",
+      "category": "한국영화",
+      "title": "헤어질 결심",
+      "year": 2022,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-34",
+      "category": "한국영화",
+      "title": "모가디슈",
+      "year": 2021,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-35",
+      "category": "한국영화",
+      "title": "프로젝트 Y",
+      "year": 2026,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-36",
+      "category": "한국영화",
+      "title": "호프",
+      "year": 2026,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-37",
+      "category": "한국영화",
+      "title": "하트맨",
+      "year": 2026,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-38",
+      "category": "한국영화",
+      "title": "경주기행",
+      "year": 2026,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-39",
+      "category": "드라마",
+      "title": "오징어 게임",
+      "year": 2021,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-40",
+      "category": "드라마",
+      "title": "더 글로리",
+      "year": 2022,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-41",
+      "category": "드라마",
+      "title": "이상한 변호사 우영우",
+      "year": 2022,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-42",
+      "category": "드라마",
+      "title": "사랑의 불시착",
+      "year": 2019,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-43",
+      "category": "드라마",
+      "title": "눈물의 여왕",
+      "year": 2024,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-44",
+      "category": "드라마",
+      "title": "중증외상센터",
+      "year": 2025,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-45",
+      "category": "드라마",
+      "title": "선의의 경쟁",
+      "year": 2025,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-46",
+      "category": "드라마",
+      "title": "스터디그룹",
+      "year": 2025,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-47",
+      "category": "드라마",
+      "title": "폭싹 속았수다",
+      "year": 2025,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-48",
+      "category": "드라마",
+      "title": "약한영웅 Class 2",
+      "year": 2025,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-49",
+      "category": "드라마",
+      "title": "뉴토피아",
+      "year": 2025,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-50",
+      "category": "드라마",
+      "title": "언더커버 하이스쿨",
+      "year": 2025,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-51",
+      "category": "드라마",
+      "title": "언젠가는 슬기로울 전공의생활",
+      "year": 2025,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-52",
+      "category": "드라마",
+      "title": "귀궁",
+      "year": 2025,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-53",
+      "category": "드라마",
+      "title": "미지의 서울",
+      "year": 2025,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-54",
+      "category": "드라마",
+      "title": "굿보이",
+      "year": 2025,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-55",
+      "category": "드라마",
+      "title": "악연",
+      "year": 2025,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-56",
+      "category": "드라마",
+      "title": "나인 퍼즐",
+      "year": 2025,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-57",
+      "category": "드라마",
+      "title": "이태원 클라쓰",
+      "year": 2020,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
+    },
+    {
+      "id": "movie-info-58",
+      "category": "드라마",
+      "title": "비밀의 숲",
+      "year": 2017,
+      "description": "작품 제목만 등록되어 있으며 스트리밍 연결은 별도입니다."
     }
   ]
 }
