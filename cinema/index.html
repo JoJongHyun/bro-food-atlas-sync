@@ -67,7 +67,7 @@
     <div class="tvwiki-episode-head"><strong>회차 선택</strong><span id="tvwikiEpisodeCount"></span></div>
     <div id="tvwikiEpisodeButtons" class="tvwiki-episode-buttons" role="group" aria-label="드라마 회차 선택"></div>
   </div>
-  <p class="tvwiki-limit">TV위키 원본 영상 영역을 표시하는 시험 기능입니다. 영상 제공자가 외부 재생을 차단하면 이 화면에서 재생되지 않을 수 있습니다. 영상 화면의 크기는 고정되며 회차는 아래에서 선택하세요.</p>
+  <p class="tvwiki-limit">BRO CINEMA 앱에서는 회차를 누르면 앱 내부 재생창이 열립니다. 일반 브라우저에서는 외부 재생 제한으로 영상이 보이지 않을 수 있습니다.</p>
 </section>
 <section class="playereditor" id="playerEditor"><details id="playerEditorDetails"><summary>재생 권한이 있는 영상 주소 등록</summary><div class="editorrow"><input id="personalMediaUrl" type="url" inputmode="url" placeholder="https://.../playlist.m3u8 또는 공식 임베드 URL" aria-label="허가된 영상 주소"/><button class="btn primary" id="saveMedia" type="button">저장하고 재생</button><button class="btn" id="clearMedia" type="button">삭제</button></div><p class="editorhint">재생·임베드 권한이 있는 HTTPS HLS·MP4 또는 Bunny Stream/YouTube/Vimeo 공식 임베드 주소만 등록하세요. 이 브라우저에만 저장됩니다. TV위키 인증·서명 우회 주소는 지원하지 않습니다.</p></details></section><div class="modaltools"><button class="btn primary" id="cast">▣ TV 전송</button><button class="btn" id="airplay">AirPlay</button><button class="btn" id="share">↗ 공유</button><span id="notice" class="notice">영상을 선택하세요.</span></div><p class="help">Chromecast 지원 TV와 동일한 Wi-Fi 연결이 필요합니다. 삼성 TV는 휴대전화 Smart View 화면 미러링을 사용할 수도 있습니다. TV가 재생할 수 있는 스트림 주소여야 합니다.</p></dialog>
 <script>
@@ -285,10 +285,30 @@ function fitTvwikiFrame(){
   frame.dataset.focusOffset=crop?String(offset):"0";
 }
 window.addEventListener("resize",()=>{if(selected&&!$("tvwikiViewer").hidden)fitTvwikiFrame()});
-function setTvwikiEpisode(item,url,label){
+function openNativeEpisode(item,url){
+  if(!BRO_ANDROID_APP||!validTvwikiPage(url))return false;
+  const episodes=(item.episodes||[]).filter(e=>validTvwikiPage(e.pageUrl)).sort((a,b)=>a.number-b.number).slice(0,100);
+  if(!episodes.length)episodes.push({number:1,label:"영상 보기",pageUrl:url});
+  const data=episodes.map(e=>({label:e.label,url:e.pageUrl}));
+  const params=new URLSearchParams({title:item.title,episode:url,items:JSON.stringify(data)});
+  // Android app intercepts this same-origin navigation before a network request.
+  location.assign("/__native_watch?"+params.toString());
+  return true;
+}
+function setTvwikiEpisode(item,url,label,launchNative=false){
   if(!validTvwikiPage(url))return;
   rememberWatch(item,url);
   const frame=$("tvwikiFrame");
+  if(BRO_ANDROID_APP){
+    frame.removeAttribute("src");
+    frame.title=item.title+" · BRO CINEMA 앱 영상창";
+    $("tvwikiStatus").textContent=label+" · 아래 회차를 누르면 앱 내부 영상 화면에서 재생을 시도합니다.";
+    for(const button of $("tvwikiEpisodeButtons").querySelectorAll("button")){
+      button.setAttribute("aria-pressed",String(button.dataset.src===url));
+    }
+    if(launchNative)openNativeEpisode(item,url);
+    return;
+  }
   fitTvwikiFrame();
   // Browser-compatible visual cropping only: no session changes, stream extraction,
   // or cross-origin document scripting. Desktop uses the original anchor.
@@ -330,7 +350,7 @@ function showMissing(item){
     const button=el("button","tvwiki-ep",ep.label);
     button.type="button";button.dataset.src=ep.pageUrl;
     button.setAttribute("aria-pressed","false");
-    button.addEventListener("click",()=>setTvwikiEpisode(item,ep.pageUrl,ep.label));
+    button.addEventListener("click",()=>setTvwikiEpisode(item,ep.pageUrl,ep.label,true));
     buttons.append(button);
   }
   if(!dlg.open)dlg.showModal();
