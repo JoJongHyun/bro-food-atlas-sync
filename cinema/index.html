@@ -71,6 +71,7 @@ function observePoster(item,art){
 }
 const video=$("video"),dlg=$("dlg");
 function validUrl(s){try{const u=new URL(s);return u.protocol==="https:"&&!u.username&&!u.password;}catch{return false;}}
+function validTvwikiPage(s){try{const u=new URL(s);return u.protocol==="https:"&&["tvwiki59.net","tvwiki60.net"].includes(u.hostname)&&/^\/(?:drama|old_drama|movie|kor_movie)\/\d+(?:\/\d+)?$/.test(u.pathname);}catch{return false;}}
 function el(tag,cls,str){const x=document.createElement(tag);if(cls)x.className=cls;if(str!==undefined)x.textContent=str;return x;}
 
 const titleGroups=[
@@ -131,7 +132,7 @@ function sortNewest(a,b){
   if(a.releaseDate!==b.releaseDate)return a.releaseDate?-1:1;
   return a.title.localeCompare(b.title,"ko");
 }
-function normalize(o){if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350),sourceUrl:validUrl(o.sourceUrl)?o.sourceUrl:"",releaseAt:typeof o.releaseAt==="string"&&!Number.isNaN(Date.parse(o.releaseAt))?o.releaseAt:"",releaseDate:validReleaseDate(o.releaseDate||o.premiereDate),episodes:Array.isArray(o.episodes)?o.episodes.filter(x=>x&&Number.isInteger(x.number)&&x.number>0&&x.number<10000&&validUrl(x.pageUrl)).slice(0,200).map(x=>({number:x.number,label:String(x.label||x.number+"화").slice(0,80),pageUrl:x.pageUrl})):[],officialLinks:Array.isArray(o.officialLinks)?o.officialLinks.filter(x=>x&&typeof x.label==="string"&&validUrl(x.url)).slice(0,12).map(x=>({label:x.label.slice(0,85),url:x.url})):[]};}
+function normalize(o){if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350),sourceUrl:validUrl(o.sourceUrl)?o.sourceUrl:"",releaseAt:typeof o.releaseAt==="string"&&!Number.isNaN(Date.parse(o.releaseAt))?o.releaseAt:"",releaseDate:validReleaseDate(o.releaseDate||o.premiereDate),tvwikiPage:validTvwikiPage(o.tvwikiPage)?o.tvwikiPage:"",episodes:Array.isArray(o.episodes)?o.episodes.filter(x=>x&&Number.isInteger(x.number)&&x.number>0&&x.number<10000&&validUrl(x.pageUrl)).slice(0,200).map(x=>({number:x.number,label:String(x.label||x.number+"화").slice(0,80),pageUrl:x.pageUrl})):[],officialLinks:Array.isArray(o.officialLinks)?o.officialLinks.filter(x=>x&&typeof x.label==="string"&&validUrl(x.url)).slice(0,12).map(x=>({label:x.label.slice(0,85),url:x.url})):[]};}
 function render(){
   const q=$("search").value.trim().toLocaleLowerCase("ko");
   const filtered=items.filter(item=>(cat==="즐겨찾기"?favorites.has(favKey(item)):item.category===cat)&&item.title.toLocaleLowerCase("ko").includes(q)).sort(sortNewest);
@@ -150,7 +151,7 @@ function render(){
                el("span","cover-name",item.title),
                el("span","cover-year",String(item.releaseDate||item.year||"")));
     observePoster(item,art);
-    art.append(el("span","tag",isUpcoming(item)?"공개 예정":item.hls?"재생 가능":item.officialLinks?.length?"공식 보기":item.episodes?.length?"회차 링크":item.releaseDate?"작품 정보":"제목 등록"));
+    art.append(el("span","tag",isUpcoming(item)?"공개 예정":item.hls?"재생 가능":item.tvwikiPage?"TV위키 링크":item.officialLinks?.length?"공식 보기":item.episodes?.length?"회차 링크":item.releaseDate?"작품 정보":"제목 등록"));
     const cap=el("div","caption");
     cap.append(el("strong","",item.title),el("small","",(item.releaseDate||item.year||"날짜 미확인")+(isUpcoming(item)?" · 공개 예정":item.hls?" · 재생 가능":" · 영상 미연결")));
     open.append(art,cap);
@@ -179,23 +180,30 @@ function showMissing(item){
   if(item.description)body.append(el("p","",item.description));
   hero.append(cover,body);hero.hidden=false;
   $("playing").textContent=item.title;
-  $("notice").textContent=item.officialLinks?.length?"방송사·OTT 공식 페이지에서 시청할 수 있어요. 로그인, 이용권 또는 인증이 필요할 수 있습니다.":item.episodes?.length?"영상 스트림은 미확인 상태입니다. 외부 페이지에서는 광고가 나타날 수 있습니다.":"재생이 승인된 영상 링크가 아직 연결되지 않았습니다.";
+  const hasTvwiki=Boolean(item.tvwikiPage||item.episodes?.length);
+  $("notice").textContent=hasTvwiki?"TV위키 공개 작품·회차 페이지를 새 탭에서 엽니다. BRO CINEMA 내부 영상 재생이 아니며 원본 사이트 광고가 표시될 수 있습니다.":item.officialLinks?.length?"공식 시청 페이지에서 재생할 수 있습니다. 이용권 또는 로그인이 필요할 수 있습니다.":"확인된 재생 페이지가 없습니다.";
   $("videoStage").style.display="none";
   $("cast").style.display="none";$("airplay").style.display="none";
   const list=$("episodeLinks");list.replaceChildren();
-  if(item.officialLinks?.length){
-    for(const source of item.officialLinks){
-      const link=el("a","btn primary",source.label+" ↗");
-      link.href=source.url;link.target="_blank";link.rel="noopener noreferrer";
-      list.append(link);
+  function linkButton(label,url,style="btn"){
+    if(!validUrl(url))return;
+    const a=el("a",style,label+" ↗");
+    a.href=url;a.target="_blank";a.rel="noopener noreferrer";list.append(a);
+  }
+  if(item.tvwikiPage)linkButton("TV위키 작품 페이지",item.tvwikiPage,"btn primary");
+  if(item.episodes?.length){
+    const label=el("div","", "TV위키 전체 회차 · "+item.episodes.length+"개 확인");
+    label.style.cssText="width:100%;color:#c9d5f3;font-size:13px;margin-top:9px;font-weight:700";
+    list.append(label);
+    for(const ep of [...item.episodes].sort((a,b)=>a.number-b.number)){
+      if(validTvwikiPage(ep.pageUrl))linkButton(ep.label,ep.pageUrl,"btn");
     }
   }
-  if(item.episodes?.length){
-    for(const ep of item.episodes){
-      const link=el("a","btn",ep.label+" · 외부 사이트 ↗");
-      link.href=ep.pageUrl;link.target="_blank";link.rel="noopener noreferrer";
-      list.append(link);
-    }
+  if(item.officialLinks?.length){
+    const label=el("div","", "다른 정식 시청 경로");
+    label.style.cssText="width:100%;color:#9db2d8;font-size:12px;margin-top:12px";
+    list.append(label);
+    for(const source of item.officialLinks)linkButton(source.label,source.url,"btn");
   }
   list.style.display=list.childElementCount?"flex":"none";
   dlg.showModal();
