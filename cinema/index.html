@@ -199,7 +199,7 @@ function render(){
 async function sync(){const button=$("reload");button.disabled=true;$("status").textContent="목록 확인 중…";try{const response=await fetch("./catalog.json?ts="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const payload=await response.json();if(!Array.isArray(payload.items))throw Error("목록 형식 오류");seedItems=payload.items.map(normalize).filter(Boolean);items=seedItems;$("status").textContent="기본 작품 "+items.length+"개";render();await updateWikiTitles();}catch(e){$("status").textContent="목록 갱신 실패";console.error(e);if(!items.length)render();}finally{button.disabled=false;}}
 function showMissing(item){
   selected=item;
-  cleanup();
+  cleanup();setupMediaEditor(item);
   const hero=$("detailHero");
   hero.replaceChildren();
   const cover=el("div","detail-art",item.title);
@@ -241,9 +241,49 @@ function showMissing(item){
   list.style.display=list.childElementCount?"flex":"none";
   dlg.showModal();
 }
-function cleanup(){if(hls){hls.destroy();hls=null}video.pause();video.removeAttribute("src");video.load();}
-async function openVideo(item){selected=item;$("cast").style.display="";$("airplay").style.display="";$("detailHero").hidden=true;$("videoStage").style.display="flex";$("episodeLinks").style.display="none";cleanup();if(validUrl(item.poster))video.poster=item.poster;else video.removeAttribute("poster");$("playing").textContent=item.title;$("notice").textContent="영상 준비 중…";dlg.showModal();const u=new URL(location.href);u.searchParams.set("play",item.id);history.replaceState(null,"",u);
-try{if(video.canPlayType("application/vnd.apple.mpegurl"))video.src=item.hls;else if(window.Hls&&Hls.isSupported()){hls=new Hls();hls.loadSource(item.hls);hls.attachMedia(video);hls.on(Hls.Events.ERROR,(_e,d)=>{if(d.fatal)$("notice").textContent="재생 오류 · CORS/접근 권한을 확인하세요."})}else throw Error("이 브라우저는 HLS를 지원하지 않습니다");$("notice").textContent="재생 준비 완료";const p=video.play();if(p)p.catch(()=>$("notice").textContent="화면의 ▶ 버튼을 눌러주세요.");}catch(e){$("notice").textContent=e.message;}}
+function cleanup(){
+  if(hls){hls.destroy();hls=null}
+  video.pause();
+  video.removeAttribute("src");
+  video.load();
+  $("embedPlayer").removeAttribute("src");
+  $("embedPlayer").hidden=true;
+  video.hidden=false;
+}
+async function openVideo(item){
+  const media=resolvedMedia(item);
+  if(!media){showMissing(item);return}
+  selected=item;cleanup();setupMediaEditor(item);
+  $("detailHero").hidden=true;$("videoStage").style.display="flex";$("episodeLinks").style.display="none";
+  $("cast").style.display=media.kind==="embed"?"none":"";
+  $("airplay").style.display=media.kind==="embed"?"none":"";
+  $("playing").textContent=item.title;$("notice").textContent="영상 준비 중…";
+  if(media.kind==="embed"){
+    video.hidden=true;
+    $("embedPlayer").hidden=false;
+    $("embedPlayer").src=media.url;
+    $("notice").textContent="공식 임베드 플레이어입니다. 콘텐츠 제공자의 로그인·접근·도메인 제한이 적용됩니다.";
+  }else{
+    $("embedPlayer").hidden=true;video.hidden=false;
+    if(validUrl(item.poster))video.poster=item.poster;
+    else video.removeAttribute("poster");
+  }
+  if(!dlg.open)dlg.showModal();
+  const u=new URL(location.href);
+  u.searchParams.set("play",item.id);
+  history.replaceState(null,"",u);
+  if(media.kind==="embed")return;
+  try{
+    if(media.kind==="mp4"||video.canPlayType("application/vnd.apple.mpegurl"))video.src=media.url;
+    else if(window.Hls&&Hls.isSupported()){
+      hls=new Hls();hls.loadSource(media.url);hls.attachMedia(video);
+      hls.on(Hls.Events.ERROR,(_e,d)=>{if(d.fatal)$("notice").textContent="재생 오류 · 제공자 접근권한 또는 CORS를 확인하세요."})
+    }else throw Error("이 브라우저는 HLS를 지원하지 않습니다");
+    $("notice").textContent="재생 준비 완료";
+    const p=video.play();
+    if(p)p.catch(()=>$("notice").textContent="화면의 ▶ 버튼을 눌러주세요.");
+  }catch(e){$("notice").textContent=e.message}
+}
 function closeVideo(){cleanup();selected=null;$("detailHero").hidden=true;$("videoStage").style.display="flex";$("episodeLinks").style.display="none";dlg.close();const u=new URL(location.href);u.searchParams.delete("play");history.replaceState(null,"",u);}
 window.__onGCastApiAvailable=function(ok){if(!ok)return;try{cast.framework.CastContext.getInstance().setOptions({receiverApplicationId:chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,autoJoinPolicy:chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED});castReady=true;}catch(e){console.warn(e)}};
 $("cast").addEventListener("click",async()=>{if(!selected)return;if(!castReady){$("notice").textContent="Cast를 사용할 수 없습니다. Chrome과 TV 연결을 확인하세요.";return}try{const ctx=cast.framework.CastContext.getInstance();let session=ctx.getCurrentSession();if(!session){await ctx.requestSession();session=ctx.getCurrentSession()}if(!session)throw Error("TV 연결 실패");const info=new chrome.cast.media.MediaInfo(selected.hls,"application/x-mpegURL");const metadata=new chrome.cast.media.GenericMediaMetadata();metadata.title=selected.title;info.metadata=metadata;await session.loadMedia(new chrome.cast.media.LoadRequest(info));$("notice").textContent="TV 재생 요청 완료";}catch(e){$("notice").textContent="TV 전송 실패 · 기기 또는 HLS 접근 권한을 확인하세요.";console.warn(e)}});
