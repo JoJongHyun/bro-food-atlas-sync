@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T17:21:33.219Z",
+  "updatedAt": "2026-11-14T17:22:33.714Z",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -1880,8 +1880,15 @@
       "sourceUrl": "https://www.esquirekorea.co.kr/article/1911919",
       "releaseAt": "2026-11-14T21:20:00+09:00",
       "poster": "https://image.tmdb.org/t/p/w500/wVpTtPknLaYCeXnRKO6p2dQle5Z.jpg",
-      "tvwikiPage": "https://tvwiki60.net/drama/12640",
-      "posterSource": "TVWiki public search title match"
+      "tvwikiPage": "https://tvwiki60.net/drama/12640/406792026",
+      "posterSource": "TVWiki public search title match",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화",
+          "pageUrl": "https://tvwiki60.net/drama/12640/406792026"
+        }
+      ]
     },
     {
       "id": "new-2026-drama-2",
@@ -2190,7 +2197,64 @@
       "sourceUrl": "https://opobull.tistory.com/225",
       "poster": "https://api1115.apisvc10.com/data/peakl/thumb/b0ffa164e68babed0ed6d25705a18deeebc6d4dc.webp",
       "posterSource": "TVWiki public listing",
-      "tvwikiPage": "https://tvwiki60.net/drama/12417/406790396"
+      "tvwikiPage": "https://tvwiki60.net/drama/12417/406792021",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화",
+          "pageUrl": "https://tvwiki60.net/drama/12417/406785363"
+        },
+        {
+          "number": 2,
+          "label": "2화",
+          "pageUrl": "https://tvwiki60.net/drama/12417/406785435"
+        },
+        {
+          "number": 3,
+          "label": "3화",
+          "pageUrl": "https://tvwiki60.net/drama/12417/406786396"
+        },
+        {
+          "number": 4,
+          "label": "4화",
+          "pageUrl": "https://tvwiki60.net/drama/12417/406786515"
+        },
+        {
+          "number": 5,
+          "label": "5화",
+          "pageUrl": "https://tvwiki60.net/drama/12417/406787453"
+        },
+        {
+          "number": 6,
+          "label": "6화",
+          "pageUrl": "https://tvwiki60.net/drama/12417/406787565"
+        },
+        {
+          "number": 7,
+          "label": "7화",
+          "pageUrl": "https://tvwiki60.net/drama/12417/406788608"
+        },
+        {
+          "number": 8,
+          "label": "8화",
+          "pageUrl": "https://tvwiki60.net/drama/12417/406788707"
+        },
+        {
+          "number": 9,
+          "label": "9화",
+          "pageUrl": "https://tvwiki60.net/drama/12417/406790241"
+        },
+        {
+          "number": 10,
+          "label": "10화",
+          "pageUrl": "https://tvwiki60.net/drama/12417/406790396"
+        },
+        {
+          "number": 11,
+          "label": "11화",
+          "pageUrl": "https://tvwiki60.net/drama/12417/406792021"
+        }
+      ]
     },
     {
       "id": "new-2026-drama-11",
