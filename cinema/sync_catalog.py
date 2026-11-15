@@ -25,6 +25,7 @@ import urllib.parse
 import urllib.request
 
 from sync_tvwiki_kor import sync_kr_movies
+from sync_tvwiki_recent import sync_recent_boards
 
 LOG = logging.getLogger("cinema.sync")
 UA = "BRO-CINEMA-MetadataSync/1.0 (public TVmaze and Wikimedia API)"
@@ -349,6 +350,7 @@ def sync(catalog, today):
     # Keep the Korean-movie tab sourced exclusively from the TVWiki /kor_movie
     # public listing, not from Wikimedia film categories or guesses.
     tvwiki_kr = sync_kr_movies(catalog)
+    tvwiki_recent = sync_recent_boards(catalog)
     added["한국영화"] = [
         x["title"] for x in items if x.get("category") == "한국영화"
         and x.get("sourceProvider") == "TVWiki Korean movie index"
@@ -384,9 +386,10 @@ def sync(catalog, today):
         "status": "ok", "checkedAt": when,
         "lastFilmSyncAt": when if works_ok else last_film_check,
         "sourceCategoriesChecked": work_sources,
-        "source": ["TVmaze public API", "Wikimedia MediaWiki API (other categories)", "TVWiki public Korean-film listing"],
+        "source": ["TVmaze public API", "Wikimedia MediaWiki API (other categories)", "TVWiki public recent-broadcast movie, Korean film and drama listings"],
         "tvwikiKoreanMovieSync": {"status": tvwiki_kr.get("status"), "totalPages": tvwiki_kr.get("totalPages"), "pagesFetched": tvwiki_kr.get("pagesFetched"), "newTitles": tvwiki_kr.get("newTitles"), "tvwikiLinked": tvwiki_kr.get("tvwikiLinked")},
-        "newTitles": {**{k: len(v) for k, v in added.items()}, "한국영화": int(tvwiki_kr.get("newTitles") or 0)},
+        "tvwikiRecentBoards": tvwiki_recent,
+        "newTitles": {**{k: len(v) + int((tvwiki_recent.get(k) or {}).get("newTitles") or 0) for k, v in added.items()}, "한국영화": int(tvwiki_kr.get("newTitles") or 0)},
         "newEpisodeMetadata": sum(x["newCount"] for x in updated_episodes),
         "titlesAdded": [{"category": k, "title": title} for k, vals in added.items() for title in vals],
         "episodeChanges": updated_episodes[:40],
