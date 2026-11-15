@@ -320,10 +320,14 @@ def sync(catalog, today):
 
     movies, works_ok, work_sources = read_recent_works(today)
     api_success += works_ok
-    # Incremental detection: do not import old pages in the category on every
-    # run. A catalog initially seeds the most recent film metadata only once.
+    # Rolling catch-up prevents source-indexed titles from being skipped when
+    # more than MAX_NEW_PER_CATEGORY are discovered during one sync.
+    # A category's timestamp is its index date, not its theatrical air date.
     last_film_check = (catalog.get("autoSync") or {}).get("lastFilmSyncAt") or (
         catalog.get("autoSync") or {}).get("checkedAt") or ""
+    rolling_cutoff = (dt.datetime.combine(
+        today - dt.timedelta(days=60), dt.time.min, tzinfo=dt.timezone.utc
+    ).isoformat())
     for incoming in movies:
         cat = incoming["category"]
         key = item_key(incoming)
@@ -331,7 +335,9 @@ def sync(catalog, today):
         if key in by_key or len(added[cat]) >= MAX_NEW_PER_CATEGORY:
             continue
         stamp = incoming.get("sourceIndexedAt") or ""
-        if last_film_check and stamp and stamp <= last_film_check:
+        # Backfill recently indexed pages even if the last hourly scan was
+        # successful; future-year titles are allowed if catalogued earlier.
+        if incoming.get("year", today.year) <= today.year and stamp and stamp < rolling_cutoff:
             continue
         items.append(incoming)
         by_key[key] = incoming
