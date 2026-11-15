@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T05:29:02+00:00",
+  "updatedAt": "2026-11-15T05:30:26+00:00",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -4431,6 +4431,26 @@
   "autoSyncHistory": [
     {
       "status": "ok",
+      "checkedAt": "2026-11-15T05:30:26+00:00",
+      "lastFilmSyncAt": "2026-11-15T05:30:26+00:00",
+      "source": [
+        "TVmaze public API",
+        "Wikimedia MediaWiki API"
+      ],
+      "newTitles": {
+        "영화": 0,
+        "한국영화": 0,
+        "드라마": 0
+      },
+      "newEpisodeMetadata": 0,
+      "titlesAdded": [],
+      "episodeChanges": [],
+      "duplicatesMerged": [],
+      "sourceRequestsSucceeded": 30,
+      "note": "Official episode metadata is not playable video. User TVWiki links are unchanged."
+    },
+    {
+      "status": "ok",
       "checkedAt": "2026-11-15T05:29:02+00:00",
       "lastFilmSyncAt": "2026-11-15T05:29:02+00:00",
       "source": [
@@ -4800,8 +4820,8 @@
   ],
   "autoSync": {
     "status": "ok",
-    "checkedAt": "2026-11-15T05:29:02+00:00",
-    "lastFilmSyncAt": "2026-11-15T05:29:02+00:00",
+    "checkedAt": "2026-11-15T05:30:26+00:00",
+    "lastFilmSyncAt": "2026-11-15T05:30:26+00:00",
     "source": [
       "TVmaze public API",
       "Wikimedia MediaWiki API"
@@ -4814,36 +4834,7 @@
     "newEpisodeMetadata": 0,
     "titlesAdded": [],
     "episodeChanges": [],
-    "duplicatesMerged": [
-      {
-        "removed": "100 Days of Deception",
-        "kept": "100일의 거짓말"
-      },
-      {
-        "removed": "Sword & Silence",
-        "kept": "문무"
-      },
-      {
-        "removed": "Doctor X: Mafia in White",
-        "kept": "닥터X: 하얀 마피아의 시대"
-      },
-      {
-        "removed": "The Perfect Lie",
-        "kept": "라이어"
-      },
-      {
-        "removed": "Final Table",
-        "kept": "파이널 테이블"
-      },
-      {
-        "removed": "Love in Disguise",
-        "kept": "나의 유죄인간"
-      },
-      {
-        "removed": "One of a Kind Romance",
-        "kept": "유일무이 로맨스"
-      }
-    ],
+    "duplicatesMerged": [],
     "sourceRequestsSucceeded": 30,
     "note": "Official episode metadata is not playable video. User TVWiki links are unchanged."
   }
