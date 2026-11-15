@@ -114,7 +114,6 @@
 .install-offer-go{border:0;border-radius:9px;background:#4072ec;color:white;white-space:nowrap;font-weight:750;font-size:12px;padding:10px}
 .install-offer-dismiss{border:0;background:transparent;color:#b6c6e4;font-size:21px;padding:2px 3px;align-self:flex-start}
 @media(max-width:370px){.install-offer{gap:7px;padding:10px}.install-offer-mark{display:none}.install-offer-go{padding:9px 7px}}
-.tvwiki-ep-missing{opacity:.8;cursor:pointer;background:#17253a!important;color:#b9d0ec!important;border-style:dashed!important}
 .episode-link-note{margin:9px 0 0;color:#b9c9e0;font-size:12px;line-height:1.6}
 
 .tvwiki-link-status{padding:13px 16px;border-top:1px solid #354b6c;background:#15253c;display:flex;flex-direction:column;gap:7px}
@@ -173,7 +172,7 @@
     <div id="tvwikiEpisodeButtons" class="tvwiki-episode-buttons" role="group" aria-label="드라마 회차 선택"></div>
     <p id="episodeConnectionNote" class="episode-link-note" aria-live="polite"></p>
   </div>
-  <details id="episodeMediaEditor" class="tvwiki-media-editor">
+  <details id="episodeMediaEditor" class="tvwiki-media-editor" hidden>
     <summary>회차별 영상 주소 연결 (공식 임베드·허용된 영상)</summary>
     <div class="tvwiki-media-editrow">
       <input id="episodeMediaURL" type="url" inputmode="url" placeholder="HTTPS .m3u8 / .mp4 / 공식 플레이어 주소" aria-label="선택한 회차의 재생 가능한 영상 주소">
@@ -766,9 +765,9 @@ function showMissing(item){
   const hasEpisode=choices.length>0;
   $("tvwikiViewer").hidden=!hasEpisode;
   $("videoStage").style.display="none";
-  $("playerEditor").style.display=hasEpisode?"none":"";
-  document.querySelector(".modaltools").style.display=hasEpisode?"none":"";
-  document.querySelector("p.help").style.display=hasEpisode?"none":"";
+  $("playerEditor").style.display="none";
+  document.querySelector(".modaltools").style.display="none";
+  document.querySelector("p.help").style.display="none";
   $("cast").style.display="none";$("airplay").style.display="none";
   $("notice").textContent=hasEpisode?"방송 회차를 자동 표시합니다. 영상 미연결 회차는 재생되지 않습니다.":"영상이 연결되지 않았습니다.";
   updateEpisodeControls();
