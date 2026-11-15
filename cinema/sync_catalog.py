@@ -128,10 +128,9 @@ def read_tvmaze(today):
 
 def mediawiki_categories(today):
     """Track Korean originals as well as international releases and upcoming-year titles."""
-    years = [today.year]
-    if today.month >= 9:
-        years.append(today.year + 1)
-    for year in years:
+    # Catalog new releases from the current year only. A future year alone
+    # does not establish that a title has been released.
+    for year in [today.year]:
         yield "한국영화", "ko", year, f"분류:{year}년 대한민국의 영화"
         yield "한국영화", "en", year, f"Category:{year} South Korean films"
         yield "영화", "ko", year, f"분류:{year}년 영화"
@@ -335,9 +334,8 @@ def sync(catalog, today):
         if key in by_key or len(added[cat]) >= MAX_NEW_PER_CATEGORY:
             continue
         stamp = incoming.get("sourceIndexedAt") or ""
-        # Backfill recently indexed pages even if the last hourly scan was
-        # successful; future-year titles are allowed if catalogued earlier.
-        if incoming.get("year", today.year) <= today.year and stamp and stamp < rolling_cutoff:
+        # Backfill recently indexed pages even after an earlier successful scan.
+        if stamp and stamp < rolling_cutoff:
             continue
         items.append(incoming)
         by_key[key] = incoming
