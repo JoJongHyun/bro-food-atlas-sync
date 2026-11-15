@@ -3,7 +3,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0b0d17">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="BRO CINEMA"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icons/icon-192.png"><link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png"><meta name="description" content="BRO CINEMA: 영화, 한국영화, 드라마 전용 HLS 플레이어.">
+<link rel="manifest" href="./manifest.json" type="application/manifest+json"><link rel="apple-touch-icon" href="./icons/icon-192.png"><link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png"><meta name="description" content="BRO CINEMA: 영화, 한국영화, 드라마 전용 HLS 플레이어.">
 <title>BRO CINEMA · 영화 · 한국영화 · 드라마</title>
 <style>
 :root{color-scheme:dark;font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;--bg:#080b13;--panel:#131b2a;--line:#303c54;--dim:#a3aec5;--text:#f5f7ff;--indigo:#7190ff}
@@ -113,7 +113,7 @@
 </div>
 <dialog id="installHelp" class="install-help" aria-labelledby="installHelpTitle"><div class="install-help-body">
   <div class="install-help-title"><h2 id="installHelpTitle">📲 BRO CINEMA 홈 화면에 추가</h2><button class="x" type="button" id="installHelpClose" aria-label="설치 안내 닫기">×</button></div>
-  <p>앱스토어나 APK 설치 없이, 지금 열려 있는 사이트를 휴대전화 홈 화면에 추가할 수 있어요.</p>
+  <p>Chrome 표시가 붙은 기존 아이콘은 웹사이트 바로가기일 수 있어요. <strong>‘바로가기 만들기’가 아닌 ‘설치’</strong>를 선택해야 독립 웹앱으로 실행할 수 있습니다.</p>
   <div id="installSteps" class="install-steps"></div>
   <p class="install-help-note">홈 화면 아이콘을 누르면 BRO CINEMA가 앱처럼 열립니다. 영상 연결과 콘텐츠는 웹사이트와 동일하며 인터넷 연결이 필요합니다.</p>
   <button class="btn primary install-help-done" type="button" id="installHelpDone">확인</button>
@@ -195,7 +195,7 @@ function showInstallInstructions(){
     :samsung
       ?"1. 삼성 인터넷 메뉴(≡)를 여세요.\n2. '현재 페이지 추가' → '홈 화면'을 선택하세요.\n3. 이름을 확인하고 '추가'를 누르세요."
       :android
-        ?"1. Chrome 오른쪽 위 ⋮ 메뉴를 누르세요.\n2. '홈 화면에 추가' 또는 '앱 설치'를 선택하세요.\n3. '설치' 또는 '추가'를 누르세요."
+        ?"1. 기존 BRO CINEMA의 Chrome 표시가 붙은 홈 화면 바로가기만 삭제하세요.\n2. Chrome 앱에서 https://bro-cinema-hls.onrender.com 을 직접 열어주세요.\n3. 오른쪽 위 ⋮ → '앱 설치' 또는 '홈 화면에 추가' → '설치'를 선택하세요.\n4. ‘바로가기 만들기’만 보인다면 독립 웹앱 설치가 지원되지 않는 상태입니다. Chrome 업데이트 후 다시 시도하세요."
         :"Chrome 또는 Edge 주소창의 설치 아이콘을 누르거나, ⋮ 메뉴에서 '앱 설치'를 선택하세요.\n지원되지 않는 브라우저라면 즐겨찾기로 저장하세요.";
   $("installHelp").showModal();
 }
@@ -205,8 +205,9 @@ $("appInstall").addEventListener("click",async()=>{
     const prompt=pendingInstallPrompt;
     pendingInstallPrompt=null;
     try{
-      prompt.prompt();
-      await prompt.userChoice;
+      await prompt.prompt();
+      const choice=await prompt.userChoice;
+      if(choice?.outcome!=="accepted")showInstallInstructions();
     }catch(e){showInstallInstructions();}
   }else showInstallInstructions();
 });
