@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T17:26:18.218Z",
+  "updatedAt": "2026-11-15T05:26:41+00:00",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -2578,7 +2578,2571 @@
       "poster": "https://image.tmdb.org/t/p/w500/tnwFaR8oaRMW85iKmYxRtbuKx09.jpg",
       "tvwikiPage": "https://tvwiki60.net/kor_movie/35767",
       "posterSource": "TVWiki public search title match"
+    },
+    {
+      "id": "auto-tvmaze-93245",
+      "category": "드라마",
+      "title": "Love on the Menu",
+      "year": 2026,
+      "releaseDate": "2026-07-25",
+      "description": "Some sacrificed love for the sake of family. Others walked away from their families to protect the ones they loved. And some, believing they were acting out of love, only left deeper wounds behind. Years of misunderstanding and conflict have driven them apart,",
+      "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/633/1583690.jpg",
+      "sourceUrl": "https://www.tvmaze.com/shows/93245/love-on-the-menu",
+      "tvmazeId": 93245,
+      "sourceProvider": "TVmaze",
+      "officialEpisodes": [
+        {
+          "season": 1,
+          "number": 1,
+          "label": "1화",
+          "airdate": "2026-07-25",
+          "title": "Patience Meets A Rival",
+          "url": "https://www.tvmaze.com/episodes/3681383/love-on-the-menu-1x01-patience-meets-a-rival"
+        },
+        {
+          "season": 1,
+          "number": 2,
+          "label": "2화",
+          "airdate": "2026-07-26",
+          "title": "You Are My Saviour",
+          "url": "https://www.tvmaze.com/episodes/3681384/love-on-the-menu-1x02-you-are-my-saviour"
+        },
+        {
+          "season": 1,
+          "number": 3,
+          "label": "3화",
+          "airdate": "2026-08-01",
+          "title": "Truth Changes Everything",
+          "url": "https://www.tvmaze.com/episodes/3681385/love-on-the-menu-1x03-truth-changes-everything"
+        },
+        {
+          "season": 1,
+          "number": 4,
+          "label": "4화",
+          "airdate": "2026-08-02",
+          "title": "Unexpected Reunion",
+          "url": "https://www.tvmaze.com/episodes/3681386/love-on-the-menu-1x04-unexpected-reunion"
+        },
+        {
+          "season": 1,
+          "number": 5,
+          "label": "5화",
+          "airdate": "2026-08-08",
+          "title": "A Love Left Unfinished",
+          "url": "https://www.tvmaze.com/episodes/3681387/love-on-the-menu-1x05-a-love-left-unfinished"
+        },
+        {
+          "season": 1,
+          "number": 6,
+          "label": "6화",
+          "airdate": "2026-08-09",
+          "title": "Reunion With Mother",
+          "url": "https://www.tvmaze.com/episodes/3681388/love-on-the-menu-1x06-reunion-with-mother"
+        },
+        {
+          "season": 1,
+          "number": 7,
+          "label": "7화",
+          "airdate": "2026-08-15",
+          "title": "A Past They Cannot Erase",
+          "url": "https://www.tvmaze.com/episodes/3681389/love-on-the-menu-1x07-a-past-they-cannot-erase"
+        },
+        {
+          "season": 1,
+          "number": 8,
+          "label": "8화",
+          "airdate": "2026-08-16",
+          "title": "The Saviour Who Saved My Son",
+          "url": "https://www.tvmaze.com/episodes/3681390/love-on-the-menu-1x08-the-saviour-who-saved-my-son"
+        },
+        {
+          "season": 1,
+          "number": 9,
+          "label": "9화",
+          "airdate": "2026-08-22",
+          "title": "A Wedding To Stop",
+          "url": "https://www.tvmaze.com/episodes/3681391/love-on-the-menu-1x09-a-wedding-to-stop"
+        },
+        {
+          "season": 1,
+          "number": 10,
+          "label": "10화",
+          "airdate": "2026-08-23",
+          "title": "A Lost Memory",
+          "url": "https://www.tvmaze.com/episodes/3681392/love-on-the-menu-1x10-a-lost-memory"
+        },
+        {
+          "season": 1,
+          "number": 11,
+          "label": "11화",
+          "airdate": "2026-08-29",
+          "title": "The Secret Behind Gyu Rim's Childbirth",
+          "url": "https://www.tvmaze.com/episodes/3681393/love-on-the-menu-1x11-the-secret-behind-gyu-rims-childbirth"
+        },
+        {
+          "season": 1,
+          "number": 12,
+          "label": "12화",
+          "airdate": "2026-08-30",
+          "title": "No More Sacrifices",
+          "url": "https://www.tvmaze.com/episodes/3681394/love-on-the-menu-1x12-no-more-sacrifices"
+        },
+        {
+          "season": 1,
+          "number": 13,
+          "label": "13화",
+          "airdate": "2026-09-05",
+          "title": "A Shocking Discovery",
+          "url": "https://www.tvmaze.com/episodes/3681395/love-on-the-menu-1x13-a-shocking-discovery"
+        },
+        {
+          "season": 1,
+          "number": 14,
+          "label": "14화",
+          "airdate": "2026-09-06",
+          "title": "A Child Demands The Truth",
+          "url": "https://www.tvmaze.com/episodes/3681396/love-on-the-menu-1x14-a-child-demands-the-truth"
+        },
+        {
+          "season": 1,
+          "number": 15,
+          "label": "15화",
+          "airdate": "2026-09-12",
+          "title": "Hidden Truths And Cold Calculations",
+          "url": "https://www.tvmaze.com/episodes/3681397/love-on-the-menu-1x15-hidden-truths-and-cold-calculations"
+        },
+        {
+          "season": 1,
+          "number": 16,
+          "label": "16화",
+          "airdate": "2026-09-13",
+          "title": "When Silence Finally Breaks",
+          "url": "https://www.tvmaze.com/episodes/3681398/love-on-the-menu-1x16-when-silence-finally-breaks"
+        },
+        {
+          "season": 1,
+          "number": 17,
+          "label": "17화",
+          "airdate": "2026-09-19",
+          "title": "Stay By My Side",
+          "url": "https://www.tvmaze.com/episodes/3681399/love-on-the-menu-1x17-stay-by-my-side"
+        },
+        {
+          "season": 1,
+          "number": 18,
+          "label": "18화",
+          "airdate": "2026-09-20",
+          "title": "Meeting the Family",
+          "url": "https://www.tvmaze.com/episodes/3681400/love-on-the-menu-1x18-meeting-the-family"
+        },
+        {
+          "season": 1,
+          "number": 19,
+          "label": "19화",
+          "airdate": "2026-10-04",
+          "title": "The Cost Of Trust",
+          "url": "https://www.tvmaze.com/episodes/3681401/love-on-the-menu-1x19-the-cost-of-trust"
+        },
+        {
+          "season": 1,
+          "number": 20,
+          "label": "20화",
+          "airdate": "2026-10-10",
+          "title": "Straight Toward Gyu Rim",
+          "url": "https://www.tvmaze.com/episodes/3681402/love-on-the-menu-1x20-straight-toward-gyu-rim"
+        },
+        {
+          "season": 1,
+          "number": 21,
+          "label": "21화",
+          "airdate": "2026-10-11",
+          "title": "Too Bright To Ignore",
+          "url": "https://www.tvmaze.com/episodes/3681403/love-on-the-menu-1x21-too-bright-to-ignore"
+        },
+        {
+          "season": 1,
+          "number": 22,
+          "label": "22화",
+          "airdate": "2026-10-17",
+          "title": "No More Running",
+          "url": "https://www.tvmaze.com/episodes/3681404/love-on-the-menu-1x22-no-more-running"
+        },
+        {
+          "season": 1,
+          "number": 23,
+          "label": "23화",
+          "airdate": "2026-10-18",
+          "title": "Love in the Present Tense",
+          "url": "https://www.tvmaze.com/episodes/3681405/love-on-the-menu-1x23-love-in-the-present-tense"
+        },
+        {
+          "season": 1,
+          "number": 24,
+          "label": "24화",
+          "airdate": "2026-10-24",
+          "title": "The Price of Love",
+          "url": "https://www.tvmaze.com/episodes/3681406/love-on-the-menu-1x24-the-price-of-love"
+        },
+        {
+          "season": 1,
+          "number": 25,
+          "label": "25화",
+          "airdate": "2026-10-25",
+          "title": "Standing Together In Crisis",
+          "url": "https://www.tvmaze.com/episodes/3681407/love-on-the-menu-1x25-standing-together-in-crisis"
+        },
+        {
+          "season": 1,
+          "number": 26,
+          "label": "26화",
+          "airdate": "2026-10-31",
+          "title": "Standing Through The Storm",
+          "url": "https://www.tvmaze.com/episodes/3681408/love-on-the-menu-1x26-standing-through-the-storm"
+        },
+        {
+          "season": 1,
+          "number": 27,
+          "label": "27화",
+          "airdate": "2026-11-01",
+          "title": "Trouble Beyond the Headlines",
+          "url": "https://www.tvmaze.com/episodes/3681409/love-on-the-menu-1x27-trouble-beyond-the-headlines"
+        },
+        {
+          "season": 1,
+          "number": 28,
+          "label": "28화",
+          "airdate": "2026-11-07",
+          "title": "An Unexpected Turn",
+          "url": "https://www.tvmaze.com/episodes/3681410/love-on-the-menu-1x28-an-unexpected-turn"
+        },
+        {
+          "season": 1,
+          "number": 29,
+          "label": "29화",
+          "airdate": "2026-11-08",
+          "title": "Episode 29",
+          "url": "https://www.tvmaze.com/episodes/3681411/love-on-the-menu-1x29-episode-29"
+        },
+        {
+          "season": 1,
+          "number": 30,
+          "label": "30화",
+          "airdate": "2026-11-14",
+          "title": "Episode 30",
+          "url": "https://www.tvmaze.com/episodes/3681412/love-on-the-menu-1x30-episode-30"
+        },
+        {
+          "season": 1,
+          "number": 31,
+          "label": "31화",
+          "airdate": "2026-11-15",
+          "title": "Episode 31",
+          "url": "https://www.tvmaze.com/episodes/3681413/love-on-the-menu-1x31-episode-31"
+        }
+      ]
+    },
+    {
+      "id": "auto-tvmaze-90249",
+      "category": "드라마",
+      "title": "100 Days of Deception",
+      "year": 2026,
+      "releaseDate": "2026-10-10",
+      "description": "Set in Gyeongseong during the Japanese colonial period, the drama follows Ga Gyeong, the city's most talented pickpocket, who strikes a dangerous deal with the independence army and goes undercover at the Japanese Government-General of Joseon. Disguised as an ",
+      "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/645/1613484.jpg",
+      "sourceUrl": "https://www.tvmaze.com/shows/90249/100-days-of-deception",
+      "tvmazeId": 90249,
+      "sourceProvider": "TVmaze",
+      "officialEpisodes": [
+        {
+          "season": 1,
+          "number": 1,
+          "label": "1화",
+          "airdate": "2026-10-10",
+          "title": "Episode 1",
+          "url": "https://www.tvmaze.com/episodes/3709571/100-days-of-deception-1x01-episode-1"
+        },
+        {
+          "season": 1,
+          "number": 2,
+          "label": "2화",
+          "airdate": "2026-10-11",
+          "title": "Episode 2",
+          "url": "https://www.tvmaze.com/episodes/3709572/100-days-of-deception-1x02-episode-2"
+        },
+        {
+          "season": 1,
+          "number": 3,
+          "label": "3화",
+          "airdate": "2026-10-17",
+          "title": "Episode 3",
+          "url": "https://www.tvmaze.com/episodes/3709573/100-days-of-deception-1x03-episode-3"
+        },
+        {
+          "season": 1,
+          "number": 4,
+          "label": "4화",
+          "airdate": "2026-10-18",
+          "title": "Episode 4",
+          "url": "https://www.tvmaze.com/episodes/3709574/100-days-of-deception-1x04-episode-4"
+        },
+        {
+          "season": 1,
+          "number": 5,
+          "label": "5화",
+          "airdate": "2026-10-24",
+          "title": "Episode 5",
+          "url": "https://www.tvmaze.com/episodes/3709575/100-days-of-deception-1x05-episode-5"
+        },
+        {
+          "season": 1,
+          "number": 6,
+          "label": "6화",
+          "airdate": "2026-10-25",
+          "title": "Episode 6",
+          "url": "https://www.tvmaze.com/episodes/3709576/100-days-of-deception-1x06-episode-6"
+        },
+        {
+          "season": 1,
+          "number": 7,
+          "label": "7화",
+          "airdate": "2026-10-31",
+          "title": "Episode 7",
+          "url": "https://www.tvmaze.com/episodes/3709577/100-days-of-deception-1x07-episode-7"
+        },
+        {
+          "season": 1,
+          "number": 8,
+          "label": "8화",
+          "airdate": "2026-11-01",
+          "title": "Episode 8",
+          "url": "https://www.tvmaze.com/episodes/3709578/100-days-of-deception-1x08-episode-8"
+        },
+        {
+          "season": 1,
+          "number": 9,
+          "label": "9화",
+          "airdate": "2026-11-07",
+          "title": "Episode 9",
+          "url": "https://www.tvmaze.com/episodes/3709579/100-days-of-deception-1x09-episode-9"
+        },
+        {
+          "season": 1,
+          "number": 10,
+          "label": "10화",
+          "airdate": "2026-11-08",
+          "title": "Episode 10",
+          "url": "https://www.tvmaze.com/episodes/3709580/100-days-of-deception-1x10-episode-10"
+        },
+        {
+          "season": 1,
+          "number": 11,
+          "label": "11화",
+          "airdate": "2026-11-14",
+          "title": "Episode 11",
+          "url": "https://www.tvmaze.com/episodes/3709581/100-days-of-deception-1x11-episode-11"
+        },
+        {
+          "season": 1,
+          "number": 12,
+          "label": "12화",
+          "airdate": "2026-11-15",
+          "title": "Episode 12",
+          "url": "https://www.tvmaze.com/episodes/3709582/100-days-of-deception-1x12-episode-12"
+        }
+      ]
+    },
+    {
+      "id": "auto-tvmaze-89763",
+      "category": "드라마",
+      "title": "Sword & Silence",
+      "year": 2026,
+      "releaseDate": "2026-11-14",
+      "description": "A large-scale historical drama that highlights the great victory of the small nation of Silla, which defeated Goguryeo, Baekje, and even the Tang Dynasty, and completed the unification of the three kingdoms.",
+      "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/646/1617072.jpg",
+      "sourceUrl": "https://www.tvmaze.com/shows/89763/sword-silence",
+      "tvmazeId": 89763,
+      "sourceProvider": "TVmaze",
+      "officialEpisodes": [
+        {
+          "season": 1,
+          "number": 1,
+          "label": "1화",
+          "airdate": "2026-11-14",
+          "title": "Episode 1",
+          "url": "https://www.tvmaze.com/episodes/3775262/sword-silence-1x01-episode-1"
+        },
+        {
+          "season": 1,
+          "number": 2,
+          "label": "2화",
+          "airdate": "2026-11-15",
+          "title": "Episode 2",
+          "url": "https://www.tvmaze.com/episodes/3797008/sword-silence-1x02-episode-2"
+        }
+      ]
+    },
+    {
+      "id": "auto-tvmaze-91309",
+      "category": "드라마",
+      "title": "Doctor X: Mafia in White",
+      "year": 2026,
+      "releaseDate": "2026-10-09",
+      "description": "In a hospital dominated by ego and corruption, an enigmatic but brilliant surgeon arrives — taking on seemingly impossible cases amid fierce opposition.",
+      "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/645/1613382.jpg",
+      "sourceUrl": "https://www.tvmaze.com/shows/91309/doctor-x-mafia-in-white",
+      "tvmazeId": 91309,
+      "sourceProvider": "TVmaze",
+      "officialEpisodes": [
+        {
+          "season": 1,
+          "number": 1,
+          "label": "1화",
+          "airdate": "2026-10-09",
+          "title": "Episode 1",
+          "url": "https://www.tvmaze.com/episodes/3723566/doctor-x-mafia-in-white-1x01-episode-1"
+        },
+        {
+          "season": 1,
+          "number": 2,
+          "label": "2화",
+          "airdate": "2026-10-10",
+          "title": "Episode 2",
+          "url": "https://www.tvmaze.com/episodes/3736147/doctor-x-mafia-in-white-1x02-episode-2"
+        },
+        {
+          "season": 1,
+          "number": 3,
+          "label": "3화",
+          "airdate": "2026-10-16",
+          "title": "Episode 3",
+          "url": "https://www.tvmaze.com/episodes/3736148/doctor-x-mafia-in-white-1x03-episode-3"
+        },
+        {
+          "season": 1,
+          "number": 4,
+          "label": "4화",
+          "airdate": "2026-10-17",
+          "title": "Episode 4",
+          "url": "https://www.tvmaze.com/episodes/3736149/doctor-x-mafia-in-white-1x04-episode-4"
+        },
+        {
+          "season": 1,
+          "number": 5,
+          "label": "5화",
+          "airdate": "2026-10-23",
+          "title": "Episode 5",
+          "url": "https://www.tvmaze.com/episodes/3736150/doctor-x-mafia-in-white-1x05-episode-5"
+        },
+        {
+          "season": 1,
+          "number": 6,
+          "label": "6화",
+          "airdate": "2026-10-24",
+          "title": "Episode 6",
+          "url": "https://www.tvmaze.com/episodes/3736151/doctor-x-mafia-in-white-1x06-episode-6"
+        },
+        {
+          "season": 1,
+          "number": 7,
+          "label": "7화",
+          "airdate": "2026-10-30",
+          "title": "Episode 7",
+          "url": "https://www.tvmaze.com/episodes/3736152/doctor-x-mafia-in-white-1x07-episode-7"
+        },
+        {
+          "season": 1,
+          "number": 8,
+          "label": "8화",
+          "airdate": "2026-10-31",
+          "title": "Episode 8",
+          "url": "https://www.tvmaze.com/episodes/3736153/doctor-x-mafia-in-white-1x08-episode-8"
+        },
+        {
+          "season": 1,
+          "number": 9,
+          "label": "9화",
+          "airdate": "2026-11-06",
+          "title": "Episode 9",
+          "url": "https://www.tvmaze.com/episodes/3736154/doctor-x-mafia-in-white-1x09-episode-9"
+        },
+        {
+          "season": 1,
+          "number": 10,
+          "label": "10화",
+          "airdate": "2026-11-07",
+          "title": "Episode 10",
+          "url": "https://www.tvmaze.com/episodes/3736155/doctor-x-mafia-in-white-1x10-episode-10"
+        },
+        {
+          "season": 1,
+          "number": 11,
+          "label": "11화",
+          "airdate": "2026-11-13",
+          "title": "Episode 11",
+          "url": "https://www.tvmaze.com/episodes/3736156/doctor-x-mafia-in-white-1x11-episode-11"
+        },
+        {
+          "season": 1,
+          "number": 12,
+          "label": "12화",
+          "airdate": "2026-11-14",
+          "title": "Episode 12",
+          "url": "https://www.tvmaze.com/episodes/3736157/doctor-x-mafia-in-white-1x12-episode-12"
+        }
+      ]
+    },
+    {
+      "id": "auto-tvmaze-94682",
+      "category": "드라마",
+      "title": "The Perfect Lie",
+      "year": 2026,
+      "releaseDate": "2026-10-30",
+      "description": "Joonho, a heart surgeon with a perfect smile, and Jisun, a free-spirited teacher-librarian, share a special night after a heart-fluttering date. The next day, they face each other at a police station with completely different memories. One of them is lying. Wi",
+      "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/646/1617481.jpg",
+      "sourceUrl": "https://www.tvmaze.com/shows/94682/the-perfect-lie",
+      "tvmazeId": 94682,
+      "sourceProvider": "TVmaze",
+      "officialEpisodes": [
+        {
+          "season": 1,
+          "number": 1,
+          "label": "1화",
+          "airdate": "2026-10-30",
+          "title": "Episode 1",
+          "url": "https://www.tvmaze.com/episodes/3771243/the-perfect-lie-1x01-episode-1"
+        },
+        {
+          "season": 1,
+          "number": 2,
+          "label": "2화",
+          "airdate": "2026-10-31",
+          "title": "Episode 2",
+          "url": "https://www.tvmaze.com/episodes/3771244/the-perfect-lie-1x02-episode-2"
+        },
+        {
+          "season": 1,
+          "number": 3,
+          "label": "3화",
+          "airdate": "2026-11-06",
+          "title": "Episode 3",
+          "url": "https://www.tvmaze.com/episodes/3771245/the-perfect-lie-1x03-episode-3"
+        },
+        {
+          "season": 1,
+          "number": 4,
+          "label": "4화",
+          "airdate": "2026-11-07",
+          "title": "Episode 4",
+          "url": "https://www.tvmaze.com/episodes/3771246/the-perfect-lie-1x04-episode-4"
+        },
+        {
+          "season": 1,
+          "number": 5,
+          "label": "5화",
+          "airdate": "2026-11-13",
+          "title": "Episode 5",
+          "url": "https://www.tvmaze.com/episodes/3771247/the-perfect-lie-1x05-episode-5"
+        },
+        {
+          "season": 1,
+          "number": 6,
+          "label": "6화",
+          "airdate": "2026-11-14",
+          "title": "Episode 6",
+          "url": "https://www.tvmaze.com/episodes/3771248/the-perfect-lie-1x06-episode-6"
+        }
+      ]
+    },
+    {
+      "id": "auto-tvmaze-91448",
+      "category": "드라마",
+      "title": "Final Table",
+      "year": 2026,
+      "releaseDate": "2026-10-24",
+      "description": "Follows Choi Song I, the new manager of a family restaurant, who must step up to take charge after her father's sudden death. In a bid to save the restaurant, she becomes entangled in a fierce cooking competition alongside Kang Han, also known as \"Chris K\", a ",
+      "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/646/1617487.jpg",
+      "sourceUrl": "https://www.tvmaze.com/shows/91448/final-table",
+      "tvmazeId": 91448,
+      "sourceProvider": "TVmaze",
+      "officialEpisodes": [
+        {
+          "season": 1,
+          "number": 1,
+          "label": "1화",
+          "airdate": "2026-10-24",
+          "title": "Episode 1",
+          "url": "https://www.tvmaze.com/episodes/3759314/final-table-1x01-episode-1"
+        },
+        {
+          "season": 1,
+          "number": 2,
+          "label": "2화",
+          "airdate": "2026-10-25",
+          "title": "Episode 2",
+          "url": "https://www.tvmaze.com/episodes/3759315/final-table-1x02-episode-2"
+        },
+        {
+          "season": 1,
+          "number": 3,
+          "label": "3화",
+          "airdate": "2026-10-31",
+          "title": "Episode 3",
+          "url": "https://www.tvmaze.com/episodes/3759316/final-table-1x03-episode-3"
+        },
+        {
+          "season": 1,
+          "number": 4,
+          "label": "4화",
+          "airdate": "2026-11-01",
+          "title": "Episode 4",
+          "url": "https://www.tvmaze.com/episodes/3759317/final-table-1x04-episode-4"
+        },
+        {
+          "season": 1,
+          "number": 5,
+          "label": "5화",
+          "airdate": "2026-11-07",
+          "title": "Episode 5",
+          "url": "https://www.tvmaze.com/episodes/3759318/final-table-1x05-episode-5"
+        },
+        {
+          "season": 1,
+          "number": 6,
+          "label": "6화",
+          "airdate": "2026-11-08",
+          "title": "Episode 6",
+          "url": "https://www.tvmaze.com/episodes/3759319/final-table-1x06-episode-6"
+        },
+        {
+          "season": 1,
+          "number": 7,
+          "label": "7화",
+          "airdate": "2026-11-14",
+          "title": "Episode 7",
+          "url": "https://www.tvmaze.com/episodes/3759320/final-table-1x07-episode-7"
+        },
+        {
+          "season": 1,
+          "number": 8,
+          "label": "8화",
+          "airdate": "2026-11-15",
+          "title": "Episode 8",
+          "url": "https://www.tvmaze.com/episodes/3759321/final-table-1x08-episode-8"
+        }
+      ]
+    },
+    {
+      "id": "auto-tvmaze-94429",
+      "category": "드라마",
+      "title": "It's You, Regardless",
+      "year": 2026,
+      "releaseDate": "2026-10-24",
+      "description": "An unprecedented, unpredictable, and audacious romance that begins 'out of the blue' when a 'melodrama master' actor with a fatal flaw meets a suspicious woman who believes she is the heroine of a drama.",
+      "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/646/1617486.jpg",
+      "sourceUrl": "https://www.tvmaze.com/shows/94429/its-you-regardless",
+      "tvmazeId": 94429,
+      "sourceProvider": "TVmaze",
+      "officialEpisodes": [
+        {
+          "season": 1,
+          "number": 1,
+          "label": "1화",
+          "airdate": "2026-10-24",
+          "title": "Hae Ra Steps Outside",
+          "url": "https://www.tvmaze.com/episodes/3761956/its-you-regardless-1x01-hae-ra-steps-outside"
+        },
+        {
+          "season": 1,
+          "number": 2,
+          "label": "2화",
+          "airdate": "2026-10-25",
+          "title": "Three Years Out Of Time",
+          "url": "https://www.tvmaze.com/episodes/3796266/its-you-regardless-1x02-three-years-out-of-time"
+        },
+        {
+          "season": 1,
+          "number": 3,
+          "label": "3화",
+          "airdate": "2026-10-31",
+          "title": "Whispers Of The Past",
+          "url": "https://www.tvmaze.com/episodes/3796267/its-you-regardless-1x03-whispers-of-the-past"
+        },
+        {
+          "season": 1,
+          "number": 4,
+          "label": "4화",
+          "airdate": "2026-11-01",
+          "title": "The World Hong Du Believes In",
+          "url": "https://www.tvmaze.com/episodes/3796268/its-you-regardless-1x04-the-world-hong-du-believes-in"
+        },
+        {
+          "season": 1,
+          "number": 5,
+          "label": "5화",
+          "airdate": "2026-11-07",
+          "title": "The Father She Lost",
+          "url": "https://www.tvmaze.com/episodes/3796269/its-you-regardless-1x05-the-father-she-lost"
+        },
+        {
+          "season": 1,
+          "number": 6,
+          "label": "6화",
+          "airdate": "2026-11-08",
+          "title": "When Doubt Turns To Jealousy",
+          "url": "https://www.tvmaze.com/episodes/3796270/its-you-regardless-1x06-when-doubt-turns-to-jealousy"
+        },
+        {
+          "season": 1,
+          "number": 7,
+          "label": "7화",
+          "airdate": "2026-11-14",
+          "title": "Episode 7",
+          "url": "https://www.tvmaze.com/episodes/3796271/its-you-regardless-1x07-episode-7"
+        },
+        {
+          "season": 1,
+          "number": 8,
+          "label": "8화",
+          "airdate": "2026-11-15",
+          "title": "Episode 8",
+          "url": "https://www.tvmaze.com/episodes/3796272/its-you-regardless-1x08-episode-8"
+        }
+      ]
+    },
+    {
+      "id": "auto-tvmaze-94124",
+      "category": "드라마",
+      "title": "Love in Disguise",
+      "year": 2026,
+      "releaseDate": "2026-10-19",
+      "description": "An office romantic comedy that follows the story of a conglomerate heir and his new secretary, a former special forces officer now working undercover. Yun I Jun is a quirky third-generation chaebol raised in a sheltered environment who becomes a prime suspect ",
+      "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/646/1616801.jpg",
+      "sourceUrl": "https://www.tvmaze.com/shows/94124/love-in-disguise",
+      "tvmazeId": 94124,
+      "sourceProvider": "TVmaze",
+      "officialEpisodes": [
+        {
+          "season": 1,
+          "number": 1,
+          "label": "1화",
+          "airdate": "2026-10-19",
+          "title": "Episode 1",
+          "url": "https://www.tvmaze.com/episodes/3741554/love-in-disguise-1x01-episode-1"
+        },
+        {
+          "season": 1,
+          "number": 2,
+          "label": "2화",
+          "airdate": "2026-10-20",
+          "title": "Episode 2",
+          "url": "https://www.tvmaze.com/episodes/3748379/love-in-disguise-1x02-episode-2"
+        },
+        {
+          "season": 1,
+          "number": 3,
+          "label": "3화",
+          "airdate": "2026-10-26",
+          "title": "Episode 3",
+          "url": "https://www.tvmaze.com/episodes/3748380/love-in-disguise-1x03-episode-3"
+        },
+        {
+          "season": 1,
+          "number": 4,
+          "label": "4화",
+          "airdate": "2026-10-27",
+          "title": "Episode 4",
+          "url": "https://www.tvmaze.com/episodes/3748381/love-in-disguise-1x04-episode-4"
+        },
+        {
+          "season": 1,
+          "number": 5,
+          "label": "5화",
+          "airdate": "2026-11-02",
+          "title": "Episode 5",
+          "url": "https://www.tvmaze.com/episodes/3748382/love-in-disguise-1x05-episode-5"
+        },
+        {
+          "season": 1,
+          "number": 6,
+          "label": "6화",
+          "airdate": "2026-11-03",
+          "title": "Episode 6",
+          "url": "https://www.tvmaze.com/episodes/3748383/love-in-disguise-1x06-episode-6"
+        },
+        {
+          "season": 1,
+          "number": 7,
+          "label": "7화",
+          "airdate": "2026-11-09",
+          "title": "Episode 7",
+          "url": "https://www.tvmaze.com/episodes/3748384/love-in-disguise-1x07-episode-7"
+        },
+        {
+          "season": 1,
+          "number": 8,
+          "label": "8화",
+          "airdate": "2026-11-10",
+          "title": "Episode 8",
+          "url": "https://www.tvmaze.com/episodes/3748385/love-in-disguise-1x08-episode-8"
+        }
+      ]
+    },
+    {
+      "id": "auto-tvmaze-94372",
+      "category": "드라마",
+      "title": "A Trap Called Desire",
+      "year": 2026,
+      "releaseDate": "2026-08-10",
+      "description": "One accusation destroys an ordinary life overnight. Falsely accused of murder, Ko Eun Seol loses her name, her family, and everything she once called her own. Instead of running, she turns hunter. Eun Seol sets out to reclaim what was stolen from her and confr",
+      "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/640/1602320.jpg",
+      "sourceUrl": "https://www.tvmaze.com/shows/94372/a-trap-called-desire",
+      "tvmazeId": 94372,
+      "sourceProvider": "TVmaze",
+      "officialEpisodes": [
+        {
+          "season": 1,
+          "number": 1,
+          "label": "1화",
+          "airdate": "2026-08-10",
+          "title": "Episode 1",
+          "url": "https://www.tvmaze.com/episodes/3758381/a-trap-called-desire-1x01-episode-1"
+        },
+        {
+          "season": 1,
+          "number": 2,
+          "label": "2화",
+          "airdate": "2026-08-11",
+          "title": "Episode 2",
+          "url": "https://www.tvmaze.com/episodes/3758382/a-trap-called-desire-1x02-episode-2"
+        },
+        {
+          "season": 1,
+          "number": 3,
+          "label": "3화",
+          "airdate": "2026-08-12",
+          "title": "Episode 3",
+          "url": "https://www.tvmaze.com/episodes/3758383/a-trap-called-desire-1x03-episode-3"
+        },
+        {
+          "season": 1,
+          "number": 4,
+          "label": "4화",
+          "airdate": "2026-08-13",
+          "title": "Episode 4",
+          "url": "https://www.tvmaze.com/episodes/3758384/a-trap-called-desire-1x04-episode-4"
+        },
+        {
+          "season": 1,
+          "number": 5,
+          "label": "5화",
+          "airdate": "2026-08-14",
+          "title": "Episode 5",
+          "url": "https://www.tvmaze.com/episodes/3758385/a-trap-called-desire-1x05-episode-5"
+        },
+        {
+          "season": 1,
+          "number": 6,
+          "label": "6화",
+          "airdate": "2026-08-17",
+          "title": "Episode 6",
+          "url": "https://www.tvmaze.com/episodes/3758386/a-trap-called-desire-1x06-episode-6"
+        },
+        {
+          "season": 1,
+          "number": 7,
+          "label": "7화",
+          "airdate": "2026-08-18",
+          "title": "Episode 7",
+          "url": "https://www.tvmaze.com/episodes/3758387/a-trap-called-desire-1x07-episode-7"
+        },
+        {
+          "season": 1,
+          "number": 8,
+          "label": "8화",
+          "airdate": "2026-08-19",
+          "title": "Episode 8",
+          "url": "https://www.tvmaze.com/episodes/3758388/a-trap-called-desire-1x08-episode-8"
+        },
+        {
+          "season": 1,
+          "number": 9,
+          "label": "9화",
+          "airdate": "2026-08-20",
+          "title": "Episode 9",
+          "url": "https://www.tvmaze.com/episodes/3758389/a-trap-called-desire-1x09-episode-9"
+        },
+        {
+          "season": 1,
+          "number": 10,
+          "label": "10화",
+          "airdate": "2026-08-21",
+          "title": "Episode 10",
+          "url": "https://www.tvmaze.com/episodes/3758390/a-trap-called-desire-1x10-episode-10"
+        },
+        {
+          "season": 1,
+          "number": 11,
+          "label": "11화",
+          "airdate": "2026-08-24",
+          "title": "Episode 11",
+          "url": "https://www.tvmaze.com/episodes/3758391/a-trap-called-desire-1x11-episode-11"
+        },
+        {
+          "season": 1,
+          "number": 12,
+          "label": "12화",
+          "airdate": "2026-08-25",
+          "title": "Episode 12",
+          "url": "https://www.tvmaze.com/episodes/3758392/a-trap-called-desire-1x12-episode-12"
+        },
+        {
+          "season": 1,
+          "number": 13,
+          "label": "13화",
+          "airdate": "2026-08-26",
+          "title": "Episode 13",
+          "url": "https://www.tvmaze.com/episodes/3758393/a-trap-called-desire-1x13-episode-13"
+        },
+        {
+          "season": 1,
+          "number": 14,
+          "label": "14화",
+          "airdate": "2026-08-27",
+          "title": "Episode 14",
+          "url": "https://www.tvmaze.com/episodes/3758394/a-trap-called-desire-1x14-episode-14"
+        },
+        {
+          "season": 1,
+          "number": 15,
+          "label": "15화",
+          "airdate": "2026-08-28",
+          "title": "Episode 15",
+          "url": "https://www.tvmaze.com/episodes/3758395/a-trap-called-desire-1x15-episode-15"
+        },
+        {
+          "season": 1,
+          "number": 16,
+          "label": "16화",
+          "airdate": "2026-08-31",
+          "title": "Episode 16",
+          "url": "https://www.tvmaze.com/episodes/3758396/a-trap-called-desire-1x16-episode-16"
+        },
+        {
+          "season": 1,
+          "number": 17,
+          "label": "17화",
+          "airdate": "2026-09-01",
+          "title": "Episode 17",
+          "url": "https://www.tvmaze.com/episodes/3758397/a-trap-called-desire-1x17-episode-17"
+        },
+        {
+          "season": 1,
+          "number": 18,
+          "label": "18화",
+          "airdate": "2026-09-02",
+          "title": "Episode 18",
+          "url": "https://www.tvmaze.com/episodes/3758398/a-trap-called-desire-1x18-episode-18"
+        },
+        {
+          "season": 1,
+          "number": 19,
+          "label": "19화",
+          "airdate": "2026-09-03",
+          "title": "Episode 19",
+          "url": "https://www.tvmaze.com/episodes/3758399/a-trap-called-desire-1x19-episode-19"
+        },
+        {
+          "season": 1,
+          "number": 20,
+          "label": "20화",
+          "airdate": "2026-09-04",
+          "title": "Episode 20",
+          "url": "https://www.tvmaze.com/episodes/3758400/a-trap-called-desire-1x20-episode-20"
+        },
+        {
+          "season": 1,
+          "number": 21,
+          "label": "21화",
+          "airdate": "2026-09-07",
+          "title": "Episode 21",
+          "url": "https://www.tvmaze.com/episodes/3758401/a-trap-called-desire-1x21-episode-21"
+        },
+        {
+          "season": 1,
+          "number": 22,
+          "label": "22화",
+          "airdate": "2026-09-08",
+          "title": "Episode 22",
+          "url": "https://www.tvmaze.com/episodes/3758402/a-trap-called-desire-1x22-episode-22"
+        },
+        {
+          "season": 1,
+          "number": 23,
+          "label": "23화",
+          "airdate": "2026-09-09",
+          "title": "Episode 23",
+          "url": "https://www.tvmaze.com/episodes/3758403/a-trap-called-desire-1x23-episode-23"
+        },
+        {
+          "season": 1,
+          "number": 24,
+          "label": "24화",
+          "airdate": "2026-09-10",
+          "title": "Episode 24",
+          "url": "https://www.tvmaze.com/episodes/3758404/a-trap-called-desire-1x24-episode-24"
+        },
+        {
+          "season": 1,
+          "number": 25,
+          "label": "25화",
+          "airdate": "2026-09-11",
+          "title": "Episode 25",
+          "url": "https://www.tvmaze.com/episodes/3758405/a-trap-called-desire-1x25-episode-25"
+        },
+        {
+          "season": 1,
+          "number": 26,
+          "label": "26화",
+          "airdate": "2026-09-14",
+          "title": "Episode 26",
+          "url": "https://www.tvmaze.com/episodes/3758406/a-trap-called-desire-1x26-episode-26"
+        },
+        {
+          "season": 1,
+          "number": 27,
+          "label": "27화",
+          "airdate": "2026-09-15",
+          "title": "Episode 27",
+          "url": "https://www.tvmaze.com/episodes/3758407/a-trap-called-desire-1x27-episode-27"
+        },
+        {
+          "season": 1,
+          "number": 28,
+          "label": "28화",
+          "airdate": "2026-09-16",
+          "title": "Episode 28",
+          "url": "https://www.tvmaze.com/episodes/3758408/a-trap-called-desire-1x28-episode-28"
+        },
+        {
+          "season": 1,
+          "number": 29,
+          "label": "29화",
+          "airdate": "2026-09-17",
+          "title": "Episode 29",
+          "url": "https://www.tvmaze.com/episodes/3758409/a-trap-called-desire-1x29-episode-29"
+        },
+        {
+          "season": 1,
+          "number": 30,
+          "label": "30화",
+          "airdate": "2026-09-18",
+          "title": "Episode 30",
+          "url": "https://www.tvmaze.com/episodes/3758410/a-trap-called-desire-1x30-episode-30"
+        },
+        {
+          "season": 1,
+          "number": 31,
+          "label": "31화",
+          "airdate": "2026-09-21",
+          "title": "Episode 31",
+          "url": "https://www.tvmaze.com/episodes/3758411/a-trap-called-desire-1x31-episode-31"
+        },
+        {
+          "season": 1,
+          "number": 32,
+          "label": "32화",
+          "airdate": "2026-09-22",
+          "title": "Episode 32",
+          "url": "https://www.tvmaze.com/episodes/3758412/a-trap-called-desire-1x32-episode-32"
+        },
+        {
+          "season": 1,
+          "number": 33,
+          "label": "33화",
+          "airdate": "2026-09-23",
+          "title": "Episode 33",
+          "url": "https://www.tvmaze.com/episodes/3758413/a-trap-called-desire-1x33-episode-33"
+        },
+        {
+          "season": 1,
+          "number": 34,
+          "label": "34화",
+          "airdate": "2026-09-24",
+          "title": "Episode 34",
+          "url": "https://www.tvmaze.com/episodes/3758414/a-trap-called-desire-1x34-episode-34"
+        },
+        {
+          "season": 1,
+          "number": 35,
+          "label": "35화",
+          "airdate": "2026-09-25",
+          "title": "Episode 35",
+          "url": "https://www.tvmaze.com/episodes/3758415/a-trap-called-desire-1x35-episode-35"
+        },
+        {
+          "season": 1,
+          "number": 36,
+          "label": "36화",
+          "airdate": "2026-09-28",
+          "title": "Episode 36",
+          "url": "https://www.tvmaze.com/episodes/3758416/a-trap-called-desire-1x36-episode-36"
+        },
+        {
+          "season": 1,
+          "number": 37,
+          "label": "37화",
+          "airdate": "2026-09-29",
+          "title": "Episode 37",
+          "url": "https://www.tvmaze.com/episodes/3758417/a-trap-called-desire-1x37-episode-37"
+        },
+        {
+          "season": 1,
+          "number": 38,
+          "label": "38화",
+          "airdate": "2026-09-30",
+          "title": "Episode 38",
+          "url": "https://www.tvmaze.com/episodes/3758418/a-trap-called-desire-1x38-episode-38"
+        },
+        {
+          "season": 1,
+          "number": 39,
+          "label": "39화",
+          "airdate": "2026-10-01",
+          "title": "Episode 39",
+          "url": "https://www.tvmaze.com/episodes/3758419/a-trap-called-desire-1x39-episode-39"
+        },
+        {
+          "season": 1,
+          "number": 40,
+          "label": "40화",
+          "airdate": "2026-10-02",
+          "title": "Episode 40",
+          "url": "https://www.tvmaze.com/episodes/3758420/a-trap-called-desire-1x40-episode-40"
+        },
+        {
+          "season": 1,
+          "number": 41,
+          "label": "41화",
+          "airdate": "2026-10-05",
+          "title": "Episode 41",
+          "url": "https://www.tvmaze.com/episodes/3758421/a-trap-called-desire-1x41-episode-41"
+        },
+        {
+          "season": 1,
+          "number": 42,
+          "label": "42화",
+          "airdate": "2026-10-06",
+          "title": "Episode 42",
+          "url": "https://www.tvmaze.com/episodes/3758422/a-trap-called-desire-1x42-episode-42"
+        },
+        {
+          "season": 1,
+          "number": 43,
+          "label": "43화",
+          "airdate": "2026-10-07",
+          "title": "Episode 43",
+          "url": "https://www.tvmaze.com/episodes/3758423/a-trap-called-desire-1x43-episode-43"
+        },
+        {
+          "season": 1,
+          "number": 44,
+          "label": "44화",
+          "airdate": "2026-10-08",
+          "title": "Episode 44",
+          "url": "https://www.tvmaze.com/episodes/3758424/a-trap-called-desire-1x44-episode-44"
+        },
+        {
+          "season": 1,
+          "number": 45,
+          "label": "45화",
+          "airdate": "2026-10-09",
+          "title": "Episode 45",
+          "url": "https://www.tvmaze.com/episodes/3758425/a-trap-called-desire-1x45-episode-45"
+        },
+        {
+          "season": 1,
+          "number": 46,
+          "label": "46화",
+          "airdate": "2026-10-12",
+          "title": "Episode 46",
+          "url": "https://www.tvmaze.com/episodes/3758426/a-trap-called-desire-1x46-episode-46"
+        },
+        {
+          "season": 1,
+          "number": 47,
+          "label": "47화",
+          "airdate": "2026-10-13",
+          "title": "Episode 47",
+          "url": "https://www.tvmaze.com/episodes/3758427/a-trap-called-desire-1x47-episode-47"
+        },
+        {
+          "season": 1,
+          "number": 48,
+          "label": "48화",
+          "airdate": "2026-10-14",
+          "title": "Episode 48",
+          "url": "https://www.tvmaze.com/episodes/3758428/a-trap-called-desire-1x48-episode-48"
+        },
+        {
+          "season": 1,
+          "number": 49,
+          "label": "49화",
+          "airdate": "2026-10-15",
+          "title": "Episode 49",
+          "url": "https://www.tvmaze.com/episodes/3758429/a-trap-called-desire-1x49-episode-49"
+        },
+        {
+          "season": 1,
+          "number": 50,
+          "label": "50화",
+          "airdate": "2026-10-16",
+          "title": "Episode 50",
+          "url": "https://www.tvmaze.com/episodes/3758430/a-trap-called-desire-1x50-episode-50"
+        },
+        {
+          "season": 1,
+          "number": 51,
+          "label": "51화",
+          "airdate": "2026-10-19",
+          "title": "Episode 51",
+          "url": "https://www.tvmaze.com/episodes/3758431/a-trap-called-desire-1x51-episode-51"
+        },
+        {
+          "season": 1,
+          "number": 52,
+          "label": "52화",
+          "airdate": "2026-10-20",
+          "title": "Episode 52",
+          "url": "https://www.tvmaze.com/episodes/3758432/a-trap-called-desire-1x52-episode-52"
+        },
+        {
+          "season": 1,
+          "number": 53,
+          "label": "53화",
+          "airdate": "2026-10-21",
+          "title": "Episode 53",
+          "url": "https://www.tvmaze.com/episodes/3758433/a-trap-called-desire-1x53-episode-53"
+        },
+        {
+          "season": 1,
+          "number": 54,
+          "label": "54화",
+          "airdate": "2026-10-22",
+          "title": "Episode 54",
+          "url": "https://www.tvmaze.com/episodes/3758434/a-trap-called-desire-1x54-episode-54"
+        },
+        {
+          "season": 1,
+          "number": 55,
+          "label": "55화",
+          "airdate": "2026-10-23",
+          "title": "Episode 55",
+          "url": "https://www.tvmaze.com/episodes/3758435/a-trap-called-desire-1x55-episode-55"
+        },
+        {
+          "season": 1,
+          "number": 56,
+          "label": "56화",
+          "airdate": "2026-10-26",
+          "title": "Episode 56",
+          "url": "https://www.tvmaze.com/episodes/3758436/a-trap-called-desire-1x56-episode-56"
+        },
+        {
+          "season": 1,
+          "number": 57,
+          "label": "57화",
+          "airdate": "2026-10-27",
+          "title": "Episode 57",
+          "url": "https://www.tvmaze.com/episodes/3758437/a-trap-called-desire-1x57-episode-57"
+        },
+        {
+          "season": 1,
+          "number": 58,
+          "label": "58화",
+          "airdate": "2026-10-28",
+          "title": "Episode 58",
+          "url": "https://www.tvmaze.com/episodes/3758438/a-trap-called-desire-1x58-episode-58"
+        },
+        {
+          "season": 1,
+          "number": 59,
+          "label": "59화",
+          "airdate": "2026-10-29",
+          "title": "Episode 59",
+          "url": "https://www.tvmaze.com/episodes/3758439/a-trap-called-desire-1x59-episode-59"
+        },
+        {
+          "season": 1,
+          "number": 60,
+          "label": "60화",
+          "airdate": "2026-10-30",
+          "title": "Episode 60",
+          "url": "https://www.tvmaze.com/episodes/3758440/a-trap-called-desire-1x60-episode-60"
+        },
+        {
+          "season": 1,
+          "number": 61,
+          "label": "61화",
+          "airdate": "2026-11-02",
+          "title": "Episode 61",
+          "url": "https://www.tvmaze.com/episodes/3758441/a-trap-called-desire-1x61-episode-61"
+        },
+        {
+          "season": 1,
+          "number": 62,
+          "label": "62화",
+          "airdate": "2026-11-03",
+          "title": "Episode 62",
+          "url": "https://www.tvmaze.com/episodes/3758442/a-trap-called-desire-1x62-episode-62"
+        },
+        {
+          "season": 1,
+          "number": 63,
+          "label": "63화",
+          "airdate": "2026-11-04",
+          "title": "Episode 63",
+          "url": "https://www.tvmaze.com/episodes/3758443/a-trap-called-desire-1x63-episode-63"
+        },
+        {
+          "season": 1,
+          "number": 64,
+          "label": "64화",
+          "airdate": "2026-11-05",
+          "title": "Episode 64",
+          "url": "https://www.tvmaze.com/episodes/3758444/a-trap-called-desire-1x64-episode-64"
+        },
+        {
+          "season": 1,
+          "number": 65,
+          "label": "65화",
+          "airdate": "2026-11-06",
+          "title": "Episode 65",
+          "url": "https://www.tvmaze.com/episodes/3758445/a-trap-called-desire-1x65-episode-65"
+        },
+        {
+          "season": 1,
+          "number": 66,
+          "label": "66화",
+          "airdate": "2026-11-09",
+          "title": "Episode 66",
+          "url": "https://www.tvmaze.com/episodes/3758446/a-trap-called-desire-1x66-episode-66"
+        },
+        {
+          "season": 1,
+          "number": 67,
+          "label": "67화",
+          "airdate": "2026-11-10",
+          "title": "Episode 67",
+          "url": "https://www.tvmaze.com/episodes/3758447/a-trap-called-desire-1x67-episode-67"
+        },
+        {
+          "season": 1,
+          "number": 68,
+          "label": "68화",
+          "airdate": "2026-11-11",
+          "title": "Episode 68",
+          "url": "https://www.tvmaze.com/episodes/3758448/a-trap-called-desire-1x68-episode-68"
+        },
+        {
+          "season": 1,
+          "number": 69,
+          "label": "69화",
+          "airdate": "2026-11-12",
+          "title": "Episode 69",
+          "url": "https://www.tvmaze.com/episodes/3758449/a-trap-called-desire-1x69-episode-69"
+        },
+        {
+          "season": 1,
+          "number": 70,
+          "label": "70화",
+          "airdate": "2026-11-13",
+          "title": "Episode 70",
+          "url": "https://www.tvmaze.com/episodes/3758450/a-trap-called-desire-1x70-episode-70"
+        }
+      ]
+    },
+    {
+      "id": "auto-tvmaze-94650",
+      "category": "드라마",
+      "title": "Summer Vacation",
+      "year": 2026,
+      "releaseDate": "2026-10-26",
+      "description": "Kim Ha Yeon is an ordinary 18-year-old girl who dreams of a life as dramatic as the ones she sees on screen. Her life takes an unexpected, mystical turn when she heads to the unfamiliar countryside village of Upo-ri for her summer break. There, she crosses pat",
+      "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/646/1617485.jpg",
+      "sourceUrl": "https://www.tvmaze.com/shows/94650/summer-vacation",
+      "tvmazeId": 94650,
+      "sourceProvider": "TVmaze",
+      "officialEpisodes": [
+        {
+          "season": 1,
+          "number": 1,
+          "label": "1화",
+          "airdate": "2026-10-26",
+          "title": "Episode 1",
+          "url": "https://www.tvmaze.com/episodes/3770306/summer-vacation-1x01-episode-1"
+        },
+        {
+          "season": 1,
+          "number": 2,
+          "label": "2화",
+          "airdate": "2026-10-27",
+          "title": "Episode 2",
+          "url": "https://www.tvmaze.com/episodes/3777519/summer-vacation-1x02-episode-2"
+        },
+        {
+          "season": 1,
+          "number": 3,
+          "label": "3화",
+          "airdate": "2026-11-02",
+          "title": "Episode 3",
+          "url": "https://www.tvmaze.com/episodes/3777520/summer-vacation-1x03-episode-3"
+        },
+        {
+          "season": 1,
+          "number": 4,
+          "label": "4화",
+          "airdate": "2026-11-03",
+          "title": "Episode 4",
+          "url": "https://www.tvmaze.com/episodes/3777521/summer-vacation-1x04-episode-4"
+        },
+        {
+          "season": 1,
+          "number": 5,
+          "label": "5화",
+          "airdate": "2026-11-09",
+          "title": "Episode 5",
+          "url": "https://www.tvmaze.com/episodes/3777522/summer-vacation-1x05-episode-5"
+        },
+        {
+          "season": 1,
+          "number": 6,
+          "label": "6화",
+          "airdate": "2026-11-10",
+          "title": "Episode 6",
+          "url": "https://www.tvmaze.com/episodes/3777523/summer-vacation-1x06-episode-6"
+        }
+      ]
+    },
+    {
+      "id": "auto-tvmaze-95084",
+      "category": "드라마",
+      "title": "One of a Kind Romance",
+      "year": 2026,
+      "releaseDate": "2026-11-09",
+      "description": "One of a Kind Romance follows the story of an ordinary job-seeker whose everyday life is suddenly disrupted by a celebrated actor and a rising idol, leading to a romance brimming with personal desires.",
+      "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/646/1616899.jpg",
+      "sourceUrl": "https://www.tvmaze.com/shows/95084/one-of-a-kind-romance",
+      "tvmazeId": 95084,
+      "sourceProvider": "TVmaze",
+      "officialEpisodes": [
+        {
+          "season": 1,
+          "number": 1,
+          "label": "1화",
+          "airdate": "2026-11-09",
+          "title": "An Unexpected Encounter",
+          "url": "https://www.tvmaze.com/episodes/3793103/one-of-a-kind-romance-1x01-an-unexpected-encounter"
+        },
+        {
+          "season": 1,
+          "number": 2,
+          "label": "2화",
+          "airdate": "2026-11-09",
+          "title": "The Stalker's Identity",
+          "url": "https://www.tvmaze.com/episodes/3793104/one-of-a-kind-romance-1x02-the-stalkers-identity"
+        }
+      ]
+    },
+    {
+      "id": "auto-wiki-한국영화-78046123",
+      "category": "한국영화",
+      "title": "Hope (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Hope_%282026_film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-81824192",
+      "category": "한국영화",
+      "title": "Canvas of Blood",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Canvas_of_Blood",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-83781124",
+      "category": "한국영화",
+      "title": "Sinner (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Sinner_%282026_film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-84325842",
+      "category": "한국영화",
+      "title": "Portrait of a Family (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Portrait_of_a_Family_%282026_film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-84286898",
+      "category": "한국영화",
+      "title": "Long Long Night",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Long_Long_Night",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-84137521",
+      "category": "한국영화",
+      "title": "My Name (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/My_Name_%28film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-84096905",
+      "category": "한국영화",
+      "title": "Ugly Duckling Ms. Maeng",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ugly_Duckling_Ms._Maeng",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-84060919",
+      "category": "한국영화",
+      "title": "Final Interview",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Final_Interview",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-84012479",
+      "category": "한국영화",
+      "title": "The Table: Day and Night",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/The_Table%3A_Day_and_Night",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-83972730",
+      "category": "한국영화",
+      "title": "Underground (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Underground_%282026_film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-83919842",
+      "category": "한국영화",
+      "title": "The World Before (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/The_World_Before_%28film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-83911796",
+      "category": "한국영화",
+      "title": "Paradise Lost (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Paradise_Lost_%282026_film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-83872632",
+      "category": "한국영화",
+      "title": "The Intern (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/The_Intern_%282026_film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-83823253",
+      "category": "한국영화",
+      "title": "Reawaken Man: The Red",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Reawaken_Man%3A_The_Red",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-83760002",
+      "category": "한국영화",
+      "title": "The Eyes (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/The_Eyes_%282026_film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-82172199",
+      "category": "한국영화",
+      "title": "Possible Love",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Possible_Love",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-83712655",
+      "category": "한국영화",
+      "title": "The Assassin(s)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/The_Assassin%28s%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-83703387",
+      "category": "한국영화",
+      "title": "Okay! Madam 2",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Okay%21_Madam_2",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-83654675",
+      "category": "한국영화",
+      "title": "Nowhere to Lay My Eyes",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Nowhere_to_Lay_My_Eyes",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-83435943",
+      "category": "한국영화",
+      "title": "Wild Sing",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Wild_Sing",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-82172047",
+      "category": "한국영화",
+      "title": "Husbands in Action",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Husbands_in_Action",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-83249700",
+      "category": "한국영화",
+      "title": "Silent Voices (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Silent_Voices_%282026_film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-83175761",
+      "category": "한국영화",
+      "title": "Dora (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Dora_%282026_film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-82880497",
+      "category": "한국영화",
+      "title": "BTS: The Return",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/BTS%3A_The_Return",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-한국영화-82729871",
+      "category": "한국영화",
+      "title": "Judge Girl",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Judge_Girl",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84800635",
+      "category": "영화",
+      "title": "Masterplan (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Masterplan_%28film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-83589390",
+      "category": "영화",
+      "title": "Daffy Season",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Daffy_Season",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84797953",
+      "category": "영화",
+      "title": "Chevittorma",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Chevittorma",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-83421747",
+      "category": "영화",
+      "title": "Heals (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Heals_%28film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84795606",
+      "category": "영화",
+      "title": "Pension Patta",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Pension_Patta",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84769228",
+      "category": "영화",
+      "title": "John Doe (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/John_Doe_%28film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84791281",
+      "category": "영화",
+      "title": "Sukhamano Sukhamann",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Sukhamano_Sukhamann",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84790385",
+      "category": "영화",
+      "title": "Paper Plane (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Paper_Plane_%28film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84766947",
+      "category": "영화",
+      "title": "Los Salvajes Bravos",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Los_Salvajes_Bravos",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84775083",
+      "category": "영화",
+      "title": "SCTV: The Greatest Show You've Never Heard Of",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/SCTV%3A_The_Greatest_Show_You%27ve_Never_Heard_Of",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84772374",
+      "category": "영화",
+      "title": "Himitsu no AiPri The Movie: Full Bloom Buzzlume Live!",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Himitsu_no_AiPri_The_Movie%3A_Full_Bloom_Buzzlume_Live%21",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84773930",
+      "category": "영화",
+      "title": "Haiku (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Haiku_%28film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84773928",
+      "category": "영화",
+      "title": "Enemy of the Smuggler",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Enemy_of_the_Smuggler",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84772001",
+      "category": "영화",
+      "title": "Allen (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Allen_%28film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84771330",
+      "category": "영화",
+      "title": "Bollywoof",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Bollywoof",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84743228",
+      "category": "영화",
+      "title": "Star Wars: Gobaith Newydd",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Star_Wars%3A_Gobaith_Newydd",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84768511",
+      "category": "영화",
+      "title": "2nd Miracle in Cell No. 7 (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2nd_Miracle_in_Cell_No._7_%282026_film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84770326",
+      "category": "영화",
+      "title": "Bouma (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Bouma_%28film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-77048829",
+      "category": "영화",
+      "title": "Goat (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Goat_%282026_film%29",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84767370",
+      "category": "영화",
+      "title": "Haunted Carnival",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Haunted_Carnival",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84767091",
+      "category": "영화",
+      "title": "Seeds of Peace: The Life of Fr. Rhoel D. Gallardo, CMF",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Seeds_of_Peace%3A_The_Life_of_Fr._Rhoel_D._Gallardo%2C_CMF",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84763489",
+      "category": "영화",
+      "title": "Concrete Turned to Sand",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Concrete_Turned_to_Sand",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84762329",
+      "category": "영화",
+      "title": "The Last Roman God",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/The_Last_Roman_God",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84759592",
+      "category": "영화",
+      "title": "Athimanoharam",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Athimanoharam",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-wiki-영화-84759003",
+      "category": "영화",
+      "title": "Made in Abyss: Awakening Mystery",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Made_in_Abyss%3A_Awakening_Mystery",
+      "sourceProvider": "Wikimedia"
     }
   ],
-  "posterSourceNote": "Verified per-title cover URLs from public TVWiki listings, search results, and detail-page bo_v_poster. Missing or unavailable posters fall back to Wikimedia or a text cover; works with no verified match are not guessed."
+  "posterSourceNote": "Verified per-title cover URLs from public TVWiki listings, search results, and detail-page bo_v_poster. Missing or unavailable posters fall back to Wikimedia or a text cover; works with no verified match are not guessed.",
+  "autoSyncHistory": [
+    {
+      "status": "ok",
+      "checkedAt": "2026-11-15T05:26:41+00:00",
+      "source": [
+        "TVmaze public API",
+        "Wikimedia MediaWiki API"
+      ],
+      "newTitles": {
+        "영화": 25,
+        "한국영화": 25,
+        "드라마": 11
+      },
+      "newEpisodeMetadata": 165,
+      "titlesAdded": [
+        {
+          "category": "영화",
+          "title": "Masterplan (film)"
+        },
+        {
+          "category": "영화",
+          "title": "Daffy Season"
+        },
+        {
+          "category": "영화",
+          "title": "Chevittorma"
+        },
+        {
+          "category": "영화",
+          "title": "Heals (film)"
+        },
+        {
+          "category": "영화",
+          "title": "Pension Patta"
+        },
+        {
+          "category": "영화",
+          "title": "John Doe (film)"
+        },
+        {
+          "category": "영화",
+          "title": "Sukhamano Sukhamann"
+        },
+        {
+          "category": "영화",
+          "title": "Paper Plane (film)"
+        },
+        {
+          "category": "영화",
+          "title": "Los Salvajes Bravos"
+        },
+        {
+          "category": "영화",
+          "title": "SCTV: The Greatest Show You've Never Heard Of"
+        },
+        {
+          "category": "영화",
+          "title": "Himitsu no AiPri The Movie: Full Bloom Buzzlume Live!"
+        },
+        {
+          "category": "영화",
+          "title": "Haiku (film)"
+        },
+        {
+          "category": "영화",
+          "title": "Enemy of the Smuggler"
+        },
+        {
+          "category": "영화",
+          "title": "Allen (film)"
+        },
+        {
+          "category": "영화",
+          "title": "Bollywoof"
+        },
+        {
+          "category": "영화",
+          "title": "Star Wars: Gobaith Newydd"
+        },
+        {
+          "category": "영화",
+          "title": "2nd Miracle in Cell No. 7 (2026 film)"
+        },
+        {
+          "category": "영화",
+          "title": "Bouma (film)"
+        },
+        {
+          "category": "영화",
+          "title": "Goat (2026 film)"
+        },
+        {
+          "category": "영화",
+          "title": "Haunted Carnival"
+        },
+        {
+          "category": "영화",
+          "title": "Seeds of Peace: The Life of Fr. Rhoel D. Gallardo, CMF"
+        },
+        {
+          "category": "영화",
+          "title": "Concrete Turned to Sand"
+        },
+        {
+          "category": "영화",
+          "title": "The Last Roman God"
+        },
+        {
+          "category": "영화",
+          "title": "Athimanoharam"
+        },
+        {
+          "category": "영화",
+          "title": "Made in Abyss: Awakening Mystery"
+        },
+        {
+          "category": "한국영화",
+          "title": "Hope (2026 film)"
+        },
+        {
+          "category": "한국영화",
+          "title": "Canvas of Blood"
+        },
+        {
+          "category": "한국영화",
+          "title": "Sinner (2026 film)"
+        },
+        {
+          "category": "한국영화",
+          "title": "Portrait of a Family (2026 film)"
+        },
+        {
+          "category": "한국영화",
+          "title": "Long Long Night"
+        },
+        {
+          "category": "한국영화",
+          "title": "My Name (film)"
+        },
+        {
+          "category": "한국영화",
+          "title": "Ugly Duckling Ms. Maeng"
+        },
+        {
+          "category": "한국영화",
+          "title": "Final Interview"
+        },
+        {
+          "category": "한국영화",
+          "title": "The Table: Day and Night"
+        },
+        {
+          "category": "한국영화",
+          "title": "Underground (2026 film)"
+        },
+        {
+          "category": "한국영화",
+          "title": "The World Before (film)"
+        },
+        {
+          "category": "한국영화",
+          "title": "Paradise Lost (2026 film)"
+        },
+        {
+          "category": "한국영화",
+          "title": "The Intern (2026 film)"
+        },
+        {
+          "category": "한국영화",
+          "title": "Reawaken Man: The Red"
+        },
+        {
+          "category": "한국영화",
+          "title": "The Eyes (2026 film)"
+        },
+        {
+          "category": "한국영화",
+          "title": "Possible Love"
+        },
+        {
+          "category": "한국영화",
+          "title": "The Assassin(s)"
+        },
+        {
+          "category": "한국영화",
+          "title": "Okay! Madam 2"
+        },
+        {
+          "category": "한국영화",
+          "title": "Nowhere to Lay My Eyes"
+        },
+        {
+          "category": "한국영화",
+          "title": "Wild Sing"
+        },
+        {
+          "category": "한국영화",
+          "title": "Husbands in Action"
+        },
+        {
+          "category": "한국영화",
+          "title": "Silent Voices (2026 film)"
+        },
+        {
+          "category": "한국영화",
+          "title": "Dora (2026 film)"
+        },
+        {
+          "category": "한국영화",
+          "title": "BTS: The Return"
+        },
+        {
+          "category": "한국영화",
+          "title": "Judge Girl"
+        },
+        {
+          "category": "드라마",
+          "title": "Love on the Menu"
+        },
+        {
+          "category": "드라마",
+          "title": "100 Days of Deception"
+        },
+        {
+          "category": "드라마",
+          "title": "Sword & Silence"
+        },
+        {
+          "category": "드라마",
+          "title": "Doctor X: Mafia in White"
+        },
+        {
+          "category": "드라마",
+          "title": "The Perfect Lie"
+        },
+        {
+          "category": "드라마",
+          "title": "Final Table"
+        },
+        {
+          "category": "드라마",
+          "title": "It's You, Regardless"
+        },
+        {
+          "category": "드라마",
+          "title": "Love in Disguise"
+        },
+        {
+          "category": "드라마",
+          "title": "A Trap Called Desire"
+        },
+        {
+          "category": "드라마",
+          "title": "Summer Vacation"
+        },
+        {
+          "category": "드라마",
+          "title": "One of a Kind Romance"
+        }
+      ],
+      "episodeChanges": [
+        {
+          "title": "Love on the Menu",
+          "newCount": 31,
+          "total": 31
+        },
+        {
+          "title": "100 Days of Deception",
+          "newCount": 12,
+          "total": 12
+        },
+        {
+          "title": "Sword & Silence",
+          "newCount": 2,
+          "total": 2
+        },
+        {
+          "title": "Doctor X: Mafia in White",
+          "newCount": 12,
+          "total": 12
+        },
+        {
+          "title": "The Perfect Lie",
+          "newCount": 6,
+          "total": 6
+        },
+        {
+          "title": "Final Table",
+          "newCount": 8,
+          "total": 8
+        },
+        {
+          "title": "It's You, Regardless",
+          "newCount": 8,
+          "total": 8
+        },
+        {
+          "title": "Love in Disguise",
+          "newCount": 8,
+          "total": 8
+        },
+        {
+          "title": "A Trap Called Desire",
+          "newCount": 70,
+          "total": 70
+        },
+        {
+          "title": "Summer Vacation",
+          "newCount": 6,
+          "total": 6
+        },
+        {
+          "title": "One of a Kind Romance",
+          "newCount": 2,
+          "total": 2
+        }
+      ],
+      "sourceRequestsSucceeded": 19,
+      "note": "Official broadcast episode metadata does not imply playable video. Existing TVWiki links are unchanged."
+    }
+  ],
+  "autoSync": {
+    "status": "ok",
+    "checkedAt": "2026-11-15T05:26:41+00:00",
+    "source": [
+      "TVmaze public API",
+      "Wikimedia MediaWiki API"
+    ],
+    "newTitles": {
+      "영화": 25,
+      "한국영화": 25,
+      "드라마": 11
+    },
+    "newEpisodeMetadata": 165,
+    "titlesAdded": [
+      {
+        "category": "영화",
+        "title": "Masterplan (film)"
+      },
+      {
+        "category": "영화",
+        "title": "Daffy Season"
+      },
+      {
+        "category": "영화",
+        "title": "Chevittorma"
+      },
+      {
+        "category": "영화",
+        "title": "Heals (film)"
+      },
+      {
+        "category": "영화",
+        "title": "Pension Patta"
+      },
+      {
+        "category": "영화",
+        "title": "John Doe (film)"
+      },
+      {
+        "category": "영화",
+        "title": "Sukhamano Sukhamann"
+      },
+      {
+        "category": "영화",
+        "title": "Paper Plane (film)"
+      },
+      {
+        "category": "영화",
+        "title": "Los Salvajes Bravos"
+      },
+      {
+        "category": "영화",
+        "title": "SCTV: The Greatest Show You've Never Heard Of"
+      },
+      {
+        "category": "영화",
+        "title": "Himitsu no AiPri The Movie: Full Bloom Buzzlume Live!"
+      },
+      {
+        "category": "영화",
+        "title": "Haiku (film)"
+      },
+      {
+        "category": "영화",
+        "title": "Enemy of the Smuggler"
+      },
+      {
+        "category": "영화",
+        "title": "Allen (film)"
+      },
+      {
+        "category": "영화",
+        "title": "Bollywoof"
+      },
+      {
+        "category": "영화",
+        "title": "Star Wars: Gobaith Newydd"
+      },
+      {
+        "category": "영화",
+        "title": "2nd Miracle in Cell No. 7 (2026 film)"
+      },
+      {
+        "category": "영화",
+        "title": "Bouma (film)"
+      },
+      {
+        "category": "영화",
+        "title": "Goat (2026 film)"
+      },
+      {
+        "category": "영화",
+        "title": "Haunted Carnival"
+      },
+      {
+        "category": "영화",
+        "title": "Seeds of Peace: The Life of Fr. Rhoel D. Gallardo, CMF"
+      },
+      {
+        "category": "영화",
+        "title": "Concrete Turned to Sand"
+      },
+      {
+        "category": "영화",
+        "title": "The Last Roman God"
+      },
+      {
+        "category": "영화",
+        "title": "Athimanoharam"
+      },
+      {
+        "category": "영화",
+        "title": "Made in Abyss: Awakening Mystery"
+      },
+      {
+        "category": "한국영화",
+        "title": "Hope (2026 film)"
+      },
+      {
+        "category": "한국영화",
+        "title": "Canvas of Blood"
+      },
+      {
+        "category": "한국영화",
+        "title": "Sinner (2026 film)"
+      },
+      {
+        "category": "한국영화",
+        "title": "Portrait of a Family (2026 film)"
+      },
+      {
+        "category": "한국영화",
+        "title": "Long Long Night"
+      },
+      {
+        "category": "한국영화",
+        "title": "My Name (film)"
+      },
+      {
+        "category": "한국영화",
+        "title": "Ugly Duckling Ms. Maeng"
+      },
+      {
+        "category": "한국영화",
+        "title": "Final Interview"
+      },
+      {
+        "category": "한국영화",
+        "title": "The Table: Day and Night"
+      },
+      {
+        "category": "한국영화",
+        "title": "Underground (2026 film)"
+      },
+      {
+        "category": "한국영화",
+        "title": "The World Before (film)"
+      },
+      {
+        "category": "한국영화",
+        "title": "Paradise Lost (2026 film)"
+      },
+      {
+        "category": "한국영화",
+        "title": "The Intern (2026 film)"
+      },
+      {
+        "category": "한국영화",
+        "title": "Reawaken Man: The Red"
+      },
+      {
+        "category": "한국영화",
+        "title": "The Eyes (2026 film)"
+      },
+      {
+        "category": "한국영화",
+        "title": "Possible Love"
+      },
+      {
+        "category": "한국영화",
+        "title": "The Assassin(s)"
+      },
+      {
+        "category": "한국영화",
+        "title": "Okay! Madam 2"
+      },
+      {
+        "category": "한국영화",
+        "title": "Nowhere to Lay My Eyes"
+      },
+      {
+        "category": "한국영화",
+        "title": "Wild Sing"
+      },
+      {
+        "category": "한국영화",
+        "title": "Husbands in Action"
+      },
+      {
+        "category": "한국영화",
+        "title": "Silent Voices (2026 film)"
+      },
+      {
+        "category": "한국영화",
+        "title": "Dora (2026 film)"
+      },
+      {
+        "category": "한국영화",
+        "title": "BTS: The Return"
+      },
+      {
+        "category": "한국영화",
+        "title": "Judge Girl"
+      },
+      {
+        "category": "드라마",
+        "title": "Love on the Menu"
+      },
+      {
+        "category": "드라마",
+        "title": "100 Days of Deception"
+      },
+      {
+        "category": "드라마",
+        "title": "Sword & Silence"
+      },
+      {
+        "category": "드라마",
+        "title": "Doctor X: Mafia in White"
+      },
+      {
+        "category": "드라마",
+        "title": "The Perfect Lie"
+      },
+      {
+        "category": "드라마",
+        "title": "Final Table"
+      },
+      {
+        "category": "드라마",
+        "title": "It's You, Regardless"
+      },
+      {
+        "category": "드라마",
+        "title": "Love in Disguise"
+      },
+      {
+        "category": "드라마",
+        "title": "A Trap Called Desire"
+      },
+      {
+        "category": "드라마",
+        "title": "Summer Vacation"
+      },
+      {
+        "category": "드라마",
+        "title": "One of a Kind Romance"
+      }
+    ],
+    "episodeChanges": [
+      {
+        "title": "Love on the Menu",
+        "newCount": 31,
+        "total": 31
+      },
+      {
+        "title": "100 Days of Deception",
+        "newCount": 12,
+        "total": 12
+      },
+      {
+        "title": "Sword & Silence",
+        "newCount": 2,
+        "total": 2
+      },
+      {
+        "title": "Doctor X: Mafia in White",
+        "newCount": 12,
+        "total": 12
+      },
+      {
+        "title": "The Perfect Lie",
+        "newCount": 6,
+        "total": 6
+      },
+      {
+        "title": "Final Table",
+        "newCount": 8,
+        "total": 8
+      },
+      {
+        "title": "It's You, Regardless",
+        "newCount": 8,
+        "total": 8
+      },
+      {
+        "title": "Love in Disguise",
+        "newCount": 8,
+        "total": 8
+      },
+      {
+        "title": "A Trap Called Desire",
+        "newCount": 70,
+        "total": 70
+      },
+      {
+        "title": "Summer Vacation",
+        "newCount": 6,
+        "total": 6
+      },
+      {
+        "title": "One of a Kind Romance",
+        "newCount": 2,
+        "total": 2
+      }
+    ],
+    "sourceRequestsSucceeded": 19,
+    "note": "Official broadcast episode metadata does not imply playable video. Existing TVWiki links are unchanged."
+  }
 }
