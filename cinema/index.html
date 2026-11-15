@@ -553,7 +553,7 @@ function render(){
     card.append(open,star);root.append(card);
   }
 }
-async function sync(){const button=$("reload");button.disabled=true;$("status").textContent="목록 확인 중…";try{const response=await fetch("./catalog.json?ts="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const payload=await response.json();if(!Array.isArray(payload.items))throw Error("목록 형식 오류");seedItems=payload.items.map(normalize).filter(Boolean);items=seedItems;
+async function sync(){const button=$("reload");button.disabled=true;$("status").textContent="목록 확인 중…";try{let response;try{response=await fetch("https://raw.githubusercontent.com/JoJongHyun/bro-food-atlas-sync/bro-cinema-standalone/cinema/catalog.json?ts="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("GitHub "+response.status)}catch(remoteError){console.warn("실시간 목록 접근 불가, 배포된 목록으로 대체",remoteError);response=await fetch("./catalog.json?ts="+Date.now(),{cache:"no-store"})}if(!response.ok)throw Error("HTTP "+response.status);const payload=await response.json();if(!Array.isArray(payload.items))throw Error("목록 형식 오류");seedItems=payload.items.map(normalize).filter(Boolean);items=seedItems;
 const checked=payload.autoSync?.checkedAt;
 cinemaBackendCheckedAt=checked||"";
 const latest=payload.autoSync||{};
@@ -562,7 +562,7 @@ const t=checked&&!Number.isNaN(Date.parse(checked))
   ?new Date(checked).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"})
   :null;
 $("cinemaSyncInfo").textContent=t
-  ?"자동 동기화: "+t+" · 6시간 간격 확인 · 최근 신규 작품 "+Object.values(recentAdditions?.newTitles||{}).reduce((a,b)=>a+Number(b||0),0)+"편 / 회차 정보 "+Number(recentAdditions?.newEpisodeMetadata||0)+"건"
+  ?"자동 동기화: "+t+" · 매시간 서버 갱신 · 화면 자동 확인 · 최근 신규 작품 "+Object.values(recentAdditions?.newTitles||{}).reduce((a,b)=>a+Number(b||0),0)+"편 / 회차 정보 "+Number(recentAdditions?.newEpisodeMetadata||0)+"건"
   :"자동 동기화 정보 없음 · 목록을 확인하세요";
 const refreshed=checked&&!Number.isNaN(Date.parse(checked))
   ?new Date(checked).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"})
