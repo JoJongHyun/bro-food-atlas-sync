@@ -2,6 +2,7 @@
 <html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0b0d17">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="BRO CINEMA"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="manifest" href="./manifest.json" type="application/manifest+json"><link rel="apple-touch-icon" href="./icons/icon-192.png"><link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png"><meta name="description" content="BRO CINEMA: 영화, 한국영화, 드라마 전용 HLS 플레이어.">
 <title>BRO CINEMA · 영화 · 한국영화 · 드라마</title>
@@ -102,8 +103,27 @@
 .tv-connect-actions{display:flex;justify-content:flex-end;gap:9px;flex-wrap:wrap}
 @media(max-width:580px){.tvwiki-actionbar{padding:9px 11px;gap:8px}.tvwiki-action{font-size:13px}}
 
+
+.install-offer{position:fixed;bottom:max(17px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:min(520px,calc(100vw - 26px));display:flex;align-items:center;gap:11px;z-index:1005;background:#182743;color:#f2f6ff;border:1px solid #6b89bd;border-radius:15px;padding:12px;box-shadow:0 18px 55px #000a}
+.install-offer[hidden]{display:none!important}
+.install-offer-mark{display:grid;place-items:center;background:#416adb;border-radius:11px;min-width:39px;height:39px;font-weight:900}
+.install-offer-body{flex:1;min-width:0}
+.install-offer-body strong{font-size:14px}
+.install-offer-body p{font-size:11px;color:#bbc9e6;line-height:1.5;margin:3px 0 0}
+.install-offer-go{border:0;border-radius:9px;background:#4072ec;color:white;white-space:nowrap;font-weight:750;font-size:12px;padding:10px}
+.install-offer-dismiss{border:0;background:transparent;color:#b6c6e4;font-size:21px;padding:2px 3px;align-self:flex-start}
+@media(max-width:370px){.install-offer{gap:7px;padding:10px}.install-offer-mark{display:none}.install-offer-go{padding:9px 7px}}
 </style></head>
 <body><div class="shell">
+<section id="installOffer" class="install-offer" hidden aria-labelledby="installOfferTitle">
+  <div class="install-offer-mark" aria-hidden="true">▶</div>
+  <div class="install-offer-body">
+    <strong id="installOfferTitle">BRO CINEMA 앱 설치</strong>
+    <p>서프캠처럼 홈 화면에서 앱으로 열어보세요. APK 설치는 필요하지 않아요.</p>
+  </div>
+  <button id="installOfferGo" type="button" class="install-offer-go">설치하기</button>
+  <button id="installOfferDismiss" type="button" class="install-offer-dismiss" aria-label="나중에 설치">×</button>
+</section>
 <header class="top"><div class="logo"><div class="logo-mark">▶</div><div><div class="brand">BRO CINEMA</div><div class="sub">HLS VIDEO PLAYER</div></div></div><div class="tools"><span class="tiny" id="status">목록 확인 중…</span><button class="btn" id="reload">⟳ 새로고침</button><button class="btn primary app-install" id="appInstall" type="button" aria-label="BRO CINEMA를 홈 화면에 앱처럼 설치">📲 앱 설치</button></div></header>
 <section class="hero"><h1>좋아하는 영상, 한곳에서.</h1><p>영화 · 한국영화 · 드라마 전용 화면과 광고 배너 없는 자체 플레이어, TV 전송 기능을 제공합니다.</p></section>
 <nav class="tabs" role="tablist"><button class="tab active" role="tab" aria-selected="true" data-cat="영화">🎬 영화</button><button class="tab" role="tab" aria-selected="false" data-cat="한국영화">🇰🇷 한국영화</button><button class="tab" role="tab" aria-selected="false" data-cat="드라마">📺 드라마</button><button class="tab" role="tab" aria-selected="false" data-cat="즐겨찾기">♥ 즐겨찾기 <span id="favCount">0</span></button></nav>
@@ -173,16 +193,32 @@
 const $=id=>document.getElementById(id),validCats=new Set(["영화","한국영화","드라마"]);
 let pendingInstallPrompt=null;
 const isStandalone=()=>window.matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;
+const CINEMA_INSTALL_DISMISSED="bro-cinema-install-dismiss-v1";
+const isAndroidDevice=()=>/Android/i.test(navigator.userAgent);
+function dismissedInstallRecently(){
+  try{const t=Number(localStorage.getItem(CINEMA_INSTALL_DISMISSED)||0);return t>0&&Date.now()-t<7*24*60*60*1000;}catch{return false;}
+}
+function hideInstallOffer(remember=false){
+  $("installOffer").hidden=true;
+  if(remember){try{localStorage.setItem(CINEMA_INSTALL_DISMISSED,String(Date.now()))}catch{}}
+}
+function maybeShowInstallOffer(){
+  if(isStandalone()||!isAndroidDevice()||dismissedInstallRecently()||$("installHelp").open)return;
+  $("installOffer").hidden=false;
+}
 function updateInstallButton(){
   $("appInstall").hidden=isStandalone();
+  if(isStandalone())hideInstallOffer();
 }
 window.addEventListener("beforeinstallprompt",event=>{
   event.preventDefault();
   pendingInstallPrompt=event;
   updateInstallButton();
+  maybeShowInstallOffer();
 });
 window.addEventListener("appinstalled",()=>{
   pendingInstallPrompt=null;
+  hideInstallOffer(true);
   updateInstallButton();
 });
 function showInstallInstructions(){
@@ -199,8 +235,9 @@ function showInstallInstructions(){
         :"Chrome 또는 Edge 주소창의 설치 아이콘을 누르거나, ⋮ 메뉴에서 '앱 설치'를 선택하세요.\n지원되지 않는 브라우저라면 즐겨찾기로 저장하세요.";
   $("installHelp").showModal();
 }
-$("appInstall").addEventListener("click",async()=>{
+async function requestCinemaInstall(){
   if(isStandalone())return;
+  hideInstallOffer();
   if(pendingInstallPrompt){
     const prompt=pendingInstallPrompt;
     pendingInstallPrompt=null;
@@ -208,9 +245,14 @@ $("appInstall").addEventListener("click",async()=>{
       await prompt.prompt();
       const choice=await prompt.userChoice;
       if(choice?.outcome!=="accepted")showInstallInstructions();
+      else hideInstallOffer(true);
     }catch(e){showInstallInstructions();}
   }else showInstallInstructions();
-});
+}
+$("appInstall").addEventListener("click",requestCinemaInstall);
+$("installOfferGo").addEventListener("click",requestCinemaInstall);
+$("installOfferDismiss").addEventListener("click",()=>hideInstallOffer(true));
+window.addEventListener("load",()=>setTimeout(maybeShowInstallOffer,1300));
 $("installHelpClose").addEventListener("click",()=>$("installHelp").close());
 $("installHelpDone").addEventListener("click",()=>$("installHelp").close());
 $("installHelp").addEventListener("click",event=>{if(event.target===$("installHelp"))$("installHelp").close()});
