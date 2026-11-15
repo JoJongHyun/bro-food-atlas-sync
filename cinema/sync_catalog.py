@@ -3,7 +3,7 @@
 
 Authorized, keyless sources:
 * TVmaze public TV + episode metadata API (https://www.tvmaze.com/api)
-* Wikimedia public MediaWiki categorymembers API
+* Wikimedia public MediaWiki categorymembers API (Korean and English film/TV categories)
 
 This does not crawl TVWiki, resolve protected video URLs or alter manually
 verified playback and episode links. Unknown values stay empty.
@@ -92,7 +92,7 @@ def read_tvmaze(today):
     """Official schedules: yesterday, today, tomorrow; Korean-language scripted only."""
     results = {}
     succeeded = 0
-    dates = [today + dt.timedelta(days=n) for n in (-1, 0, 1)]
+    dates = [today + dt.timedelta(days=n) for n in (-2, -1, 0, 1, 2, 7, 14)]
     urls = []
     for day in dates:
         q = urllib.parse.urlencode({"country": "KR", "date": day.isoformat()})
@@ -126,43 +126,64 @@ def read_tvmaze(today):
     return list(results.values()), succeeded
 
 
-def read_recent_films(today):
-    """Wikimedia licensed metadata only. No film streams or provider page scraping."""
-    categories = [
-        ("한국영화", "Category:" + str(today.year) + " South Korean films"),
-        ("영화", "Category:" + str(today.year) + " films"),
-    ]
-    records = []
-    success = 0
-    for category, title in categories:
+def mediawiki_categories(today):
+    """Track Korean originals as well as international releases and upcoming-year titles."""
+    years = [today.year]
+    if today.month >= 9:
+        years.append(today.year + 1)
+    for year in years:
+        yield "한국영화", "ko", year, f"분류:{year}년 대한민국의 영화"
+        yield "한국영화", "en", year, f"Category:{year} South Korean films"
+        yield "영화", "ko", year, f"분류:{year}년 영화"
+        yield "영화", "en", year, f"Category:{year} films"
+        yield "드라마", "ko", year, f"분류:{year}년 대한민국의 텔레비전 드라마"
+        yield "드라마", "en", year, f"Category:{year} South Korean television series"
+
+
+def read_recent_works(today):
+    """Discover movie + series pages via publicly documented MediaWiki categories.
+
+    Category timestamps denote when an article joined the category, NOT the
+    release date. Keep them for incremental comparison, never as release dates.
+    """
+    records, succeeded, sources = [], 0, {}
+    for category, language, year, group in mediawiki_categories(today):
         query = urllib.parse.urlencode({
             "action": "query", "format": "json", "list": "categorymembers",
-            "cmtitle": title, "cmnamespace": "0", "cmtype": "page",
-            "cmlimit": "50", "cmprop": "ids|title|timestamp",
+            "cmtitle": group, "cmnamespace": "0",
+            "cmlimit": "100", "cmprop": "ids|title|timestamp",
             "cmsort": "timestamp", "cmdir": "desc",
         })
         try:
-            doc = request_json(WIKI + "?" + query)
-            success += 1
+            endpoint = f"https://{language}.wikipedia.org/w/api.php?" + query
+            doc = request_json(endpoint)
+            if not isinstance(doc, dict) or doc.get("error"):
+                LOG.warning("MediaWiki category failed: %s (%s)", group, (doc or {}).get("error") if isinstance(doc, dict) else "invalid")
+                continue
+            succeeded += 1
+            source_key = f"{language}|{category}|{year}"
+            sources[source_key] = len((doc.get("query") or {}).get("categorymembers") or [])
             for page in (doc.get("query") or {}).get("categorymembers", []):
-                name = str(page.get("title", "")).strip()
-                if not name or not isinstance(page.get("pageid"), int):
+                if page.get("ns", 0) != 0:
                     continue
-                if re.search(r"\b(list of|filmography|awards|category|template)\b", name, re.I):
+                title = strip_markup(page.get("title"))[:180]
+                pageid = page.get("pageid")
+                if not title or not isinstance(pageid, int):
+                    continue
+                if re.search(r"\\b(list of|filmography|awards|category|template)\\b", title, re.I):
                     continue
                 records.append({
                     "sourceIndexedAt": str(page.get("timestamp") or ""),
-                    "id": f"auto-wiki-{category}-{page['pageid']}",
-                    "category": category, "title": name, "year": today.year,
-                    "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
-                    "sourceUrl": "https://en.wikipedia.org/wiki/" + urllib.parse.quote(name.replace(" ", "_")),
-                    "sourceProvider": "Wikimedia",
+                    "id": f"auto-wiki-{language}-{category}-{pageid}",
+                    "category": category, "title": title, "year": year,
+                    "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+                    "sourceUrl": f"https://{language}.wikipedia.org/wiki/" + urllib.parse.quote(title.replace(" ", "_")),
+                    "sourceProvider": f"Wikimedia ({language})",
                 })
         except RuntimeError as e:
-            LOG.warning("%s", e)
-        time.sleep(0.4)
-    return records, success
-
+            LOG.warning("Category %s unavailable: %s", group, e)
+        time.sleep(0.2)
+    return records, succeeded, sources
 
 def read_tvmaze_akas(show_id):
     """Official localized alternate names, used ONLY for matching existing titles."""
@@ -297,8 +318,8 @@ def sync(catalog, today):
             by_tvmaze[show_id] = existing
             added["드라마"].append(existing["title"])
 
-    movies, ok = read_recent_films(today)
-    api_success += ok
+    movies, works_ok, work_sources = read_recent_works(today)
+    api_success += works_ok
     # Incremental detection: do not import old pages in the category on every
     # run. A catalog initially seeds the most recent film metadata only once.
     last_film_check = (catalog.get("autoSync") or {}).get("lastFilmSyncAt") or (
@@ -306,6 +327,7 @@ def sync(catalog, today):
     for incoming in movies:
         cat = incoming["category"]
         key = item_key(incoming)
+        # Ignore already stored works, including earlier imported foreign IDs.
         if key in by_key or len(added[cat]) >= MAX_NEW_PER_CATEGORY:
             continue
         stamp = incoming.get("sourceIndexedAt") or ""
@@ -317,7 +339,7 @@ def sync(catalog, today):
 
     # Sync official episode metadata, not playable TVWiki video links.
     # Existing user-provided TVWiki 'episodes' are preserved unchanged.
-    for item in list(by_tvmaze.values())[:40]:
+    for item in list(by_tvmaze.values())[:120]:
         show_id = item.get("tvmazeId")
         if not isinstance(show_id, int):
             continue
@@ -343,15 +365,16 @@ def sync(catalog, today):
     when = utc_now().isoformat(timespec="seconds")
     summary = {
         "status": "ok", "checkedAt": when,
-        "lastFilmSyncAt": when if ok else last_film_check,
-        "source": ["TVmaze public API", "Wikimedia MediaWiki API"],
+        "lastFilmSyncAt": when if works_ok else last_film_check,
+        "sourceCategoriesChecked": work_sources,
+        "source": ["TVmaze public API", "Wikimedia MediaWiki API (ko/en movies and TV)"],
         "newTitles": {k: len(v) for k, v in added.items()},
         "newEpisodeMetadata": sum(x["newCount"] for x in updated_episodes),
         "titlesAdded": [{"category": k, "title": title} for k, vals in added.items() for title in vals],
         "episodeChanges": updated_episodes[:40],
         "duplicatesMerged": merged[:40],
         "sourceRequestsSucceeded": api_success,
-        "note": "Official episode metadata is not playable video. User TVWiki links are unchanged.",
+        "note": "New movie and drama titles plus official episode metadata are checked automatically. Playback links are never invented; verified existing links are preserved.",
     }
     history = catalog.get("autoSyncHistory") or []
     history.insert(0, summary)
