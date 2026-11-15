@@ -28,7 +28,7 @@ MAX_PAGES = 250
 MINIMUM_CARDS = 10
 REQUEST_DELAY = 0.7
 MAX_PER_RUN = 160  # page 1 + up to 159 other pages, enough for current 151-page index
-SOURCE_SCHEMA_VERSION = 2  # Include listing-only /kor_movie/<id> records
+SOURCE_SCHEMA_VERSION = 3  # TVWiki recent-broadcast list, including listing-only titles
 
 def now_iso():
     return dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
@@ -50,7 +50,7 @@ def work_id(url):
 def fetch_index(page):
     if not 1 <= page <= MAX_PAGES:
         raise ValueError("Page index exceeds crawler bounds")
-    qs = urllib.parse.urlencode({"sst": "wr_datetime", "page": page})
+    qs = urllib.parse.urlencode({"sst": "subidx", "page": page})
     url = SOURCE + "?" + qs
     req = urllib.request.Request(url, headers={
         "User-Agent": "Mozilla/5.0 (compatible; BRO-CINEMA-IndexSync/1.0)",
@@ -214,6 +214,7 @@ def sync_kr_movies(catalog, timestamp=None):
     linked_count = sum(1 for x in items if x.get("category") == "한국영화"
                        and valid_movie_url(x.get("tvwikiPage")))
     state.update({
+        "sort": "recent_broadcast",
         "status": "ok" if not failed_at else "partial",
         "schemaVersion": SOURCE_SCHEMA_VERSION,
         "source": SOURCE, "checkedAt": stamp, "totalPages": total,
