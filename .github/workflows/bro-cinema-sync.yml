@@ -1,0 +1,51 @@
+name: BRO CINEMA metadata sync
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - bro-cinema-standalone
+    paths:
+      - '.github/workflows/bro-cinema-sync.yml'
+      - 'cinema/sync_catalog.py'
+      - 'cinema/.sync-trigger'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bro-cinema-metadata-sync
+  cancel-in-progress: false
+
+jobs:
+  update-catalog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout BRO CINEMA branch
+        uses: actions/checkout@v4
+        with:
+          ref: bro-cinema-standalone
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate update code
+        run: python -m py_compile cinema/sync_catalog.py
+      - name: Refresh film drama and official episode metadata
+        run: python cinema/sync_catalog.py --catalog cinema/catalog.json
+      - name: Commit updated metadata only
+        run: |
+          if git diff --quiet -- cinema/catalog.json; then
+            echo "No changes to catalog"
+            exit 0
+          fi
+          git config user.name "bro-cinema-sync[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add cinema/catalog.json
+          git commit -m "Auto-sync BRO CINEMA movie drama and official episode metadata"
+          # Rebase only this data commit if another user edit landed during the run.
+          git pull --rebase origin bro-cinema-standalone
+          git push origin HEAD:bro-cinema-standalone
