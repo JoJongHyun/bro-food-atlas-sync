@@ -98,6 +98,10 @@ def sync_recent_boards(catalog):
             report[category] = {"status": "source_unavailable", "detail": str(exc)[:120]}
             continue
 
+        # Clear stale ranks whenever a title leaves the newest 3 pages.
+        for old_item in items:
+            if old_item.get("category") == category:
+                old_item.pop("tvwikiRank", None)
         # Keep existing TVWiki episode/media fields, deduplicate by stable work ID.
         known = {}
         for item in items:
