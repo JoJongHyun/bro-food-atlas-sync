@@ -151,6 +151,7 @@ def read_recent_films(today):
                 if re.search(r"\b(list of|filmography|awards|category|template)\b", name, re.I):
                     continue
                 records.append({
+                    "sourceIndexedAt": str(page.get("timestamp") or ""),
                     "id": f"auto-wiki-{category}-{page['pageid']}",
                     "category": category, "title": name, "year": today.year,
                     "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
@@ -163,12 +164,27 @@ def read_recent_films(today):
     return records, success
 
 
-def new_tvmaze_item(show):
+def read_tvmaze_akas(show_id):
+    """Official localized alternate names, used ONLY for matching existing titles."""
+    values = request_json(TVMAZE + "/shows/" + str(show_id) + "/akas")
+    if not isinstance(values, list):
+        return []
+    names = []
+    for v in values[:40]:
+        if not isinstance(v, dict):
+            continue
+        name = strip_markup(v.get("name"))[:180]
+        if name and name not in names:
+            names.append(name)
+    return names
+
+
+def new_tvmaze_item(show, preferred_title=None):
     show_id = show["id"]
     image = show.get("image") or {}
     if not isinstance(image, dict):
         image = {}
-    title = strip_markup(show.get("name"))[:180]
+    title = strip_markup(preferred_title or show.get("name"))[:180]
     premiered = str(show.get("premiered") or "")
     premiered = premiered if re.fullmatch(r"\d{4}-\d{2}-\d{2}", premiered) else ""
     return {
@@ -216,47 +232,91 @@ def sync(catalog, today):
     items = catalog.get("items")
     if not isinstance(items, list):
         raise ValueError("Missing items array")
-    # Preserve all user-maintained fields, poster references, verified episode URLs.
+    # Preserve all user-maintained fields, posters and verified TVWiki episode URLs.
     by_key = {item_key(x): x for x in items}
     by_tvmaze = {x["tvmazeId"]: x for x in items if isinstance(x.get("tvmazeId"), int)}
-    source_ids = {item_source_id(x) for x in items if item_source_id(x)}
     added = {"영화": [], "한국영화": [], "드라마": []}
+    merged = []
     updated_episodes = []
     api_success = 0
 
     tvshows, ok = read_tvmaze(today)
     api_success += ok
     for show in tvshows:
-        cat = "드라마"
         name = strip_markup(show.get("name"))[:180]
-        key = cat + "|" + norm_name(name)
         show_id = show["id"]
-        existing = by_tvmaze.get(show_id) or by_key.get(key)
+        aliases = []
+        try:
+            aliases = read_tvmaze_akas(show_id)
+            api_success += 1
+            time.sleep(0.3)
+        except RuntimeError as e:
+            LOG.warning("No aliases for TVmaze %s: %s", show_id, e)
+        candidate_names = [name] + aliases
+        preferred_ko = next((v for v in aliases if re.search(r"[가-힣]", v)), None)
+        # A translated title is the same show, never a second film/drama.
+        matches = []
+        for alias in candidate_names:
+            alternatives = [alias]
+            if alias.startswith("더 "):
+                alternatives.append(alias[2:].strip())
+            for n in alternatives:
+                item = by_key.get("드라마|" + norm_name(n))
+                if item is not None and item not in matches:
+                    matches.append(item)
+        current = by_tvmaze.get(show_id)
+        if current is not None and current not in matches:
+            matches.append(current)
+        manual = next((x for x in matches if not str(x.get("id", "")).startswith("auto-tvmaze-")), None)
+        existing = manual or current or (matches[0] if matches else None)
+        for duplicate in matches:
+            if duplicate is existing or not str(duplicate.get("id", "")).startswith("auto-tvmaze-"):
+                continue
+            if not existing.get("officialEpisodes") and duplicate.get("officialEpisodes"):
+                existing["officialEpisodes"] = duplicate["officialEpisodes"]
+            if duplicate in items:
+                items.remove(duplicate)
+                merged.append({"removed": duplicate.get("title"), "kept": existing.get("title")})
+                by_key.pop(item_key(duplicate), None)
+
         if existing:
             if existing.get("tvmazeId") in (None, ""):
                 existing["tvmazeId"] = show_id
+            # Do not rename manual titles or overwrite verified playback fields.
+            if str(existing.get("id", "")).startswith("auto-tvmaze-") and preferred_ko:
+                newer_key = "드라마|" + norm_name(preferred_ko)
+                if newer_key not in by_key or by_key[newer_key] is existing:
+                    by_key.pop(item_key(existing), None)
+                    existing["title"] = preferred_ko
+                    by_key[newer_key] = existing
             by_tvmaze[show_id] = existing
-        elif len(added[cat]) < MAX_NEW_PER_CATEGORY:
-            existing = new_tvmaze_item(show)
+        elif len(added["드라마"]) < MAX_NEW_PER_CATEGORY:
+            existing = new_tvmaze_item(show, preferred_ko)
             items.append(existing)
-            by_key[key] = existing
+            by_key[item_key(existing)] = existing
             by_tvmaze[show_id] = existing
-            added[cat].append(name)
+            added["드라마"].append(existing["title"])
 
     movies, ok = read_recent_films(today)
     api_success += ok
+    # Incremental detection: do not import old pages in the category on every
+    # run. A catalog initially seeds the most recent film metadata only once.
+    last_film_check = (catalog.get("autoSync") or {}).get("lastFilmSyncAt") or (
+        catalog.get("autoSync") or {}).get("checkedAt") or ""
     for incoming in movies:
         cat = incoming["category"]
         key = item_key(incoming)
         if key in by_key or len(added[cat]) >= MAX_NEW_PER_CATEGORY:
             continue
-        # Avoid near-exact language variant duplicates only; never infer a release date.
+        stamp = incoming.get("sourceIndexedAt") or ""
+        if last_film_check and stamp and stamp <= last_film_check:
+            continue
         items.append(incoming)
         by_key[key] = incoming
         added[cat].append(incoming["title"])
 
-    # Query official episode metadata for all items with a known TVmaze ID.
-    # Hard cap requests so large catalogs do not overwhelm the public API.
+    # Sync official episode metadata, not playable TVWiki video links.
+    # Existing user-provided TVWiki 'episodes' are preserved unchanged.
     for item in list(by_tvmaze.values())[:40]:
         show_id = item.get("tvmazeId")
         if not isinstance(show_id, int):
@@ -283,13 +343,15 @@ def sync(catalog, today):
     when = utc_now().isoformat(timespec="seconds")
     summary = {
         "status": "ok", "checkedAt": when,
+        "lastFilmSyncAt": when if ok else last_film_check,
         "source": ["TVmaze public API", "Wikimedia MediaWiki API"],
         "newTitles": {k: len(v) for k, v in added.items()},
         "newEpisodeMetadata": sum(x["newCount"] for x in updated_episodes),
         "titlesAdded": [{"category": k, "title": title} for k, vals in added.items() for title in vals],
         "episodeChanges": updated_episodes[:40],
+        "duplicatesMerged": merged[:40],
         "sourceRequestsSucceeded": api_success,
-        "note": "Official broadcast episode metadata does not imply playable video. Existing TVWiki links are unchanged.",
+        "note": "Official episode metadata is not playable video. User TVWiki links are unchanged.",
     }
     history = catalog.get("autoSyncHistory") or []
     history.insert(0, summary)
@@ -297,7 +359,6 @@ def sync(catalog, today):
     catalog["autoSync"] = summary
     catalog["updatedAt"] = when
     return summary
-
 
 def main():
     parser = argparse.ArgumentParser()
