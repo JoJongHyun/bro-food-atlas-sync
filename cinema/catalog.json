@@ -3,14 +3,6 @@
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
-      "id": "apple-hls-demo",
-      "category": "영화",
-      "title": "[재생 테스트] 공개 HLS 샘플 (실제 영화 아님)",
-      "year": "데모",
-      "description": "Apple 개발자용 공개 테스트 HLS",
-      "hls": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8"
-    },
-    {
       "id": "movie-info-1",
       "category": "영화",
       "title": "인터스텔라",
