@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T09:31:05+00:00",
+  "updatedAt": "2026-11-15T09:31:57+00:00",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -4676,10 +4676,449 @@
           "url": "https://www.tvmaze.com/episodes/3807489/beautiful-malice-1x15-episode-15"
         }
       ]
+    },
+    {
+      "sourceIndexedAt": "2026-11-14T02:32:26Z",
+      "id": "auto-wiki-ko-영화-4304349",
+      "category": "영화",
+      "title": "입에 대한 앙케트",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%9E%85%EC%97%90_%EB%8C%80%ED%95%9C_%EC%95%99%EC%BC%80%ED%8A%B8",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-10T03:31:43Z",
+      "id": "auto-wiki-ko-영화-4301131",
+      "category": "영화",
+      "title": "오버액션 갱",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%98%A4%EB%B2%84%EC%95%A1%EC%85%98_%EA%B0%B1",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-09T11:11:43Z",
+      "id": "auto-wiki-ko-영화-4300375",
+      "category": "영화",
+      "title": "슈가 (영화)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%8A%88%EA%B0%80_%28%EC%98%81%ED%99%94%29",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-09T04:02:25Z",
+      "id": "auto-wiki-ko-영화-4299840",
+      "category": "영화",
+      "title": "킬링타임 (2026년 영화)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%ED%82%AC%EB%A7%81%ED%83%80%EC%9E%84_%282026%EB%85%84_%EC%98%81%ED%99%94%29",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-08T02:23:27Z",
+      "id": "auto-wiki-ko-영화-4298739",
+      "category": "영화",
+      "title": "슈퍼 트루퍼스 3",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%8A%88%ED%8D%BC_%ED%8A%B8%EB%A3%A8%ED%8D%BC%EC%8A%A4_3",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-07T07:00:02Z",
+      "id": "auto-wiki-ko-영화-4213373",
+      "category": "영화",
+      "title": "암살자(들)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%95%94%EC%82%B4%EC%9E%90%28%EB%93%A4%29",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-07T03:30:54Z",
+      "id": "auto-wiki-ko-영화-4298075",
+      "category": "영화",
+      "title": "부활남: 더 레드",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EB%B6%80%ED%99%9C%EB%82%A8%3A_%EB%8D%94_%EB%A0%88%EB%93%9C",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-04T03:08:10Z",
+      "id": "auto-wiki-ko-영화-4296875",
+      "category": "영화",
+      "title": "더 웨이트",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EB%8D%94_%EC%9B%A8%EC%9D%B4%ED%8A%B8",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-03T02:22:42Z",
+      "id": "auto-wiki-ko-영화-4296518",
+      "category": "영화",
+      "title": "드라이브 계약 관계",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C_%EA%B3%84%EC%95%BD_%EA%B4%80%EA%B3%84",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-01T03:59:48Z",
+      "id": "auto-wiki-ko-영화-4295653",
+      "category": "영화",
+      "title": "퓨리어스 (영화)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%ED%93%A8%EB%A6%AC%EC%96%B4%EC%8A%A4_%28%EC%98%81%ED%99%94%29",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-29T02:47:57Z",
+      "id": "auto-wiki-ko-영화-4294098",
+      "category": "영화",
+      "title": "숀 더 쉽: 공포의 털보 괴물",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%88%80_%EB%8D%94_%EC%89%BD%3A_%EA%B3%B5%ED%8F%AC%EC%9D%98_%ED%84%B8%EB%B3%B4_%EA%B4%B4%EB%AC%BC",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-26T03:27:46Z",
+      "id": "auto-wiki-ko-영화-4292701",
+      "category": "영화",
+      "title": "캐리어를 끄는 소녀",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%BA%90%EB%A6%AC%EC%96%B4%EB%A5%BC_%EB%81%84%EB%8A%94_%EC%86%8C%EB%85%80",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-25T03:22:14Z",
+      "id": "auto-wiki-ko-영화-4292253",
+      "category": "영화",
+      "title": "게일의 원나잇 패스",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EA%B2%8C%EC%9D%BC%EC%9D%98_%EC%9B%90%EB%82%98%EC%9E%87_%ED%8C%A8%EC%8A%A4",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-24T02:56:57Z",
+      "id": "auto-wiki-ko-영화-4291859",
+      "category": "영화",
+      "title": "다마알 4",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EB%8B%A4%EB%A7%88%EC%95%8C_4",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-20T03:18:38Z",
+      "id": "auto-wiki-ko-영화-4290381",
+      "category": "영화",
+      "title": "텐징 (영화)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%ED%85%90%EC%A7%95_%28%EC%98%81%ED%99%94%29",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-19T03:34:12Z",
+      "id": "auto-wiki-ko-영화-4289954",
+      "category": "영화",
+      "title": "폭풍의 밤",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%ED%8F%AD%ED%92%8D%EC%9D%98_%EB%B0%A4",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-17T13:58:37Z",
+      "id": "auto-wiki-ko-영화-4289192",
+      "category": "영화",
+      "title": "마리와 별난 엄마들",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EB%A7%88%EB%A6%AC%EC%99%80_%EB%B3%84%EB%82%9C_%EC%97%84%EB%A7%88%EB%93%A4",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-17T04:13:18Z",
+      "id": "auto-wiki-ko-영화-4288926",
+      "category": "영화",
+      "title": "광대 패닉：공포의 스마일",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EA%B4%91%EB%8C%80_%ED%8C%A8%EB%8B%89%EF%BC%9A%EA%B3%B5%ED%8F%AC%EC%9D%98_%EC%8A%A4%EB%A7%88%EC%9D%BC",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-16T03:58:13Z",
+      "id": "auto-wiki-ko-영화-4288146",
+      "category": "영화",
+      "title": "텐더 러빙 케어",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%ED%85%90%EB%8D%94_%EB%9F%AC%EB%B9%99_%EC%BC%80%EC%96%B4",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-14T02:36:31Z",
+      "id": "auto-wiki-ko-영화-4287235",
+      "category": "영화",
+      "title": "드골: 저항의 시작",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EB%93%9C%EA%B3%A8%3A_%EC%A0%80%ED%95%AD%EC%9D%98_%EC%8B%9C%EC%9E%91",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-12T02:08:02Z",
+      "id": "auto-wiki-ko-영화-4286223",
+      "category": "영화",
+      "title": "온슬로트 (영화)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%98%A8%EC%8A%AC%EB%A1%9C%ED%8A%B8_%28%EC%98%81%ED%99%94%29",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-11T03:41:52Z",
+      "id": "auto-wiki-ko-영화-4285812",
+      "category": "영화",
+      "title": "멜라니아 (영화)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EB%A9%9C%EB%9D%BC%EB%8B%88%EC%95%84_%28%EC%98%81%ED%99%94%29",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-11T03:11:00Z",
+      "id": "auto-wiki-ko-영화-4285782",
+      "category": "영화",
+      "title": "지느러미 (영화)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%A7%80%EB%8A%90%EB%9F%AC%EB%AF%B8_%28%EC%98%81%ED%99%94%29",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-10T03:12:56Z",
+      "id": "auto-wiki-ko-영화-4285140",
+      "category": "영화",
+      "title": "표인: 풍기대막",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%ED%91%9C%EC%9D%B8%3A_%ED%92%8D%EA%B8%B0%EB%8C%80%EB%A7%89",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-07T03:06:19Z",
+      "id": "auto-wiki-ko-영화-4283665",
+      "category": "영화",
+      "title": "경주기행",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A3%BC%EA%B8%B0%ED%96%89",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-10T20:26:16Z",
+      "id": "auto-wiki-en-한국영화-84753785",
+      "category": "한국영화",
+      "title": "Teen Cop",
+      "year": 2027,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Teen_Cop",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-03T01:13:33Z",
+      "id": "auto-wiki-en-한국영화-67370229",
+      "category": "한국영화",
+      "title": "K-Pop: The Debut",
+      "year": 2027,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/K-Pop%3A_The_Debut",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-03T01:10:46Z",
+      "id": "auto-wiki-en-한국영화-83123073",
+      "category": "한국영화",
+      "title": "The Sword: Rebirth of the Red Wolf",
+      "year": 2027,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/The_Sword%3A_Rebirth_of_the_Red_Wolf",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-03T08:06:45Z",
+      "id": "auto-wiki-en-한국영화-79341943",
+      "category": "한국영화",
+      "title": "Ally (film)",
+      "year": 2027,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ally_%28film%29",
+      "sourceProvider": "Wikimedia (en)"
     }
   ],
   "posterSourceNote": "Verified per-title cover URLs from public TVWiki listings, search results, and detail-page bo_v_poster. Missing or unavailable posters fall back to Wikimedia or a text cover; works with no verified match are not guessed.",
   "autoSyncHistory": [
+    {
+      "status": "ok",
+      "checkedAt": "2026-11-15T09:31:57+00:00",
+      "lastFilmSyncAt": "2026-11-15T09:31:57+00:00",
+      "sourceCategoriesChecked": {
+        "ko|한국영화|2026": 0,
+        "en|한국영화|2026": 33,
+        "ko|영화|2026": 99,
+        "en|영화|2026": 100,
+        "ko|드라마|2026": 0,
+        "en|드라마|2026": 0,
+        "ko|한국영화|2027": 0,
+        "en|한국영화|2027": 4,
+        "ko|영화|2027": 42,
+        "en|영화|2027": 97
+      },
+      "source": [
+        "TVmaze public API",
+        "Wikimedia MediaWiki API (ko/en movies and TV)"
+      ],
+      "newTitles": {
+        "영화": 25,
+        "한국영화": 4,
+        "드라마": 0
+      },
+      "newEpisodeMetadata": 0,
+      "titlesAdded": [
+        {
+          "category": "영화",
+          "title": "입에 대한 앙케트"
+        },
+        {
+          "category": "영화",
+          "title": "오버액션 갱"
+        },
+        {
+          "category": "영화",
+          "title": "슈가 (영화)"
+        },
+        {
+          "category": "영화",
+          "title": "킬링타임 (2026년 영화)"
+        },
+        {
+          "category": "영화",
+          "title": "슈퍼 트루퍼스 3"
+        },
+        {
+          "category": "영화",
+          "title": "암살자(들)"
+        },
+        {
+          "category": "영화",
+          "title": "부활남: 더 레드"
+        },
+        {
+          "category": "영화",
+          "title": "더 웨이트"
+        },
+        {
+          "category": "영화",
+          "title": "드라이브 계약 관계"
+        },
+        {
+          "category": "영화",
+          "title": "퓨리어스 (영화)"
+        },
+        {
+          "category": "영화",
+          "title": "숀 더 쉽: 공포의 털보 괴물"
+        },
+        {
+          "category": "영화",
+          "title": "캐리어를 끄는 소녀"
+        },
+        {
+          "category": "영화",
+          "title": "게일의 원나잇 패스"
+        },
+        {
+          "category": "영화",
+          "title": "다마알 4"
+        },
+        {
+          "category": "영화",
+          "title": "텐징 (영화)"
+        },
+        {
+          "category": "영화",
+          "title": "폭풍의 밤"
+        },
+        {
+          "category": "영화",
+          "title": "마리와 별난 엄마들"
+        },
+        {
+          "category": "영화",
+          "title": "광대 패닉：공포의 스마일"
+        },
+        {
+          "category": "영화",
+          "title": "텐더 러빙 케어"
+        },
+        {
+          "category": "영화",
+          "title": "드골: 저항의 시작"
+        },
+        {
+          "category": "영화",
+          "title": "온슬로트 (영화)"
+        },
+        {
+          "category": "영화",
+          "title": "멜라니아 (영화)"
+        },
+        {
+          "category": "영화",
+          "title": "지느러미 (영화)"
+        },
+        {
+          "category": "영화",
+          "title": "표인: 풍기대막"
+        },
+        {
+          "category": "영화",
+          "title": "경주기행"
+        },
+        {
+          "category": "한국영화",
+          "title": "Teen Cop"
+        },
+        {
+          "category": "한국영화",
+          "title": "K-Pop: The Debut"
+        },
+        {
+          "category": "한국영화",
+          "title": "The Sword: Rebirth of the Red Wolf"
+        },
+        {
+          "category": "한국영화",
+          "title": "Ally (film)"
+        }
+      ],
+      "episodeChanges": [],
+      "duplicatesMerged": [],
+      "sourceRequestsSucceeded": 52,
+      "note": "New movie and drama titles plus official episode metadata are checked automatically. Playback links are never invented; verified existing links are preserved."
+    },
     {
       "status": "ok",
       "checkedAt": "2026-11-15T09:31:05+00:00",
@@ -5177,8 +5616,8 @@
   ],
   "autoSync": {
     "status": "ok",
-    "checkedAt": "2026-11-15T09:31:05+00:00",
-    "lastFilmSyncAt": "2026-11-15T09:31:05+00:00",
+    "checkedAt": "2026-11-15T09:31:57+00:00",
+    "lastFilmSyncAt": "2026-11-15T09:31:57+00:00",
     "sourceCategoriesChecked": {
       "ko|한국영화|2026": 0,
       "en|한국영화|2026": 33,
@@ -5196,38 +5635,130 @@
       "Wikimedia MediaWiki API (ko/en movies and TV)"
     ],
     "newTitles": {
-      "영화": 0,
-      "한국영화": 0,
-      "드라마": 2
+      "영화": 25,
+      "한국영화": 4,
+      "드라마": 0
     },
-    "newEpisodeMetadata": 25,
+    "newEpisodeMetadata": 0,
     "titlesAdded": [
       {
-        "category": "드라마",
-        "title": "각설탕 소리"
+        "category": "영화",
+        "title": "입에 대한 앙케트"
       },
       {
-        "category": "드라마",
-        "title": "아름다운 악의"
+        "category": "영화",
+        "title": "오버액션 갱"
+      },
+      {
+        "category": "영화",
+        "title": "슈가 (영화)"
+      },
+      {
+        "category": "영화",
+        "title": "킬링타임 (2026년 영화)"
+      },
+      {
+        "category": "영화",
+        "title": "슈퍼 트루퍼스 3"
+      },
+      {
+        "category": "영화",
+        "title": "암살자(들)"
+      },
+      {
+        "category": "영화",
+        "title": "부활남: 더 레드"
+      },
+      {
+        "category": "영화",
+        "title": "더 웨이트"
+      },
+      {
+        "category": "영화",
+        "title": "드라이브 계약 관계"
+      },
+      {
+        "category": "영화",
+        "title": "퓨리어스 (영화)"
+      },
+      {
+        "category": "영화",
+        "title": "숀 더 쉽: 공포의 털보 괴물"
+      },
+      {
+        "category": "영화",
+        "title": "캐리어를 끄는 소녀"
+      },
+      {
+        "category": "영화",
+        "title": "게일의 원나잇 패스"
+      },
+      {
+        "category": "영화",
+        "title": "다마알 4"
+      },
+      {
+        "category": "영화",
+        "title": "텐징 (영화)"
+      },
+      {
+        "category": "영화",
+        "title": "폭풍의 밤"
+      },
+      {
+        "category": "영화",
+        "title": "마리와 별난 엄마들"
+      },
+      {
+        "category": "영화",
+        "title": "광대 패닉：공포의 스마일"
+      },
+      {
+        "category": "영화",
+        "title": "텐더 러빙 케어"
+      },
+      {
+        "category": "영화",
+        "title": "드골: 저항의 시작"
+      },
+      {
+        "category": "영화",
+        "title": "온슬로트 (영화)"
+      },
+      {
+        "category": "영화",
+        "title": "멜라니아 (영화)"
+      },
+      {
+        "category": "영화",
+        "title": "지느러미 (영화)"
+      },
+      {
+        "category": "영화",
+        "title": "표인: 풍기대막"
+      },
+      {
+        "category": "영화",
+        "title": "경주기행"
+      },
+      {
+        "category": "한국영화",
+        "title": "Teen Cop"
+      },
+      {
+        "category": "한국영화",
+        "title": "K-Pop: The Debut"
+      },
+      {
+        "category": "한국영화",
+        "title": "The Sword: Rebirth of the Red Wolf"
+      },
+      {
+        "category": "한국영화",
+        "title": "Ally (film)"
       }
     ],
-    "episodeChanges": [
-      {
-        "title": "각설탕 소리",
-        "newCount": 8,
-        "total": 8
-      },
-      {
-        "title": "옆자리, 프란체스카",
-        "newCount": 2,
-        "total": 2
-      },
-      {
-        "title": "아름다운 악의",
-        "newCount": 15,
-        "total": 15
-      }
-    ],
+    "episodeChanges": [],
     "duplicatesMerged": [],
     "sourceRequestsSucceeded": 52,
     "note": "New movie and drama titles plus official episode metadata are checked automatically. Playback links are never invented; verified existing links are preserved."
