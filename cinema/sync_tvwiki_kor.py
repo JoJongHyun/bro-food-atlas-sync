@@ -218,7 +218,7 @@ def sync_kr_movies(catalog, timestamp=None):
         "schemaVersion": SOURCE_SCHEMA_VERSION,
         "source": SOURCE, "checkedAt": stamp, "totalPages": total,
         "pagesFetched": 1 + (failed_at - cursor if failed_at else len(pages)),
-        "scanNextPage": state.get("nextPage", 2), "fullScanComplete": bool(state.get("fullIndexedAt")),
+        "scanNextPage": state.get("nextPage", 2), "fullScanComplete": state.get("completedSchemaVersion") == SOURCE_SCHEMA_VERSION,
         "newTitles": added, "updatedLinks": updated,
         "removedNonTVWiki": removed_unlinked,
         "tvwikiLinked": linked_count,
