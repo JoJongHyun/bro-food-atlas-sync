@@ -28,6 +28,7 @@ MAX_PAGES = 250
 MINIMUM_CARDS = 10
 REQUEST_DELAY = 0.7
 MAX_PER_RUN = 160  # page 1 + up to 159 other pages, enough for current 151-page index
+SOURCE_SCHEMA_VERSION = 2  # Include listing-only /kor_movie/<id> records
 
 def now_iso():
     return dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
@@ -142,8 +143,8 @@ def sync_kr_movies(catalog, timestamp=None):
         return state
 
     last_full = state.get("fullIndexedAt")
-    full_due = True
-    if last_full:
+    full_due = state.get("schemaVersion") != SOURCE_SCHEMA_VERSION
+    if last_full and not full_due:
         try:
             full_due = (dt.datetime.fromisoformat(stamp) -
                         dt.datetime.fromisoformat(last_full)).days >= 7
@@ -213,6 +214,7 @@ def sync_kr_movies(catalog, timestamp=None):
                        and valid_movie_url(x.get("tvwikiPage")))
     state.update({
         "status": "ok" if not failed_at else "partial",
+        "schemaVersion": SOURCE_SCHEMA_VERSION,
         "source": SOURCE, "checkedAt": stamp, "totalPages": total,
         "pagesFetched": 1 + (failed_at - cursor if failed_at else len(pages)),
         "scanNextPage": state.get("nextPage", 2), "fullScanComplete": bool(state.get("fullIndexedAt")),
