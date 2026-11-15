@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T16:23:46+00:00",
+  "updatedAt": "2026-11-15T21:51:19+00:00",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -56716,10 +56716,76 @@
       "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
       "sourceUrl": "https://en.wikipedia.org/wiki/Batulo_Jun",
       "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-15T17:32:21Z",
+      "id": "auto-wiki-en-영화-84807854",
+      "category": "영화",
+      "title": "Extrawurst (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Extrawurst_%28film%29",
+      "sourceProvider": "Wikimedia (en)"
     }
   ],
   "posterSourceNote": "Verified per-title cover URLs from public TVWiki listings, search results, and detail-page bo_v_poster. Missing or unavailable posters fall back to Wikimedia or a text cover; works with no verified match are not guessed.",
   "autoSyncHistory": [
+    {
+      "status": "ok",
+      "checkedAt": "2026-11-15T21:51:19+00:00",
+      "lastFilmSyncAt": "2026-11-15T21:51:19+00:00",
+      "sourceCategoriesChecked": {
+        "ko|영화|2026": 99,
+        "en|영화|2026": 100,
+        "ko|드라마|2026": 0,
+        "en|드라마|2026": 0
+      },
+      "source": [
+        "TVmaze public API",
+        "Wikimedia MediaWiki API (other categories)",
+        "TVWiki public recent-broadcast movie, Korean film and drama listings"
+      ],
+      "tvwikiKoreanMovieSync": {
+        "status": "ok",
+        "totalPages": 151,
+        "pagesFetched": 3,
+        "newTitles": 0,
+        "tvwikiLinked": 4507
+      },
+      "tvwikiRecentBoards": {
+        "영화": {
+          "status": "ok",
+          "sort": "recent_broadcast",
+          "pagesFetched": 3,
+          "itemsIndexed": 90,
+          "newTitles": 0
+        },
+        "드라마": {
+          "status": "ok",
+          "sort": "recent_broadcast",
+          "pagesFetched": 3,
+          "itemsIndexed": 90,
+          "newTitles": 0
+        }
+      },
+      "newTitles": {
+        "영화": 1,
+        "한국영화": 0,
+        "드라마": 0
+      },
+      "newEpisodeMetadata": 0,
+      "titlesAdded": [
+        {
+          "category": "영화",
+          "title": "Extrawurst (film)"
+        }
+      ],
+      "episodeChanges": [],
+      "duplicatesMerged": [],
+      "sourceRequestsSucceeded": 46,
+      "tvwikiLinked": 4724,
+      "note": "Public discovery metadata is separate from TVWiki playback. Only verified TVWiki page links are displayed; third-party provider watch links are removed and not regenerated."
+    },
     {
       "status": "ok",
       "checkedAt": "2026-11-15T16:23:46+00:00",
@@ -57618,44 +57684,15 @@
       "duplicatesMerged": [],
       "sourceRequestsSucceeded": 30,
       "note": "Official episode metadata is not playable video. User TVWiki links are unchanged."
-    },
-    {
-      "status": "ok",
-      "checkedAt": "2026-11-15T08:59:44+00:00",
-      "lastFilmSyncAt": "2026-11-15T08:59:44+00:00",
-      "source": [
-        "TVmaze public API",
-        "Wikimedia MediaWiki API"
-      ],
-      "newTitles": {
-        "영화": 2,
-        "한국영화": 0,
-        "드라마": 0
-      },
-      "newEpisodeMetadata": 0,
-      "titlesAdded": [
-        {
-          "category": "영화",
-          "title": "Kabaddi 5: After the Final Match"
-        },
-        {
-          "category": "영화",
-          "title": "Cop This"
-        }
-      ],
-      "episodeChanges": [],
-      "duplicatesMerged": [],
-      "sourceRequestsSucceeded": 30,
-      "note": "Official episode metadata is not playable video. User TVWiki links are unchanged."
     }
   ],
   "autoSync": {
     "status": "ok",
-    "checkedAt": "2026-11-15T16:23:46+00:00",
-    "lastFilmSyncAt": "2026-11-15T16:23:46+00:00",
+    "checkedAt": "2026-11-15T21:51:19+00:00",
+    "lastFilmSyncAt": "2026-11-15T21:51:19+00:00",
     "sourceCategoriesChecked": {
       "ko|영화|2026": 99,
-      "en|영화|2026": 99,
+      "en|영화|2026": 100,
       "ko|드라마|2026": 0,
       "en|드라마|2026": 0
     },
@@ -57688,7 +57725,7 @@
       }
     },
     "newTitles": {
-      "영화": 3,
+      "영화": 1,
       "한국영화": 0,
       "드라마": 0
     },
@@ -57696,40 +57733,11 @@
     "titlesAdded": [
       {
         "category": "영화",
-        "title": "Girl and Wolf"
-      },
-      {
-        "category": "영화",
-        "title": "Black Gold (2026 film)"
-      },
-      {
-        "category": "영화",
-        "title": "Batulo Jun"
+        "title": "Extrawurst (film)"
       }
     ],
     "episodeChanges": [],
-    "duplicatesMerged": [
-      {
-        "removed": "욕망의 덫",
-        "kept": "욕망의 덫"
-      },
-      {
-        "removed": "각설탕 소리",
-        "kept": "각설탕 소리"
-      },
-      {
-        "removed": "사랑이 온다",
-        "kept": "사랑이 온다"
-      },
-      {
-        "removed": "밑도 끝도 없이, 너다",
-        "kept": "밑도 끝도 없이, 너다"
-      },
-      {
-        "removed": "여름방학",
-        "kept": "여름방학"
-      }
-    ],
+    "duplicatesMerged": [],
     "sourceRequestsSucceeded": 46,
     "tvwikiLinked": 4724,
     "note": "Public discovery metadata is separate from TVWiki playback. Only verified TVWiki page links are displayed; third-party provider watch links are removed and not regenerated."
@@ -57739,7 +57747,7 @@
     "nextPage": 2,
     "status": "ok",
     "source": "https://tvwiki60.net/kor_movie",
-    "checkedAt": "2026-11-15T16:23:26+00:00",
+    "checkedAt": "2026-11-15T21:51:01+00:00",
     "totalPages": 151,
     "pagesFetched": 3,
     "scanNextPage": 2,
