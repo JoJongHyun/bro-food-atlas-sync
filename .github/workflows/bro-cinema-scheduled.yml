@@ -1,0 +1,58 @@
+name: BRO CINEMA autonomous hourly metadata sync
+
+# Scheduled workflows run only from the repository default branch (main).
+# The live cinema files are intentionally maintained on bro-cinema-standalone.
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/bro-cinema-scheduled.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bro-cinema-metadata-sync
+  cancel-in-progress: false
+
+jobs:
+  update-catalog:
+    if: github.repository == 'JoJongHyun/bro-food-atlas-sync'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout BRO CINEMA live catalog
+        uses: actions/checkout@v4
+        with:
+          ref: bro-cinema-standalone
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate updater
+        run: python -m py_compile cinema/sync_catalog.py
+
+      - name: Refresh newly available film, drama and official episode metadata
+        run: python cinema/sync_catalog.py --catalog cinema/catalog.json
+
+      - name: Commit changed catalog without disturbing verified links
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add cinema/catalog.json
+          if git diff --cached --quiet; then
+            echo 'Catalog is already up to date.'
+            exit 0
+          fi
+          git config user.name 'bro-cinema-sync[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Auto-sync BRO CINEMA catalog (independent hourly schedule)'
+          git pull --rebase origin bro-cinema-standalone
+          git push origin HEAD:bro-cinema-standalone
