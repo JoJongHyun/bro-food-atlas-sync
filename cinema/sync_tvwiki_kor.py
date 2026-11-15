@@ -19,7 +19,7 @@ import urllib.request
 LOG = logging.getLogger("cinema.tvwiki.kr")
 SOURCE = "https://tvwiki60.net/kor_movie"
 HOST = "tvwiki60.net"
-WORK_RE = re.compile(r"^https://tvwiki60\.net/kor_movie/(\d+)/(\d+)$")
+WORK_RE = re.compile(r"^https://tvwiki60\.net/kor_movie/(\d+)(?:/(\d+))?$")
 CARD_RE = re.compile(r'<div\s+class="box"\s*>(.*?)</div>', re.S | re.I)
 TITLE_RE = re.compile(r'<a\s+href="([^"]+)"\s+class="title2"[^>]*>(.*?)</a>', re.S | re.I)
 POSTER_RE = re.compile(r'<img\s+src="([^"]+)"', re.I)
@@ -108,7 +108,8 @@ def parse_index(text):
                         "tvwikiPage": url,
                         "sourceUrl": url,
                         "sourceProvider": "TVWiki Korean movie index",
-                        "poster": poster})
+                        "poster": poster,
+                        "tvwikiPageStatus": "episode" if WORK_RE.fullmatch(url).group(2) else "listing"})
     total = 1
     match = LAST_RE.search(text)
     if match:
@@ -189,6 +190,7 @@ def sync_kr_movies(catalog, timestamp=None):
             existing["title"] = record["title"]
             existing["sourceUrl"] = record["tvwikiPage"]
             existing["sourceProvider"] = "TVWiki Korean movie index"
+            existing["tvwikiPageStatus"] = record["tvwikiPageStatus"]
             existing["tvwikiRank"] = position
             if record["poster"]:
                 existing["poster"] = record["poster"]
