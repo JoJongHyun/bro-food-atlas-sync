@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T05:30:26+00:00",
+  "updatedAt": "2026-11-15T08:59:44+00:00",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -4425,10 +4425,59 @@
       "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
       "sourceUrl": "https://en.wikipedia.org/wiki/Made_in_Abyss%3A_Awakening_Mystery",
       "sourceProvider": "Wikimedia"
+    },
+    {
+      "sourceIndexedAt": "2026-11-15T05:51:58Z",
+      "id": "auto-wiki-영화-84624572",
+      "category": "영화",
+      "title": "Kabaddi 5: After the Final Match",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Kabaddi_5%3A_After_the_Final_Match",
+      "sourceProvider": "Wikimedia"
+    },
+    {
+      "sourceIndexedAt": "2026-11-15T05:42:46Z",
+      "id": "auto-wiki-영화-84756181",
+      "category": "영화",
+      "title": "Cop This",
+      "year": 2026,
+      "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Cop_This",
+      "sourceProvider": "Wikimedia"
     }
   ],
   "posterSourceNote": "Verified per-title cover URLs from public TVWiki listings, search results, and detail-page bo_v_poster. Missing or unavailable posters fall back to Wikimedia or a text cover; works with no verified match are not guessed.",
   "autoSyncHistory": [
+    {
+      "status": "ok",
+      "checkedAt": "2026-11-15T08:59:44+00:00",
+      "lastFilmSyncAt": "2026-11-15T08:59:44+00:00",
+      "source": [
+        "TVmaze public API",
+        "Wikimedia MediaWiki API"
+      ],
+      "newTitles": {
+        "영화": 2,
+        "한국영화": 0,
+        "드라마": 0
+      },
+      "newEpisodeMetadata": 0,
+      "titlesAdded": [
+        {
+          "category": "영화",
+          "title": "Kabaddi 5: After the Final Match"
+        },
+        {
+          "category": "영화",
+          "title": "Cop This"
+        }
+      ],
+      "episodeChanges": [],
+      "duplicatesMerged": [],
+      "sourceRequestsSucceeded": 30,
+      "note": "Official episode metadata is not playable video. User TVWiki links are unchanged."
+    },
     {
       "status": "ok",
       "checkedAt": "2026-11-15T05:30:26+00:00",
@@ -4820,19 +4869,28 @@
   ],
   "autoSync": {
     "status": "ok",
-    "checkedAt": "2026-11-15T05:30:26+00:00",
-    "lastFilmSyncAt": "2026-11-15T05:30:26+00:00",
+    "checkedAt": "2026-11-15T08:59:44+00:00",
+    "lastFilmSyncAt": "2026-11-15T08:59:44+00:00",
     "source": [
       "TVmaze public API",
       "Wikimedia MediaWiki API"
     ],
     "newTitles": {
-      "영화": 0,
+      "영화": 2,
       "한국영화": 0,
       "드라마": 0
     },
     "newEpisodeMetadata": 0,
-    "titlesAdded": [],
+    "titlesAdded": [
+      {
+        "category": "영화",
+        "title": "Kabaddi 5: After the Final Match"
+      },
+      {
+        "category": "영화",
+        "title": "Cop This"
+      }
+    ],
     "episodeChanges": [],
     "duplicatesMerged": [],
     "sourceRequestsSucceeded": 30,
