@@ -117,23 +117,10 @@
 .tvwiki-ep-missing{opacity:.8;cursor:pointer;background:#17253a!important;color:#b9d0ec!important;border-style:dashed!important}
 .episode-link-note{margin:9px 0 0;color:#b9c9e0;font-size:12px;line-height:1.6}
 
-.official-episode-info{padding:12px 16px;border-top:1px solid #354b6c;background:#132039}
-.cinema-watch-links{padding:13px 16px 15px;border-top:1px solid #354b6c;background:#15253c;display:flex;flex-direction:column;gap:9px}
-.cinema-watch-links[hidden]{display:none!important}
-.cinema-watch-links-title{font-weight:750;font-size:14px;color:#e3edff}
-.cinema-watch-links-note{font-size:11px;line-height:1.65;color:#aabddc}
-.cinema-watch-links-list{display:flex;gap:8px;flex-wrap:wrap}
-.cinema-watch-link{min-height:39px;display:inline-flex;align-items:center;justify-content:center;padding:9px 12px;border-radius:10px;border:1px solid #536f9b;background:#233c62;color:#f1f6ff;text-decoration:none;font-weight:700;font-size:12px;line-height:1.4}
-.cinema-watch-link:focus-visible,.cinema-watch-link:hover{background:#31588a;outline-color:#9dbafa}
-.cinema-watch-link.search{border-style:dashed;background:#1b2d48}
-
-.official-episode-info details{border:1px solid #3f5274;padding:10px 12px;border-radius:11px}
-.official-episode-info summary{font-size:14px;font-weight:750;color:#cee1ff;cursor:pointer}
-.official-episode-info p,.official-episode-info small{display:block;margin:9px 0;font-size:11px;line-height:1.7;color:#b9cae7}
-.official-episode-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(135px,1fr));gap:7px;padding:4px 0 8px}
-.official-episode-link{display:flex;flex-direction:column;gap:4px;padding:9px;border:1px solid #425678;border-radius:9px;background:#202e49;color:#dfeaff;text-decoration:none;font-size:12px}
-.official-episode-link:hover{background:#2f4265}
-.official-episode-link small{font-size:10px;color:#a5b5cf;margin:0}
+.tvwiki-link-status{padding:13px 16px;border-top:1px solid #354b6c;background:#15253c;display:flex;flex-direction:column;gap:7px}
+.tvwiki-link-status[hidden]{display:none!important}
+.tvwiki-link-title{font-weight:750;font-size:14px;color:#e3edff}
+.tvwiki-link-note{font-size:12px;line-height:1.65;color:#aabddc}
 .cinema-sync-info{display:block;margin-top:5px;color:#9bb6e4;font-size:11px;line-height:1.55;font-weight:550}
 </style></head>
 <body><div class="shell">
@@ -160,7 +147,7 @@
   <p class="install-help-note">홈 화면 아이콘을 누르면 BRO CINEMA가 앱처럼 열립니다. 영상 연결과 콘텐츠는 웹사이트와 동일하며 인터넷 연결이 필요합니다.</p>
   <button class="btn primary install-help-done" type="button" id="installHelpDone">확인</button>
 </div></dialog>
-<dialog id="dlg"><div class="modalhead"><h2 id="playing">영상 재생</h2><button class="x" id="close" aria-label="닫기">×</button></div><div id="detailHero" class="detail-hero" hidden></div><div id="officialWatchLinks" class="cinema-watch-links" hidden aria-live="polite"></div><div class="stage" id="videoStage"><video id="video" controls playsinline x-webkit-airplay="allow" preload="metadata" crossorigin="anonymous"></video><iframe id="embedPlayer" title="공식 영상 플레이어" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen hidden></iframe></div><section id="tvwikiViewer" class="tvwiki-viewer" hidden>
+<dialog id="dlg"><div class="modalhead"><h2 id="playing">영상 재생</h2><button class="x" id="close" aria-label="닫기">×</button></div><div id="detailHero" class="detail-hero" hidden></div><div id="tvwikiLinkStatus" class="tvwiki-link-status" hidden aria-live="polite"></div><div class="stage" id="videoStage"><video id="video" controls playsinline x-webkit-airplay="allow" preload="metadata" crossorigin="anonymous"></video><iframe id="embedPlayer" title="공식 영상 플레이어" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen hidden></iframe></div><section id="tvwikiViewer" class="tvwiki-viewer" hidden>
   <div class="tvwiki-frame-wrap" id="tvwikiFrameWrap">
     <div id="tvwikiScreen" class="tvwiki-screen">
     <iframe id="tvwikiFrame" title="회차 원본 페이지 미리보기" scrolling="no" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen hidden></iframe>
@@ -600,9 +587,8 @@ function openNativeEpisode(item,url){
   return true;
 }
 function setTvwikiEpisode(item,url,label,launchNative=false){
-  const isOriginal=validTvwikiPage(url),isOfficial=validOfficialEpisodeURL(url);
-  if(!isOriginal&&!isOfficial)return;
-  if(isOriginal)rememberWatch(item,url);
+  if(!validTvwikiPage(url))return;
+  rememberWatch(item,url);
   activeEpisodePage=url;
   syncEpisodeMediaEditor(item,url);
   const frame=$("tvwikiFrame");
@@ -617,20 +603,6 @@ function setTvwikiEpisode(item,url,label,launchNative=false){
     return;
   }
   resetEpisodeMedia();
-  if(isOfficial){
-    frame.removeAttribute("src");frame.hidden=true;
-    updateEpisodeControls();
-    $("tvwikiPlaceholder").hidden=false;
-    $("tvwikiPlaceholder").querySelector("strong").textContent="신규 방송 회차 자동 등록";
-    $("tvwikiPlaceholder").querySelector("span").textContent="방송 회차 정보는 자동 반영됐지만 재생 가능한 영상 주소는 아직 확인되지 않았습니다. 아래에서 허용된 영상 주소를 연결할 수 있습니다.";
-    $("tvwikiPreviewToggle").hidden=true;
-    $("episodeConnectionNote").textContent=label+" · 회차 자동 등록 완료 · 영상 미연결";
-    $("tvwikiStatus").textContent=label+" · 영상 링크 대기";
-    for(const button of $("tvwikiEpisodeButtons").querySelectorAll("button")){
-      button.setAttribute("aria-pressed",String(button.dataset.src===url));
-    }
-    return;
-  }
   $("tvwikiPlaceholder").querySelector("strong").textContent="원본 화면이 숨겨졌습니다";
   $("tvwikiPlaceholder").querySelector("span").textContent="원본 다시 연결을 누르면 회차 페이지가 표시됩니다.";
   $("episodeConnectionNote").textContent=label+" · 기존에 확인된 원본 회차 페이지입니다.";
@@ -763,13 +735,13 @@ function renderEpisodeChoices(item){
   return choices;
 }
 
-function showWatchLinks(item){
-  const root=$("officialWatchLinks");root.replaceChildren();
+function showTvwikiConnectionState(item){
+  const root=$("tvwikiLinkStatus");root.replaceChildren();
   const connected=validTvwikiPage(item.tvwikiPage)||(item.episodes||[]).some(e=>validTvwikiPage(e.pageUrl));
   root.hidden=connected;
   if(!connected){
-    root.append(el("strong","cinema-watch-links-title",isUpcoming(item)?"TV위키 공개 대기":"TV위키 영상 미연결"));
-    root.append(el("span","cinema-watch-links-note",
+    root.append(el("strong","tvwiki-link-title",isUpcoming(item)?"TV위키 공개 대기":"TV위키 영상 미연결"));
+    root.append(el("span","tvwiki-link-note",
       isUpcoming(item)?"공개 전 작품입니다. TV위키 재생 주소가 확인되면 연결됩니다."
       :"확인된 TV위키 재생 주소가 없습니다. 다른 OTT나 방송사 링크는 사용하지 않습니다."));
   }
@@ -788,7 +760,7 @@ function showMissing(item){
   body.append(el("span","detail-category",item.category),el("h3","",item.title),el("p","",String(item.releaseDate||item.year||"날짜 미확인")));
   if(item.description)body.append(el("p","",item.description));
   hero.append(cover,body);hero.hidden=false;
-  showWatchLinks(item);
+  showTvwikiConnectionState(item);
   $("playing").textContent=item.title;
   const choices=renderEpisodeChoices(item);
   const hasEpisode=choices.length>0;
@@ -824,7 +796,7 @@ function cleanup(){
 async function openVideo(item){
   const media=resolvedMedia(item);
   if(!media){showMissing(item);return}
-  selected=item;cleanup();setupMediaEditor(item);$("officialWatchLinks").hidden=true;$("tvwikiViewer").hidden=true;
+  selected=item;cleanup();setupMediaEditor(item);$("tvwikiLinkStatus").hidden=true;$("tvwikiViewer").hidden=true;
   $("playerEditor").style.display="";document.querySelector(".modaltools").style.display="";document.querySelector("p.help").style.display="";
   $("detailHero").hidden=true;$("videoStage").style.display="flex";
   $("cast").style.display=media.kind==="embed"?"none":"";
@@ -856,7 +828,7 @@ async function openVideo(item){
     if(p)p.catch(()=>$("notice").textContent="화면의 ▶ 버튼을 눌러주세요.");
   }catch(e){$("notice").textContent=e.message}
 }
-function closeVideo(){if(isCinemaFullscreen())closeCinemaFullscreen();cleanup();$("officialWatchLinks").hidden=true;selected=null;$("tvwikiViewer").hidden=true;$("detailHero").hidden=true;$("videoStage").style.display="flex";$("playerEditor").style.display="";document.querySelector(".modaltools").style.display="";document.querySelector("p.help").style.display="";dlg.close();const u=new URL(location.href);u.searchParams.delete("play");history.replaceState(null,"",u);}
+function closeVideo(){if(isCinemaFullscreen())closeCinemaFullscreen();cleanup();$("tvwikiLinkStatus").hidden=true;selected=null;$("tvwikiViewer").hidden=true;$("detailHero").hidden=true;$("videoStage").style.display="flex";$("playerEditor").style.display="";document.querySelector(".modaltools").style.display="";document.querySelector("p.help").style.display="";dlg.close();const u=new URL(location.href);u.searchParams.delete("play");history.replaceState(null,"",u);}
 window.__onGCastApiAvailable=function(ok){if(!ok)return;try{cast.framework.CastContext.getInstance().setOptions({receiverApplicationId:chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,autoJoinPolicy:chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED});castReady=true;}catch(e){console.warn(e)}};
 $("cast").addEventListener("click",async()=>{if(!selected)return;if(!castReady){$("notice").textContent="Cast를 사용할 수 없습니다. Chrome과 TV 연결을 확인하세요.";return}try{const ctx=cast.framework.CastContext.getInstance();let session=ctx.getCurrentSession();if(!session){await ctx.requestSession();session=ctx.getCurrentSession()}if(!session)throw Error("TV 연결 실패");const info=new chrome.cast.media.MediaInfo(selected.hls,"application/x-mpegURL");const metadata=new chrome.cast.media.GenericMediaMetadata();metadata.title=selected.title;info.metadata=metadata;await session.loadMedia(new chrome.cast.media.LoadRequest(info));$("notice").textContent="TV 재생 요청 완료";}catch(e){$("notice").textContent="TV 전송 실패 · 기기 또는 HLS 접근 권한을 확인하세요.";console.warn(e)}});
 $("airplay").addEventListener("click",()=>{if(typeof video.webkitShowPlaybackTargetPicker==="function")video.webkitShowPlaybackTargetPicker();else $("notice").textContent="AirPlay는 지원되는 Safari에서 이용 가능합니다.";});
