@@ -483,16 +483,30 @@ function isUpcoming(item){
   return item.releaseDate>koreaDate;
 }
 function sortNewest(a,b){
+  // Korean movies follow their verified TVWiki board registration order.
   if(a.category==="한국영화"&&b.category==="한국영화"){
     const ar=Number.isInteger(a.tvwikiRank)?a.tvwikiRank:999999,br=Number.isInteger(b.tvwikiRank)?b.tvwikiRank:999999;
     if(ar!==br)return ar-br;
   }
+  // Movie tab: actual theatrical release dates, latest first. A year
+  // or a catalog-import timestamp is NOT an exact release date.
+  if(a.category==="영화"&&b.category==="영화"){
+    const af=isUpcoming(a),bf=isUpcoming(b);
+    if(af!==bf)return af?1:-1;
+    const ad=validReleaseDate(a.releaseDate),bd=validReleaseDate(b.releaseDate);
+    if(ad&&bd&&ad!==bd)return bd.localeCompare(ad);
+    if(Boolean(ad)!==Boolean(bd))return ad?-1:1;
+    // Titles with no verified day/month follow year-only order at the end.
+    const ay=yearOf(a),by=yearOf(b);
+    if(ay!==by)return by-ay;
+    return a.title.localeCompare(b.title,"ko");
+  }
   const af=isUpcoming(a),bf=isUpcoming(b);
   if(af!==bf)return af?1:-1;
+  if(a.releaseDate&&b.releaseDate&&a.releaseDate!==b.releaseDate)return b.releaseDate.localeCompare(a.releaseDate);
+  if(Boolean(a.releaseDate)!==Boolean(b.releaseDate))return a.releaseDate?-1:1;
   const y=yearOf(b)-yearOf(a);
   if(y)return y;
-  if(a.releaseDate&&b.releaseDate)return b.releaseDate.localeCompare(a.releaseDate);
-  if(a.releaseDate!==b.releaseDate)return a.releaseDate?-1:1;
   return a.title.localeCompare(b.title,"ko");
 }
 function normalize(o){if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",embedUrl:verifyMediaURL(o.embedUrl)?.kind==="embed"?o.embedUrl:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350),tvwikiRank:Number.isInteger(o.tvwikiRank)&&o.tvwikiRank>=0?o.tvwikiRank:null,tvwikiPageStatus:o.tvwikiPageStatus==="listing"?"listing":o.tvwikiPageStatus==="episode"?"episode":"",sourceUrl:validUrl(o.sourceUrl)?o.sourceUrl:"",releaseAt:typeof o.releaseAt==="string"&&!Number.isNaN(Date.parse(o.releaseAt))?o.releaseAt:"",releaseDate:validReleaseDate(o.releaseDate||o.premiereDate),tvwikiPage:validTvwikiPage(o.tvwikiPage)?o.tvwikiPage:"",tvmazeId:Number.isInteger(o.tvmazeId)?o.tvmazeId:null,officialEpisodes:Array.isArray(o.officialEpisodes)?o.officialEpisodes.filter(x=>x&&Number.isInteger(x.number)&&Number.isInteger(x.season)&&x.number>0&&x.season>0&&validOfficialEpisodeURL(x.url)).slice(0,200).map(x=>({number:x.number,season:x.season,label:String(x.label||x.number+"화").slice(0,60),airdate:String(x.airdate||"").slice(0,10),url:x.url,mediaUrl:verifyMediaURL(x.mediaUrl)?.url||""})):[],episodes:Array.isArray(o.episodes)?o.episodes.filter(x=>x&&Number.isInteger(x.number)&&x.number>0&&x.number<10000&&validUrl(x.pageUrl)).slice(0,200).map(x=>({number:x.number,label:String(x.label||x.number+"화").slice(0,80),pageUrl:x.pageUrl,mediaUrl:verifyMediaURL(x.mediaUrl)?.url||""})):[]};}
@@ -501,7 +515,7 @@ function render(){
   const q=$("search").value.trim().toLocaleLowerCase("ko");
   const filtered=items.filter(item=>(cat==="즐겨찾기"?favorites.has(favKey(item)):item.category===cat)&&item.title.toLocaleLowerCase("ko").includes(q)).sort(sortNewest);
   $("count").textContent=cat+" · "+filtered.length+"편";
-  $("cinemaSortDescription").textContent=cat==="한국영화"?"TV위키 최근 등록순 · 원본 목록 기준":cat==="즐겨찾기"?"즐겨찾기에 저장한 작품":"최근 개봉·첫방송순 · 방영 예정작은 뒤로 정렬";
+  $("cinemaSortDescription").textContent=cat==="한국영화"?"TV위키 최근 등록순 · 원본 목록 기준":cat==="즐겨찾기"?"즐겨찾기에 저장한 작품":cat==="영화"?"최근 개봉일순 · 개봉일 미확인 작품은 뒤로":"최근 첫방송순 · 방영 예정작은 뒤로 정렬";
   $("favCount").textContent=String(favorites.size);
   const root=$("grid");root.replaceChildren();
   if(!filtered.length){
