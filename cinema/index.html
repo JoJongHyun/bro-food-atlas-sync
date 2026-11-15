@@ -147,7 +147,7 @@
   <button id="installOfferDismiss" type="button" class="install-offer-dismiss" aria-label="나중에 설치">×</button>
 </section>
 <header class="top"><div class="logo"><div class="logo-mark">▶</div><div><div class="brand">BRO CINEMA</div><div class="sub">HLS VIDEO PLAYER</div></div></div><div class="tools"><span class="tiny" id="status">목록 확인 중…</span><button class="btn" id="reload">⟳ 새로고침</button><button class="btn primary app-install" id="appInstall" type="button" aria-label="BRO CINEMA를 홈 화면에 앱처럼 설치">📲 앱 설치</button></div></header>
-<section class="hero"><h1>좋아하는 영상, 한곳에서.</h1><p>영화 · 한국영화 · 드라마 전용 화면과 광고 배너 없는 자체 플레이어, TV 전송 기능을 제공합니다.</p></section>
+<section class="hero"><h1>좋아하는 영상, 한곳에서.</h1><p>확인된 TV위키 재생 주소만 연결합니다. 미연결 작품은 정확히 구분해 표시합니다.</p></section>
 <nav class="tabs" role="tablist"><button class="tab active" role="tab" aria-selected="true" data-cat="영화">🎬 영화</button><button class="tab" role="tab" aria-selected="false" data-cat="한국영화">🇰🇷 한국영화</button><button class="tab" role="tab" aria-selected="false" data-cat="드라마">📺 드라마</button><button class="tab" role="tab" aria-selected="false" data-cat="즐겨찾기">♥ 즐겨찾기 <span id="favCount">0</span></button></nav>
 <div class="row"><div><h2 id="count">영화 · 0편</h2><span class="tiny">최근 개봉·첫방송순 · 방영 예정작은 뒤로 정렬</span><span id="cinemaSyncInfo" class="cinema-sync-info">자동 동기화 확인 중…</span></div><input class="search" id="search" type="search" placeholder="제목 검색" aria-label="제목 검색"></div>
 <main id="grid" class="grid" aria-live="polite"></main><p class="note">매칭된 작품 포스터는 TV위키의 공개 상세·검색 목록에 표시된 이미지 URL을 사용합니다(실제 이미지는 TMDB 또는 다른 이미지 제공처에서 표시될 수 있습니다). 해당 이미지가 제공되지 않으면 Wikimedia 이미지 또는 제목형 표지를 표시합니다. BRO CINEMA는 해당 제공처와 제휴하지 않습니다. 즐겨찾기는 현재 브라우저에 저장되어 다른 기기와 자동 동기화되지 않습니다.</p>
@@ -289,17 +289,7 @@ let items=[],seedItems=[],cat="영화",selected=null,hls=null,castReady=false;
 let cinemaBackendCheckedAt="";
 function validOfficialEpisodeURL(link){try{const u=new URL(link);return u.protocol==="https:"&&u.hostname==="www.tvmaze.com"&&/^\/episodes\/\d+(?:\/[^/]*)?$/.test(u.pathname)}catch{return false}}
 function showOfficialEpisodeInfo(item){
-  const official=(item.officialEpisodes||[]).filter(e=>e&&Number.isInteger(e.number)&&e.number>0&&Number.isInteger(e.season)&&e.season>0&&validOfficialEpisodeURL(e.url));
-  const root=$("officialEpisodeList");root.replaceChildren();
-  $("officialEpisodeInfo").hidden=!official.length;
-  $("officialEpisodeSummary").textContent="방송 회차 자동동기화 · "+official.length+"화 (재생 정보 아님)";
-  for(const ep of official){
-    const a=el("a","official-episode-link");
-    a.href=ep.url;a.target="_blank";a.rel="noopener noreferrer";
-    a.append(el("strong","",ep.label||"시즌 "+ep.season+" "+ep.number+"화"),el("small","",String(ep.airdate||"방영일 미확인")));
-    root.append(a);
-  }
-  $("officialEpisodeDetails").open=false;
+  $("officialEpisodeInfo").hidden=true;
 }
 const USERMEDIAKEY="bro-cinema-custom-source-v1";let customSources={};
 const EPISODEMEDIAKEY="bro-cinema-episode-media-v1";let episodeMediaSources={},episodeHls=null,activeEpisodePage="";
@@ -545,9 +535,9 @@ function render(){
                el("span","cover-name",item.title),
                el("span","cover-year",String(item.releaseDate||item.year||"")));
     observePoster(item,art);
-    art.append(el("span","tag",isUpcoming(item)?"공개 예정":resolvedMedia(item)?"사이트 내 재생":item.tvwikiPage?"TV위키 링크":item.officialLinks?.length?"공식 보기":item.episodes?.length?"회차 링크":item.releaseDate?"작품 정보":"제목 등록"));
+    art.append(el("span","tag",isUpcoming(item)?"공개 예정":resolvedMedia(item)?"사이트 내 재생":validTvwikiPage(item.tvwikiPage)||item.episodes?.some(e=>validTvwikiPage(e.pageUrl))?"TV위키 연결":"TV위키 미연결"));
     const cap=el("div","caption");
-    cap.append(el("strong","",item.title),el("small","",(item.releaseDate||item.year||"날짜 미확인")+(isUpcoming(item)?" · 공개 예정":resolvedMedia(item)?" · 재생 가능":item.officialLinks?.length?" · 공식 시청처 연결":" · 영상 미연결")));
+    cap.append(el("strong","",item.title),el("small","",(item.releaseDate||item.year||"날짜 미확인")+(isUpcoming(item)?" · 공개 예정":resolvedMedia(item)?" · 재생 가능":validTvwikiPage(item.tvwikiPage)||item.episodes?.some(e=>validTvwikiPage(e.pageUrl))?" · TV위키 링크":" · TV위키 미연결")));
     open.append(art,cap);
     open.addEventListener("click",()=>resolvedMedia(item)?openVideo(item):showMissing(item));
     const star=el("button","fav-heart",favorites.has(favKey(item))?"♥":"♡");
@@ -769,59 +759,31 @@ $("tvwikiFullscreen").addEventListener("click",async()=>{
 });
 $("tvwikiFullscreenExit").addEventListener("click",closeCinemaFullscreen);
 function renderEpisodeChoices(item){
-  const known=(item.episodes||[]).filter(e=>validTvwikiPage(e.pageUrl)&&Number.isInteger(e.number)&&e.number>0);
-  const linked=new Map();
-  for(const ep of known)linked.set("1:"+ep.number,{kind:"linked",season:1,number:ep.number,url:ep.pageUrl,label:ep.label||ep.number+"화"});
-  const choices=[...linked.values()];
-  if(!choices.length&&validTvwikiPage(item.tvwikiPage))choices.push({kind:"linked",season:0,number:0,url:item.tvwikiPage,label:"원본 보기"});
-  const covered=new Set(linked.keys());
-  const official=(item.officialEpisodes||[])
-    .filter(ep=>Number.isInteger(ep.season)&&Number.isInteger(ep.number)&&ep.season>0&&ep.number>0&&validOfficialEpisodeURL(ep.url))
-    .sort((a,b)=>a.season-b.season||a.number-b.number);
-  for(const ep of official){
-    const key=ep.season+":"+ep.number;
-    if(covered.has(key))continue;
-    covered.add(key);
-    choices.push({kind:"official",season:ep.season,number:ep.number,url:ep.url,label:ep.label||(ep.season>1?"시즌 "+ep.season+" · ":"")+ep.number+"화"});
-  }
-  choices.sort((a,b)=>a.season-b.season||a.number-b.number);
+  const known=(item.episodes||[]).filter(e=>Number.isInteger(e.number)&&e.number>0&&validTvwikiPage(e.pageUrl)).sort((a,b)=>a.number-b.number);
+  const choices=known.map(e=>({kind:"linked",url:e.pageUrl,number:e.number,label:e.label||e.number+"화"}));
+  if(!choices.length&&validTvwikiPage(item.tvwikiPage))choices.push({kind:"linked",url:item.tvwikiPage,number:0,label:"영상 보기"});
   const root=$("tvwikiEpisodeButtons");root.replaceChildren();
-  let connected=0,waiting=0;
   for(const ep of choices){
-    const pending=ep.kind==="official";
-    if(pending)waiting++;else connected++;
-    const button=el("button","tvwiki-ep"+(pending?" tvwiki-ep-missing":""),ep.label+(pending?" · 영상 대기":""));
-    button.type="button";button.dataset.src=ep.url;button.setAttribute("aria-pressed","false");
-    button.title=pending?"방송 회차 정보가 자동 추가됐습니다. 회차를 눌러 재생 가능한 링크를 연결할 수 있습니다.":"기존에 확인된 회차 링크";
-    button.addEventListener("click",()=>setTvwikiEpisode(item,ep.url,ep.label,true));
-    root.append(button);
+    const btn=el("button","tvwiki-ep",ep.label);btn.type="button";btn.dataset.src=ep.url;btn.setAttribute("aria-pressed","false");
+    btn.title="확인된 TV위키 원본 회차";
+    btn.addEventListener("click",()=>setTvwikiEpisode(item,ep.url,ep.label,true));
+    root.append(btn);
   }
-  $("tvwikiEpisodeCount").textContent=connected+"개 연결"+(waiting?" · "+waiting+"개 자동 추가":"");
-  $("episodeConnectionNote").textContent=waiting?"공식 방영 회차가 자동 반영됩니다. '영상 대기'는 재생 주소가 연결되기 전까지 재생되지 않습니다.":connected?"연결된 회차를 선택하세요.":"등록된 회차 정보가 없습니다.";
+  $("tvwikiEpisodeCount").textContent=choices.length+"개 TV위키 연결";
+  $("episodeConnectionNote").textContent=choices.length?"확인된 TV위키 회차만 표시됩니다. 새 회차는 실제 TV위키 주소가 확인된 경우에만 추가됩니다.":"TV위키 연결 회차가 없습니다.";
   return choices;
 }
 
 function showWatchLinks(item){
-  const root=$("officialWatchLinks");
-  root.replaceChildren();
-  const connected=(item.officialLinks||[]).filter(x=>x&&validUrl(x.url)&&typeof x.label==="string");
-  const hasLocal=Boolean(resolvedMedia(item)||item.tvwikiPage||(item.episodes||[]).some(e=>validTvwikiPage(e.pageUrl)));
-  if(!connected.length&&hasLocal){root.hidden=true;return}
-  root.hidden=false;
-  root.append(el("strong","cinema-watch-links-title",connected.length?"공식 시청처 연결":"영상 미연결 · 공식 시청처 찾기"));
-  root.append(el("span","cinema-watch-links-note",connected.length
-    ?"확인된 제공자의 공식 페이지입니다. 새 창에서 열리며 로그인·이용권·시청 가능 여부는 각 제공자에 따릅니다."
-    :"아직 재생 가능한 영상 주소가 확인되지 않았습니다. 방송 전 작품은 공개 이후에 다시 확인해 주세요."));
-  const list=el("div","cinema-watch-links-list");
-  for(const link of connected){
-    const a=el("a","cinema-watch-link",link.label+" ↗");
-    a.href=link.url;a.target="_blank";a.rel="noopener noreferrer";list.append(a);
+  const root=$("officialWatchLinks");root.replaceChildren();
+  const connected=validTvwikiPage(item.tvwikiPage)||(item.episodes||[]).some(e=>validTvwikiPage(e.pageUrl));
+  root.hidden=connected;
+  if(!connected){
+    root.append(el("strong","cinema-watch-links-title",isUpcoming(item)?"TV위키 공개 대기":"TV위키 영상 미연결"));
+    root.append(el("span","cinema-watch-links-note",
+      isUpcoming(item)?"공개 전 작품입니다. TV위키 재생 주소가 확인되면 연결됩니다."
+      :"확인된 TV위키 재생 주소가 없습니다. 다른 OTT나 방송사 링크는 사용하지 않습니다."));
   }
-  const query=item.title+" "+(item.category==="드라마"?"드라마":"영화")+" OTT 공식 다시보기 시청처";
-  const lookup=el("a","cinema-watch-link search","공식 시청처 검색 ↗");
-  lookup.href="https://search.naver.com/search.naver?"+new URLSearchParams({query}).toString();
-  lookup.target="_blank";lookup.rel="noopener noreferrer";
-  list.append(lookup);root.append(list);
 }
 function showMissing(item){
   selected=item;cleanup();setupMediaEditor(item);showOfficialEpisodeInfo(item);
