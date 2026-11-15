@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T09:03:31+00:00",
+  "updatedAt": "2026-11-15T09:31:05+00:00",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -2031,6 +2031,25 @@
           "number": 4,
           "label": "4화",
           "pageUrl": "https://tvwiki60.net/drama/12628/406791825"
+        }
+      ],
+      "tvmazeId": 95103,
+      "officialEpisodes": [
+        {
+          "season": 1,
+          "number": 1,
+          "label": "1화",
+          "airdate": "2026-11-06",
+          "title": "Episode 1",
+          "url": "https://www.tvmaze.com/episodes/3793730/francesca-next-door-1x01-episode-1"
+        },
+        {
+          "season": 1,
+          "number": 2,
+          "label": "2화",
+          "airdate": "2026-11-13",
+          "title": "Episode 2",
+          "url": "https://www.tvmaze.com/episodes/3795221/francesca-next-door-1x02-episode-2"
         }
       ]
     },
@@ -4445,10 +4464,279 @@
       "description": "Wikimedia 공개 영화 작품 정보 · 영상 재생 별도",
       "sourceUrl": "https://en.wikipedia.org/wiki/Cop_This",
       "sourceProvider": "Wikimedia"
+    },
+    {
+      "id": "auto-tvmaze-94793",
+      "category": "드라마",
+      "title": "각설탕 소리",
+      "year": 2026,
+      "releaseDate": "2026-10-23",
+      "description": "An orphan, Han Yul didn't have much in life but a dream to become a singer. That is, till he saw his best friend mercilessly murdered by someone he looked up to. Harold. Popular. Perfect. Psychopath. And rich enough to cover his tracks. On the run, Han Yul qui",
+      "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/645/1613120.jpg",
+      "sourceUrl": "https://www.tvmaze.com/shows/94793/the-sound-of-sugar-cubes",
+      "tvmazeId": 94793,
+      "sourceProvider": "TVmaze",
+      "officialEpisodes": [
+        {
+          "season": 1,
+          "number": 1,
+          "label": "1화",
+          "airdate": "2026-10-23",
+          "title": "Episode 1",
+          "url": "https://www.tvmaze.com/episodes/3777653/the-sound-of-sugar-cubes-1x01-episode-1"
+        },
+        {
+          "season": 1,
+          "number": 2,
+          "label": "2화",
+          "airdate": "2026-10-23",
+          "title": "Episode 2",
+          "url": "https://www.tvmaze.com/episodes/3777654/the-sound-of-sugar-cubes-1x02-episode-2"
+        },
+        {
+          "season": 1,
+          "number": 3,
+          "label": "3화",
+          "airdate": "2026-10-30",
+          "title": "Episode 3",
+          "url": "https://www.tvmaze.com/episodes/3777655/the-sound-of-sugar-cubes-1x03-episode-3"
+        },
+        {
+          "season": 1,
+          "number": 4,
+          "label": "4화",
+          "airdate": "2026-10-30",
+          "title": "Episode 4",
+          "url": "https://www.tvmaze.com/episodes/3777656/the-sound-of-sugar-cubes-1x04-episode-4"
+        },
+        {
+          "season": 1,
+          "number": 5,
+          "label": "5화",
+          "airdate": "2026-11-06",
+          "title": "Episode 5",
+          "url": "https://www.tvmaze.com/episodes/3777518/the-sound-of-sugar-cubes-1x05-episode-5"
+        },
+        {
+          "season": 1,
+          "number": 6,
+          "label": "6화",
+          "airdate": "2026-11-06",
+          "title": "Episode 6",
+          "url": "https://www.tvmaze.com/episodes/3777657/the-sound-of-sugar-cubes-1x06-episode-6"
+        },
+        {
+          "season": 1,
+          "number": 7,
+          "label": "7화",
+          "airdate": "2026-11-13",
+          "title": "Episode 7",
+          "url": "https://www.tvmaze.com/episodes/3777658/the-sound-of-sugar-cubes-1x07-episode-7"
+        },
+        {
+          "season": 1,
+          "number": 8,
+          "label": "8화",
+          "airdate": "2026-11-13",
+          "title": "Episode 8",
+          "url": "https://www.tvmaze.com/episodes/3777659/the-sound-of-sugar-cubes-1x08-episode-8"
+        }
+      ]
+    },
+    {
+      "id": "auto-tvmaze-95475",
+      "category": "드라마",
+      "title": "아름다운 악의",
+      "year": 2026,
+      "releaseDate": "2026-11-06",
+      "description": "A girl from Sichuan, Zhang Zhi'an, moves to South Korea to study abroad and stumbles into an elite chaebol academy — landing in Class F, the lowest tier of the social ladder. Here, everyone lives by a strict code of power drawn along lines of birth and family ",
+      "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/650/1625704.jpg",
+      "sourceUrl": "https://www.tvmaze.com/shows/95475/beautiful-malice",
+      "tvmazeId": 95475,
+      "sourceProvider": "TVmaze",
+      "officialEpisodes": [
+        {
+          "season": 1,
+          "number": 1,
+          "label": "1화",
+          "airdate": "2026-11-06",
+          "title": "Episode 1",
+          "url": "https://www.tvmaze.com/episodes/3807475/beautiful-malice-1x01-episode-1"
+        },
+        {
+          "season": 1,
+          "number": 2,
+          "label": "2화",
+          "airdate": "2026-11-06",
+          "title": "Episode 2",
+          "url": "https://www.tvmaze.com/episodes/3807476/beautiful-malice-1x02-episode-2"
+        },
+        {
+          "season": 1,
+          "number": 3,
+          "label": "3화",
+          "airdate": "2026-11-06",
+          "title": "Episode 3",
+          "url": "https://www.tvmaze.com/episodes/3807477/beautiful-malice-1x03-episode-3"
+        },
+        {
+          "season": 1,
+          "number": 4,
+          "label": "4화",
+          "airdate": "2026-11-06",
+          "title": "Episode 4",
+          "url": "https://www.tvmaze.com/episodes/3807478/beautiful-malice-1x04-episode-4"
+        },
+        {
+          "season": 1,
+          "number": 5,
+          "label": "5화",
+          "airdate": "2026-11-06",
+          "title": "Episode 5",
+          "url": "https://www.tvmaze.com/episodes/3807479/beautiful-malice-1x05-episode-5"
+        },
+        {
+          "season": 1,
+          "number": 6,
+          "label": "6화",
+          "airdate": "2026-11-06",
+          "title": "Episode 6",
+          "url": "https://www.tvmaze.com/episodes/3807480/beautiful-malice-1x06-episode-6"
+        },
+        {
+          "season": 1,
+          "number": 7,
+          "label": "7화",
+          "airdate": "2026-11-06",
+          "title": "Episode 7",
+          "url": "https://www.tvmaze.com/episodes/3807481/beautiful-malice-1x07-episode-7"
+        },
+        {
+          "season": 1,
+          "number": 8,
+          "label": "8화",
+          "airdate": "2026-11-06",
+          "title": "Episode 8",
+          "url": "https://www.tvmaze.com/episodes/3807482/beautiful-malice-1x08-episode-8"
+        },
+        {
+          "season": 1,
+          "number": 9,
+          "label": "9화",
+          "airdate": "2026-11-06",
+          "title": "Episode 9",
+          "url": "https://www.tvmaze.com/episodes/3807483/beautiful-malice-1x09-episode-9"
+        },
+        {
+          "season": 1,
+          "number": 10,
+          "label": "10화",
+          "airdate": "2026-11-06",
+          "title": "Episode 10",
+          "url": "https://www.tvmaze.com/episodes/3807484/beautiful-malice-1x10-episode-10"
+        },
+        {
+          "season": 1,
+          "number": 11,
+          "label": "11화",
+          "airdate": "2026-11-06",
+          "title": "Episode 11",
+          "url": "https://www.tvmaze.com/episodes/3807485/beautiful-malice-1x11-episode-11"
+        },
+        {
+          "season": 1,
+          "number": 12,
+          "label": "12화",
+          "airdate": "2026-11-06",
+          "title": "Episode 12",
+          "url": "https://www.tvmaze.com/episodes/3807486/beautiful-malice-1x12-episode-12"
+        },
+        {
+          "season": 1,
+          "number": 13,
+          "label": "13화",
+          "airdate": "2026-11-06",
+          "title": "Episode 13",
+          "url": "https://www.tvmaze.com/episodes/3807487/beautiful-malice-1x13-episode-13"
+        },
+        {
+          "season": 1,
+          "number": 14,
+          "label": "14화",
+          "airdate": "2026-11-13",
+          "title": "Episode 14",
+          "url": "https://www.tvmaze.com/episodes/3807488/beautiful-malice-1x14-episode-14"
+        },
+        {
+          "season": 1,
+          "number": 15,
+          "label": "15화",
+          "airdate": "2026-11-13",
+          "title": "Episode 15",
+          "url": "https://www.tvmaze.com/episodes/3807489/beautiful-malice-1x15-episode-15"
+        }
+      ]
     }
   ],
   "posterSourceNote": "Verified per-title cover URLs from public TVWiki listings, search results, and detail-page bo_v_poster. Missing or unavailable posters fall back to Wikimedia or a text cover; works with no verified match are not guessed.",
   "autoSyncHistory": [
+    {
+      "status": "ok",
+      "checkedAt": "2026-11-15T09:31:05+00:00",
+      "lastFilmSyncAt": "2026-11-15T09:31:05+00:00",
+      "sourceCategoriesChecked": {
+        "ko|한국영화|2026": 0,
+        "en|한국영화|2026": 33,
+        "ko|영화|2026": 99,
+        "en|영화|2026": 100,
+        "ko|드라마|2026": 0,
+        "en|드라마|2026": 0,
+        "ko|한국영화|2027": 0,
+        "en|한국영화|2027": 4,
+        "ko|영화|2027": 42,
+        "en|영화|2027": 97
+      },
+      "source": [
+        "TVmaze public API",
+        "Wikimedia MediaWiki API (ko/en movies and TV)"
+      ],
+      "newTitles": {
+        "영화": 0,
+        "한국영화": 0,
+        "드라마": 2
+      },
+      "newEpisodeMetadata": 25,
+      "titlesAdded": [
+        {
+          "category": "드라마",
+          "title": "각설탕 소리"
+        },
+        {
+          "category": "드라마",
+          "title": "아름다운 악의"
+        }
+      ],
+      "episodeChanges": [
+        {
+          "title": "각설탕 소리",
+          "newCount": 8,
+          "total": 8
+        },
+        {
+          "title": "옆자리, 프란체스카",
+          "newCount": 2,
+          "total": 2
+        },
+        {
+          "title": "아름다운 악의",
+          "newCount": 15,
+          "total": 15
+        }
+      ],
+      "duplicatesMerged": [],
+      "sourceRequestsSucceeded": 52,
+      "note": "New movie and drama titles plus official episode metadata are checked automatically. Playback links are never invented; verified existing links are preserved."
+    },
     {
       "status": "ok",
       "checkedAt": "2026-11-15T09:03:31+00:00",
@@ -4889,22 +5177,59 @@
   ],
   "autoSync": {
     "status": "ok",
-    "checkedAt": "2026-11-15T09:03:31+00:00",
-    "lastFilmSyncAt": "2026-11-15T09:03:31+00:00",
+    "checkedAt": "2026-11-15T09:31:05+00:00",
+    "lastFilmSyncAt": "2026-11-15T09:31:05+00:00",
+    "sourceCategoriesChecked": {
+      "ko|한국영화|2026": 0,
+      "en|한국영화|2026": 33,
+      "ko|영화|2026": 99,
+      "en|영화|2026": 100,
+      "ko|드라마|2026": 0,
+      "en|드라마|2026": 0,
+      "ko|한국영화|2027": 0,
+      "en|한국영화|2027": 4,
+      "ko|영화|2027": 42,
+      "en|영화|2027": 97
+    },
     "source": [
       "TVmaze public API",
-      "Wikimedia MediaWiki API"
+      "Wikimedia MediaWiki API (ko/en movies and TV)"
     ],
     "newTitles": {
       "영화": 0,
       "한국영화": 0,
-      "드라마": 0
+      "드라마": 2
     },
-    "newEpisodeMetadata": 0,
-    "titlesAdded": [],
-    "episodeChanges": [],
+    "newEpisodeMetadata": 25,
+    "titlesAdded": [
+      {
+        "category": "드라마",
+        "title": "각설탕 소리"
+      },
+      {
+        "category": "드라마",
+        "title": "아름다운 악의"
+      }
+    ],
+    "episodeChanges": [
+      {
+        "title": "각설탕 소리",
+        "newCount": 8,
+        "total": 8
+      },
+      {
+        "title": "옆자리, 프란체스카",
+        "newCount": 2,
+        "total": 2
+      },
+      {
+        "title": "아름다운 악의",
+        "newCount": 15,
+        "total": 15
+      }
+    ],
     "duplicatesMerged": [],
-    "sourceRequestsSucceeded": 30,
-    "note": "Official episode metadata is not playable video. User TVWiki links are unchanged."
+    "sourceRequestsSucceeded": 52,
+    "note": "New movie and drama titles plus official episode metadata are checked automatically. Playback links are never invented; verified existing links are preserved."
   }
 }
