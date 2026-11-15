@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T11:39:03+00:00",
+  "updatedAt": "2026-11-15T11:39:45+00:00",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -49476,10 +49476,172 @@
       "sourceProvider": "TVWiki Korean movie index",
       "poster": "https://tvwiki60.net/data/peakl/thumb/7569758496178.jpg",
       "tvwikiRank": 4506
+    },
+    {
+      "sourceIndexedAt": "2026-10-30T08:12:53Z",
+      "id": "auto-wiki-en-영화-84638931",
+      "category": "영화",
+      "title": "Un tranquillo funerale di famiglia",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Un_tranquillo_funerale_di_famiglia",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-30T06:39:47Z",
+      "id": "auto-wiki-en-영화-83787015",
+      "category": "영화",
+      "title": "Chitukurinji",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Chitukurinji",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-30T05:40:55Z",
+      "id": "auto-wiki-en-영화-84653291",
+      "category": "영화",
+      "title": "Still Sexy",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Still_Sexy",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-30T05:11:10Z",
+      "id": "auto-wiki-en-영화-81341004",
+      "category": "영화",
+      "title": "Jhaad Phoonk",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Jhaad_Phoonk",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-30T05:10:59Z",
+      "id": "auto-wiki-en-영화-84653180",
+      "category": "영화",
+      "title": "Mate's Rate",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mate%27s_Rate",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-29T22:40:29Z",
+      "id": "auto-wiki-en-영화-84235733",
+      "category": "영화",
+      "title": "Baby/girls",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Baby/girls",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-29T22:34:49Z",
+      "id": "auto-wiki-en-영화-84624319",
+      "category": "영화",
+      "title": "Christmas at the Kringles",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Christmas_at_the_Kringles",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-29T21:44:22Z",
+      "id": "auto-wiki-en-영화-81499220",
+      "category": "영화",
+      "title": "Godzilla Minus Zero",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Godzilla_Minus_Zero",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-29T21:40:35Z",
+      "id": "auto-wiki-en-영화-84650613",
+      "category": "영화",
+      "title": "Collision Course (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Collision_Course_%282026_film%29",
+      "sourceProvider": "Wikimedia (en)"
     }
   ],
   "posterSourceNote": "Verified per-title cover URLs from public TVWiki listings, search results, and detail-page bo_v_poster. Missing or unavailable posters fall back to Wikimedia or a text cover; works with no verified match are not guessed.",
   "autoSyncHistory": [
+    {
+      "status": "ok",
+      "checkedAt": "2026-11-15T11:39:45+00:00",
+      "lastFilmSyncAt": "2026-11-15T11:39:45+00:00",
+      "sourceCategoriesChecked": {
+        "ko|영화|2026": 99,
+        "en|영화|2026": 100,
+        "ko|드라마|2026": 0,
+        "en|드라마|2026": 0
+      },
+      "source": [
+        "TVmaze public API",
+        "Wikimedia MediaWiki API (other categories)",
+        "TVWiki public Korean-film listing"
+      ],
+      "tvwikiKoreanMovieSync": {
+        "status": "ok",
+        "totalPages": 151,
+        "pagesFetched": 3,
+        "newTitles": 0,
+        "tvwikiLinked": 4427
+      },
+      "newTitles": {
+        "영화": 9,
+        "한국영화": 0,
+        "드라마": 0
+      },
+      "newEpisodeMetadata": 0,
+      "titlesAdded": [
+        {
+          "category": "영화",
+          "title": "Un tranquillo funerale di famiglia"
+        },
+        {
+          "category": "영화",
+          "title": "Chitukurinji"
+        },
+        {
+          "category": "영화",
+          "title": "Still Sexy"
+        },
+        {
+          "category": "영화",
+          "title": "Jhaad Phoonk"
+        },
+        {
+          "category": "영화",
+          "title": "Mate's Rate"
+        },
+        {
+          "category": "영화",
+          "title": "Baby/girls"
+        },
+        {
+          "category": "영화",
+          "title": "Christmas at the Kringles"
+        },
+        {
+          "category": "영화",
+          "title": "Godzilla Minus Zero"
+        },
+        {
+          "category": "영화",
+          "title": "Collision Course (2026 film)"
+        }
+      ],
+      "episodeChanges": [],
+      "duplicatesMerged": [],
+      "sourceRequestsSucceeded": 46,
+      "tvwikiLinked": 4478,
+      "note": "Public discovery metadata is separate from TVWiki playback. Only verified TVWiki page links are displayed; third-party provider watch links are removed and not regenerated."
+    },
     {
       "status": "ok",
       "checkedAt": "2026-11-15T11:39:03+00:00",
@@ -50521,8 +50683,8 @@
   ],
   "autoSync": {
     "status": "ok",
-    "checkedAt": "2026-11-15T11:39:03+00:00",
-    "lastFilmSyncAt": "2026-11-15T11:39:03+00:00",
+    "checkedAt": "2026-11-15T11:39:45+00:00",
+    "lastFilmSyncAt": "2026-11-15T11:39:45+00:00",
     "sourceCategoriesChecked": {
       "ko|영화|2026": 99,
       "en|영화|2026": 100,
@@ -50537,116 +50699,52 @@
     "tvwikiKoreanMovieSync": {
       "status": "ok",
       "totalPages": 151,
-      "pagesFetched": 151,
-      "newTitles": 4426,
+      "pagesFetched": 3,
+      "newTitles": 0,
       "tvwikiLinked": 4427
     },
     "newTitles": {
-      "영화": 25,
-      "한국영화": 4426,
+      "영화": 9,
+      "한국영화": 0,
       "드라마": 0
     },
     "newEpisodeMetadata": 0,
     "titlesAdded": [
       {
         "category": "영화",
-        "title": "Remember (2026 film)"
+        "title": "Un tranquillo funerale di famiglia"
       },
       {
         "category": "영화",
-        "title": "Nooru Kodi Vaanavil"
+        "title": "Chitukurinji"
       },
       {
         "category": "영화",
-        "title": "Florid (film)"
+        "title": "Still Sexy"
       },
       {
         "category": "영화",
-        "title": "Gunmaaster G9"
+        "title": "Jhaad Phoonk"
       },
       {
         "category": "영화",
-        "title": "Dashami (film)"
+        "title": "Mate's Rate"
       },
       {
         "category": "영화",
-        "title": "Blind Game"
+        "title": "Baby/girls"
       },
       {
         "category": "영화",
-        "title": "Drones (2026 film)"
+        "title": "Christmas at the Kringles"
       },
       {
         "category": "영화",
-        "title": "The Gospel of Christmas"
+        "title": "Godzilla Minus Zero"
       },
       {
         "category": "영화",
-        "title": "Pulavar (film)"
-      },
-      {
-        "category": "영화",
-        "title": "Avatar Aang: The Last Airbender"
-      },
-      {
-        "category": "영화",
-        "title": "Buddy (2026 film)"
-      },
-      {
-        "category": "영화",
-        "title": "The Return of Omotara Johnson"
-      },
-      {
-        "category": "영화",
-        "title": "The Cycle (2026 film)"
-      },
-      {
-        "category": "영화",
-        "title": "In a Holidaze"
-      },
-      {
-        "category": "영화",
-        "title": "The Eken: Kerala-e Kurukshetra"
-      },
-      {
-        "category": "영화",
-        "title": "He's Dating a Bold Star"
-      },
-      {
-        "category": "영화",
-        "title": "Sidelined 3: End Game"
-      },
-      {
-        "category": "영화",
-        "title": "The Further Mis-Adventures of Cliff Booth"
-      },
-      {
-        "category": "영화",
-        "title": "The Bitch Pack"
-      },
-      {
-        "category": "영화",
-        "title": "Prempaatta"
-      },
-      {
-        "category": "영화",
-        "title": "Pratap (2026 film)"
-      },
-      {
-        "category": "영화",
-        "title": "The Dark Heaven"
-      },
-      {
-        "category": "영화",
-        "title": "Life Support (2026 film)"
-      },
-      {
-        "category": "영화",
-        "title": "Tehran, Under the Skin"
-      },
-      {
-        "category": "영화",
-        "title": "Chand Mera Dil"
+        "title": "Collision Course (2026 film)"
       }
     ],
     "episodeChanges": [],
@@ -50660,14 +50758,14 @@
     "nextPage": 2,
     "status": "ok",
     "source": "https://tvwiki60.net/kor_movie",
-    "checkedAt": "2026-11-15T11:36:31+00:00",
+    "checkedAt": "2026-11-15T11:39:32+00:00",
     "totalPages": 151,
-    "pagesFetched": 151,
+    "pagesFetched": 3,
     "scanNextPage": 2,
     "fullScanComplete": true,
-    "newTitles": 4426,
+    "newTitles": 0,
     "updatedLinks": 0,
-    "removedNonTVWiki": 51,
+    "removedNonTVWiki": 0,
     "tvwikiLinked": 4427,
     "note": "Only public Korean movie list metadata and page links; no player-stream extraction."
   }
