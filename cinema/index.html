@@ -429,6 +429,7 @@ function observePoster(item,art){
 const video=$("video"),dlg=$("dlg");
 function validUrl(s){try{const u=new URL(s);return u.protocol==="https:"&&!u.username&&!u.password;}catch{return false;}}
 function validTvwikiPage(s){try{const u=new URL(s);return u.protocol==="https:"&&["tvwiki59.net","tvwiki60.net"].includes(u.hostname)&&/^\/(?:drama|old_drama|movie|kor_movie)\/\d+(?:\/\d+)?$/.test(u.pathname);}catch{return false;}}
+function isTvwikiListingOnly(item){return item&&item.category==="한국영화"&&(item.tvwikiPageStatus==="listing"||/\/kor_movie\/\d+$/.test(String(item.tvwikiPage||"")))}
 function el(tag,cls,str){const x=document.createElement(tag);if(cls)x.className=cls;if(str!==undefined)x.textContent=str;return x;}
 
 const titleGroups=[
@@ -494,7 +495,7 @@ function sortNewest(a,b){
   if(a.releaseDate!==b.releaseDate)return a.releaseDate?-1:1;
   return a.title.localeCompare(b.title,"ko");
 }
-function normalize(o){if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",embedUrl:verifyMediaURL(o.embedUrl)?.kind==="embed"?o.embedUrl:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350),tvwikiRank:Number.isInteger(o.tvwikiRank)&&o.tvwikiRank>=0?o.tvwikiRank:null,sourceUrl:validUrl(o.sourceUrl)?o.sourceUrl:"",releaseAt:typeof o.releaseAt==="string"&&!Number.isNaN(Date.parse(o.releaseAt))?o.releaseAt:"",releaseDate:validReleaseDate(o.releaseDate||o.premiereDate),tvwikiPage:validTvwikiPage(o.tvwikiPage)?o.tvwikiPage:"",tvmazeId:Number.isInteger(o.tvmazeId)?o.tvmazeId:null,officialEpisodes:Array.isArray(o.officialEpisodes)?o.officialEpisodes.filter(x=>x&&Number.isInteger(x.number)&&Number.isInteger(x.season)&&x.number>0&&x.season>0&&validOfficialEpisodeURL(x.url)).slice(0,200).map(x=>({number:x.number,season:x.season,label:String(x.label||x.number+"화").slice(0,60),airdate:String(x.airdate||"").slice(0,10),url:x.url,mediaUrl:verifyMediaURL(x.mediaUrl)?.url||""})):[],episodes:Array.isArray(o.episodes)?o.episodes.filter(x=>x&&Number.isInteger(x.number)&&x.number>0&&x.number<10000&&validUrl(x.pageUrl)).slice(0,200).map(x=>({number:x.number,label:String(x.label||x.number+"화").slice(0,80),pageUrl:x.pageUrl,mediaUrl:verifyMediaURL(x.mediaUrl)?.url||""})):[]};}
+function normalize(o){if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",embedUrl:verifyMediaURL(o.embedUrl)?.kind==="embed"?o.embedUrl:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350),tvwikiRank:Number.isInteger(o.tvwikiRank)&&o.tvwikiRank>=0?o.tvwikiRank:null,tvwikiPageStatus:o.tvwikiPageStatus==="listing"?"listing":o.tvwikiPageStatus==="episode"?"episode":"",sourceUrl:validUrl(o.sourceUrl)?o.sourceUrl:"",releaseAt:typeof o.releaseAt==="string"&&!Number.isNaN(Date.parse(o.releaseAt))?o.releaseAt:"",releaseDate:validReleaseDate(o.releaseDate||o.premiereDate),tvwikiPage:validTvwikiPage(o.tvwikiPage)?o.tvwikiPage:"",tvmazeId:Number.isInteger(o.tvmazeId)?o.tvmazeId:null,officialEpisodes:Array.isArray(o.officialEpisodes)?o.officialEpisodes.filter(x=>x&&Number.isInteger(x.number)&&Number.isInteger(x.season)&&x.number>0&&x.season>0&&validOfficialEpisodeURL(x.url)).slice(0,200).map(x=>({number:x.number,season:x.season,label:String(x.label||x.number+"화").slice(0,60),airdate:String(x.airdate||"").slice(0,10),url:x.url,mediaUrl:verifyMediaURL(x.mediaUrl)?.url||""})):[],episodes:Array.isArray(o.episodes)?o.episodes.filter(x=>x&&Number.isInteger(x.number)&&x.number>0&&x.number<10000&&validUrl(x.pageUrl)).slice(0,200).map(x=>({number:x.number,label:String(x.label||x.number+"화").slice(0,80),pageUrl:x.pageUrl,mediaUrl:verifyMediaURL(x.mediaUrl)?.url||""})):[]};}
 let koreanMovieVisible=60;
 function render(){
   const q=$("search").value.trim().toLocaleLowerCase("ko");
@@ -518,9 +519,9 @@ function render(){
                el("span","cover-name",item.title),
                el("span","cover-year",String(item.releaseDate||item.year||"")));
     observePoster(item,art);
-    art.append(el("span","tag",isUpcoming(item)?"공개 예정":resolvedMedia(item)?"사이트 내 재생":validTvwikiPage(item.tvwikiPage)||item.episodes?.some(e=>validTvwikiPage(e.pageUrl))?"TV위키 연결":"TV위키 미연결"));
+    art.append(el("span","tag",isUpcoming(item)?"공개 예정":resolvedMedia(item)?"사이트 내 재생":isTvwikiListingOnly(item)?"TV위키 등록 · 영상 대기":validTvwikiPage(item.tvwikiPage)||item.episodes?.some(e=>validTvwikiPage(e.pageUrl))?"TV위키 연결":"TV위키 미연결"));
     const cap=el("div","caption");
-    cap.append(el("strong","",item.title),el("small","",(item.releaseDate||item.year||"날짜 미확인")+(isUpcoming(item)?" · 공개 예정":resolvedMedia(item)?" · 재생 가능":validTvwikiPage(item.tvwikiPage)||item.episodes?.some(e=>validTvwikiPage(e.pageUrl))?" · TV위키 링크":" · TV위키 미연결")));
+    cap.append(el("strong","",item.title),el("small","",(item.releaseDate||item.year||"날짜 미확인")+(isUpcoming(item)?" · 공개 예정":resolvedMedia(item)?" · 재생 가능":isTvwikiListingOnly(item)?" · 본편 대기":validTvwikiPage(item.tvwikiPage)||item.episodes?.some(e=>validTvwikiPage(e.pageUrl))?" · TV위키 링크":" · TV위키 미연결")));
     open.append(art,cap);
     open.addEventListener("click",()=>resolvedMedia(item)?openVideo(item):showMissing(item));
     const star=el("button","fav-heart",favorites.has(favKey(item))?"♥":"♡");
@@ -731,7 +732,7 @@ $("tvwikiFullscreenExit").addEventListener("click",closeCinemaFullscreen);
 function renderEpisodeChoices(item){
   const known=(item.episodes||[]).filter(e=>Number.isInteger(e.number)&&e.number>0&&validTvwikiPage(e.pageUrl)).sort((a,b)=>a.number-b.number);
   const choices=known.map(e=>({kind:"linked",url:e.pageUrl,number:e.number,label:e.label||e.number+"화"}));
-  if(!choices.length&&validTvwikiPage(item.tvwikiPage))choices.push({kind:"linked",url:item.tvwikiPage,number:0,label:"영상 보기"});
+  if(!choices.length&&validTvwikiPage(item.tvwikiPage))choices.push({kind:"linked",url:item.tvwikiPage,number:0,label:isTvwikiListingOnly(item)?"작품 상세":"영상 보기"});
   const root=$("tvwikiEpisodeButtons");root.replaceChildren();
   for(const ep of choices){
     const btn=el("button","tvwiki-ep",ep.label);btn.type="button";btn.dataset.src=ep.url;btn.setAttribute("aria-pressed","false");
@@ -740,18 +741,20 @@ function renderEpisodeChoices(item){
     root.append(btn);
   }
   $("tvwikiEpisodeCount").textContent=choices.length+"개 TV위키 연결";
-  $("episodeConnectionNote").textContent=choices.length?"확인된 TV위키 회차만 표시됩니다. 새 회차는 실제 TV위키 주소가 확인된 경우에만 추가됩니다.":"TV위키 연결 회차가 없습니다.";
+  $("episodeConnectionNote").textContent=isTvwikiListingOnly(item)?"TV위키 작품 상세 주소만 등록되어 있습니다. 실제 본편 영상이 준비됐는지는 원본 페이지에서 확인할 수 있습니다.":choices.length?"확인된 TV위키 회차만 표시됩니다. 새 회차는 실제 TV위키 주소가 확인된 경우에만 추가됩니다.":"TV위키 연결 회차가 없습니다.";
   return choices;
 }
 
 function showTvwikiConnectionState(item){
   const root=$("tvwikiLinkStatus");root.replaceChildren();
   const connected=validTvwikiPage(item.tvwikiPage)||(item.episodes||[]).some(e=>validTvwikiPage(e.pageUrl));
-  root.hidden=connected;
-  if(!connected){
-    root.append(el("strong","tvwiki-link-title",isUpcoming(item)?"TV위키 공개 대기":"TV위키 영상 미연결"));
+  const listingOnly=isTvwikiListingOnly(item);
+  root.hidden=connected&&!listingOnly;
+  if(!connected||listingOnly){
+    root.append(el("strong","tvwiki-link-title",listingOnly?"TV위키 작품 등록 · 본편 대기":isUpcoming(item)?"TV위키 공개 대기":"TV위키 영상 미연결"));
     root.append(el("span","tvwiki-link-note",
-      isUpcoming(item)?"공개 전 작품입니다. TV위키 재생 주소가 확인되면 연결됩니다."
+      listingOnly?"TV위키에는 작품 상세 페이지가 등록되어 있지만 실제 재생 회차 주소는 확인되지 않았습니다."
+      :isUpcoming(item)?"공개 전 작품입니다. TV위키 재생 주소가 확인되면 연결됩니다."
       :"확인된 TV위키 재생 주소가 없습니다. 다른 OTT나 방송사 링크는 사용하지 않습니다."));
   }
 }
