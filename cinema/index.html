@@ -518,11 +518,11 @@ function render(){
     const art=el("div","art");
     art.append(el("span","cover-head",item.category==="드라마"?"BRO SERIES":"BRO CINEMA"),
                el("span","cover-name",item.title),
-               el("span","cover-year",String(item.releaseDate||item.year||"")));
+               el("span","cover-year",String(item.releaseDate||item.year||(item.category==="한국영화"?"TV위키 등록":""))));
     observePoster(item,art);
     art.append(el("span","tag",isUpcoming(item)?"공개 예정":resolvedMedia(item)?"사이트 내 재생":isTvwikiListingOnly(item)?"TV위키 등록 · 영상 대기":validTvwikiPage(item.tvwikiPage)||item.episodes?.some(e=>validTvwikiPage(e.pageUrl))?"TV위키 연결":"TV위키 미연결"));
     const cap=el("div","caption");
-    cap.append(el("strong","",item.title),el("small","",(item.releaseDate||item.year||"날짜 미확인")+(isUpcoming(item)?" · 공개 예정":resolvedMedia(item)?" · 재생 가능":isTvwikiListingOnly(item)?" · 본편 대기":validTvwikiPage(item.tvwikiPage)||item.episodes?.some(e=>validTvwikiPage(e.pageUrl))?" · TV위키 링크":" · TV위키 미연결")));
+    cap.append(el("strong","",item.title),el("small","",(item.releaseDate||item.year||(item.category==="한국영화"?"TV위키 한국영화":"날짜 미확인"))+(isUpcoming(item)?" · 공개 예정":resolvedMedia(item)?" · 재생 가능":isTvwikiListingOnly(item)?" · 본편 대기":validTvwikiPage(item.tvwikiPage)||item.episodes?.some(e=>validTvwikiPage(e.pageUrl))?" · TV위키 링크":" · TV위키 미연결")));
     open.append(art,cap);
     open.addEventListener("click",()=>resolvedMedia(item)?openVideo(item):showMissing(item));
     const star=el("button","fav-heart",favorites.has(favKey(item))?"♥":"♡");
@@ -770,7 +770,7 @@ function showMissing(item){
     photo.src=img;cover.replaceChildren(photo);
   }
   const body=el("div","detail-text");
-  body.append(el("span","detail-category",item.category),el("h3","",item.title),el("p","",String(item.releaseDate||item.year||"날짜 미확인")));
+  body.append(el("span","detail-category",item.category),el("h3","",item.title),el("p","",String(item.releaseDate||item.year||(item.category==="한국영화"?"TV위키 한국영화":"날짜 미확인"))));
   if(item.description)body.append(el("p","",item.description));
   hero.append(cover,body);hero.hidden=false;
   showTvwikiConnectionState(item);
