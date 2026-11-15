@@ -24,6 +24,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+from sync_tvwiki_kor import sync_kr_movies
+
 LOG = logging.getLogger("cinema.sync")
 UA = "BRO-CINEMA-MetadataSync/1.0 (public TVmaze and Wikimedia API)"
 MAX_NEW_PER_CATEGORY = 25
@@ -131,8 +133,6 @@ def mediawiki_categories(today):
     # Catalog new releases from the current year only. A future year alone
     # does not establish that a title has been released.
     for year in [today.year]:
-        yield "한국영화", "ko", year, f"분류:{year}년 대한민국의 영화"
-        yield "한국영화", "en", year, f"Category:{year} South Korean films"
         yield "영화", "ko", year, f"분류:{year}년 영화"
         yield "영화", "en", year, f"Category:{year} films"
         yield "드라마", "ko", year, f"분류:{year}년 대한민국의 텔레비전 드라마"
@@ -346,6 +346,14 @@ def sync(catalog, today):
         by_key[key] = incoming
         added[cat].append(incoming["title"])
 
+    # Keep the Korean-movie tab sourced exclusively from the TVWiki /kor_movie
+    # public listing, not from Wikimedia film categories or guesses.
+    tvwiki_kr = sync_kr_movies(catalog)
+    added["한국영화"] = [
+        x["title"] for x in items if x.get("category") == "한국영화"
+        and x.get("sourceProvider") == "TVWiki Korean movie index"
+    ][:0]  # The source's count is reported separately, not as invented titles.
+
     # Sync official episode metadata, not playable TVWiki video links.
     # Existing user-provided TVWiki 'episodes' are preserved unchanged.
     for item in list(by_tvmaze.values())[:120]:
@@ -376,8 +384,9 @@ def sync(catalog, today):
         "status": "ok", "checkedAt": when,
         "lastFilmSyncAt": when if works_ok else last_film_check,
         "sourceCategoriesChecked": work_sources,
-        "source": ["TVmaze public API", "Wikimedia MediaWiki API (ko/en movies and TV)"],
-        "newTitles": {k: len(v) for k, v in added.items()},
+        "source": ["TVmaze public API", "Wikimedia MediaWiki API (other categories)", "TVWiki public Korean-film listing"],
+        "tvwikiKoreanMovieSync": {"status": tvwiki_kr.get("status"), "totalPages": tvwiki_kr.get("totalPages"), "pagesFetched": tvwiki_kr.get("pagesFetched"), "newTitles": tvwiki_kr.get("newTitles"), "tvwikiLinked": tvwiki_kr.get("tvwikiLinked")},
+        "newTitles": {**{k: len(v) for k, v in added.items()}, "한국영화": int(tvwiki_kr.get("newTitles") or 0)},
         "newEpisodeMetadata": sum(x["newCount"] for x in updated_episodes),
         "titlesAdded": [{"category": k, "title": title} for k, vals in added.items() for title in vals],
         "episodeChanges": updated_episodes[:40],
