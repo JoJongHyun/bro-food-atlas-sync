@@ -122,6 +122,7 @@
 .official-episode-link{display:flex;flex-direction:column;gap:4px;padding:9px;border:1px solid #425678;border-radius:9px;background:#202e49;color:#dfeaff;text-decoration:none;font-size:12px}
 .official-episode-link:hover{background:#2f4265}
 .official-episode-link small{font-size:10px;color:#a5b5cf;margin:0}
+.cinema-sync-info{display:block;margin-top:5px;color:#9bb6e4;font-size:11px;line-height:1.55;font-weight:550}
 </style></head>
 <body><div class="shell">
 <section id="installOffer" class="install-offer" hidden aria-labelledby="installOfferTitle">
@@ -136,7 +137,7 @@
 <header class="top"><div class="logo"><div class="logo-mark">▶</div><div><div class="brand">BRO CINEMA</div><div class="sub">HLS VIDEO PLAYER</div></div></div><div class="tools"><span class="tiny" id="status">목록 확인 중…</span><button class="btn" id="reload">⟳ 새로고침</button><button class="btn primary app-install" id="appInstall" type="button" aria-label="BRO CINEMA를 홈 화면에 앱처럼 설치">📲 앱 설치</button></div></header>
 <section class="hero"><h1>좋아하는 영상, 한곳에서.</h1><p>영화 · 한국영화 · 드라마 전용 화면과 광고 배너 없는 자체 플레이어, TV 전송 기능을 제공합니다.</p></section>
 <nav class="tabs" role="tablist"><button class="tab active" role="tab" aria-selected="true" data-cat="영화">🎬 영화</button><button class="tab" role="tab" aria-selected="false" data-cat="한국영화">🇰🇷 한국영화</button><button class="tab" role="tab" aria-selected="false" data-cat="드라마">📺 드라마</button><button class="tab" role="tab" aria-selected="false" data-cat="즐겨찾기">♥ 즐겨찾기 <span id="favCount">0</span></button></nav>
-<div class="row"><div><h2 id="count">영화 · 0편</h2><span class="tiny">최근 개봉·첫방송순 · 방영 예정작은 뒤로 정렬</span></div><input class="search" id="search" type="search" placeholder="제목 검색" aria-label="제목 검색"></div>
+<div class="row"><div><h2 id="count">영화 · 0편</h2><span class="tiny">최근 개봉·첫방송순 · 방영 예정작은 뒤로 정렬</span><span id="cinemaSyncInfo" class="cinema-sync-info">자동 동기화 확인 중…</span></div><input class="search" id="search" type="search" placeholder="제목 검색" aria-label="제목 검색"></div>
 <main id="grid" class="grid" aria-live="polite"></main><p class="note">매칭된 작품 포스터는 TV위키의 공개 상세·검색 목록에 표시된 이미지 URL을 사용합니다(실제 이미지는 TMDB 또는 다른 이미지 제공처에서 표시될 수 있습니다). 해당 이미지가 제공되지 않으면 Wikimedia 이미지 또는 제목형 표지를 표시합니다. BRO CINEMA는 해당 제공처와 제휴하지 않습니다. 즐겨찾기는 현재 브라우저에 저장되어 다른 기기와 자동 동기화되지 않습니다.</p>
 <p class="note">본 사이트는 별도 재생 출처를 저장한 경우에만 해당 영상의 직접 재생을 시도합니다. TV위키 플레이어는 다른 도메인의 임베드를 차단하므로 원본 사이트로 이동합니다. 본 사이트는 자체 광고·팝업을 포함하지 않습니다. 영상 내 삽입 광고가 없는지는 콘텐츠 제공자에 따라 다릅니다. 승인된 HTTPS M3U8 스트림만 재생하며, 외부 사이트의 접근 제한·DRM·광고 시스템을 우회하지 않습니다.</p>
 </div>
@@ -555,6 +556,14 @@ function render(){
 async function sync(){const button=$("reload");button.disabled=true;$("status").textContent="목록 확인 중…";try{const response=await fetch("./catalog.json?ts="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const payload=await response.json();if(!Array.isArray(payload.items))throw Error("목록 형식 오류");seedItems=payload.items.map(normalize).filter(Boolean);items=seedItems;
 const checked=payload.autoSync?.checkedAt;
 cinemaBackendCheckedAt=checked||"";
+const latest=payload.autoSync||{};
+const recentAdditions=(payload.autoSyncHistory||[]).find(x=>(Object.values(x.newTitles||{}).reduce((a,b)=>a+Number(b||0),0)+Number(x.newEpisodeMetadata||0))>0);
+const t=checked&&!Number.isNaN(Date.parse(checked))
+  ?new Date(checked).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"})
+  :null;
+$("cinemaSyncInfo").textContent=t
+  ?"자동 동기화: "+t+" · 6시간 간격 확인 · 최근 신규 작품 "+Object.values(recentAdditions?.newTitles||{}).reduce((a,b)=>a+Number(b||0),0)+"편 / 회차 정보 "+Number(recentAdditions?.newEpisodeMetadata||0)+"건"
+  :"자동 동기화 정보 없음 · 목록을 확인하세요";
 const refreshed=checked&&!Number.isNaN(Date.parse(checked))
   ?new Date(checked).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"})
   :"시간 미확인";
