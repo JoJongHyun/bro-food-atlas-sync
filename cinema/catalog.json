@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T09:31:57+00:00",
+  "updatedAt": "2026-11-15T09:33:35+00:00",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -4966,10 +4966,389 @@
       "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
       "sourceUrl": "https://en.wikipedia.org/wiki/Ally_%28film%29",
       "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-05T02:20:20Z",
+      "id": "auto-wiki-ko-영화-4282508",
+      "category": "영화",
+      "title": "와이프 (영화)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%99%80%EC%9D%B4%ED%94%84_%28%EC%98%81%ED%99%94%29",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-05T00:20:21Z",
+      "id": "auto-wiki-ko-영화-4282456",
+      "category": "영화",
+      "title": "올공, 2030 나라를 살리다",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%98%AC%EA%B3%B5%2C_2030_%EB%82%98%EB%9D%BC%EB%A5%BC_%EC%82%B4%EB%A6%AC%EB%8B%A4",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-04T03:06:49Z",
+      "id": "auto-wiki-ko-영화-4281917",
+      "category": "영화",
+      "title": "사카모토 데이즈 (영화)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%82%AC%EC%B9%B4%EB%AA%A8%ED%86%A0_%EB%8D%B0%EC%9D%B4%EC%A6%88_%28%EC%98%81%ED%99%94%29",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-03T03:08:50Z",
+      "id": "auto-wiki-ko-영화-4280903",
+      "category": "영화",
+      "title": "연옥: 살인마들의 자치구역",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%97%B0%EC%98%A5%3A_%EC%82%B4%EC%9D%B8%EB%A7%88%EB%93%A4%EC%9D%98_%EC%9E%90%EC%B9%98%EA%B5%AC%EC%97%AD",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-10-01T03:31:54Z",
+      "id": "auto-wiki-ko-영화-4279867",
+      "category": "영화",
+      "title": "사랑의 가설",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%82%AC%EB%9E%91%EC%9D%98_%EA%B0%80%EC%84%A4",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-09-30T02:21:47Z",
+      "id": "auto-wiki-ko-영화-4279260",
+      "category": "영화",
+      "title": "귀객",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EA%B7%80%EA%B0%9D",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-09-27T02:50:51Z",
+      "id": "auto-wiki-ko-영화-4277480",
+      "category": "영화",
+      "title": "오케이 마담2",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%98%A4%EC%BC%80%EC%9D%B4_%EB%A7%88%EB%8B%B42",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-09-22T02:35:37Z",
+      "id": "auto-wiki-ko-영화-4273821",
+      "category": "영화",
+      "title": "베스트 오브 베스트 (영화)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EB%B2%A0%EC%8A%A4%ED%8A%B8_%EC%98%A4%EB%B8%8C_%EB%B2%A0%EC%8A%A4%ED%8A%B8_%28%EC%98%81%ED%99%94%29",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-09-21T07:48:17Z",
+      "id": "auto-wiki-ko-영화-4273253",
+      "category": "영화",
+      "title": "엘시노어 (영화)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%97%98%EC%8B%9C%EB%85%B8%EC%96%B4_%28%EC%98%81%ED%99%94%29",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-09-17T02:25:07Z",
+      "id": "auto-wiki-ko-영화-4268625",
+      "category": "영화",
+      "title": "소실점 (영화)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%86%8C%EC%8B%A4%EC%A0%90_%28%EC%98%81%ED%99%94%29",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-09-16T06:54:06Z",
+      "id": "auto-wiki-ko-영화-4268284",
+      "category": "영화",
+      "title": "유 캔 씨 에브리씽",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EC%9C%A0_%EC%BA%94_%EC%94%A8_%EC%97%90%EB%B8%8C%EB%A6%AC%EC%94%BD",
+      "sourceProvider": "Wikimedia (ko)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-11T01:34:00Z",
+      "id": "auto-wiki-en-영화-84755569",
+      "category": "영화",
+      "title": "Yen Ennai Edho Seidhai",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Yen_Ennai_Edho_Seidhai",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-10T18:14:46Z",
+      "id": "auto-wiki-en-영화-84752774",
+      "category": "영화",
+      "title": "ENE Repeat",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/ENE_Repeat",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-10T07:09:45Z",
+      "id": "auto-wiki-en-영화-84748303",
+      "category": "영화",
+      "title": "Love Story Abhimanyu Ki",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Love_Story_Abhimanyu_Ki",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-09T08:46:50Z",
+      "id": "auto-wiki-en-영화-84737870",
+      "category": "영화",
+      "title": "Disco (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Disco_%282026_film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-09T03:29:04Z",
+      "id": "auto-wiki-en-영화-84735758",
+      "category": "영화",
+      "title": "Marty, Life Is Short",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Marty%2C_Life_Is_Short",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-08T18:32:40Z",
+      "id": "auto-wiki-en-영화-84715449",
+      "category": "영화",
+      "title": "Deewana (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Deewana_%282026_film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-08T17:14:41Z",
+      "id": "auto-wiki-en-영화-84732214",
+      "category": "영화",
+      "title": "Mrigaya 1.5: The Hunt Continues",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mrigaya_1.5%3A_The_Hunt_Continues",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-08T16:21:50Z",
+      "id": "auto-wiki-en-영화-84731936",
+      "category": "영화",
+      "title": "Ria (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ria_%28film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-08T15:35:08Z",
+      "id": "auto-wiki-en-영화-84731706",
+      "category": "영화",
+      "title": "Mission D.D.L.J.",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mission_D.D.L.J.",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-08T11:14:49Z",
+      "id": "auto-wiki-en-영화-84730579",
+      "category": "영화",
+      "title": "Tomb of Dreams",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Tomb_of_Dreams",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-08T09:55:18Z",
+      "id": "auto-wiki-en-영화-84730313",
+      "category": "영화",
+      "title": "Wandance (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Wandance_%28film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-08T09:48:15Z",
+      "id": "auto-wiki-en-영화-84730102",
+      "category": "영화",
+      "title": "Pee Mak (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Pee_Mak_%282026_film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-08T09:45:54Z",
+      "id": "auto-wiki-en-영화-84693746",
+      "category": "영화",
+      "title": "The Phantom of the Opera (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/The_Phantom_of_the_Opera_%282026_film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-08T09:35:57Z",
+      "id": "auto-wiki-en-영화-84730255",
+      "category": "영화",
+      "title": "Khaani (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Khaani_%28film%29",
+      "sourceProvider": "Wikimedia (en)"
     }
   ],
   "posterSourceNote": "Verified per-title cover URLs from public TVWiki listings, search results, and detail-page bo_v_poster. Missing or unavailable posters fall back to Wikimedia or a text cover; works with no verified match are not guessed.",
   "autoSyncHistory": [
+    {
+      "status": "ok",
+      "checkedAt": "2026-11-15T09:33:35+00:00",
+      "lastFilmSyncAt": "2026-11-15T09:33:35+00:00",
+      "sourceCategoriesChecked": {
+        "ko|한국영화|2026": 0,
+        "en|한국영화|2026": 33,
+        "ko|영화|2026": 99,
+        "en|영화|2026": 100,
+        "ko|드라마|2026": 0,
+        "en|드라마|2026": 0
+      },
+      "source": [
+        "TVmaze public API",
+        "Wikimedia MediaWiki API (ko/en movies and TV)"
+      ],
+      "newTitles": {
+        "영화": 25,
+        "한국영화": 0,
+        "드라마": 0
+      },
+      "newEpisodeMetadata": 0,
+      "titlesAdded": [
+        {
+          "category": "영화",
+          "title": "와이프 (영화)"
+        },
+        {
+          "category": "영화",
+          "title": "올공, 2030 나라를 살리다"
+        },
+        {
+          "category": "영화",
+          "title": "사카모토 데이즈 (영화)"
+        },
+        {
+          "category": "영화",
+          "title": "연옥: 살인마들의 자치구역"
+        },
+        {
+          "category": "영화",
+          "title": "사랑의 가설"
+        },
+        {
+          "category": "영화",
+          "title": "귀객"
+        },
+        {
+          "category": "영화",
+          "title": "오케이 마담2"
+        },
+        {
+          "category": "영화",
+          "title": "베스트 오브 베스트 (영화)"
+        },
+        {
+          "category": "영화",
+          "title": "엘시노어 (영화)"
+        },
+        {
+          "category": "영화",
+          "title": "소실점 (영화)"
+        },
+        {
+          "category": "영화",
+          "title": "유 캔 씨 에브리씽"
+        },
+        {
+          "category": "영화",
+          "title": "Yen Ennai Edho Seidhai"
+        },
+        {
+          "category": "영화",
+          "title": "ENE Repeat"
+        },
+        {
+          "category": "영화",
+          "title": "Love Story Abhimanyu Ki"
+        },
+        {
+          "category": "영화",
+          "title": "Disco (2026 film)"
+        },
+        {
+          "category": "영화",
+          "title": "Marty, Life Is Short"
+        },
+        {
+          "category": "영화",
+          "title": "Deewana (2026 film)"
+        },
+        {
+          "category": "영화",
+          "title": "Mrigaya 1.5: The Hunt Continues"
+        },
+        {
+          "category": "영화",
+          "title": "Ria (film)"
+        },
+        {
+          "category": "영화",
+          "title": "Mission D.D.L.J."
+        },
+        {
+          "category": "영화",
+          "title": "Tomb of Dreams"
+        },
+        {
+          "category": "영화",
+          "title": "Wandance (film)"
+        },
+        {
+          "category": "영화",
+          "title": "Pee Mak (2026 film)"
+        },
+        {
+          "category": "영화",
+          "title": "The Phantom of the Opera (2026 film)"
+        },
+        {
+          "category": "영화",
+          "title": "Khaani (film)"
+        }
+      ],
+      "episodeChanges": [],
+      "duplicatesMerged": [],
+      "sourceRequestsSucceeded": 48,
+      "note": "New movie and drama titles plus official episode metadata are checked automatically. Playback links are never invented; verified existing links are preserved."
+    },
     {
       "status": "ok",
       "checkedAt": "2026-11-15T09:31:57+00:00",
@@ -5616,19 +5995,15 @@
   ],
   "autoSync": {
     "status": "ok",
-    "checkedAt": "2026-11-15T09:31:57+00:00",
-    "lastFilmSyncAt": "2026-11-15T09:31:57+00:00",
+    "checkedAt": "2026-11-15T09:33:35+00:00",
+    "lastFilmSyncAt": "2026-11-15T09:33:35+00:00",
     "sourceCategoriesChecked": {
       "ko|한국영화|2026": 0,
       "en|한국영화|2026": 33,
       "ko|영화|2026": 99,
       "en|영화|2026": 100,
       "ko|드라마|2026": 0,
-      "en|드라마|2026": 0,
-      "ko|한국영화|2027": 0,
-      "en|한국영화|2027": 4,
-      "ko|영화|2027": 42,
-      "en|영화|2027": 97
+      "en|드라마|2026": 0
     },
     "source": [
       "TVmaze public API",
@@ -5636,131 +6011,115 @@
     ],
     "newTitles": {
       "영화": 25,
-      "한국영화": 4,
+      "한국영화": 0,
       "드라마": 0
     },
     "newEpisodeMetadata": 0,
     "titlesAdded": [
       {
         "category": "영화",
-        "title": "입에 대한 앙케트"
+        "title": "와이프 (영화)"
       },
       {
         "category": "영화",
-        "title": "오버액션 갱"
+        "title": "올공, 2030 나라를 살리다"
       },
       {
         "category": "영화",
-        "title": "슈가 (영화)"
+        "title": "사카모토 데이즈 (영화)"
       },
       {
         "category": "영화",
-        "title": "킬링타임 (2026년 영화)"
+        "title": "연옥: 살인마들의 자치구역"
       },
       {
         "category": "영화",
-        "title": "슈퍼 트루퍼스 3"
+        "title": "사랑의 가설"
       },
       {
         "category": "영화",
-        "title": "암살자(들)"
+        "title": "귀객"
       },
       {
         "category": "영화",
-        "title": "부활남: 더 레드"
+        "title": "오케이 마담2"
       },
       {
         "category": "영화",
-        "title": "더 웨이트"
+        "title": "베스트 오브 베스트 (영화)"
       },
       {
         "category": "영화",
-        "title": "드라이브 계약 관계"
+        "title": "엘시노어 (영화)"
       },
       {
         "category": "영화",
-        "title": "퓨리어스 (영화)"
+        "title": "소실점 (영화)"
       },
       {
         "category": "영화",
-        "title": "숀 더 쉽: 공포의 털보 괴물"
+        "title": "유 캔 씨 에브리씽"
       },
       {
         "category": "영화",
-        "title": "캐리어를 끄는 소녀"
+        "title": "Yen Ennai Edho Seidhai"
       },
       {
         "category": "영화",
-        "title": "게일의 원나잇 패스"
+        "title": "ENE Repeat"
       },
       {
         "category": "영화",
-        "title": "다마알 4"
+        "title": "Love Story Abhimanyu Ki"
       },
       {
         "category": "영화",
-        "title": "텐징 (영화)"
+        "title": "Disco (2026 film)"
       },
       {
         "category": "영화",
-        "title": "폭풍의 밤"
+        "title": "Marty, Life Is Short"
       },
       {
         "category": "영화",
-        "title": "마리와 별난 엄마들"
+        "title": "Deewana (2026 film)"
       },
       {
         "category": "영화",
-        "title": "광대 패닉：공포의 스마일"
+        "title": "Mrigaya 1.5: The Hunt Continues"
       },
       {
         "category": "영화",
-        "title": "텐더 러빙 케어"
+        "title": "Ria (film)"
       },
       {
         "category": "영화",
-        "title": "드골: 저항의 시작"
+        "title": "Mission D.D.L.J."
       },
       {
         "category": "영화",
-        "title": "온슬로트 (영화)"
+        "title": "Tomb of Dreams"
       },
       {
         "category": "영화",
-        "title": "멜라니아 (영화)"
+        "title": "Wandance (film)"
       },
       {
         "category": "영화",
-        "title": "지느러미 (영화)"
+        "title": "Pee Mak (2026 film)"
       },
       {
         "category": "영화",
-        "title": "표인: 풍기대막"
+        "title": "The Phantom of the Opera (2026 film)"
       },
       {
         "category": "영화",
-        "title": "경주기행"
-      },
-      {
-        "category": "한국영화",
-        "title": "Teen Cop"
-      },
-      {
-        "category": "한국영화",
-        "title": "K-Pop: The Debut"
-      },
-      {
-        "category": "한국영화",
-        "title": "The Sword: Rebirth of the Red Wolf"
-      },
-      {
-        "category": "한국영화",
-        "title": "Ally (film)"
+        "title": "Khaani (film)"
       }
     ],
     "episodeChanges": [],
     "duplicatesMerged": [],
-    "sourceRequestsSucceeded": 52,
+    "sourceRequestsSucceeded": 48,
     "note": "New movie and drama titles plus official episode metadata are checked automatically. Playback links are never invented; verified existing links are preserved."
   }
 }
