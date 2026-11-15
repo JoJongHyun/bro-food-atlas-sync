@@ -2139,16 +2139,6 @@
       ],
       "poster": "https://image.tmdb.org/t/p/w500/up1YBgPq6lC0ut2JvjguNwLiXw4.jpg",
       "posterSource": "TVWiki public listing",
-      "officialLinks": [
-        {
-          "label": "MBC 공식 다시보기 · 1회",
-          "url": "https://playvod.imbc.com/Vod/VodPlay?broadcastId=1006930100033100000"
-        },
-        {
-          "label": "웨이브 공식 다시보기 · 전체 회차",
-          "url": "https://deep.wavve.com/content/M_T60533G?contentType=vod"
-        }
-      ],
       "tvwikiPage": "https://tvwiki60.net/drama/12555/406792037",
       "officialEpisodes": [
         {
@@ -3279,12 +3269,6 @@
           "title": "Episode 31",
           "url": "https://www.tvmaze.com/episodes/3681413/love-on-the-menu-1x31-episode-31"
         }
-      ],
-      "officialLinks": [
-        {
-          "label": "KBS 공식 다시보기 · 사랑이 온다 30회",
-          "url": "https://vod.kbs.co.kr/index.html?broadcast_complete_yn=N&local_station_code=00&program_code=T2026-0039&program_id=PS-2026193069-01-000&section_code=03&section_id=27960&sname=vod&source=episode&stype=vod"
-        }
       ]
     },
     {
@@ -3362,12 +3346,6 @@
           "airdate": "2026-11-15",
           "title": "Episode 8",
           "url": "https://www.tvmaze.com/episodes/3796272/its-you-regardless-1x08-episode-8"
-        }
-      ],
-      "officialLinks": [
-        {
-          "label": "TVING 공식 시청 · 밑도 끝도 없이, 너다 1화",
-          "url": "https://www.tving.com/contents/P001793160"
         }
       ]
     },
@@ -3942,12 +3920,6 @@
           "airdate": "2026-11-13",
           "title": "Episode 70",
           "url": "https://www.tvmaze.com/episodes/3758450/a-trap-called-desire-1x70-episode-70"
-        }
-      ],
-      "officialLinks": [
-        {
-          "label": "KBS 공식 다시보기 · 욕망의 덫 57회",
-          "url": "https://vod.kbs.co.kr/index.html?broadcast_complete_yn=N&local_station_code=00&program_code=T2026-0209&program_id=PS-2026179157-01-000&section_code=03&section_id=27988&sname=vod&source=episode&stype=vod"
         }
       ]
     },
@@ -4558,12 +4530,6 @@
           "airdate": "2026-11-13",
           "title": "Episode 8",
           "url": "https://www.tvmaze.com/episodes/3777659/the-sound-of-sugar-cubes-1x08-episode-8"
-        }
-      ],
-      "officialLinks": [
-        {
-          "label": "Wavve 공식 작품 · 각설탕 소리",
-          "url": "https://deep.wavve.com/content/H04_VOD000003513?contentType=vod"
         }
       ]
     },
