@@ -158,7 +158,7 @@
       <p>휴대전화에서 상단을 두 번 내려 빠른 설정을 열고 <b>Smart View</b>를 선택해. 같은 Wi-Fi의 TV를 선택한 뒤 <b>지금 시작</b>을 누르면 휴대전화 화면을 TV에 표시할 수 있어.</p>
       <p>TV가 Smart View를 지원하지 않으면 Google TV·Chromecast 또는 TV 자체의 화면 미러링 기능을 확인해. 일부 영상은 제공자 제한으로 TV에서 검은 화면이 나올 수 있어.</p>
     </div>
-    <div class="tv-connect-actions"><button id="tvConnectRetry" type="button" class="btn primary" hidden>Chromecast로 전송 시도</button><button id="tvConnectDone" type="button" class="btn">닫기</button></div>
+    <div class="tv-connect-actions"><button id="tvConnectOriginal" type="button" class="btn primary" hidden>원본 플레이어에서 TV 연결</button><button id="tvConnectRetry" type="button" class="btn primary" hidden>Chromecast로 전송 시도</button><button id="tvConnectDone" type="button" class="btn">닫기</button></div>
   </div>
 </dialog>
 <dialog id="dlg"><div class="modalhead"><h2 id="playing">영상 재생</h2><button class="x" id="close" aria-label="닫기">×</button></div><div id="detailHero" class="detail-hero" hidden></div><div class="stage" id="videoStage"><video id="video" controls playsinline x-webkit-airplay="allow" preload="metadata" crossorigin="anonymous"></video><iframe id="embedPlayer" title="공식 영상 플레이어" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen hidden></iframe></div><section id="tvwikiViewer" class="tvwiki-viewer" hidden>
@@ -197,7 +197,7 @@
     </div>
     <p>선택한 회차에만 저장하며 내 기기에서만 적용됩니다. 권한 있는 MP4·HLS 또는 공식 Bunny Stream·YouTube·Vimeo 임베드만 지원합니다. 재생 제한을 우회하거나 TV위키 영상을 복제하지 않습니다.</p>
   </details>
-  <p class="tvwiki-limit">선택한 회차의 TV위키 원본 페이지를 영상창 안에 표시합니다. 원본 사이트의 상단 프레임·광고 또는 외부 재생 제한이 남을 수 있으며 실제 본편 재생은 보장되지 않습니다. 전체화면은 가로 전환을 시도하고, TV 연결은 재생 가능한 영상의 Chromecast 전송 또는 Smart View 화면 미러링을 안내합니다.</p>
+  <p class="tvwiki-limit">직접 연결된 영상은 플레이어 전체화면·지원 TV 연결 기능을 사용합니다. TV위키는 외부 사이트여서 플레이어 내부 버튼을 우리 사이트에서 직접 누를 수 없습니다. 전체화면은 원본 화면 전체화면으로 제공되며, TV 연결은 원본 플레이어에서 실행하거나 Smart View를 사용하세요.</p>
 </section>
 <section id="officialEpisodeInfo" class="official-episode-info" hidden>
   <details id="officialEpisodeDetails">
@@ -632,6 +632,7 @@ function setTvwikiEpisode(item,url,label,launchNative=false){
   const media=getEpisodeMedia(item,url);
   if(media){
     playAuthorizedEpisode(media,label);
+    updateEpisodeControls();
     $("episodeConnectionNote").textContent=label+" · 재생 가능한 영상이 연결되어 있습니다.";
     for(const button of $("tvwikiEpisodeButtons").querySelectorAll("button")){
       button.setAttribute("aria-pressed",String(button.dataset.src===url));
@@ -641,6 +642,7 @@ function setTvwikiEpisode(item,url,label,launchNative=false){
   resetEpisodeMedia();
   if(isOfficial){
     frame.removeAttribute("src");frame.hidden=true;
+    updateEpisodeControls();
     $("tvwikiPlaceholder").hidden=false;
     $("tvwikiPlaceholder").querySelector("strong").textContent="신규 방송 회차 자동 등록";
     $("tvwikiPlaceholder").querySelector("span").textContent="방송 회차 정보는 자동 반영됐지만 재생 가능한 영상 주소는 아직 확인되지 않았습니다. 아래에서 허용된 영상 주소를 연결할 수 있습니다.";
@@ -662,6 +664,7 @@ function setTvwikiEpisode(item,url,label,launchNative=false){
   fitTvwikiFrame();
   frame.src=url+"#playerArea";
   frame.title=item.title+" "+label+" 원본 영상 페이지";
+  updateEpisodeControls();
   $("tvwikiStatus").textContent=label+" · 원본 회차 연결됨 (실제 본편 재생은 제공자 제한에 따름)";
   for(const button of $("tvwikiEpisodeButtons").querySelectorAll("button")){
     button.setAttribute("aria-pressed",String(button.dataset.src===url));
@@ -683,56 +686,88 @@ $("tvwikiPreviewToggle").addEventListener("click",()=>{
   }
 });
 
+// Only the media element we own can be directly controlled. A third-party
+// TVWiki iframe cannot be instructed to press its internal fullscreen button.
 let cinemaOrientationLocked=false;
 function currentFullscreenElement(){return document.fullscreenElement||document.webkitFullscreenElement||null}
+function isCinemaFullscreen(){
+  const active=currentFullscreenElement();
+  return active=== $("tvwikiFrameWrap")||active===$("episodeVideo")||active===$("episodeEmbed")||Boolean($("episodeVideo").webkitDisplayingFullscreen);
+}
+function episodeFullscreenTarget(){
+  if(!$("episodeNativeStage").hidden){
+    if(!$("episodeVideo").hidden)return $("episodeVideo");
+    if(!$("episodeEmbed").hidden)return $("episodeEmbed");
+  }
+  return $("tvwikiFrameWrap");
+}
+function updateEpisodeControls(){
+  const native=!$("episodeNativeStage").hidden&&!$("episodeVideo").hidden;
+  const embedded=!$("episodeNativeStage").hidden&&!$("episodeEmbed").hidden;
+  const original=!$("tvwikiFrame").hidden&&validTvwikiPage(activeEpisodePage);
+  const active=isCinemaFullscreen();
+  const full=$("tvwikiFullscreen"),tv=$("tvwikiTVConnect");
+  full.textContent=active?"⛶ 전체화면 종료":"⛶ 전체화면";
+  full.disabled=!native&&!embedded&&!original;
+  full.title=native?"영상 플레이어 자체 전체화면":embedded?"공식 임베드 플레이어 전체화면":original?"TV위키 원본 화면 전체화면 (내부 버튼 직접 제어는 불가)":"연결된 영상이 없습니다";
+  tv.disabled=!native&&!embedded&&!original;
+  tv.title=native?"지원되는 TV로 영상 전송":embedded?"영상 제공자의 TV 연결 기능에 따름":original?"TV위키 내부 TV 버튼은 직접 제어할 수 없습니다. 원본 플레이어 또는 Smart View 이용":"연결된 영상이 없습니다";
+}
 function updateCinemaFullscreen(){
-  const target=$("tvwikiFrameWrap");
-  const active=currentFullscreenElement()===target;
-  $("tvwikiFullscreen").textContent=active?"⛶ 전체화면 종료":"⛶ 전체화면";
+  const wrap=$("tvwikiFrameWrap"),active=isCinemaFullscreen();
   if(!active){
-    target.classList.remove("landscape-fallback");
+    wrap.classList.remove("landscape-fallback");
     if(cinemaOrientationLocked&&screen.orientation&&typeof screen.orientation.unlock==="function"){
       try{screen.orientation.unlock()}catch(e){}
     }
     cinemaOrientationLocked=false;
   }
+  updateEpisodeControls();
   requestAnimationFrame(fitTvwikiFrame);
   setTimeout(fitTvwikiFrame,160);
 }
 document.addEventListener("fullscreenchange",updateCinemaFullscreen);
 document.addEventListener("webkitfullscreenchange",updateCinemaFullscreen);
+$("episodeVideo").addEventListener("webkitbeginfullscreen",updateCinemaFullscreen);
+$("episodeVideo").addEventListener("webkitendfullscreen",updateCinemaFullscreen);
 async function closeCinemaFullscreen(){
-  const target=$("tvwikiFrameWrap");
-  if(currentFullscreenElement()!==target)return;
+  if(!isCinemaFullscreen())return;
   try{
-    if(document.exitFullscreen)await document.exitFullscreen();
-    else if(document.webkitExitFullscreen)document.webkitExitFullscreen();
+    if(currentFullscreenElement()&&document.exitFullscreen)await document.exitFullscreen();
+    else if(currentFullscreenElement()&&document.webkitExitFullscreen)document.webkitExitFullscreen();
+    else if($("episodeVideo").webkitDisplayingFullscreen&&$("episodeVideo").webkitExitFullscreen)$("episodeVideo").webkitExitFullscreen();
   }catch(e){console.warn("전체화면 종료 오류",e)}
   updateCinemaFullscreen();
 }
 $("tvwikiFullscreen").addEventListener("click",async()=>{
-  const target=$("tvwikiFrameWrap");
-  if(currentFullscreenElement()===target){await closeCinemaFullscreen();return}
+  if(isCinemaFullscreen()){await closeCinemaFullscreen();return}
+  let target=episodeFullscreenTarget();
+  if(!target||$("tvwikiFullscreen").disabled)return;
   try{
+    if(target===$("episodeVideo")&&typeof target.webkitEnterFullscreen==="function"&&!target.requestFullscreen){
+      target.webkitEnterFullscreen();
+      updateCinemaFullscreen();
+      return;
+    }
     if(typeof target.requestFullscreen==="function")await target.requestFullscreen({navigationUI:"hide"});
     else if(typeof target.webkitRequestFullscreen==="function")target.webkitRequestFullscreen();
-    else throw Error("이 브라우저는 전체화면을 지원하지 않습니다.");
-    if(currentFullscreenElement()!==target)return;
-    try{
-      if(screen.orientation&&typeof screen.orientation.lock==="function"){
+    else throw Error("브라우저에서 전체화면을 지원하지 않습니다.");
+    if(!isCinemaFullscreen())return;
+    if(screen.orientation&&typeof screen.orientation.lock==="function"){
+      try{
         await screen.orientation.lock("landscape");
         cinemaOrientationLocked=true;
-        target.classList.toggle("landscape-fallback",innerHeight>innerWidth);
-      }else throw Error("방향 잠금 미지원");
-    }catch(e){
-      // Orientation lock is restricted by some browsers / Galaxy settings.
-      // Use a CSS landscape rotation inside the fullscreen overlay instead.
-      if(innerHeight>innerWidth)target.classList.add("landscape-fallback");
+      }catch(e){
+        if(target===$("tvwikiFrameWrap")&&innerHeight>innerWidth)target.classList.add("landscape-fallback");
+      }
+    }else if(target===$("tvwikiFrameWrap")&&innerHeight>innerWidth){
+      target.classList.add("landscape-fallback");
     }
     updateCinemaFullscreen();
   }catch(e){
-    console.warn("전체화면 전환 실패",e);
-    alert("이 브라우저에서는 전체화면 전환이 제한됩니다. 브라우저 또는 기기 설정을 확인하세요.");
+    console.warn("영상 전체화면 제한",e);
+    // Do not claim that an external provider's player fullscreen was engaged.
+    $("tvwikiStatus").textContent="현재 브라우저 또는 영상 제공자가 전체화면을 제한했습니다.";
   }
 });
 $("tvwikiFullscreenExit").addEventListener("click",closeCinemaFullscreen);
@@ -744,57 +779,58 @@ function currentEpisodeTVMedia(){
 function showTVConnectionHelp(message){
   $("tvConnectMessage").textContent=message;
   const player=$("episodeVideo");
-  const canTry=Boolean(currentEpisodeTVMedia()&&(castReady||(!player.hidden&&player.remote&&typeof player.remote.prompt==="function")||(!player.hidden&&typeof player.webkitShowPlaybackTargetPicker==="function")));
+  const linked=Boolean(currentEpisodeTVMedia());
+  const canTry=linked&&(castReady||(!player.hidden&&player.remote&&typeof player.remote.prompt==="function")||(!player.hidden&&typeof player.webkitShowPlaybackTargetPicker==="function"));
   $("tvConnectRetry").hidden=!canTry;
-  $("tvConnectRetry").textContent=castReady?"Chromecast 연결 시도":"TV 기기 찾기";
+  $("tvConnectRetry").textContent=castReady?"Chromecast 기기 선택":"TV 기기 선택";
+  $("tvConnectOriginal").hidden=!(validTvwikiPage(activeEpisodePage)&&!linked);
   if(!$("tvConnectHelp").open)$("tvConnectHelp").showModal();
 }
-async function sendEpisodeToTV(fromRetry=false){
+async function sendEpisodeToTV(){
   if(!selected)return;
   const media=currentEpisodeTVMedia();
   if(!media){
-    showTVConnectionHelp("현재 회차는 TV위키 원본 페이지 연결만 있습니다. 원본 페이지 전체를 Chromecast에 영상 파일로 직접 전송할 수는 없습니다. 갤럭시 Smart View로 BRO CINEMA 화면을 미러링하는 방법을 이용해 주세요.");
+    const isSource=validTvwikiPage(activeEpisodePage)&&!$("tvwikiFrame").hidden;
+    showTVConnectionHelp(isSource
+      ?"TV위키 원본 재생 화면입니다. 다른 사이트의 플레이어 내부 TV 연결 버튼은 BRO CINEMA가 직접 누를 수 없습니다. 원본 플레이어에서 TV 연결 기능을 사용하거나 갤럭시 Smart View로 화면을 미러링해 주세요."
+      :"이 회차에 TV로 전송할 수 있는 영상 파일이 연결되어 있지 않습니다. 원본에서 TV 연결 기능을 사용하거나 갤럭시 Smart View로 화면을 미러링해 주세요.");
     return;
+  }
+  const player=$("episodeVideo");
+  // RemotePlayback.prompt() must be invoked directly from the user's tap.
+  if(!castReady&&!player.hidden&&player.remote&&typeof player.remote.prompt==="function"){
+    try{
+      await player.remote.prompt();
+      $("tvwikiStatus").textContent="TV 선택 기능이 열렸습니다. 실제 재생 여부를 TV에서 확인해 주세요.";
+      return;
+    }catch(e){if(e.name==="AbortError"||e.name==="NotAllowedError")return}
+  }
+  if(!castReady&&!player.hidden&&typeof player.webkitShowPlaybackTargetPicker==="function"){
+    try{player.webkitShowPlaybackTargetPicker();return}catch(e){}
   }
   if(castReady&&window.cast?.framework&&window.chrome?.cast?.media){
     try{
       const ctx=cast.framework.CastContext.getInstance();
       let session=ctx.getCurrentSession();
       if(!session){await ctx.requestSession();session=ctx.getCurrentSession()}
-      if(!session)throw Error("연결할 Chromecast를 선택하지 않았습니다.");
+      if(!session)throw Error("연결할 TV를 선택하지 않았습니다.");
       const info=new chrome.cast.media.MediaInfo(media.url,media.kind==="mp4"?"video/mp4":"application/x-mpegURL");
-      const meta=new chrome.cast.media.GenericMediaMetadata();
-      meta.title=selected.title;
-      info.metadata=meta;
+      const meta=new chrome.cast.media.GenericMediaMetadata();meta.title=selected.title;info.metadata=meta;
       await session.loadMedia(new chrome.cast.media.LoadRequest(info));
-      showTVConnectionHelp("Chromecast로 영상 재생 요청을 보냈습니다. TV에서 실제 재생되는지 확인하세요. 제공자 접근 제한이나 TV 지원 코덱에 따라 실패할 수 있습니다.");
+      $("tvwikiStatus").textContent="TV 재생을 요청했습니다. 실제 재생 여부는 제공자·TV 지원 형식에 따라 달라집니다.";
       return;
     }catch(e){
-      showTVConnectionHelp("Chromecast 연결을 완료하지 못했습니다: "+String(e.message||e)+". 아래 Smart View 미러링 방법도 사용할 수 있습니다.");
+      showTVConnectionHelp("TV 연결을 완료하지 못했습니다: "+String(e.message||e)+". Chromecast 지원 여부 또는 Smart View 미러링을 확인해 주세요.");
       return;
     }
   }
-  const player=$("episodeVideo");
-  if(!fromRetry&&(!player.hidden&&((player.remote&&typeof player.remote.prompt==="function")||typeof player.webkitShowPlaybackTargetPicker==="function"))){
-    showTVConnectionHelp("재생 가능한 영상 주소가 연결돼 있습니다. 아래 ‘TV 기기 찾기’를 눌러 지원되는 TV를 선택하거나 Smart View로 화면을 미러링할 수 있어요.");
-    return;
-  }
-  if(!player.hidden&&player.remote&&typeof player.remote.prompt==="function"){
-    try{
-      await player.remote.prompt();
-      showTVConnectionHelp("TV 선택 기능을 열었습니다. 선택한 기기에 실제 영상이 재생되는지 확인하세요.");
-      return;
-    }catch(e){if(e.name==="AbortError")return}
-  }
-  if(!player.hidden&&typeof player.webkitShowPlaybackTargetPicker==="function"){
-    try{player.webkitShowPlaybackTargetPicker();return}catch(e){}
-  }
-  showTVConnectionHelp("현재 브라우저에서 Chromecast 영상 전송 기능을 사용할 수 없습니다. 같은 Wi-Fi의 TV에서 Smart View 미러링을 이용하거나, Chromecast를 지원하는 브라우저에서 시도하세요.");
+  showTVConnectionHelp("이 브라우저에서는 직접 TV 전송이 지원되지 않습니다. 갤럭시 Smart View로 화면 미러링을 사용할 수 있습니다.");
 }
 $("tvwikiTVConnect").addEventListener("click",sendEpisodeToTV);
-$("tvConnectRetry").addEventListener("click",async()=>{
-  $("tvConnectHelp").close();
-  await sendEpisodeToTV(true);
+$("tvConnectRetry").addEventListener("click",()=>{$("tvConnectHelp").close();sendEpisodeToTV()});
+$("tvConnectOriginal").addEventListener("click",()=>{
+  if(!validTvwikiPage(activeEpisodePage))return;
+  window.open(activeEpisodePage,"_blank","noopener,noreferrer");
 });
 $("tvConnectClose").addEventListener("click",()=>$("tvConnectHelp").close());
 $("tvConnectDone").addEventListener("click",()=>$("tvConnectHelp").close());
@@ -857,6 +893,7 @@ function showMissing(item){
   document.querySelector("p.help").style.display=hasEpisode?"none":"";
   $("cast").style.display="none";$("airplay").style.display="none";
   $("notice").textContent=hasEpisode?"방송 회차를 자동 표시합니다. 영상 미연결 회차는 재생되지 않습니다.":"영상이 연결되지 않았습니다.";
+  updateEpisodeControls();
   if(!dlg.open)dlg.showModal();
   if(hasEpisode){
     const stored=lastWatched[favKey(item)];
@@ -913,7 +950,7 @@ async function openVideo(item){
     if(p)p.catch(()=>$("notice").textContent="화면의 ▶ 버튼을 눌러주세요.");
   }catch(e){$("notice").textContent=e.message}
 }
-function closeVideo(){if(currentFullscreenElement()===$("tvwikiFrameWrap"))closeCinemaFullscreen();cleanup();$("officialEpisodeInfo").hidden=true;selected=null;$("tvwikiViewer").hidden=true;$("detailHero").hidden=true;$("videoStage").style.display="flex";$("playerEditor").style.display="";document.querySelector(".modaltools").style.display="";document.querySelector("p.help").style.display="";dlg.close();const u=new URL(location.href);u.searchParams.delete("play");history.replaceState(null,"",u);}
+function closeVideo(){if(isCinemaFullscreen())closeCinemaFullscreen();cleanup();$("officialEpisodeInfo").hidden=true;selected=null;$("tvwikiViewer").hidden=true;$("detailHero").hidden=true;$("videoStage").style.display="flex";$("playerEditor").style.display="";document.querySelector(".modaltools").style.display="";document.querySelector("p.help").style.display="";dlg.close();const u=new URL(location.href);u.searchParams.delete("play");history.replaceState(null,"",u);}
 window.__onGCastApiAvailable=function(ok){if(!ok)return;try{cast.framework.CastContext.getInstance().setOptions({receiverApplicationId:chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,autoJoinPolicy:chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED});castReady=true;}catch(e){console.warn(e)}};
 $("cast").addEventListener("click",async()=>{if(!selected)return;if(!castReady){$("notice").textContent="Cast를 사용할 수 없습니다. Chrome과 TV 연결을 확인하세요.";return}try{const ctx=cast.framework.CastContext.getInstance();let session=ctx.getCurrentSession();if(!session){await ctx.requestSession();session=ctx.getCurrentSession()}if(!session)throw Error("TV 연결 실패");const info=new chrome.cast.media.MediaInfo(selected.hls,"application/x-mpegURL");const metadata=new chrome.cast.media.GenericMediaMetadata();metadata.title=selected.title;info.metadata=metadata;await session.loadMedia(new chrome.cast.media.LoadRequest(info));$("notice").textContent="TV 재생 요청 완료";}catch(e){$("notice").textContent="TV 전송 실패 · 기기 또는 HLS 접근 권한을 확인하세요.";console.warn(e)}});
 $("airplay").addEventListener("click",()=>{if(typeof video.webkitShowPlaybackTargetPicker==="function")video.webkitShowPlaybackTargetPicker();else $("notice").textContent="AirPlay는 지원되는 Safari에서 이용 가능합니다.";});
