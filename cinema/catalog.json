@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T09:33:35+00:00",
+  "updatedAt": "2026-11-15T11:20:19+00:00",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -5200,10 +5200,390 @@
       "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
       "sourceUrl": "https://en.wikipedia.org/wiki/Khaani_%28film%29",
       "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-08T08:35:11Z",
+      "id": "auto-wiki-en-영화-84730111",
+      "category": "영화",
+      "title": "Inherit (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Inherit_%28film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-07T18:13:54Z",
+      "id": "auto-wiki-en-영화-84725956",
+      "category": "영화",
+      "title": "Proxies (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Proxies_%282026_film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-07T16:28:51Z",
+      "id": "auto-wiki-en-영화-56312288",
+      "category": "영화",
+      "title": "Titanic (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Titanic_%282026_film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-07T16:09:25Z",
+      "id": "auto-wiki-en-영화-84583261",
+      "category": "영화",
+      "title": "Party Animals (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Party_Animals_%28film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-07T14:20:23Z",
+      "id": "auto-wiki-en-영화-78630711",
+      "category": "영화",
+      "title": "Mr. Bhaarath",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mr._Bhaarath",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-07T10:07:34Z",
+      "id": "auto-wiki-en-영화-84723416",
+      "category": "영화",
+      "title": "A Pagan Party",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/A_Pagan_Party",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-07T04:41:34Z",
+      "id": "auto-wiki-en-영화-84721909",
+      "category": "영화",
+      "title": "Naa Wife Missing",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Naa_Wife_Missing",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-07T00:48:28Z",
+      "id": "auto-wiki-en-영화-79035100",
+      "category": "영화",
+      "title": "Christmas & Chaos",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Christmas_%26_Chaos",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-06T18:18:43Z",
+      "id": "auto-wiki-en-영화-84718344",
+      "category": "영화",
+      "title": "Anfa 8",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Anfa_8",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-06T17:55:20Z",
+      "id": "auto-wiki-en-영화-84717464",
+      "category": "영화",
+      "title": "Anchors Aweigh (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Anchors_Aweigh_%282026_film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-06T15:15:40Z",
+      "id": "auto-wiki-en-영화-84144221",
+      "category": "영화",
+      "title": "Mookuthi Amman 2",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mookuthi_Amman_2",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-06T15:15:34Z",
+      "id": "auto-wiki-en-영화-84717015",
+      "category": "영화",
+      "title": "Summer Holidays (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Summer_Holidays_%282026_film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-06T15:12:43Z",
+      "id": "auto-wiki-en-영화-84593927",
+      "category": "영화",
+      "title": "A Proud Family Wizmas",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/A_Proud_Family_Wizmas",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-06T09:46:21Z",
+      "id": "auto-wiki-en-영화-82865047",
+      "category": "영화",
+      "title": "The Editor (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/The_Editor_%282026_film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-06T09:41:14Z",
+      "id": "auto-wiki-en-영화-82721273",
+      "category": "영화",
+      "title": "Maatrubhumi: May War Rest in Peace",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Maatrubhumi%3A_May_War_Rest_in_Peace",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-06T04:49:45Z",
+      "id": "auto-wiki-en-영화-84714750",
+      "category": "영화",
+      "title": "Aa Ondu Notu",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Aa_Ondu_Notu",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-05T23:33:23Z",
+      "id": "auto-wiki-en-영화-82885021",
+      "category": "영화",
+      "title": "Molly (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Molly_%282026_film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-05T22:02:35Z",
+      "id": "auto-wiki-en-영화-84712813",
+      "category": "영화",
+      "title": "Lucky Weekend",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Lucky_Weekend",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-05T17:44:43Z",
+      "id": "auto-wiki-en-영화-84709013",
+      "category": "영화",
+      "title": "Lifeline (2026 film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Lifeline_%282026_film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-05T14:40:53Z",
+      "id": "auto-wiki-en-영화-84707660",
+      "category": "영화",
+      "title": "Jersey Boy (film)",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Jersey_Boy_%28film%29",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-05T13:03:49Z",
+      "id": "auto-wiki-en-영화-84707170",
+      "category": "영화",
+      "title": "Status: Rejected",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Status%3A_Rejected",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-04T20:47:40Z",
+      "id": "auto-wiki-en-영화-81878580",
+      "category": "영화",
+      "title": "The 12 Dates of Christmas",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/The_12_Dates_of_Christmas",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-04T12:51:52Z",
+      "id": "auto-wiki-en-영화-84698841",
+      "category": "영화",
+      "title": "Paach Futacha Bachchan",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Paach_Futacha_Bachchan",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-04T08:36:45Z",
+      "id": "auto-wiki-en-영화-84697837",
+      "category": "영화",
+      "title": "God Laughs",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/God_Laughs",
+      "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "sourceIndexedAt": "2026-11-04T05:56:18Z",
+      "id": "auto-wiki-en-영화-84419055",
+      "category": "영화",
+      "title": "The Bride's Chamber",
+      "year": 2026,
+      "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
+      "sourceUrl": "https://en.wikipedia.org/wiki/The_Bride%27s_Chamber",
+      "sourceProvider": "Wikimedia (en)"
     }
   ],
   "posterSourceNote": "Verified per-title cover URLs from public TVWiki listings, search results, and detail-page bo_v_poster. Missing or unavailable posters fall back to Wikimedia or a text cover; works with no verified match are not guessed.",
   "autoSyncHistory": [
+    {
+      "status": "ok",
+      "checkedAt": "2026-11-15T11:20:19+00:00",
+      "lastFilmSyncAt": "2026-11-15T11:20:19+00:00",
+      "sourceCategoriesChecked": {
+        "ko|한국영화|2026": 0,
+        "en|한국영화|2026": 33,
+        "ko|영화|2026": 99,
+        "en|영화|2026": 100,
+        "ko|드라마|2026": 0,
+        "en|드라마|2026": 0
+      },
+      "source": [
+        "TVmaze public API",
+        "Wikimedia MediaWiki API (ko/en movies and TV)"
+      ],
+      "newTitles": {
+        "영화": 25,
+        "한국영화": 0,
+        "드라마": 0
+      },
+      "newEpisodeMetadata": 0,
+      "titlesAdded": [
+        {
+          "category": "영화",
+          "title": "Inherit (film)"
+        },
+        {
+          "category": "영화",
+          "title": "Proxies (2026 film)"
+        },
+        {
+          "category": "영화",
+          "title": "Titanic (2026 film)"
+        },
+        {
+          "category": "영화",
+          "title": "Party Animals (film)"
+        },
+        {
+          "category": "영화",
+          "title": "Mr. Bhaarath"
+        },
+        {
+          "category": "영화",
+          "title": "A Pagan Party"
+        },
+        {
+          "category": "영화",
+          "title": "Naa Wife Missing"
+        },
+        {
+          "category": "영화",
+          "title": "Christmas & Chaos"
+        },
+        {
+          "category": "영화",
+          "title": "Anfa 8"
+        },
+        {
+          "category": "영화",
+          "title": "Anchors Aweigh (2026 film)"
+        },
+        {
+          "category": "영화",
+          "title": "Mookuthi Amman 2"
+        },
+        {
+          "category": "영화",
+          "title": "Summer Holidays (2026 film)"
+        },
+        {
+          "category": "영화",
+          "title": "A Proud Family Wizmas"
+        },
+        {
+          "category": "영화",
+          "title": "The Editor (2026 film)"
+        },
+        {
+          "category": "영화",
+          "title": "Maatrubhumi: May War Rest in Peace"
+        },
+        {
+          "category": "영화",
+          "title": "Aa Ondu Notu"
+        },
+        {
+          "category": "영화",
+          "title": "Molly (2026 film)"
+        },
+        {
+          "category": "영화",
+          "title": "Lucky Weekend"
+        },
+        {
+          "category": "영화",
+          "title": "Lifeline (2026 film)"
+        },
+        {
+          "category": "영화",
+          "title": "Jersey Boy (film)"
+        },
+        {
+          "category": "영화",
+          "title": "Status: Rejected"
+        },
+        {
+          "category": "영화",
+          "title": "The 12 Dates of Christmas"
+        },
+        {
+          "category": "영화",
+          "title": "Paach Futacha Bachchan"
+        },
+        {
+          "category": "영화",
+          "title": "God Laughs"
+        },
+        {
+          "category": "영화",
+          "title": "The Bride's Chamber"
+        }
+      ],
+      "episodeChanges": [],
+      "duplicatesMerged": [],
+      "sourceRequestsSucceeded": 48,
+      "tvwikiLinked": 74,
+      "note": "Public discovery metadata is separate from TVWiki playback. Only verified TVWiki page links are displayed; third-party provider watch links are removed and not regenerated."
+    },
     {
       "status": "ok",
       "checkedAt": "2026-11-15T09:33:35+00:00",
@@ -5979,8 +6359,8 @@
   ],
   "autoSync": {
     "status": "ok",
-    "checkedAt": "2026-11-15T09:33:35+00:00",
-    "lastFilmSyncAt": "2026-11-15T09:33:35+00:00",
+    "checkedAt": "2026-11-15T11:20:19+00:00",
+    "lastFilmSyncAt": "2026-11-15T11:20:19+00:00",
     "sourceCategoriesChecked": {
       "ko|한국영화|2026": 0,
       "en|한국영화|2026": 33,
@@ -6002,108 +6382,109 @@
     "titlesAdded": [
       {
         "category": "영화",
-        "title": "와이프 (영화)"
+        "title": "Inherit (film)"
       },
       {
         "category": "영화",
-        "title": "올공, 2030 나라를 살리다"
+        "title": "Proxies (2026 film)"
       },
       {
         "category": "영화",
-        "title": "사카모토 데이즈 (영화)"
+        "title": "Titanic (2026 film)"
       },
       {
         "category": "영화",
-        "title": "연옥: 살인마들의 자치구역"
+        "title": "Party Animals (film)"
       },
       {
         "category": "영화",
-        "title": "사랑의 가설"
+        "title": "Mr. Bhaarath"
       },
       {
         "category": "영화",
-        "title": "귀객"
+        "title": "A Pagan Party"
       },
       {
         "category": "영화",
-        "title": "오케이 마담2"
+        "title": "Naa Wife Missing"
       },
       {
         "category": "영화",
-        "title": "베스트 오브 베스트 (영화)"
+        "title": "Christmas & Chaos"
       },
       {
         "category": "영화",
-        "title": "엘시노어 (영화)"
+        "title": "Anfa 8"
       },
       {
         "category": "영화",
-        "title": "소실점 (영화)"
+        "title": "Anchors Aweigh (2026 film)"
       },
       {
         "category": "영화",
-        "title": "유 캔 씨 에브리씽"
+        "title": "Mookuthi Amman 2"
       },
       {
         "category": "영화",
-        "title": "Yen Ennai Edho Seidhai"
+        "title": "Summer Holidays (2026 film)"
       },
       {
         "category": "영화",
-        "title": "ENE Repeat"
+        "title": "A Proud Family Wizmas"
       },
       {
         "category": "영화",
-        "title": "Love Story Abhimanyu Ki"
+        "title": "The Editor (2026 film)"
       },
       {
         "category": "영화",
-        "title": "Disco (2026 film)"
+        "title": "Maatrubhumi: May War Rest in Peace"
       },
       {
         "category": "영화",
-        "title": "Marty, Life Is Short"
+        "title": "Aa Ondu Notu"
       },
       {
         "category": "영화",
-        "title": "Deewana (2026 film)"
+        "title": "Molly (2026 film)"
       },
       {
         "category": "영화",
-        "title": "Mrigaya 1.5: The Hunt Continues"
+        "title": "Lucky Weekend"
       },
       {
         "category": "영화",
-        "title": "Ria (film)"
+        "title": "Lifeline (2026 film)"
       },
       {
         "category": "영화",
-        "title": "Mission D.D.L.J."
+        "title": "Jersey Boy (film)"
       },
       {
         "category": "영화",
-        "title": "Tomb of Dreams"
+        "title": "Status: Rejected"
       },
       {
         "category": "영화",
-        "title": "Wandance (film)"
+        "title": "The 12 Dates of Christmas"
       },
       {
         "category": "영화",
-        "title": "Pee Mak (2026 film)"
+        "title": "Paach Futacha Bachchan"
       },
       {
         "category": "영화",
-        "title": "The Phantom of the Opera (2026 film)"
+        "title": "God Laughs"
       },
       {
         "category": "영화",
-        "title": "Khaani (film)"
+        "title": "The Bride's Chamber"
       }
     ],
     "episodeChanges": [],
     "duplicatesMerged": [],
     "sourceRequestsSucceeded": 48,
-    "note": "New movie and drama titles plus official episode metadata are checked automatically. Playback links are never invented; verified existing links are preserved."
+    "tvwikiLinked": 74,
+    "note": "Public discovery metadata is separate from TVWiki playback. Only verified TVWiki page links are displayed; third-party provider watch links are removed and not regenerated."
   }
 }
