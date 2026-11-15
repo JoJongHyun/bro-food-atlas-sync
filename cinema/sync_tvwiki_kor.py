@@ -143,7 +143,7 @@ def sync_kr_movies(catalog, timestamp=None):
         return state
 
     last_full = state.get("fullIndexedAt")
-    full_due = state.get("schemaVersion") != SOURCE_SCHEMA_VERSION
+    full_due = state.get("completedSchemaVersion") != SOURCE_SCHEMA_VERSION
     if last_full and not full_due:
         try:
             full_due = (dt.datetime.fromisoformat(stamp) -
@@ -207,6 +207,7 @@ def sync_kr_movies(catalog, timestamp=None):
     completed = bool(full_due and next_page > total)
     if completed:
         state["fullIndexedAt"] = stamp
+        state["completedSchemaVersion"] = SOURCE_SCHEMA_VERSION
         state["nextPage"] = 2
     elif full_due:
         state["nextPage"] = next_page
