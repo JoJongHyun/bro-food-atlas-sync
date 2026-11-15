@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T08:59:44+00:00",
+  "updatedAt": "2026-11-15T09:03:31+00:00",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -4451,6 +4451,26 @@
   "autoSyncHistory": [
     {
       "status": "ok",
+      "checkedAt": "2026-11-15T09:03:31+00:00",
+      "lastFilmSyncAt": "2026-11-15T09:03:31+00:00",
+      "source": [
+        "TVmaze public API",
+        "Wikimedia MediaWiki API"
+      ],
+      "newTitles": {
+        "영화": 0,
+        "한국영화": 0,
+        "드라마": 0
+      },
+      "newEpisodeMetadata": 0,
+      "titlesAdded": [],
+      "episodeChanges": [],
+      "duplicatesMerged": [],
+      "sourceRequestsSucceeded": 30,
+      "note": "Official episode metadata is not playable video. User TVWiki links are unchanged."
+    },
+    {
+      "status": "ok",
       "checkedAt": "2026-11-15T08:59:44+00:00",
       "lastFilmSyncAt": "2026-11-15T08:59:44+00:00",
       "source": [
@@ -4869,28 +4889,19 @@
   ],
   "autoSync": {
     "status": "ok",
-    "checkedAt": "2026-11-15T08:59:44+00:00",
-    "lastFilmSyncAt": "2026-11-15T08:59:44+00:00",
+    "checkedAt": "2026-11-15T09:03:31+00:00",
+    "lastFilmSyncAt": "2026-11-15T09:03:31+00:00",
     "source": [
       "TVmaze public API",
       "Wikimedia MediaWiki API"
     ],
     "newTitles": {
-      "영화": 2,
+      "영화": 0,
       "한국영화": 0,
       "드라마": 0
     },
     "newEpisodeMetadata": 0,
-    "titlesAdded": [
-      {
-        "category": "영화",
-        "title": "Kabaddi 5: After the Final Match"
-      },
-      {
-        "category": "영화",
-        "title": "Cop This"
-      }
-    ],
+    "titlesAdded": [],
     "episodeChanges": [],
     "duplicatesMerged": [],
     "sourceRequestsSucceeded": 30,
