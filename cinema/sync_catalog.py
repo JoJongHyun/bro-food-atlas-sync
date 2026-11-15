@@ -252,6 +252,11 @@ def sync(catalog, today):
     items = catalog.get("items")
     if not isinstance(items, list):
         raise ValueError("Missing items array")
+    # TVWiki-only playback policy: never publish third-party streaming
+    # watch destinations, including previously cached provider links.
+    for item in items:
+        if isinstance(item, dict):
+            item.pop("officialLinks", None)
     # Preserve all user-maintained fields, posters and verified TVWiki episode URLs.
     by_key = {item_key(x): x for x in items}
     by_tvmaze = {x["tvmazeId"]: x for x in items if isinstance(x.get("tvmazeId"), int)}
@@ -378,7 +383,10 @@ def sync(catalog, today):
         "episodeChanges": updated_episodes[:40],
         "duplicatesMerged": merged[:40],
         "sourceRequestsSucceeded": api_success,
-        "note": "New movie and drama titles plus official episode metadata are checked automatically. Playback links are never invented; verified existing links are preserved.",
+        "tvwikiLinked": sum(1 for x in items if isinstance(x, dict) and (
+            x.get("tvwikiPage") or any(e.get("pageUrl") for e in (x.get("episodes") or []) if isinstance(e, dict))
+        )),
+        "note": "Public discovery metadata is separate from TVWiki playback. Only verified TVWiki page links are displayed; third-party provider watch links are removed and not regenerated.",
     }
     history = catalog.get("autoSyncHistory") or []
     history.insert(0, summary)
