@@ -113,6 +113,14 @@
 .install-offer-go{border:0;border-radius:9px;background:#4072ec;color:white;white-space:nowrap;font-weight:750;font-size:12px;padding:10px}
 .install-offer-dismiss{border:0;background:transparent;color:#b6c6e4;font-size:21px;padding:2px 3px;align-self:flex-start}
 @media(max-width:370px){.install-offer{gap:7px;padding:10px}.install-offer-mark{display:none}.install-offer-go{padding:9px 7px}}
+.official-episode-info{padding:12px 16px;border-top:1px solid #354b6c;background:#132039}
+.official-episode-info details{border:1px solid #3f5274;padding:10px 12px;border-radius:11px}
+.official-episode-info summary{font-size:14px;font-weight:750;color:#cee1ff;cursor:pointer}
+.official-episode-info p,.official-episode-info small{display:block;margin:9px 0;font-size:11px;line-height:1.7;color:#b9cae7}
+.official-episode-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(135px,1fr));gap:7px;padding:4px 0 8px}
+.official-episode-link{display:flex;flex-direction:column;gap:4px;padding:9px;border:1px solid #425678;border-radius:9px;background:#202e49;color:#dfeaff;text-decoration:none;font-size:12px}
+.official-episode-link:hover{background:#2f4265}
+.official-episode-link small{font-size:10px;color:#a5b5cf;margin:0}
 </style></head>
 <body><div class="shell">
 <section id="installOffer" class="install-offer" hidden aria-labelledby="installOfferTitle">
@@ -186,6 +194,14 @@
     <p>선택한 회차에만 저장하며 내 기기에서만 적용됩니다. 권한 있는 MP4·HLS 또는 공식 Bunny Stream·YouTube·Vimeo 임베드만 지원합니다. 재생 제한을 우회하거나 TV위키 영상을 복제하지 않습니다.</p>
   </details>
   <p class="tvwiki-limit">선택한 회차의 TV위키 원본 페이지를 영상창 안에 표시합니다. 원본 사이트의 상단 프레임·광고 또는 외부 재생 제한이 남을 수 있으며 실제 본편 재생은 보장되지 않습니다. 전체화면은 가로 전환을 시도하고, TV 연결은 재생 가능한 영상의 Chromecast 전송 또는 Smart View 화면 미러링을 안내합니다.</p>
+</section>
+<section id="officialEpisodeInfo" class="official-episode-info" hidden>
+  <details id="officialEpisodeDetails">
+    <summary id="officialEpisodeSummary">자동 동기화된 방송 회차 정보</summary>
+    <p>방송·공개 회차 정보입니다. 아래 링크는 TVmaze 회차 소개 페이지이며 영상 재생 링크가 아닙니다. 기존 TV위키 회차 선택 버튼과 별개로 관리됩니다.</p>
+    <div id="officialEpisodeList" class="official-episode-list"></div>
+    <small>정보 제공: TVmaze 공개 API · 실제 방영·스트리밍 여부는 제공처에서 확인</small>
+  </details>
 </section>
 <section class="playereditor" id="playerEditor"><details id="playerEditorDetails"><summary>재생 권한이 있는 영상 주소 등록</summary><div class="editorrow"><input id="personalMediaUrl" type="url" inputmode="url" placeholder="https://.../playlist.m3u8 또는 공식 임베드 URL" aria-label="허가된 영상 주소"/><button class="btn primary" id="saveMedia" type="button">저장하고 재생</button><button class="btn" id="clearMedia" type="button">삭제</button></div><p class="editorhint">재생·임베드 권한이 있는 HTTPS HLS·MP4 또는 Bunny Stream/YouTube/Vimeo 공식 임베드 주소만 등록하세요. 이 브라우저에만 저장됩니다. TV위키 인증·서명 우회 주소는 지원하지 않습니다.</p></details></section><div class="modaltools"><button class="btn primary" id="cast">▣ TV 전송</button><button class="btn" id="airplay">AirPlay</button><button class="btn" id="share">↗ 공유</button><span id="notice" class="notice">영상을 선택하세요.</span></div><p class="help">Chromecast 지원 TV와 동일한 Wi-Fi 연결이 필요합니다. 삼성 TV는 휴대전화 Smart View 화면 미러링을 사용할 수도 있습니다. TV가 재생할 수 있는 스트림 주소여야 합니다.</p></dialog>
 <script>
@@ -268,6 +284,19 @@ if("serviceWorker" in navigator){
 }
 
 let items=[],seedItems=[],cat="영화",selected=null,hls=null,castReady=false;
+function showOfficialEpisodeInfo(item){
+  const official=(item.officialEpisodes||[]).filter(e=>e&&Number.isInteger(e.number)&&e.number>0&&Number.isInteger(e.season)&&e.season>0&&validUrl(e.url)&&/^https:\/\/www\.tvmaze\.com\/episodes\//.test(e.url));
+  const root=$("officialEpisodeList");root.replaceChildren();
+  $("officialEpisodeInfo").hidden=!official.length;
+  $("officialEpisodeSummary").textContent="방송 회차 자동동기화 · "+official.length+"화 (재생 정보 아님)";
+  for(const ep of official){
+    const a=el("a","official-episode-link");
+    a.href=ep.url;a.target="_blank";a.rel="noopener noreferrer";
+    a.append(el("strong","",ep.label||"시즌 "+ep.season+" "+ep.number+"화"),el("small","",String(ep.airdate||"방영일 미확인")));
+    root.append(a);
+  }
+  $("officialEpisodeDetails").open=false;
+}
 const USERMEDIAKEY="bro-cinema-custom-source-v1";let customSources={};
 const EPISODEMEDIAKEY="bro-cinema-episode-media-v1";let episodeMediaSources={},episodeHls=null,activeEpisodePage="";
 try{const v=JSON.parse(localStorage.getItem(EPISODEMEDIAKEY)||"{}");if(v&&typeof v==="object"&&!Array.isArray(v))episodeMediaSources=v;}catch{}
@@ -487,7 +516,7 @@ function sortNewest(a,b){
   if(a.releaseDate!==b.releaseDate)return a.releaseDate?-1:1;
   return a.title.localeCompare(b.title,"ko");
 }
-function normalize(o){if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",embedUrl:verifyMediaURL(o.embedUrl)?.kind==="embed"?o.embedUrl:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350),sourceUrl:validUrl(o.sourceUrl)?o.sourceUrl:"",releaseAt:typeof o.releaseAt==="string"&&!Number.isNaN(Date.parse(o.releaseAt))?o.releaseAt:"",releaseDate:validReleaseDate(o.releaseDate||o.premiereDate),tvwikiPage:validTvwikiPage(o.tvwikiPage)?o.tvwikiPage:"",episodes:Array.isArray(o.episodes)?o.episodes.filter(x=>x&&Number.isInteger(x.number)&&x.number>0&&x.number<10000&&validUrl(x.pageUrl)).slice(0,200).map(x=>({number:x.number,label:String(x.label||x.number+"화").slice(0,80),pageUrl:x.pageUrl,mediaUrl:verifyMediaURL(x.mediaUrl)?.url||""})):[],officialLinks:Array.isArray(o.officialLinks)?o.officialLinks.filter(x=>x&&typeof x.label==="string"&&validUrl(x.url)).slice(0,12).map(x=>({label:x.label.slice(0,85),url:x.url})):[]};}
+function normalize(o){if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",embedUrl:verifyMediaURL(o.embedUrl)?.kind==="embed"?o.embedUrl:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350),sourceUrl:validUrl(o.sourceUrl)?o.sourceUrl:"",releaseAt:typeof o.releaseAt==="string"&&!Number.isNaN(Date.parse(o.releaseAt))?o.releaseAt:"",releaseDate:validReleaseDate(o.releaseDate||o.premiereDate),tvwikiPage:validTvwikiPage(o.tvwikiPage)?o.tvwikiPage:"",tvmazeId:Number.isInteger(o.tvmazeId)?o.tvmazeId:null,officialEpisodes:Array.isArray(o.officialEpisodes)?o.officialEpisodes.filter(x=>x&&Number.isInteger(x.number)&&Number.isInteger(x.season)&&x.number>0&&x.season>0&&validUrl(x.url)).slice(0,200).map(x=>({number:x.number,season:x.season,label:String(x.label||x.number+"화").slice(0,60),airdate:String(x.airdate||"").slice(0,10),url:x.url})):[],episodes:Array.isArray(o.episodes)?o.episodes.filter(x=>x&&Number.isInteger(x.number)&&x.number>0&&x.number<10000&&validUrl(x.pageUrl)).slice(0,200).map(x=>({number:x.number,label:String(x.label||x.number+"화").slice(0,80),pageUrl:x.pageUrl,mediaUrl:verifyMediaURL(x.mediaUrl)?.url||""})):[],officialLinks:Array.isArray(o.officialLinks)?o.officialLinks.filter(x=>x&&typeof x.label==="string"&&validUrl(x.url)).slice(0,12).map(x=>({label:x.label.slice(0,85),url:x.url})):[]};}
 function render(){
   const q=$("search").value.trim().toLocaleLowerCase("ko");
   const filtered=items.filter(item=>(cat==="즐겨찾기"?favorites.has(favKey(item)):item.category===cat)&&item.title.toLocaleLowerCase("ko").includes(q)).sort(sortNewest);
@@ -518,7 +547,14 @@ function render(){
     card.append(open,star);root.append(card);
   }
 }
-async function sync(){const button=$("reload");button.disabled=true;$("status").textContent="목록 확인 중…";try{const response=await fetch("./catalog.json?ts="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const payload=await response.json();if(!Array.isArray(payload.items))throw Error("목록 형식 오류");seedItems=payload.items.map(normalize).filter(Boolean);items=seedItems;$("status").textContent="기본 작품 "+items.length+"개";render();await updateWikiTitles();}catch(e){$("status").textContent="목록 갱신 실패";console.error(e);if(!items.length)render();}finally{button.disabled=false;}}
+async function sync(){const button=$("reload");button.disabled=true;$("status").textContent="목록 확인 중…";try{const response=await fetch("./catalog.json?ts="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const payload=await response.json();if(!Array.isArray(payload.items))throw Error("목록 형식 오류");seedItems=payload.items.map(normalize).filter(Boolean);items=seedItems;
+const checked=payload.autoSync?.checkedAt;
+const refreshed=checked&&!Number.isNaN(Date.parse(checked))
+  ?new Date(checked).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"})
+  :"시간 미확인";
+$("status").textContent="작품 "+items.length+"편 · 자동 갱신 "+refreshed;
+$("status").title="신규 영화·드라마 및 TVmaze 방송 회차 정보 자동 동기화. 원본 영상 자동 추출·재생이 아닙니다.";
+render();await updateWikiTitles();}catch(e){$("status").textContent="목록 갱신 실패";console.error(e);if(!items.length)render();}finally{button.disabled=false;}}
 function fitTvwikiFrame(){
   const frame=$("tvwikiFrame"),view=$("tvwikiScreen");
   if(!frame||!view||!selected||$("tvwikiViewer").hidden||!dlg.open)return;
@@ -718,7 +754,7 @@ $("tvConnectDone").addEventListener("click",()=>$("tvConnectHelp").close());
 $("tvConnectHelp").addEventListener("click",e=>{if(e.target===$("tvConnectHelp"))$("tvConnectHelp").close()});
 
 function showMissing(item){
-  selected=item;cleanup();setupMediaEditor(item);
+  selected=item;cleanup();setupMediaEditor(item);showOfficialEpisodeInfo(item);
   const hero=$("detailHero");hero.replaceChildren();
   const cover=el("div","detail-art",item.title);
   const img=item.poster||posterCache[favKey(item)];
@@ -775,7 +811,7 @@ function cleanup(){
 async function openVideo(item){
   const media=resolvedMedia(item);
   if(!media){showMissing(item);return}
-  selected=item;cleanup();setupMediaEditor(item);$("tvwikiViewer").hidden=true;
+  selected=item;cleanup();setupMediaEditor(item);showOfficialEpisodeInfo(item);$("tvwikiViewer").hidden=true;
   $("playerEditor").style.display="";document.querySelector(".modaltools").style.display="";document.querySelector("p.help").style.display="";
   $("detailHero").hidden=true;$("videoStage").style.display="flex";
   $("cast").style.display=media.kind==="embed"?"none":"";
@@ -807,7 +843,7 @@ async function openVideo(item){
     if(p)p.catch(()=>$("notice").textContent="화면의 ▶ 버튼을 눌러주세요.");
   }catch(e){$("notice").textContent=e.message}
 }
-function closeVideo(){if(currentFullscreenElement()===$("tvwikiFrameWrap"))closeCinemaFullscreen();cleanup();selected=null;$("tvwikiViewer").hidden=true;$("detailHero").hidden=true;$("videoStage").style.display="flex";$("playerEditor").style.display="";document.querySelector(".modaltools").style.display="";document.querySelector("p.help").style.display="";dlg.close();const u=new URL(location.href);u.searchParams.delete("play");history.replaceState(null,"",u);}
+function closeVideo(){if(currentFullscreenElement()===$("tvwikiFrameWrap"))closeCinemaFullscreen();cleanup();$("officialEpisodeInfo").hidden=true;selected=null;$("tvwikiViewer").hidden=true;$("detailHero").hidden=true;$("videoStage").style.display="flex";$("playerEditor").style.display="";document.querySelector(".modaltools").style.display="";document.querySelector("p.help").style.display="";dlg.close();const u=new URL(location.href);u.searchParams.delete("play");history.replaceState(null,"",u);}
 window.__onGCastApiAvailable=function(ok){if(!ok)return;try{cast.framework.CastContext.getInstance().setOptions({receiverApplicationId:chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,autoJoinPolicy:chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED});castReady=true;}catch(e){console.warn(e)}};
 $("cast").addEventListener("click",async()=>{if(!selected)return;if(!castReady){$("notice").textContent="Cast를 사용할 수 없습니다. Chrome과 TV 연결을 확인하세요.";return}try{const ctx=cast.framework.CastContext.getInstance();let session=ctx.getCurrentSession();if(!session){await ctx.requestSession();session=ctx.getCurrentSession()}if(!session)throw Error("TV 연결 실패");const info=new chrome.cast.media.MediaInfo(selected.hls,"application/x-mpegURL");const metadata=new chrome.cast.media.GenericMediaMetadata();metadata.title=selected.title;info.metadata=metadata;await session.loadMedia(new chrome.cast.media.LoadRequest(info));$("notice").textContent="TV 재생 요청 완료";}catch(e){$("notice").textContent="TV 전송 실패 · 기기 또는 HLS 접근 권한을 확인하세요.";console.warn(e)}});
 $("airplay").addEventListener("click",()=>{if(typeof video.webkitShowPlaybackTargetPicker==="function")video.webkitShowPlaybackTargetPicker();else $("notice").textContent="AirPlay는 지원되는 Safari에서 이용 가능합니다.";});
