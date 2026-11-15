@@ -132,7 +132,7 @@
 <p class="note">본 사이트는 별도 재생 출처를 저장한 경우에만 해당 영상의 직접 재생을 시도합니다. TV위키 플레이어는 다른 도메인의 임베드를 차단하므로 원본 사이트로 이동합니다. 본 사이트는 자체 광고·팝업을 포함하지 않습니다. 영상 내 삽입 광고가 없는지는 콘텐츠 제공자에 따라 다릅니다. 승인된 HTTPS M3U8 스트림만 재생하며, 외부 사이트의 접근 제한·DRM·광고 시스템을 우회하지 않습니다.</p>
 </div>
 <dialog id="installHelp" class="install-help" aria-labelledby="installHelpTitle"><div class="install-help-body">
-  <div class="install-help-title"><h2 id="installHelpTitle">📲 BRO CINEMA 홈 화면에 추가</h2><button class="x" type="button" id="installHelpClose" aria-label="설치 안내 닫기">×</button></div>
+  <div class="install-help-title"><h2 id="installHelpTitle">📲 BRO CINEMA 앱 목록에 설치</h2><button class="x" type="button" id="installHelpClose" aria-label="설치 안내 닫기">×</button></div>
   <p>Chrome 표시가 붙은 기존 아이콘은 웹사이트 바로가기일 수 있어요. <strong>갤럭시 앱 목록에 표시하려면 Chrome의 정식 ‘설치’ 과정</strong>으로 진행해야 합니다. 정식 설치창이 제공되지 않으면 앱 설치를 강제로 시작할 수 없습니다.</p>
   <div id="installSteps" class="install-steps"></div>
   <p class="install-help-note">홈 화면 아이콘을 누르면 BRO CINEMA가 앱처럼 열립니다. 영상 연결과 콘텐츠는 웹사이트와 동일하며 인터넷 연결이 필요합니다.</p>
@@ -193,7 +193,7 @@
 const $=id=>document.getElementById(id),validCats=new Set(["영화","한국영화","드라마"]);
 let pendingInstallPrompt=null;
 const isStandalone=()=>window.matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;
-const CINEMA_INSTALL_DISMISSED="bro-cinema-install-dismiss-v1";
+const CINEMA_INSTALL_DISMISSED="bro-cinema-install-dismiss-v2";
 const isAndroidDevice=()=>/Android/i.test(navigator.userAgent);
 function dismissedInstallRecently(){
   try{const t=Number(localStorage.getItem(CINEMA_INSTALL_DISMISSED)||0);return t>0&&Date.now()-t<7*24*60*60*1000;}catch{return false;}
