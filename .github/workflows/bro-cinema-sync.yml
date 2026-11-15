@@ -1,4 +1,4 @@
-name: BRO CINEMA metadata sync
+name: BRO CINEMA TVWiki Korean movie and media metadata on-demand sync
 
 on:
   workflow_dispatch:
@@ -8,6 +8,7 @@ on:
     paths:
       - '.github/workflows/bro-cinema-sync.yml'
       - 'cinema/sync_catalog.py'
+      - 'cinema/sync_tvwiki_kor.py'
       - 'cinema/.sync-trigger'
 
 permissions:
@@ -20,7 +21,7 @@ concurrency:
 jobs:
   update-catalog:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 40
     steps:
       - name: Checkout BRO CINEMA branch
         uses: actions/checkout@v4
@@ -33,8 +34,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Validate update code
-        run: python -m py_compile cinema/sync_catalog.py
-      - name: Refresh film drama and official episode metadata
+        run: python -m py_compile cinema/sync_catalog.py cinema/sync_tvwiki_kor.py
+      - name: Update TVWiki Korean movie category plus other catalog metadata
         run: python cinema/sync_catalog.py --catalog cinema/catalog.json
       - name: Commit updated metadata only
         run: |
