@@ -9,6 +9,7 @@ on:
       - '.github/workflows/bro-cinema-sync.yml'
       - 'cinema/sync_catalog.py'
       - 'cinema/sync_tvwiki_kor.py'
+      - 'cinema/sync_tvwiki_recent.py'
       - 'cinema/.sync-trigger'
 
 permissions:
@@ -34,7 +35,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Validate update code
-        run: python -m py_compile cinema/sync_catalog.py cinema/sync_tvwiki_kor.py
+        run: python -m py_compile cinema/sync_catalog.py cinema/sync_tvwiki_kor.py cinema/sync_tvwiki_recent.py
       - name: Update TVWiki Korean movie category plus other catalog metadata
         run: python cinema/sync_catalog.py --catalog cinema/catalog.json
       - name: Commit updated metadata only
