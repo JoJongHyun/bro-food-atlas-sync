@@ -136,7 +136,7 @@
 <header class="top"><div class="logo"><div class="logo-mark">▶</div><div><div class="brand">BRO CINEMA</div><div class="sub">HLS VIDEO PLAYER</div></div></div><div class="tools"><span class="tiny" id="status">목록 확인 중…</span><button class="btn" id="reload">⟳ 새로고침</button><button class="btn primary app-install" id="appInstall" type="button" aria-label="BRO CINEMA를 홈 화면에 앱처럼 설치">📲 앱 설치</button></div></header>
 <section class="hero"><h1>좋아하는 영상, 한곳에서.</h1><p>확인된 TV위키 재생 주소만 연결합니다. 미연결 작품은 정확히 구분해 표시합니다.</p></section>
 <nav class="tabs" role="tablist"><button class="tab active" role="tab" aria-selected="true" data-cat="영화">🎬 영화</button><button class="tab" role="tab" aria-selected="false" data-cat="한국영화">🇰🇷 한국영화</button><button class="tab" role="tab" aria-selected="false" data-cat="드라마">📺 드라마</button><button class="tab" role="tab" aria-selected="false" data-cat="즐겨찾기">♥ 즐겨찾기 <span id="favCount">0</span></button></nav>
-<div class="row"><div><h2 id="count">영화 · 0편</h2><span class="tiny">최근 개봉·첫방송순 · 방영 예정작은 뒤로 정렬</span><span id="cinemaSyncInfo" class="cinema-sync-info">자동 동기화 확인 중…</span></div><input class="search" id="search" type="search" placeholder="제목 검색" aria-label="제목 검색"></div>
+<div class="row"><div><h2 id="count">영화 · 0편</h2><span class="tiny" id="cinemaSortDescription">최근 개봉·첫방송순 · 방영 예정작은 뒤로 정렬</span><span id="cinemaSyncInfo" class="cinema-sync-info">자동 동기화 확인 중…</span></div><input class="search" id="search" type="search" placeholder="제목 검색" aria-label="제목 검색"></div>
 <main id="grid" class="grid" aria-live="polite"></main><div class="korean-movie-more"><button id="moreKoreanMovies" class="btn" type="button" hidden>한국영화 더 보기</button></div><p class="note">매칭된 작품 포스터는 TV위키의 공개 상세·검색 목록에 표시된 이미지 URL을 사용합니다(실제 이미지는 TMDB 또는 다른 이미지 제공처에서 표시될 수 있습니다). 해당 이미지가 제공되지 않으면 Wikimedia 이미지 또는 제목형 표지를 표시합니다. BRO CINEMA는 해당 제공처와 제휴하지 않습니다. 즐겨찾기는 현재 브라우저에 저장되어 다른 기기와 자동 동기화되지 않습니다.</p>
 <p class="note">본 사이트는 별도 재생 출처를 저장한 경우에만 해당 영상의 직접 재생을 시도합니다. TV위키 플레이어는 다른 도메인의 임베드를 차단하므로 원본 사이트로 이동합니다. 본 사이트는 자체 광고·팝업을 포함하지 않습니다. 영상 내 삽입 광고가 없는지는 콘텐츠 제공자에 따라 다릅니다. 승인된 HTTPS M3U8 스트림만 재생하며, 외부 사이트의 접근 제한·DRM·광고 시스템을 우회하지 않습니다.</p>
 </div>
@@ -501,6 +501,7 @@ function render(){
   const q=$("search").value.trim().toLocaleLowerCase("ko");
   const filtered=items.filter(item=>(cat==="즐겨찾기"?favorites.has(favKey(item)):item.category===cat)&&item.title.toLocaleLowerCase("ko").includes(q)).sort(sortNewest);
   $("count").textContent=cat+" · "+filtered.length+"편";
+  $("cinemaSortDescription").textContent=cat==="한국영화"?"TV위키 최근 등록순 · 원본 목록 기준":cat==="즐겨찾기"?"즐겨찾기에 저장한 작품":"최근 개봉·첫방송순 · 방영 예정작은 뒤로 정렬";
   $("favCount").textContent=String(favorites.size);
   const root=$("grid");root.replaceChildren();
   if(!filtered.length){
