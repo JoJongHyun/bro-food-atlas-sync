@@ -30,7 +30,7 @@ async function post(route,data,cookies='') {
     redirect:'manual'
   });
 }
-test('BRO CINEMA auth, 30-day session, admin separation and no-API persistence response', {timeout:25000},async()=>{
+test('BRO CINEMA rolling session, protected app, admin separation and safe credential rotation', {timeout:25000},async()=>{
   const child=spawn(process.execPath,['cinema/auth_server.mjs'],{
     env:{...process.env,PORT:String(port),AUTH_TEST_LOCAL:'1',ENTRY_CREDENTIAL_HASH:hash(viewer),ADMIN_CREDENTIAL_HASH:hash(admin),SESSION_SIGNING_KEY:'b'.repeat(96),RENDER_API_KEY:''},
     stdio:'ignore'
@@ -47,12 +47,21 @@ test('BRO CINEMA auth, 30-day session, admin separation and no-API persistence r
     assert.equal((await post('/api/login',{password:'wrong'})).status,401);
     const ok=await post('/api/login',{password:viewer});
     assert.equal(ok.status,200);
-    assert.match(ok.headers.get('set-cookie'),/Max-Age=2592000/);
+    assert.match(ok.headers.get('set-cookie'),/Max-Age=34560000/);  // 400 days, renewed on use
+    const loginData=await ok.json();
+    assert.equal(loginData.sessionPolicy,'rolling');
+    assert.equal(loginData.automaticRenewal,true);
     assert.match(ok.headers.get('set-cookie'),/HttpOnly/);
     assert.match(ok.headers.get('set-cookie'),/SameSite=Lax/);
     const session=cookie(ok);
     const catalog=await fetch(base+'/catalog.json',{headers:{Cookie:session}});
     assert.equal(catalog.status,200);
+    assert.match(catalog.headers.get('set-cookie'),/Max-Age=34560000/); // renewed on each request
+    assert.notEqual(cookie(catalog),session); // token is rotated; not tied to an absolute login date
+    const userHome=await fetch(base+'/',{headers:{Cookie:session}});
+    assert.equal(userHome.status,200);
+    assert.match(await userHome.text(),/BRO CINEMA/);
+    assert.match(userHome.headers.get('set-cookie'),/Max-Age=34560000/);
     const data=await catalog.json();
     assert.ok(Array.isArray(data.items));
     const adminUnauth=await fetch(base+'/api/admin/status',{headers:{Cookie:session}});
