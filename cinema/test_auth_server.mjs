@@ -39,7 +39,25 @@ test('BRO CINEMA rolling session, protected app, admin separation and safe crede
     await waitUntilReady();
     const home=await fetch(base+'/');
     assert.equal(home.status,200);
-    assert.match(await home.text(),/입장 비밀번호/);
+    const gateHtml=await home.text();
+    assert.match(gateHtml,/입장 비밀번호/);
+    assert.match(gateHtml,/rel="manifest"/);
+    assert.match(gateHtml,/상단 X 없는 앱으로 설치하기/);
+    // Public PWA install assets are metadata only, even for logged-out users.
+    const manifest=await fetch(base+'/manifest.json');
+    assert.equal(manifest.status,200);
+    assert.match(manifest.headers.get('content-type'),/application\/manifest\+json/);
+    const appManifest=await manifest.json();
+    assert.equal(appManifest.display,'standalone');
+    assert.equal(appManifest.start_url,'/');
+    assert.equal(appManifest.scope,'/');
+    for(const size of [192,512]){
+      const icon=await fetch(base+'/icons/icon-'+size+'.png');
+      assert.equal(icon.status,200);
+      assert.match(icon.headers.get('content-type'),/image\/png/);
+      assert.ok((await icon.arrayBuffer()).byteLength>400);
+    }
+    assert.equal((await fetch(base+'/sw.js')).status,200);
     for(const route of ['/catalog.json','/api/data','/index.html']){
       const restricted=await fetch(base+route);
       assert.equal(restricted.status,route==='/index.html'?200:401);
