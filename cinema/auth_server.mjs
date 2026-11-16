@@ -285,8 +285,17 @@ async function handler(req, res) {
   if (method === 'GET' && !authenticated && (route === '/' || route === '/index.html')) {
     await staticFile(res, 'gate.html', 'text/html; charset=utf-8'); return;
   }
+  // The PWA manifest and its icons are deliberately public: they contain
+  // only app metadata and artwork. Movie content remains session-protected.
+  // This lets visitors install the independent app directly from the gate.
   if (method === 'GET' && route === '/sw.js') {
     await staticFile(res, 'sw-secure.js', 'text/javascript; charset=utf-8'); return;
+  }
+  if (method === 'GET' && route === '/manifest.json') {
+    await staticFile(res, 'manifest.json', 'application/manifest+json'); return;
+  }
+  if (method === 'GET' && /^\/icons\/icon-(?:192|512)\.png$/.test(route)) {
+    await staticFile(res, route.slice(1), 'image/png'); return;
   }
   if (method === 'GET') {
     const allow = permittedResource(route);
