@@ -16,13 +16,14 @@ LOG = logging.getLogger("cinema.tvwiki.recent")
 HOST = "tvwiki60.net"
 CATEGORIES = (("영화", "movie"), ("드라마", "drama"), ("예능", "ent"))
 MAX_RECENT_PAGES = 3
+MAX_ENT_PAGES = 110  # full variety-program archive used only by weekly importer
 CARD_RE = re.compile(r'<div\s+class="box"\s*>(.*?)</div>', re.I | re.S)
 TITLE_RE = re.compile(r'<a\s+href="([^"]+)"\s+class="title2"[^>]*>(.*?)</a>', re.I | re.S)
 POSTER_RE = re.compile(r'<img\s+src="([^"]+)"', re.I)
 
 
 def get_page(route, page):
-    if route not in {"movie", "drama", "ent"} or not 1 <= page <= MAX_RECENT_PAGES:
+    if route not in {"movie", "drama", "ent"} or not 1 <= page <= (MAX_ENT_PAGES if route == "ent" else MAX_RECENT_PAGES):
         raise ValueError("Unrecognized source route or page")
     url = "https://" + HOST + "/" + route + "?" + urllib.parse.urlencode(
         {"sst": "subidx", "page": page}
