@@ -26,6 +26,7 @@ import urllib.request
 
 from sync_tvwiki_kor import sync_kr_movies
 from sync_tvwiki_recent import sync_recent_boards
+from sync_tvwiki_episodes import sync_drama_episodes
 
 LOG = logging.getLogger("cinema.sync")
 UA = "BRO-CINEMA-MetadataSync/1.0 (public TVmaze and Wikimedia API)"
@@ -250,162 +251,70 @@ def read_tvmaze_episodes(show_id, today):
 
 
 def sync(catalog, today):
+    """Hourly, entirely source-driven catalog sync. No title/episode hand entries.
+
+    TVWiki is the single source for movies, Korean movies, drama, and
+    episode page links. Source failures never delete verified links.
+    """
     items = catalog.get("items")
     if not isinstance(items, list):
         raise ValueError("Missing items array")
-    # TVWiki-only playback policy: never publish third-party streaming
-    # watch destinations, including previously cached provider links.
+    # Earlier experiments attached broadcaster viewing links; those are not
+    # part of the TVWiki catalog policy.
     for item in items:
         if isinstance(item, dict):
             item.pop("officialLinks", None)
-    # Preserve all user-maintained fields, posters and verified TVWiki episode URLs.
-    by_key = {item_key(x): x for x in items}
-    by_tvmaze = {x["tvmazeId"]: x for x in items if isinstance(x.get("tvmazeId"), int)}
-    added = {"영화": [], "한국영화": [], "드라마": []}
-    merged = []
-    updated_episodes = []
-    api_success = 0
 
-    tvshows, ok = read_tvmaze(today)
-    api_success += ok
-    for show in tvshows:
-        name = strip_markup(show.get("name"))[:180]
-        show_id = show["id"]
-        aliases = []
-        try:
-            aliases = read_tvmaze_akas(show_id)
-            api_success += 1
-            time.sleep(0.3)
-        except RuntimeError as e:
-            LOG.warning("No aliases for TVmaze %s: %s", show_id, e)
-        candidate_names = [name] + aliases
-        preferred_ko = next((v for v in aliases if re.search(r"[가-힣]", v)), None)
-        # A translated title is the same show, never a second film/drama.
-        matches = []
-        for alias in candidate_names:
-            alternatives = [alias]
-            if alias.startswith("더 "):
-                alternatives.append(alias[2:].strip())
-            for n in alternatives:
-                item = by_key.get("드라마|" + norm_name(n))
-                if item is not None and item not in matches:
-                    matches.append(item)
-        current = by_tvmaze.get(show_id)
-        if current is not None and current not in matches:
-            matches.append(current)
-        manual = next((x for x in matches if not str(x.get("id", "")).startswith("auto-tvmaze-")), None)
-        existing = manual or current or (matches[0] if matches else None)
-        for duplicate in matches:
-            if duplicate is existing or not str(duplicate.get("id", "")).startswith("auto-tvmaze-"):
-                continue
-            if not existing.get("officialEpisodes") and duplicate.get("officialEpisodes"):
-                existing["officialEpisodes"] = duplicate["officialEpisodes"]
-            if duplicate in items:
-                items.remove(duplicate)
-                merged.append({"removed": duplicate.get("title"), "kept": existing.get("title")})
-                by_key.pop(item_key(duplicate), None)
-
-        if existing:
-            if existing.get("tvmazeId") in (None, ""):
-                existing["tvmazeId"] = show_id
-            # Do not rename manual titles or overwrite verified playback fields.
-            if str(existing.get("id", "")).startswith("auto-tvmaze-") and preferred_ko:
-                newer_key = "드라마|" + norm_name(preferred_ko)
-                if newer_key not in by_key or by_key[newer_key] is existing:
-                    by_key.pop(item_key(existing), None)
-                    existing["title"] = preferred_ko
-                    by_key[newer_key] = existing
-            by_tvmaze[show_id] = existing
-        elif len(added["드라마"]) < MAX_NEW_PER_CATEGORY:
-            existing = new_tvmaze_item(show, preferred_ko)
-            items.append(existing)
-            by_key[item_key(existing)] = existing
-            by_tvmaze[show_id] = existing
-            added["드라마"].append(existing["title"])
-
-    movies, works_ok, work_sources = read_recent_works(today)
-    api_success += works_ok
-    # Rolling catch-up prevents source-indexed titles from being skipped when
-    # more than MAX_NEW_PER_CATEGORY are discovered during one sync.
-    # A category's timestamp is its index date, not its theatrical air date.
-    last_film_check = (catalog.get("autoSync") or {}).get("lastFilmSyncAt") or (
-        catalog.get("autoSync") or {}).get("checkedAt") or ""
-    rolling_cutoff = (dt.datetime.combine(
-        today - dt.timedelta(days=60), dt.time.min, tzinfo=dt.timezone.utc
-    ).isoformat())
-    for incoming in movies:
-        cat = incoming["category"]
-        key = item_key(incoming)
-        # Ignore already stored works, including earlier imported foreign IDs.
-        if key in by_key or len(added[cat]) >= MAX_NEW_PER_CATEGORY:
-            continue
-        stamp = incoming.get("sourceIndexedAt") or ""
-        # Backfill recently indexed pages even after an earlier successful scan.
-        if stamp and stamp < rolling_cutoff:
-            continue
-        items.append(incoming)
-        by_key[key] = incoming
-        added[cat].append(incoming["title"])
-
-    # Keep the Korean-movie tab sourced exclusively from the TVWiki /kor_movie
-    # public listing, not from Wikimedia film categories or guesses.
-    tvwiki_kr = sync_kr_movies(catalog)
-    tvwiki_recent = sync_recent_boards(catalog)
-    added["한국영화"] = [
-        x["title"] for x in items if x.get("category") == "한국영화"
-        and x.get("sourceProvider") == "TVWiki Korean movie index"
-    ][:0]  # The source's count is reported separately, not as invented titles.
-
-    # Sync official episode metadata, not playable TVWiki video links.
-    # Existing user-provided TVWiki 'episodes' are preserved unchanged.
-    for item in list(by_tvmaze.values())[:120]:
-        show_id = item.get("tvmazeId")
-        if not isinstance(show_id, int):
-            continue
-        try:
-            new = read_tvmaze_episodes(show_id, today)
-            api_success += 1
-            old = item.get("officialEpisodes") or []
-            if not isinstance(old, list):
-                old = []
-            if new != old:
-                item["officialEpisodes"] = new
-                diff = len({(e["season"], e["number"]) for e in new} -
-                           {(e.get("season"), e.get("number")) for e in old})
-                if diff:
-                    updated_episodes.append({"title": item["title"], "newCount": diff, "total": len(new)})
-            time.sleep(0.45)
-        except (RuntimeError, ValueError) as e:
-            LOG.warning("Episodes unavailable for %s: %s", item.get("title"), e)
-
-    if api_success == 0:
-        raise RuntimeError("Every official metadata API failed; unchanged catalog retained")
-
-    when = utc_now().isoformat(timespec="seconds")
-    summary = {
-        "status": "ok", "checkedAt": when,
-        "lastFilmSyncAt": when if works_ok else last_film_check,
-        "sourceCategoriesChecked": work_sources,
-        "source": ["TVmaze public API", "Wikimedia MediaWiki API (other categories)", "TVWiki public recent-broadcast movie, Korean film and drama listings"],
-        "tvwikiKoreanMovieSync": {"status": tvwiki_kr.get("status"), "totalPages": tvwiki_kr.get("totalPages"), "pagesFetched": tvwiki_kr.get("pagesFetched"), "newTitles": tvwiki_kr.get("newTitles"), "tvwikiLinked": tvwiki_kr.get("tvwikiLinked")},
-        "tvwikiRecentBoards": tvwiki_recent,
-        "newTitles": {**{k: len(v) + int((tvwiki_recent.get(k) or {}).get("newTitles") or 0) for k, v in added.items()}, "한국영화": int(tvwiki_kr.get("newTitles") or 0)},
-        "newEpisodeMetadata": sum(x["newCount"] for x in updated_episodes),
-        "titlesAdded": [{"category": k, "title": title} for k, vals in added.items() for title in vals],
-        "episodeChanges": updated_episodes[:40],
-        "duplicatesMerged": merged[:40],
-        "sourceRequestsSucceeded": api_success,
-        "tvwikiLinked": sum(1 for x in items if isinstance(x, dict) and (
-            x.get("tvwikiPage") or any(e.get("pageUrl") for e in (x.get("episodes") or []) if isinstance(e, dict))
-        )),
-        "note": "Public discovery metadata is separate from TVWiki playback. Only verified TVWiki page links are displayed; third-party provider watch links are removed and not regenerated.",
+    stamp = utc_now().isoformat(timespec="seconds")
+    kr = sync_kr_movies(catalog, timestamp=stamp)
+    boards = sync_recent_boards(catalog)
+    episodes = sync_drama_episodes(catalog, timestamp=stamp)
+    new_titles = {
+        "영화": int(boards.get("영화", {}).get("newTitles") or 0),
+        "한국영화": int(kr.get("newTitles") or 0),
+        "드라마": int(boards.get("드라마", {}).get("newTitles") or 0),
     }
-    history = catalog.get("autoSyncHistory") or []
-    history.insert(0, summary)
-    catalog["autoSyncHistory"] = history[:12]
+    unavailable = (kr.get("status") == "source_unavailable"
+                   and all(boards.get(cat, {}).get("status") != "ok"
+                           for cat in ("영화", "드라마"))
+                   and episodes.get("status") in ("blocked", "partial"))
+    summary = {
+        "status": "source_unavailable" if unavailable else "partial" if (
+            kr.get("status") != "ok"
+            or any(boards.get(cat, {}).get("status") != "ok" for cat in ("영화", "드라마"))
+            or episodes.get("status") != "ok"
+        ) else "ok",
+        "checkedAt": stamp,
+        "source": ["TVWiki public movie list", "TVWiki public Korean-film list",
+                   "TVWiki public drama list", "TVWiki public drama episode index"],
+        "newTitles": new_titles,
+        "newEpisodes": episodes.get("newEpisodes", 0),
+        "newEpisodeMetadata": 0,
+        "tvwikiKoreanMovieSync": {
+            "status": kr.get("status"), "totalPages": kr.get("totalPages"),
+            "pagesFetched": kr.get("pagesFetched"), "newTitles": kr.get("newTitles"),
+            "tvwikiLinked": kr.get("tvwikiLinked")
+        },
+        "tvwikiRecentBoards": boards,
+        "tvwikiEpisodeSync": episodes,
+        "tvwikiLinked": sum(1 for it in items if isinstance(it, dict)
+                            and (it.get("tvwikiPage") or any(
+                                ep.get("pageUrl") for ep in it.get("episodes", [])
+                                if isinstance(ep, dict)))),
+        "totalTitles": len(items),
+        "note": "Titles and episode buttons update only from current TVWiki public list links; failures are surfaced. No media downloads, invented episode URLs, or manual catalog entries.",
+    }
+    history = catalog.get("autoSyncHistory")
+    if not isinstance(history, list):
+        history = []
+    catalog["autoSyncHistory"] = [summary] + history[:23]
     catalog["autoSync"] = summary
-    catalog["updatedAt"] = when
+    catalog["updatedAt"] = stamp
+    LOG.info("New titles %s, TVWiki episodes +%s, episode detail pages %s, status %s",
+             new_titles, summary["newEpisodes"],
+             episodes.get("detailPagesChecked"), summary["status"])
     return summary
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -416,8 +325,8 @@ def main():
     file = Path(args.catalog)
     original = json.loads(file.read_text(encoding="utf-8"))
     report = sync(original, utc_now().date())
-    LOG.info("New titles %s, new official episodes %s, API responses %s",
-             report["newTitles"], report["newEpisodeMetadata"], report["sourceRequestsSucceeded"])
+    LOG.info("Synchronized TVWiki titles %s, episodes +%s, status %s",
+             report["newTitles"], report["newEpisodes"], report["status"])
     if not args.dry_run:
         # Atomic write, and never discard preexisting fields.
         tmp = file.with_suffix(".json.tmp")
