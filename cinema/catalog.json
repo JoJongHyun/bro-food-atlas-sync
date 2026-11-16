@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T01:33:08+00:00",
+  "updatedAt": "2026-11-16T01:34:30+00:00",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -64590,6 +64590,68 @@
   "autoSyncHistory": [
     {
       "status": "ok",
+      "checkedAt": "2026-11-16T01:34:30+00:00",
+      "source": [
+        "TVWiki public movie list",
+        "TVWiki public Korean-film list",
+        "TVWiki public drama list",
+        "TVWiki public drama episode index"
+      ],
+      "newTitles": {
+        "영화": 0,
+        "한국영화": 0,
+        "드라마": 0
+      },
+      "newEpisodes": 0,
+      "newEpisodeMetadata": 0,
+      "tvwikiKoreanMovieSync": {
+        "status": "ok",
+        "totalPages": 151,
+        "pagesFetched": 3,
+        "newTitles": 0,
+        "tvwikiLinked": 4507
+      },
+      "tvwikiRecentBoards": {
+        "영화": {
+          "status": "ok",
+          "sort": "recent_broadcast",
+          "pagesFetched": 3,
+          "itemsIndexed": 90,
+          "newTitles": 0
+        },
+        "드라마": {
+          "status": "ok",
+          "sort": "recent_broadcast",
+          "pagesFetched": 3,
+          "itemsIndexed": 90,
+          "newTitles": 0
+        },
+        "예능": {
+          "status": "ok",
+          "sort": "recent_broadcast",
+          "pagesFetched": 3,
+          "itemsIndexed": 90,
+          "newTitles": 0
+        }
+      },
+      "tvwikiEpisodeSync": {
+        "status": "ok",
+        "checkedAt": "2026-11-16T01:34:30+00:00",
+        "detailPagesChecked": 0,
+        "titlesWithEpisodeChanges": 0,
+        "newEpisodes": 0,
+        "episodeScanQueue": 0,
+        "parseWithoutEpisodeList": 0,
+        "fetchErrors": 0,
+        "reason": "",
+        "note": "Public TVWiki program episode links are checked; no media files or DRM bypass."
+      },
+      "tvwikiLinked": 4814,
+      "totalTitles": 4959,
+      "note": "Titles and episode buttons update only from current TVWiki public list links; failures are surfaced. No media downloads, invented episode URLs, or manual catalog entries."
+    },
+    {
+      "status": "ok",
       "checkedAt": "2026-11-16T01:33:08+00:00",
       "source": [
         "TVWiki public movie list",
@@ -65780,7 +65842,7 @@
   ],
   "autoSync": {
     "status": "ok",
-    "checkedAt": "2026-11-16T01:33:08+00:00",
+    "checkedAt": "2026-11-16T01:34:30+00:00",
     "source": [
       "TVWiki public movie list",
       "TVWiki public Korean-film list",
@@ -65826,7 +65888,7 @@
     },
     "tvwikiEpisodeSync": {
       "status": "ok",
-      "checkedAt": "2026-11-16T01:33:08+00:00",
+      "checkedAt": "2026-11-16T01:34:30+00:00",
       "detailPagesChecked": 0,
       "titlesWithEpisodeChanges": 0,
       "newEpisodes": 0,
@@ -65834,7 +65896,7 @@
       "parseWithoutEpisodeList": 0,
       "fetchErrors": 0,
       "reason": "",
-      "note": "Public TVWiki drama episode links are checked; no media files or DRM bypass."
+      "note": "Public TVWiki program episode links are checked; no media files or DRM bypass."
     },
     "tvwikiLinked": 4814,
     "totalTitles": 4959,
@@ -65845,7 +65907,7 @@
     "nextPage": 2,
     "status": "ok",
     "source": "https://tvwiki60.net/kor_movie",
-    "checkedAt": "2026-11-16T01:33:08+00:00",
+    "checkedAt": "2026-11-16T01:34:30+00:00",
     "totalPages": 151,
     "pagesFetched": 3,
     "scanNextPage": 2,
@@ -65884,7 +65946,7 @@
   },
   "tvwikiEpisodeSync": {
     "status": "ok",
-    "checkedAt": "2026-11-16T01:33:08+00:00",
+    "checkedAt": "2026-11-16T01:34:30+00:00",
     "detailPagesChecked": 0,
     "titlesWithEpisodeChanges": 0,
     "newEpisodes": 0,
@@ -65892,6 +65954,6 @@
     "parseWithoutEpisodeList": 0,
     "fetchErrors": 0,
     "reason": "",
-    "note": "Public TVWiki drama episode links are checked; no media files or DRM bypass."
+    "note": "Public TVWiki program episode links are checked; no media files or DRM bypass."
   }
 }
