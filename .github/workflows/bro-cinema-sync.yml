@@ -10,6 +10,7 @@ on:
       - 'cinema/sync_catalog.py'
       - 'cinema/sync_tvwiki_kor.py'
       - 'cinema/sync_tvwiki_recent.py'
+      - 'cinema/sync_tvwiki_ent.py'
       - 'cinema/sync_tvwiki_episodes.py'
       - 'cinema/test_sync_tvwiki_episodes.py'
       - 'cinema/.sync-trigger'
@@ -37,7 +38,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Validate update code
-        run: python -m py_compile cinema/sync_catalog.py cinema/sync_tvwiki_kor.py cinema/sync_tvwiki_recent.py cinema/sync_tvwiki_episodes.py
+        run: python -m py_compile cinema/sync_catalog.py cinema/sync_tvwiki_kor.py cinema/sync_tvwiki_recent.py cinema/sync_tvwiki_episodes.py cinema/sync_tvwiki_ent.py
       - name: Verify public episode parser
         run: python cinema/test_sync_tvwiki_episodes.py
       - name: Auto-sync TVWiki new titles and actual drama episode links
