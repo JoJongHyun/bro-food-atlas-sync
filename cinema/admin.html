@@ -1,0 +1,89 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BRO CINEMA · 관리</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;color-scheme:dark;color:#f5f7ff}
+*{box-sizing:border-box}body{background:#0a101c;min-height:100vh;margin:0;padding:22px 14px}
+main{max-width:540px;margin:20px auto}h1{font-size:25px;margin:0 0 7px}h2{font-size:18px}
+.hint{color:#a6badc;font-size:13px;line-height:1.7}
+.card{padding:22px;border-radius:16px;border:1px solid #314462;background:#111e30;margin:18px 0}
+input{width:100%;background:#0a1221;border:1px solid #3e5576;border-radius:10px;padding:12px;color:#fff;margin-top:7px;font:inherit}
+label{display:block;font-size:13px;font-weight:700;margin:13px 0}
+button{cursor:pointer;background:#3e65a4;color:#fff;border:0;padding:12px 16px;border-radius:10px;font-weight:700}
+button:disabled{opacity:.6}button.secondary{background:#273c5a}a{color:#bdceff}
+.actions{display:flex;flex-wrap:wrap;gap:10px}.msg{font-size:13px;line-height:1.8;color:#ffce94;white-space:pre-wrap;overflow-wrap:anywhere}
+pre{white-space:pre-wrap;word-break:break-all;user-select:all;border:1px solid #48638f;border-radius:9px;padding:11px;background:#071021;color:#e4f4ff;font-size:12px}
+small{color:#aebcd5}#management[hidden],#adminLogin[hidden],#manual[hidden]{display:none}
+</style></head><body>
+<main><div class="actions"><a href="/">← BRO CINEMA</a><span style="flex:1"></span><button id="logout" class="secondary">입장 로그아웃</button></div>
+<h1>🔐 BRO CINEMA 관리자</h1><p class="hint">관리자 전용 화면입니다. 일반 입장 비밀번호와 관리자 비밀번호는 서로 달라야 합니다.</p>
+<section id="adminLogin" class="card" hidden>
+<h2>관리자 인증</h2>
+<form id="adminForm"><label for="adminPass">관리자 비밀번호<input id="adminPass" type="password" autocomplete="current-password" required></label>
+<button type="submit">관리자 인증하기</button></form>
+<p id="adminError" class="msg" aria-live="polite"></p></section>
+<section id="management" hidden>
+<div class="card"><h2>공용 입장 비밀번호 변경</h2>
+<p class="hint">변경 후 기존 공유 비밀번호로는 새로운 입장을 할 수 없습니다. 기존 30일 인증 세션도 즉시 만료되도록 설계되어 있습니다.</p>
+<form id="change"><label>새 공용 비밀번호<input id="next" type="password" minlength="12" maxlength="128" required autocomplete="new-password" placeholder="12글자 이상, 추측하기 어려운 비밀번호"></label>
+<label>새 공용 비밀번호 다시 입력<input id="again" type="password" minlength="12" maxlength="128" required autocomplete="new-password"></label>
+<button type="submit">공용 비밀번호 변경하기</button></form>
+</div>
+<div class="card"><h2>관리자 비밀번호 변경</h2><p class="hint">관리자 인증 비밀번호도 별도로 변경할 수 있습니다.</p>
+<form id="changeAdmin"><label>새 관리자 비밀번호<input id="newAdmin" type="password" minlength="12" maxlength="128" required autocomplete="new-password"></label>
+<label>관리자 비밀번호 다시 입력<input id="againAdmin" type="password" minlength="12" maxlength="128" required autocomplete="new-password"></label>
+<button type="submit">관리자 비밀번호 변경하기</button></form></div>
+<div id="manual" class="card" hidden><h2>Render 설정을 통한 변경 필요</h2><p class="hint">현재 서버에 Render API 권한이 설정되지 않아 비밀번호 변경이 아직 적용되지 않았습니다. 아래 값을 Render 서비스의 Environment에 반영한 다음 재배포해야 변경됩니다.</p>
+<div id="envKey"></div><pre id="envValue"></pre><button id="copy" class="secondary">설정값 복사</button></div>
+<p id="message" class="msg" aria-live="polite"></p>
+</section></main>
+<script>
+const $=id=>document.getElementById(id);
+async function api(url,data){
+ const response=await fetch(url,{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+ const json=await response.json();
+ if(!response.ok){const error=new Error(json.error||'요청을 완료하지 못했습니다.');error.details=json;throw error}
+ return json;
+}
+async function refresh(){
+ const res=await fetch('/api/admin/status',{credentials:'same-origin'});
+ const json=await res.json();
+ if(!res.ok){location.replace('/login');return}
+ $('adminLogin').hidden=Boolean(json.admin);
+ $('management').hidden=!json.admin;
+ if(!json.canAutoRotate&&json.admin)$('message').textContent='자동 비밀번호 변경을 사용하려면 Render에 API 키를 설정해야 합니다. 키가 없는 경우 변경할 환경변수 값을 안내합니다.';
+}
+$('adminForm').addEventListener('submit',async e=>{
+ e.preventDefault();
+ try{await api('/api/admin/login',{password:$('adminPass').value});$('adminPass').value='';$('adminError').textContent='';await refresh();}
+ catch(error){$('adminError').textContent=error.message}
+});
+async function change(kind,first,second){
+ const a=$(first).value,b=$(second).value;
+ if(a!==b)throw new Error('새 비밀번호 두 값이 일치하지 않습니다.');
+ if(a.length<12)throw new Error('12글자 이상으로 설정해 주세요.');
+ try{
+  const result=await api('/api/admin/change-password',{kind,newPassword:a});
+  $(first).value='';$(second).value='';
+  $('manual').hidden=true;$('message').textContent=result.message||'변경했습니다.';
+  if(kind==='admin')setTimeout(()=>location.reload(),1300);
+ }catch(error){
+  if(error.details?.manualAction){
+   $('envKey').textContent=error.details.envKey;
+   $('envValue').textContent=error.details.envValue;
+   $('manual').hidden=false;
+  }
+  throw error;
+ }
+}
+for(const [form,kind,first,second] of [['change','user','next','again'],['changeAdmin','admin','newAdmin','againAdmin']]){
+ $(form).addEventListener('submit',async e=>{
+  e.preventDefault();const button=e.submitter;button.disabled=true;
+  try{await change(kind,first,second)}catch(error){$('message').textContent=error.message}
+  finally{button.disabled=false}
+ });
+}
+$('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('envValue').textContent);$('message').textContent='설정값을 복사했습니다. Render Environment에 입력 후 저장·재배포하세요.'}catch{$('message').textContent='설정값을 길게 눌러 직접 복사해 주세요.'}});
+$('logout').addEventListener('click',async()=>{try{await api('/api/logout',{})}finally{location.replace('/login')}});
+refresh();
+</script></body></html>
