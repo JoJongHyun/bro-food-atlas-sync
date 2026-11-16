@@ -134,7 +134,7 @@
   <button id="installOfferGo" type="button" class="install-offer-go">설치 방법</button>
   <button id="installOfferDismiss" type="button" class="install-offer-dismiss" aria-label="나중에 설치">×</button>
 </section>
-<header class="top"><div class="logo"><div class="logo-mark">▶</div><div><div class="brand">BRO CINEMA</div><div class="sub">HLS VIDEO PLAYER</div></div></div><div class="tools"><span class="tiny" id="status">목록 확인 중…</span><button class="btn" id="reload">⟳ 새로고침</button><a class="btn" href="./admin" style="text-decoration:none;display:inline-flex;align-items:center">⚙ 관리자</a><button class="btn" id="broLogout" type="button">↪ 로그아웃</button><button class="btn primary app-install" id="appInstall" type="button" aria-label="BRO CINEMA를 홈 화면에 앱처럼 설치">📲 앱 설치</button></div></header>
+<header class="top"><div class="logo"><div class="logo-mark">▶</div><div><div class="brand">BRO CINEMA</div><div class="sub">HLS VIDEO PLAYER</div></div></div><div class="tools"><span class="tiny" id="status">목록 확인 중…</span><button class="btn" id="reload">⟳ 새로고침</button><a class="btn" href="./admin" style="text-decoration:none;display:inline-flex;align-items:center">⚙ 관리자</a><button class="btn" id="broLogout" type="button">↪ 로그아웃</button><button class="btn primary app-install" id="appInstall" type="button" aria-label="BRO CINEMA를 상단 X 없는 독립 앱으로 설치하는 방법">📲 X 없는 앱</button></div></header>
 <section class="hero"><h1>좋아하는 영상, 한곳에서.</h1><p>확인된 TV위키 재생 주소만 연결합니다. 미연결 작품은 정확히 구분해 표시합니다.</p></section>
 <nav class="tabs" role="tablist"><button class="tab active" role="tab" aria-selected="true" data-cat="영화">🎬 영화</button><button class="tab" role="tab" aria-selected="false" data-cat="한국영화">🇰🇷 한국영화</button><button class="tab" role="tab" aria-selected="false" data-cat="드라마">📺 드라마</button><button class="tab" role="tab" aria-selected="false" data-cat="예능">🎤 예능</button><button class="tab" role="tab" aria-selected="false" data-cat="즐겨찾기">♥ 즐겨찾기 <span id="favCount">0</span></button></nav>
 <div class="row"><div><h2 id="count">영화 · 0편</h2><span class="tiny" id="cinemaSortDescription">최근 방영순 · 영화 → 한국영화 → 드라마 → 예능</span><span id="cinemaSyncInfo" class="cinema-sync-info">자동 동기화 확인 중…</span></div><input class="search" id="search" type="search" placeholder="제목 검색" aria-label="제목 검색"></div>
@@ -211,7 +211,10 @@ function maybeShowInstallOffer(){
   $("installOffer").hidden=false;
 }
 function updateInstallButton(){
-  $("appInstall").hidden=isStandalone();
+  // Keep an explicit help control visible even in Android in-app tabs.
+  // Some browser shells report a standalone display mode while still
+  // showing their native close-X toolbar.
+  $("appInstall").hidden=false;
   if(isStandalone())hideInstallOffer();
 }
 window.addEventListener("beforeinstallprompt",event=>{
@@ -235,12 +238,12 @@ function showInstallInstructions(){
     :samsung
       ?"1. 삼성 인터넷 메뉴(≡)를 여세요.\n2. '현재 페이지 추가' → '홈 화면'을 선택하세요.\n3. 이름을 확인하고 '추가'를 누르세요."
       :android
-        ?"1. Chrome 표시가 붙은 BRO CINEMA 홈 화면 바로가기만 삭제하세요.\n2. Chrome에서 사이트를 열고 잠시 이용한 뒤 '앱 설치' 버튼을 눌러보세요.\n3. Chrome의 정식 설치창 또는 ⋮ → '앱 설치' → '설치'를 선택하세요.\n4. '바로가기 만들기'만 나온다면 앱 목록 설치가 아닙니다. Chrome 업데이트와 Google Play 서비스 상태를 확인하고 다시 시도하세요."
+        ?"1. 지금처럼 상단에 X가 보이면 브라우저 자체 상단바라 사이트에서 숨길 수 없습니다.\n2. X 옆의 ⋮ 메뉴에서 'Chrome으로 열기'를 선택하거나 주소를 Chrome에서 직접 여세요.\n3. Chrome의 ⋮ 메뉴 → '앱 설치' → '설치'를 선택하세요.\n4. 휴대폰 홈 화면의 BRO CINEMA 아이콘으로 실행하면 상단 X와 주소 표시줄이 사라집니다.\n5. '바로가기 만들기'만 나오면 독립 앱이 아니라 브라우저 바로가기일 수 있습니다."
         :"Chrome 또는 Edge 주소창의 설치 아이콘을 누르거나, ⋮ 메뉴에서 '앱 설치'를 선택하세요.\n지원되지 않는 브라우저라면 즐겨찾기로 저장하세요.";
   $("installHelp").showModal();
 }
 async function requestCinemaInstall(){
-  if(isStandalone())return;
+  if(isStandalone()){showInstallInstructions();return;}
   hideInstallOffer();
   if(pendingInstallPrompt){
     const prompt=pendingInstallPrompt;
