@@ -1,0 +1,30 @@
+name: BRO CINEMA authenticated access tests
+on:
+  push:
+    branches: [bro-cinema-standalone]
+    paths:
+      - 'cinema/auth_server.mjs'
+      - 'cinema/gate.html'
+      - 'cinema/admin.html'
+      - 'cinema/sw-secure.js'
+      - 'cinema/test_auth_server.mjs'
+      - 'cinema/index.html'
+      - '.github/workflows/bro-cinema-access-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  auth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: bro-cinema-standalone
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check server syntax
+        run: node --check cinema/auth_server.mjs
+      - name: Test authentication and access isolation
+        run: node --test cinema/test_auth_server.mjs
