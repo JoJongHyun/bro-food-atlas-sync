@@ -4,7 +4,7 @@ name: BRO CINEMA hourly TVWiki Korean movie and episode index sync
 # The live cinema files are intentionally maintained on bro-cinema-standalone.
 on:
   schedule:
-    - cron: '17 * * * *'
+    - cron: '17,47 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -37,9 +37,11 @@ jobs:
           python-version: '3.12'
 
       - name: Validate updater
-        run: python -m py_compile cinema/sync_catalog.py cinema/sync_tvwiki_kor.py
+        run: python -m py_compile cinema/sync_catalog.py cinema/sync_tvwiki_kor.py cinema/sync_tvwiki_recent.py cinema/sync_tvwiki_episodes.py
 
-      - name: Import public TVWiki Korean-film index and refresh other film/drama metadata
+      - name: Verify public episode parser
+        run: python cinema/test_sync_tvwiki_episodes.py
+      - name: Auto-sync TVWiki new titles and drama episode links
         run: python cinema/sync_catalog.py --catalog cinema/catalog.json
 
       - name: Commit TVWiki indexed movies while preserving verified playback links
