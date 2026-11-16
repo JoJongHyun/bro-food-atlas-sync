@@ -541,6 +541,7 @@ function render(){
     art.append(el("span","tag",isUpcoming(item)?"공개 예정":resolvedMedia(item)?"사이트 내 재생":isTvwikiListingOnly(item)?"TV위키 등록 · 영상 대기":validTvwikiPage(item.tvwikiPage)||item.episodes?.some(e=>validTvwikiPage(e.pageUrl))?"TV위키 연결":"TV위키 미연결"));
     const cap=el("div","caption");
     cap.append(el("strong","",item.title),el("small","",(item.releaseDate||item.year||(item.category==="한국영화"?"TV위키 한국영화":"날짜 미확인"))+(isUpcoming(item)?" · 공개 예정":resolvedMedia(item)?" · 재생 가능":isTvwikiListingOnly(item)?" · 본편 대기":validTvwikiPage(item.tvwikiPage)||item.episodes?.some(e=>validTvwikiPage(e.pageUrl))?" · TV위키 링크":" · TV위키 미연결")));
+    if(item.category==="드라마"&&item.episodes?.length){cap.append(el("small","",item.episodes.length+"개 회차 연결 · 자동 갱신"));}
     open.append(art,cap);
     open.addEventListener("click",()=>resolvedMedia(item)?openVideo(item):showMissing(item));
     const star=el("button","fav-heart",favorites.has(favKey(item))?"♥":"♡");
@@ -550,24 +551,29 @@ function render(){
     card.append(open,star);root.append(card);
   }
 }
-async function sync(){const button=$("reload");button.disabled=true;$("status").textContent="목록 확인 중…";try{let response;try{response=await fetch("https://raw.githubusercontent.com/JoJongHyun/bro-food-atlas-sync/bro-cinema-standalone/cinema/catalog.json?ts="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("GitHub "+response.status)}catch(remoteError){console.warn("실시간 목록 접근 불가, 배포된 목록으로 대체",remoteError);response=await fetch("./catalog.json?ts="+Date.now(),{cache:"no-store"})}if(!response.ok)throw Error("HTTP "+response.status);const payload=await response.json();if(!Array.isArray(payload.items))throw Error("목록 형식 오류");seedItems=payload.items.map(normalize).filter(x=>x&&(x.category!=="한국영화"||validTvwikiPage(x.tvwikiPage)||x.episodes?.some(e=>validTvwikiPage(e.pageUrl))));items=seedItems;
+async function sync(){const button=$("reload");button.disabled=true;$("status").textContent="목록 확인 중…";try{let response;try{response=await fetch("https://raw.githubusercontent.com/JoJongHyun/bro-food-atlas-sync/bro-cinema-standalone/cinema/catalog.json?ts="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("GitHub "+response.status)}catch(remoteError){console.warn("실시간 목록 접근 불가, 배포된 목록으로 대체",remoteError);response=await fetch("./catalog.json?ts="+Date.now(),{cache:"no-store"})}if(!response.ok)throw Error("HTTP "+response.status);const payload=await response.json();if(!Array.isArray(payload.items))throw Error("목록 형식 오류");seedItems=payload.items.map(normalize).filter(x=>x&&(validTvwikiPage(x.tvwikiPage)||x.episodes?.some(e=>validTvwikiPage(e.pageUrl))||Boolean(resolvedMedia(x))));items=seedItems;
 const korCount=items.filter(x=>x.category==="한국영화").length;
 const korStatus=payload.tvwikiKorSync||{};
 const checked=payload.autoSync?.checkedAt;
 cinemaBackendCheckedAt=checked||"";
 const latest=payload.autoSync||{};
-const recentAdditions=(payload.autoSyncHistory||[]).find(x=>(Object.values(x.newTitles||{}).reduce((a,b)=>a+Number(b||0),0)+Number(x.newEpisodeMetadata||0))>0);
-const t=checked&&!Number.isNaN(Date.parse(checked))
-  ?new Date(checked).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"})
-  :null;
-$("cinemaSyncInfo").textContent=t
-  ?"작품정보 갱신 "+t+" · TV위키 한국영화 "+korCount+"편"+(korStatus.totalPages?" · 원본 "+korStatus.totalPages+"페이지 중 "+(korStatus.fullScanComplete?"전체 확인":(korStatus.scanNextPage||1)+"페이지까지 확인 중"):" · TV위키 목록 확인 전")
-  :"자동 동기화 정보 없음 · 목록을 확인하세요";
-const refreshed=checked&&!Number.isNaN(Date.parse(checked))
+const epSync=payload.tvwikiEpisodeSync||latest.tvwikiEpisodeSync||{};
+const tvwikiNewTitles=Object.values(latest.newTitles||{}).reduce((a,b)=>a+Number(b||0),0);
+const newEpisodes=Number(latest.newEpisodes||0);
+const checkedTime=checked&&!Number.isNaN(Date.parse(checked))
   ?new Date(checked).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"})
   :"시간 미확인";
-$("status").textContent="작품 "+items.length+"편 · 자동 갱신 "+refreshed;
-$("status").title="한국영화는 TVWiki /kor_movie 공개 목록만 사용합니다. 원본 사이트의 접속 제한 및 재생 차단은 우회하지 않습니다.";
+const updateStatus=latest.status||"unknown";
+const sourceError=updateStatus!=="ok";
+const freshMark=sourceError?"원본 일부 점검 실패":"자동 갱신 정상";
+$("cinemaSyncInfo").textContent="TV위키 "+freshMark+" · 최종 확인 "+checkedTime
+  +" · 신규 작품 "+tvwikiNewTitles+"편 · 신규 회차 "+newEpisodes+"건"
+  +" · 회차 상세 확인 "+Number(epSync.detailPagesChecked||0)+"편"
+  +(Number(epSync.episodeScanQueue||0)>0?" · 다음 차례 "+Number(epSync.episodeScanQueue)+"편":"");
+$("status").textContent="TV위키 작품 "+items.length+"편 · "+checkedTime+(sourceError?" · 동기화 일부 제한":"");
+$("status").title=epSync.reason
+  ?"TV위키 원본 응답 제한: "+epSync.reason
+  :"신규 작품과 실제 회차 링크를 자동 대조한 마지막 완료 시각입니다. 원본이 차단한 영상 파일을 추출하지 않습니다.";
 render();
 if(dlg.open&&selected&&selected.category==="드라마"){
   const current=items.find(it=>it.id===selected.id);
@@ -578,7 +584,7 @@ if(dlg.open&&selected&&selected.category==="드라마"){
     }
   }
 }
-await updateWikiTitles();}catch(e){$("status").textContent="목록 갱신 실패";console.error(e);if(!items.length)render();}finally{button.disabled=false;}}
+}catch(e){$("status").textContent="목록 갱신 실패";console.error(e);if(!items.length)render();}finally{button.disabled=false;}}
 function fitTvwikiFrame(){
   const frame=$("tvwikiFrame"),view=$("tvwikiScreen");
   if(!frame||!view||!selected||$("tvwikiViewer").hidden||!dlg.open)return;
@@ -801,7 +807,7 @@ function showMissing(item){
   document.querySelector(".modaltools").style.display="none";
   document.querySelector("p.help").style.display="none";
   $("cast").style.display="none";$("airplay").style.display="none";
-  $("notice").textContent=hasEpisode?"방송 회차를 자동 표시합니다. 영상 미연결 회차는 재생되지 않습니다.":"영상이 연결되지 않았습니다.";
+  $("notice").textContent=hasEpisode?"TV위키에서 확인한 전체회차를 자동 표시합니다.":"TV위키 영상 회차 확인 대기 중입니다.";
   updateEpisodeControls();
   if(!dlg.open)dlg.showModal();
   if(hasEpisode){
