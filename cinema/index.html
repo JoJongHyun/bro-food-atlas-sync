@@ -625,7 +625,7 @@ window.addEventListener("resize",()=>{
 });
 function openNativeEpisode(item,url){
   if(!BRO_ANDROID_APP||!validTvwikiPage(url))return false;
-  const episodes=(item.episodes||[]).filter(e=>validTvwikiPage(e.pageUrl)).sort((a,b)=>a.number-b.number).slice(-100);
+  const episodes=(item.episodes||[]).filter(e=>validTvwikiPage(e.pageUrl)).sort((a,b)=>b.number-a.number).slice(0,100);
   if(!episodes.length)episodes.push({number:1,label:"영상 보기",pageUrl:url});
   const data=episodes.map(e=>({label:e.label,url:e.pageUrl}));
   const params=new URLSearchParams({title:item.title,episode:url,items:JSON.stringify(data)});
@@ -767,7 +767,7 @@ $("tvwikiFullscreen").addEventListener("click",async()=>{
 });
 $("tvwikiFullscreenExit").addEventListener("click",closeCinemaFullscreen);
 function renderEpisodeChoices(item){
-  const known=(item.episodes||[]).filter(e=>Number.isInteger(e.number)&&e.number>0&&validTvwikiPage(e.pageUrl)).sort((a,b)=>item.category==="예능"?b.number-a.number:a.number-b.number);
+  const known=(item.episodes||[]).filter(e=>Number.isInteger(e.number)&&e.number>0&&validTvwikiPage(e.pageUrl)).sort((a,b)=>["드라마","예능"].includes(item.category)?b.number-a.number:a.number-b.number);
   const choices=known.map(e=>({kind:"linked",url:e.pageUrl,number:e.number,label:e.label||e.number+"화"}));
   if(!choices.length&&validTvwikiPage(item.tvwikiPage))choices.push({kind:"linked",url:item.tvwikiPage,number:0,label:isTvwikiListingOnly(item)?"작품 상세":"영상 보기"});
   const root=$("tvwikiEpisodeButtons");root.replaceChildren();
