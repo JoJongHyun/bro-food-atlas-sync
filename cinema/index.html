@@ -558,18 +558,26 @@ const checked=payload.autoSync?.checkedAt;
 cinemaBackendCheckedAt=checked||"";
 const latest=payload.autoSync||{};
 const epSync=payload.tvwikiEpisodeSync||latest.tvwikiEpisodeSync||{};
-const tvwikiNewTitles=Object.values(latest.newTitles||{}).reduce((a,b)=>a+Number(b||0),0);
-const newEpisodes=Number(latest.newEpisodes||0);
-const checkedTime=checked&&!Number.isNaN(Date.parse(checked))
-  ?new Date(checked).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"})
-  :"시간 미확인";
+const history=Array.isArray(payload.autoSyncHistory)?payload.autoSyncHistory:[];
+const meaningfulTitles=history.find(x=>Object.values(x.newTitles||{}).reduce((a,b)=>a+Number(b||0),0)>0);
+const meaningfulEpisodes=history.find(x=>Number(x.newEpisodes||0)>0);
+const fmtHistoryTime=value=>value&&!Number.isNaN(Date.parse(value))
+  ?new Date(value).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"})
+  :"날짜 미확인";
+const checkedTime=fmtHistoryTime(checked);
 const updateStatus=latest.status||"unknown";
 const sourceError=updateStatus!=="ok";
 const freshMark=sourceError?"원본 일부 점검 실패":"자동 갱신 정상";
-$("cinemaSyncInfo").textContent="TV위키 "+freshMark+" · 최종 확인 "+checkedTime
-  +" · 신규 작품 "+tvwikiNewTitles+"편 · 신규 회차 "+newEpisodes+"건"
-  +" · 회차 상세 확인 "+Number(epSync.detailPagesChecked||0)+"편"
-  +(Number(epSync.episodeScanQueue||0)>0?" · 다음 차례 "+Number(epSync.episodeScanQueue)+"편":"");
+const recentTitlesText=meaningfulTitles
+  ?"최근 작품 추가 "+Object.values(meaningfulTitles.newTitles||{}).reduce((a,b)=>a+Number(b||0),0)+"편 ("+fmtHistoryTime(meaningfulTitles.checkedAt)+")"
+  :"최근 작품 추가 이력 없음";
+const recentEpisodesText=meaningfulEpisodes
+  ?"최근 회차 추가 "+Number(meaningfulEpisodes.newEpisodes)+"건 ("+fmtHistoryTime(meaningfulEpisodes.checkedAt)+")"
+  :"최근 회차 추가 이력 없음";
+$("cinemaSyncInfo").textContent="TV위키 "+freshMark+" · 마지막 점검 "+checkedTime
+  +" · "+recentTitlesText+" · "+recentEpisodesText
+  +" · 이번 회차 점검 "+Number(epSync.detailPagesChecked||0)+"편"
+  +(Number(epSync.episodeScanQueue||0)>0?" · 추가 점검 대기 "+Number(epSync.episodeScanQueue)+"편":"");
 $("status").textContent="TV위키 작품 "+items.length+"편 · "+checkedTime+(sourceError?" · 동기화 일부 제한":"");
 $("status").title=epSync.reason
   ?"TV위키 원본 응답 제한: "+epSync.reason
