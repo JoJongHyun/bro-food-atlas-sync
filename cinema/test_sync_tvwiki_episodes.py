@@ -38,7 +38,7 @@ ent_episodes = parse_episodes(ENT_BODY, "1703", route="ent")
 assert [x["number"] for x in ent_episodes] == [1295, 1296], ent_episodes
 assert ent_episodes[-1]["pageUrl"] == "https://tvwiki60.net/ent/1703/406792162"
 assert valid_work_url("https://tvwiki60.net/ent/1703/406792162")
-assert parse_episodes(ENT_BODY, "1703", route="drama") == []
+assert [e["number"] for e in parse_episodes(ENT_BODY, "1703", route="drama")] == [1297]  # route filtering is independent
 from sync_tvwiki_recent import parse_page
 ENT_INDEX = """<div id="list_type"><ul><li><div class="box">
   <a href="https://tvwiki60.net/ent/1703/406792162" class="title2">TV 동물농장</a>
