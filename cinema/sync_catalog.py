@@ -25,8 +25,9 @@ import urllib.parse
 import urllib.request
 
 from sync_tvwiki_kor import sync_kr_movies
+from sync_tvwiki_ent import sync_ent_catalog
 from sync_tvwiki_recent import sync_recent_boards
-from sync_tvwiki_episodes import sync_drama_episodes
+from sync_tvwiki_episodes import sync_drama_episodes, sync_ent_episodes
 
 LOG = logging.getLogger("cinema.sync")
 UA = "BRO-CINEMA-MetadataSync/1.0 (public TVmaze and Wikimedia API)"
@@ -251,9 +252,9 @@ def read_tvmaze_episodes(show_id, today):
 
 
 def sync(catalog, today):
-    """Hourly, entirely source-driven catalog sync. No title/episode hand entries.
+    """30-minute, entirely source-driven catalog sync. No title/episode hand entries.
 
-    TVWiki is the single source for movies, Korean movies, drama, and
+    TVWiki is the single source for movies, Korean movies, drama, entertainment and
     episode page links. Source failures never delete verified links.
     """
     items = catalog.get("items")
@@ -267,28 +268,36 @@ def sync(catalog, today):
 
     stamp = utc_now().isoformat(timespec="seconds")
     kr = sync_kr_movies(catalog, timestamp=stamp)
+    entertainment = sync_ent_catalog(catalog, timestamp=stamp)
     boards = sync_recent_boards(catalog)
     episodes = sync_drama_episodes(catalog, timestamp=stamp)
+    entertainment_episodes = sync_ent_episodes(catalog, timestamp=stamp)
     new_titles = {
         "영화": int(boards.get("영화", {}).get("newTitles") or 0),
         "한국영화": int(kr.get("newTitles") or 0),
         "드라마": int(boards.get("드라마", {}).get("newTitles") or 0),
+        "예능": int(entertainment.get("newTitles") or 0) + int(boards.get("예능", {}).get("newTitles") or 0),
     }
     unavailable = (kr.get("status") == "source_unavailable"
+                   and entertainment.get("status") == "source_unavailable"
                    and all(boards.get(cat, {}).get("status") != "ok"
-                           for cat in ("영화", "드라마"))
-                   and episodes.get("status") in ("blocked", "partial"))
+                           for cat in ("영화", "드라마", "예능"))
+                   and episodes.get("status") in ("blocked", "partial")
+                   and entertainment_episodes.get("status") in ("blocked", "partial"))
     summary = {
         "status": "source_unavailable" if unavailable else "partial" if (
-            kr.get("status") != "ok"
-            or any(boards.get(cat, {}).get("status") != "ok" for cat in ("영화", "드라마"))
-            or episodes.get("status") != "ok"
+            kr.get("status") != "ok" or entertainment.get("status") != "ok"
+            or any(boards.get(cat, {}).get("status") != "ok" for cat in ("영화", "드라마", "예능"))
+            or episodes.get("status") != "ok" or entertainment_episodes.get("status") != "ok"
         ) else "ok",
         "checkedAt": stamp,
         "source": ["TVWiki public movie list", "TVWiki public Korean-film list",
-                   "TVWiki public drama list", "TVWiki public drama episode index"],
+                   "TVWiki public drama list", "TVWiki public drama episode index",
+                   "TVWiki public entertainment list", "TVWiki public entertainment episode index"],
         "newTitles": new_titles,
-        "newEpisodes": episodes.get("newEpisodes", 0),
+        "newEpisodes": int(episodes.get("newEpisodes") or 0) + int(entertainment_episodes.get("newEpisodes") or 0),
+        "newDramaEpisodes": int(episodes.get("newEpisodes") or 0),
+        "newEntertainmentEpisodes": int(entertainment_episodes.get("newEpisodes") or 0),
         "newEpisodeMetadata": 0,
         "tvwikiKoreanMovieSync": {
             "status": kr.get("status"), "totalPages": kr.get("totalPages"),
@@ -297,6 +306,8 @@ def sync(catalog, today):
         },
         "tvwikiRecentBoards": boards,
         "tvwikiEpisodeSync": episodes,
+        "tvwikiEntertainmentCatalog": entertainment,
+        "tvwikiEntertainmentEpisodes": entertainment_episodes,
         "tvwikiLinked": sum(1 for it in items if isinstance(it, dict)
                             and (it.get("tvwikiPage") or any(
                                 ep.get("pageUrl") for ep in it.get("episodes", [])
@@ -310,9 +321,10 @@ def sync(catalog, today):
     catalog["autoSyncHistory"] = [summary] + history[:23]
     catalog["autoSync"] = summary
     catalog["updatedAt"] = stamp
-    LOG.info("New titles %s, TVWiki episodes +%s, episode detail pages %s, status %s",
-             new_titles, summary["newEpisodes"],
-             episodes.get("detailPagesChecked"), summary["status"])
+    LOG.info("New titles %s, TVWiki episodes +%s (drama +%s, entertainment +%s), episode detail pages drama %s + entertainment %s, status %s",
+             new_titles, summary["newEpisodes"], summary["newDramaEpisodes"],
+             summary["newEntertainmentEpisodes"], episodes.get("detailPagesChecked"),
+             entertainment_episodes.get("detailPagesChecked"), summary["status"])
     return summary
 
 
