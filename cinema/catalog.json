@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T00:22:32+00:00",
+  "updatedAt": "2026-11-16T01:32:28+00:00",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -63594,10 +63594,1062 @@
       "description": "Wikimedia 공개 작품 정보 · 영상 연결 별도",
       "sourceUrl": "https://en.wikipedia.org/wiki/Extrawurst_%28film%29",
       "sourceProvider": "Wikimedia (en)"
+    },
+    {
+      "id": "tvwiki-ent-1703",
+      "category": "예능",
+      "title": "TV 동물농장",
+      "tvwikiPage": "https://tvwiki60.net/ent/1703/406792162",
+      "sourceUrl": "https://tvwiki60.net/ent/1703/406792162",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/tv/thumb/tw_15148776030180.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 0
+    },
+    {
+      "id": "tvwiki-ent-931",
+      "category": "예능",
+      "title": "개그콘서트 시즌 2",
+      "tvwikiPage": "https://tvwiki60.net/ent/931/406792156",
+      "sourceUrl": "https://tvwiki60.net/ent/931/406792156",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/85177534604085.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 1
+    },
+    {
+      "id": "tvwiki-ent-3761",
+      "category": "예능",
+      "title": "히스토리야 : 더 라이벌",
+      "tvwikiPage": "https://tvwiki60.net/ent/3761/406792153",
+      "sourceUrl": "https://tvwiki60.net/ent/3761/406792153",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/517cabb8fdf1b8918f6bc50de3aae358680651f4.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 2
+    },
+    {
+      "id": "tvwiki-ent-3972",
+      "category": "예능",
+      "title": "디스이즈 현무로드",
+      "tvwikiPage": "https://tvwiki60.net/ent/3972/406792149",
+      "sourceUrl": "https://tvwiki60.net/ent/3972/406792149",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://image.tmdb.org/t/p/w500/904ugLoQib2bzEcD3jhRUwr1BfC.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 3
+    },
+    {
+      "id": "tvwiki-ent-3979",
+      "category": "예능",
+      "title": "이현우의 체크인 콘서트",
+      "tvwikiPage": "https://tvwiki60.net/ent/3979/406792147",
+      "sourceUrl": "https://tvwiki60.net/ent/3979/406792147",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/ca95ae86e5c89ecbb440654324a9cae570155931.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 4
+    },
+    {
+      "id": "tvwiki-ent-4116",
+      "category": "예능",
+      "title": "신인감독 김연경2",
+      "tvwikiPage": "https://tvwiki60.net/ent/4116/406792144",
+      "sourceUrl": "https://tvwiki60.net/ent/4116/406792144",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/939e34e5ccec6cf1ff64a201e13434333b644f67.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 5
+    },
+    {
+      "id": "tvwiki-ent-4082",
+      "category": "예능",
+      "title": "밥값 하는 남자들",
+      "tvwikiPage": "https://tvwiki60.net/ent/4082/406792142",
+      "sourceUrl": "https://tvwiki60.net/ent/4082/406792142",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/e7a8f57743634cbdc2c3cccc41a8eae6b31363f6.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 6
+    },
+    {
+      "id": "tvwiki-ent-1094",
+      "category": "예능",
+      "title": "미운 우리 새끼",
+      "tvwikiPage": "https://tvwiki60.net/ent/1094/406792141",
+      "sourceUrl": "https://tvwiki60.net/ent/1094/406792141",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/tv/thumb/tw_58552343199079.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 7
+    },
+    {
+      "id": "tvwiki-ent-1944",
+      "category": "예능",
+      "title": "인생이 영화",
+      "tvwikiPage": "https://tvwiki60.net/ent/1944/406792140",
+      "sourceUrl": "https://tvwiki60.net/ent/1944/406792140",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/ad1995e197a9be576bc6e9f85014c189b62717e5.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 8
+    },
+    {
+      "id": "tvwiki-ent-4072",
+      "category": "예능",
+      "title": "퀸 메이커 (MBN)",
+      "tvwikiPage": "https://tvwiki60.net/ent/4072/406792139",
+      "sourceUrl": "https://tvwiki60.net/ent/4072/406792139",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/ff48699b6cc2c26c6f4905db188ce24be0b990c4.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 9
+    },
+    {
+      "id": "tvwiki-ent-3833",
+      "category": "예능",
+      "title": "냉장고를 부탁해 since 2014",
+      "tvwikiPage": "https://tvwiki60.net/ent/3833/406792137",
+      "sourceUrl": "https://tvwiki60.net/ent/3833/406792137",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/202f11f546495fafd59cf3f07a3a193e9b1653a5.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 10
+    },
+    {
+      "id": "tvwiki-ent-455",
+      "category": "예능",
+      "title": "이제 만나러 갑니다",
+      "tvwikiPage": "https://tvwiki60.net/ent/455/406792134",
+      "sourceUrl": "https://tvwiki60.net/ent/455/406792134",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/28691571255432.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 11
+    },
+    {
+      "id": "tvwiki-ent-3978",
+      "category": "예능",
+      "title": "식스센스: B사이드",
+      "tvwikiPage": "https://tvwiki60.net/ent/3978/406792127",
+      "sourceUrl": "https://tvwiki60.net/ent/3978/406792127",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/b9e8fd3f4449d5be6b028fb5050f131b7b53d629.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 12
+    },
+    {
+      "id": "tvwiki-ent-1042",
+      "category": "예능",
+      "title": "이슈 픽 쌤과 함께",
+      "tvwikiPage": "https://tvwiki60.net/ent/1042/406792125",
+      "sourceUrl": "https://tvwiki60.net/ent/1042/406792125",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/tv/thumb/tw_52458458864306.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 13
+    },
+    {
+      "id": "tvwiki-ent-1091",
+      "category": "예능",
+      "title": "1박 2일 시즌 4",
+      "tvwikiPage": "https://tvwiki60.net/ent/1091/406792124",
+      "sourceUrl": "https://tvwiki60.net/ent/1091/406792124",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/6d3941c302f550097cc5ace0f089a4c2ffdc1adb.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 14
+    },
+    {
+      "id": "tvwiki-ent-1067",
+      "category": "예능",
+      "title": "런닝맨",
+      "tvwikiPage": "https://tvwiki60.net/ent/1067/406792123",
+      "sourceUrl": "https://tvwiki60.net/ent/1067/406792123",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/tv/thumb/tw_96854644496866.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 15
+    },
+    {
+      "id": "tvwiki-ent-4193",
+      "category": "예능",
+      "title": "전지적 집착 시점",
+      "tvwikiPage": "https://tvwiki60.net/ent/4193/406792122",
+      "sourceUrl": "https://tvwiki60.net/ent/4193/406792122",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://image.tmdb.org/t/p/w500/obn5tsQKBX1dOEGQv34BPkZ7gH7.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 16
+    },
+    {
+      "id": "tvwiki-ent-468",
+      "category": "예능",
+      "title": "열린음악회",
+      "tvwikiPage": "https://tvwiki60.net/ent/468/406792121",
+      "sourceUrl": "https://tvwiki60.net/ent/468/406792121",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/55400990609602b2a84917ba8969daa0f49ea3d6.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 17
+    },
+    {
+      "id": "tvwiki-ent-457",
+      "category": "예능",
+      "title": "알토란",
+      "tvwikiPage": "https://tvwiki60.net/ent/457/406792119",
+      "sourceUrl": "https://tvwiki60.net/ent/457/406792119",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/13271d8321109e3cf36ae7c67780f89d65a1acbb.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 18
+    },
+    {
+      "id": "tvwiki-ent-1106",
+      "category": "예능",
+      "title": "사장님 귀는 당나귀 귀",
+      "tvwikiPage": "https://tvwiki60.net/ent/1106/406792116",
+      "sourceUrl": "https://tvwiki60.net/ent/1106/406792116",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/tv/thumb/tw_11664694165591.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 19
+    },
+    {
+      "id": "tvwiki-ent-3775",
+      "category": "예능",
+      "title": "우리동네 셀럽 1%의 비밀",
+      "tvwikiPage": "https://tvwiki60.net/ent/3775/406792105",
+      "sourceUrl": "https://tvwiki60.net/ent/3775/406792105",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/018d03ad47f544c36cbd987144aceed1d182057c.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 20
+    },
+    {
+      "id": "tvwiki-ent-1109",
+      "category": "예능",
+      "title": "SBS 인기가요",
+      "tvwikiPage": "https://tvwiki60.net/ent/1109/406792104",
+      "sourceUrl": "https://tvwiki60.net/ent/1109/406792104",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/tv/thumb/tw_68050946709721.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 21
+    },
+    {
+      "id": "tvwiki-ent-473",
+      "category": "예능",
+      "title": "출발! 비디오 여행",
+      "tvwikiPage": "https://tvwiki60.net/ent/473/406792101",
+      "sourceUrl": "https://tvwiki60.net/ent/473/406792101",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/38947269876187.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 22
+    },
+    {
+      "id": "tvwiki-ent-3894",
+      "category": "예능",
+      "title": "TV쇼 진품명품",
+      "tvwikiPage": "https://tvwiki60.net/ent/3894/406792095",
+      "sourceUrl": "https://tvwiki60.net/ent/3894/406792095",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/43328107600088.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 23
+    },
+    {
+      "id": "tvwiki-ent-3571",
+      "category": "예능",
+      "title": "서프라이즈 미스터리 살롱",
+      "tvwikiPage": "https://tvwiki60.net/ent/3571/406792087",
+      "sourceUrl": "https://tvwiki60.net/ent/3571/406792087",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/a443194f5fb065bd735663d7dbe97160d910b717.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 24
+    },
+    {
+      "id": "tvwiki-ent-3830",
+      "category": "예능",
+      "title": "시간관찰자, 더 시크릿",
+      "tvwikiPage": "https://tvwiki60.net/ent/3830/406792063",
+      "sourceUrl": "https://tvwiki60.net/ent/3830/406792063",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/ef6a6312356b5fa8e2b1e221079bc05458c8f53e.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 25
+    },
+    {
+      "id": "tvwiki-ent-1429",
+      "category": "예능",
+      "title": "너의 몸소리가 들려",
+      "tvwikiPage": "https://tvwiki60.net/ent/1429/406792062",
+      "sourceUrl": "https://tvwiki60.net/ent/1429/406792062",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/eca9ed3bb00244070a8686cfd3aa07e5a274c560.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 26
+    },
+    {
+      "id": "tvwiki-ent-1023",
+      "category": "예능",
+      "title": "살림하는 남자들 시즌2",
+      "tvwikiPage": "https://tvwiki60.net/ent/1023/406792057",
+      "sourceUrl": "https://tvwiki60.net/ent/1023/406792057",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/263db0b8137465785ebe6cb622984efd190582ca.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 27
+    },
+    {
+      "id": "tvwiki-ent-1088",
+      "category": "예능",
+      "title": "전지적 참견 시점",
+      "tvwikiPage": "https://tvwiki60.net/ent/1088/406792046",
+      "sourceUrl": "https://tvwiki60.net/ent/1088/406792046",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/632b6a203a5ffeee820050e42f18ad2348470432.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 28
+    },
+    {
+      "id": "tvwiki-ent-480",
+      "category": "예능",
+      "title": "속풀이쇼 동치미",
+      "tvwikiPage": "https://tvwiki60.net/ent/480/406792044",
+      "sourceUrl": "https://tvwiki60.net/ent/480/406792044",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/e662f147ac2753a968d0c044ff525ad4dbfa26a4.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 29
+    },
+    {
+      "id": "tvwiki-ent-4174",
+      "category": "예능",
+      "title": "니가 내라 독박투어",
+      "tvwikiPage": "https://tvwiki60.net/ent/4174/406792040",
+      "sourceUrl": "https://tvwiki60.net/ent/4174/406792040",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/9621d218d0ccb71824abc651f2ae22ef4fb693f1.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 30
+    },
+    {
+      "id": "tvwiki-ent-3884",
+      "category": "예능",
+      "title": "백투더뮤직 시즌 2",
+      "tvwikiPage": "https://tvwiki60.net/ent/3884/406792039",
+      "sourceUrl": "https://tvwiki60.net/ent/3884/406792039",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/11b8809214a8ffdfbc835b3e302b4236dd30bd9e.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 31
+    },
+    {
+      "id": "tvwiki-ent-4172",
+      "category": "예능",
+      "title": "언포게터블 듀엣2",
+      "tvwikiPage": "https://tvwiki60.net/ent/4172/406792028",
+      "sourceUrl": "https://tvwiki60.net/ent/4172/406792028",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/2f19edf6ca7e01ec694a55e13bd1e69129e74068.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 32
+    },
+    {
+      "id": "tvwiki-ent-1089",
+      "category": "예능",
+      "title": "아는 형님",
+      "tvwikiPage": "https://tvwiki60.net/ent/1089/406792027",
+      "sourceUrl": "https://tvwiki60.net/ent/1089/406792027",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/27f3f65e350fd38c4bd36fa016db3d6c0fe13ad8.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 33
+    },
+    {
+      "id": "tvwiki-ent-4188",
+      "category": "예능",
+      "title": "니돈내산 독박투어 시즌6",
+      "tvwikiPage": "https://tvwiki60.net/ent/4188/406792023",
+      "sourceUrl": "https://tvwiki60.net/ent/4188/406792023",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://image.tmdb.org/t/p/w500/msKgNBpXJLuM8pa6HSVyXUWJXJm.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 34
+    },
+    {
+      "id": "tvwiki-ent-4139",
+      "category": "예능",
+      "title": "지구마불 세계여행4",
+      "tvwikiPage": "https://tvwiki60.net/ent/4139/406792010",
+      "sourceUrl": "https://tvwiki60.net/ent/4139/406792010",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/963a8ee5f5cb2fbf58959e02845f0314dfa37cc8.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 35
+    },
+    {
+      "id": "tvwiki-ent-430",
+      "category": "예능",
+      "title": "놀라운 토요일",
+      "tvwikiPage": "https://tvwiki60.net/ent/430/406792003",
+      "sourceUrl": "https://tvwiki60.net/ent/430/406792003",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/cee6ac9014947963c11f496bc703637855afbfc5.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 36
+    },
+    {
+      "id": "tvwiki-ent-1087",
+      "category": "예능",
+      "title": "불후의 명곡",
+      "tvwikiPage": "https://tvwiki60.net/ent/1087/406791993",
+      "sourceUrl": "https://tvwiki60.net/ent/1087/406791993",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/tv/thumb/tw_42138973213327.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 37
+    },
+    {
+      "id": "tvwiki-ent-1085",
+      "category": "예능",
+      "title": "놀면 뭐하니?",
+      "tvwikiPage": "https://tvwiki60.net/ent/1085/406791992",
+      "sourceUrl": "https://tvwiki60.net/ent/1085/406791992",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/80ec8a15cc0ded6ef410fd5cda6fe5df14de8e78.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 38
+    },
+    {
+      "id": "tvwiki-ent-3806",
+      "category": "예능",
+      "title": "건강한 썰 주은네 사랑채",
+      "tvwikiPage": "https://tvwiki60.net/ent/3806/406791988",
+      "sourceUrl": "https://tvwiki60.net/ent/3806/406791988",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/bd6b910a6b1970edf87fdc67715d175dfaf14912.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 39
+    },
+    {
+      "id": "tvwiki-ent-435",
+      "category": "예능",
+      "title": "쇼! 음악중심",
+      "tvwikiPage": "https://tvwiki60.net/ent/435/406791987",
+      "sourceUrl": "https://tvwiki60.net/ent/435/406791987",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/90176092909484.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 40
+    },
+    {
+      "id": "tvwiki-ent-436",
+      "category": "예능",
+      "title": "차트를 달리는 남자",
+      "tvwikiPage": "https://tvwiki60.net/ent/436/406791982",
+      "sourceUrl": "https://tvwiki60.net/ent/436/406791982",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/34704941025119.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 41
+    },
+    {
+      "id": "tvwiki-ent-438",
+      "category": "예능",
+      "title": "접속! 무비월드",
+      "tvwikiPage": "https://tvwiki60.net/ent/438/406791980",
+      "sourceUrl": "https://tvwiki60.net/ent/438/406791980",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/27855303006454.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 42
+    },
+    {
+      "id": "tvwiki-ent-439",
+      "category": "예능",
+      "title": "영화가 좋다",
+      "tvwikiPage": "https://tvwiki60.net/ent/439/406791978",
+      "sourceUrl": "https://tvwiki60.net/ent/439/406791978",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/45578754489034.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 43
+    },
+    {
+      "id": "tvwiki-ent-1151",
+      "category": "예능",
+      "title": "중독자들 어벤져스",
+      "tvwikiPage": "https://tvwiki60.net/ent/1151/406791971",
+      "sourceUrl": "https://tvwiki60.net/ent/1151/406791971",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/d7dc74cf7860176b1ffceb395927e979dd5ac18c.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 44
+    },
+    {
+      "id": "tvwiki-ent-4136",
+      "category": "예능",
+      "title": "영민씨와 대단한 친구들 시즌2",
+      "tvwikiPage": "https://tvwiki60.net/ent/4136/406791969",
+      "sourceUrl": "https://tvwiki60.net/ent/4136/406791969",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://image.tmdb.org/t/p/w500/eHE7FtfTRe3V445XLuwpWpd0O2G.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 45
+    },
+    {
+      "id": "tvwiki-ent-3932",
+      "category": "예능",
+      "title": "도라이버 시즌6",
+      "tvwikiPage": "https://tvwiki60.net/ent/3932/406791966",
+      "sourceUrl": "https://tvwiki60.net/ent/3932/406791966",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://image.tmdb.org/t/p/w500/fDR7bSOSCz6N6ouytg9LHtkEQTM.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 46
+    },
+    {
+      "id": "tvwiki-ent-1090",
+      "category": "예능",
+      "title": "나 혼자 산다",
+      "tvwikiPage": "https://tvwiki60.net/ent/1090/406791937",
+      "sourceUrl": "https://tvwiki60.net/ent/1090/406791937",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/fa01da60bfc0e0c6f0bf587ee9bbfbb213a3ab94.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 47
+    },
+    {
+      "id": "tvwiki-ent-3696",
+      "category": "예능",
+      "title": "더 시즌즈-성시경의 고막남친",
+      "tvwikiPage": "https://tvwiki60.net/ent/3696/406791936",
+      "sourceUrl": "https://tvwiki60.net/ent/3696/406791936",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/6443ccc31b25c71ce7b7a51a0a199dcb404ae2b1.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 48
+    },
+    {
+      "id": "tvwiki-ent-3495",
+      "category": "예능",
+      "title": "금타는 금요일",
+      "tvwikiPage": "https://tvwiki60.net/ent/3495/406791933",
+      "sourceUrl": "https://tvwiki60.net/ent/3495/406791933",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/file/ent/46244835e16e6dd9c6915dbe5e851d36d4d47797.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 49
+    },
+    {
+      "id": "tvwiki-ent-4150",
+      "category": "예능",
+      "title": "결이 다른 전쟁사",
+      "tvwikiPage": "https://tvwiki60.net/ent/4150/406791931",
+      "sourceUrl": "https://tvwiki60.net/ent/4150/406791931",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/4b5f965b3dbe4ea14a03693131fbc834939c5e00.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 50
+    },
+    {
+      "id": "tvwiki-ent-4218",
+      "category": "예능",
+      "title": "우리동네 플레이리스트",
+      "tvwikiPage": "https://tvwiki60.net/ent/4218/406791929",
+      "sourceUrl": "https://tvwiki60.net/ent/4218/406791929",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/fed32743a6adeb13f22c740e2e0fbe85bec04d9f.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 51
+    },
+    {
+      "id": "tvwiki-ent-3695",
+      "category": "예능",
+      "title": "용감한 형사들 시즌5",
+      "tvwikiPage": "https://tvwiki60.net/ent/3695/406791909",
+      "sourceUrl": "https://tvwiki60.net/ent/3695/406791909",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/3f1fe766c6f9c2be208967abb7c033802b7a21c5.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 52
+    },
+    {
+      "id": "tvwiki-ent-3674",
+      "category": "예능",
+      "title": "신랑수업2",
+      "tvwikiPage": "https://tvwiki60.net/ent/3674/406791898",
+      "sourceUrl": "https://tvwiki60.net/ent/3674/406791898",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/file/ent/84e0cd4488ed07272e747ed248b641f95ef0f131.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 53
+    },
+    {
+      "id": "tvwiki-ent-3871",
+      "category": "예능",
+      "title": "전현무계획 4",
+      "tvwikiPage": "https://tvwiki60.net/ent/3871/406791897",
+      "sourceUrl": "https://tvwiki60.net/ent/3871/406791897",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/b87adf33f5675544eb23cf188732b0d43e72c7bf.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 54
+    },
+    {
+      "id": "tvwiki-ent-4151",
+      "category": "예능",
+      "title": "맛따라 길따라 대명이따라",
+      "tvwikiPage": "https://tvwiki60.net/ent/4151/406791896",
+      "sourceUrl": "https://tvwiki60.net/ent/4151/406791896",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/ad516434986498261c300bf12a5bbd2f102ab18c.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 55
+    },
+    {
+      "id": "tvwiki-ent-4149",
+      "category": "예능",
+      "title": "백수 이세돌",
+      "tvwikiPage": "https://tvwiki60.net/ent/4149/406791893",
+      "sourceUrl": "https://tvwiki60.net/ent/4149/406791893",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/5fc4fdc9161257e4387d8159e99e51cfc1e9911f.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 56
+    },
+    {
+      "id": "tvwiki-ent-550",
+      "category": "예능",
+      "title": "이십세기 힛-트쏭",
+      "tvwikiPage": "https://tvwiki60.net/ent/550/406791890",
+      "sourceUrl": "https://tvwiki60.net/ent/550/406791890",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/0655039bd28f858269a8c03cd0a0cedf755cadcb.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 57
+    },
+    {
+      "id": "tvwiki-ent-553",
+      "category": "예능",
+      "title": "맛있는 녀석들",
+      "tvwikiPage": "https://tvwiki60.net/ent/553/406791888",
+      "sourceUrl": "https://tvwiki60.net/ent/553/406791888",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/9b7c982e6bf7e2b0b8a17f88159c0da1a952164d.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 58
+    },
+    {
+      "id": "tvwiki-ent-4169",
+      "category": "예능",
+      "title": "언니만 따라와",
+      "tvwikiPage": "https://tvwiki60.net/ent/4169/406791885",
+      "sourceUrl": "https://tvwiki60.net/ent/4169/406791885",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/99e5314fd0efd01ce39e24cc1a50ca069ade2822.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 59
+    },
+    {
+      "id": "tvwiki-ent-555",
+      "category": "예능",
+      "title": "뮤직뱅크",
+      "tvwikiPage": "https://tvwiki60.net/ent/555/406791857",
+      "sourceUrl": "https://tvwiki60.net/ent/555/406791857",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/37f859c3731262647df5b22164af22489caea22f.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 60
+    },
+    {
+      "id": "tvwiki-ent-3784",
+      "category": "예능",
+      "title": "미스트롯 포유",
+      "tvwikiPage": "https://tvwiki60.net/ent/3784/406791749",
+      "sourceUrl": "https://tvwiki60.net/ent/3784/406791749",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/b22d912c35c641c443060fefc00367aa9ad7b090.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 61
+    },
+    {
+      "id": "tvwiki-ent-1687",
+      "category": "예능",
+      "title": "나는 SOLO, 그 후 사랑은 계속된다(나솔사계)",
+      "tvwikiPage": "https://tvwiki60.net/ent/1687/406791728",
+      "sourceUrl": "https://tvwiki60.net/ent/1687/406791728",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/983d4ae4a9f65c90a67ca6bc7245f68546357e2d.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 62
+    },
+    {
+      "id": "tvwiki-ent-988",
+      "category": "예능",
+      "title": "꼬리에 꼬리를 무는 그날 이야기 시즌 3",
+      "tvwikiPage": "https://tvwiki60.net/ent/988/406791727",
+      "sourceUrl": "https://tvwiki60.net/ent/988/406791727",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/18fb110ee3a114ff2516c13c5f6f344a2756a8a7.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 63
+    },
+    {
+      "id": "tvwiki-ent-1329",
+      "category": "예능",
+      "title": "이혼숙려캠프 시즌 2",
+      "tvwikiPage": "https://tvwiki60.net/ent/1329/406791725",
+      "sourceUrl": "https://tvwiki60.net/ent/1329/406791725",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/364da5f4a49f5e83f4fd137ff1c8eff24c5bb81e.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 64
+    },
+    {
+      "id": "tvwiki-ent-454",
+      "category": "예능",
+      "title": "구해줘! 홈즈",
+      "tvwikiPage": "https://tvwiki60.net/ent/454/406791724",
+      "sourceUrl": "https://tvwiki60.net/ent/454/406791724",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/800f4dfda05164c8e4d4b8088efa9683cc1a78f1.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 65
+    },
+    {
+      "id": "tvwiki-ent-4132",
+      "category": "예능",
+      "title": "티처스3: 재수전쟁",
+      "tvwikiPage": "https://tvwiki60.net/ent/4132/406791722",
+      "sourceUrl": "https://tvwiki60.net/ent/4132/406791722",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/d2ecdca86aa73b296a72e8dec976c5c635f4335f.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 66
+    },
+    {
+      "id": "tvwiki-ent-4163",
+      "category": "예능",
+      "title": "언더커버 셰프 : 멀리서 찾아온 벗",
+      "tvwikiPage": "https://tvwiki60.net/ent/4163/406791719",
+      "sourceUrl": "https://tvwiki60.net/ent/4163/406791719",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/a4cced9151c7ea61a720b7e74cf1f45834c28cee.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 67
+    },
+    {
+      "id": "tvwiki-ent-4128",
+      "category": "예능",
+      "title": "거장항준",
+      "tvwikiPage": "https://tvwiki60.net/ent/4128/406791718",
+      "sourceUrl": "https://tvwiki60.net/ent/4128/406791718",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/57d32784fd0e7a6685c987999f346cf9489a5108.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 68
+    },
+    {
+      "id": "tvwiki-ent-549",
+      "category": "예능",
+      "title": "신상출시 편스토랑",
+      "tvwikiPage": "https://tvwiki60.net/ent/549/406791716",
+      "sourceUrl": "https://tvwiki60.net/ent/549/406791716",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/1085bd02dd02a65dbcdbb0c80f6a3516857e65e8.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 69
+    },
+    {
+      "id": "tvwiki-ent-4078",
+      "category": "예능",
+      "title": "서인영의 유행꼰대",
+      "tvwikiPage": "https://tvwiki60.net/ent/4078/406791713",
+      "sourceUrl": "https://tvwiki60.net/ent/4078/406791713",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/73db5c75f0a32322fd0c35f7cb59e4f20397c1a6.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 70
+    },
+    {
+      "id": "tvwiki-ent-4096",
+      "category": "예능",
+      "title": "벌거벗은 한국사3",
+      "tvwikiPage": "https://tvwiki60.net/ent/4096/406791710",
+      "sourceUrl": "https://tvwiki60.net/ent/4096/406791710",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/a844e594874725e682262ca6f196185a9901e636.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 71
+    },
+    {
+      "id": "tvwiki-ent-517",
+      "category": "예능",
+      "title": "누가누가 잘하나",
+      "tvwikiPage": "https://tvwiki60.net/ent/517/406791702",
+      "sourceUrl": "https://tvwiki60.net/ent/517/406791702",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/79690636348269.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 72
+    },
+    {
+      "id": "tvwiki-ent-3818",
+      "category": "예능",
+      "title": "적과의 동거",
+      "tvwikiPage": "https://tvwiki60.net/ent/3818/406791700",
+      "sourceUrl": "https://tvwiki60.net/ent/3818/406791700",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/5347ef97bb58f3f1067ded169e9ff93403255844.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 73
+    },
+    {
+      "id": "tvwiki-ent-518",
+      "category": "예능",
+      "title": "TV 유치원",
+      "tvwikiPage": "https://tvwiki60.net/ent/518/406791693",
+      "sourceUrl": "https://tvwiki60.net/ent/518/406791693",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/54440030978435.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 74
+    },
+    {
+      "id": "tvwiki-ent-4214",
+      "category": "예능",
+      "title": "대탈출: 도시괴담",
+      "tvwikiPage": "https://tvwiki60.net/ent/4214/406791646",
+      "sourceUrl": "https://tvwiki60.net/ent/4214/406791646",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://image.tmdb.org/t/p/w500/u5sT67mvu9FnbvsuCTiRvw0x5IT.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 75
+    },
+    {
+      "id": "tvwiki-ent-3568",
+      "category": "예능",
+      "title": "침착맨 2026",
+      "tvwikiPage": "https://tvwiki60.net/ent/3568/406791628",
+      "sourceUrl": "https://tvwiki60.net/ent/3568/406791628",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/9a7912a1e403187dcb27fbf918baf00942716720.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 76
+    },
+    {
+      "id": "tvwiki-ent-3890",
+      "category": "예능",
+      "title": "70억의 선택",
+      "tvwikiPage": "https://tvwiki60.net/ent/3890/406791558",
+      "sourceUrl": "https://tvwiki60.net/ent/3890/406791558",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/a82d0357ff482ac0adc44032e0ce38c1cb1f69f5.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 77
+    },
+    {
+      "id": "tvwiki-ent-4077",
+      "category": "예능",
+      "title": "운명네컷",
+      "tvwikiPage": "https://tvwiki60.net/ent/4077/406791539",
+      "sourceUrl": "https://tvwiki60.net/ent/4077/406791539",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/be40acfef3ef658f1ef043343a4c565b5f8b0d16.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 78
+    },
+    {
+      "id": "tvwiki-ent-986",
+      "category": "예능",
+      "title": "나는 SOLO <나는 솔로>",
+      "tvwikiPage": "https://tvwiki60.net/ent/986/406791535",
+      "sourceUrl": "https://tvwiki60.net/ent/986/406791535",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/tv/thumb/tw_14862313728933.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 79
+    },
+    {
+      "id": "tvwiki-ent-1068",
+      "category": "예능",
+      "title": "라디오스타",
+      "tvwikiPage": "https://tvwiki60.net/ent/1068/406791530",
+      "sourceUrl": "https://tvwiki60.net/ent/1068/406791530",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/a807c3d915bffabfcfae1436f74d6291c481ad2e.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 80
+    },
+    {
+      "id": "tvwiki-ent-4213",
+      "category": "예능",
+      "title": "자랑할 개 있습니다",
+      "tvwikiPage": "https://tvwiki60.net/ent/4213/406791510",
+      "sourceUrl": "https://tvwiki60.net/ent/4213/406791510",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/18bcd36de5910b62110a6adbdb038c7182890f6d.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 81
+    },
+    {
+      "id": "tvwiki-ent-3529",
+      "category": "예능",
+      "title": "개와 늑대의 시간 시즌 2",
+      "tvwikiPage": "https://tvwiki60.net/ent/3529/406791507",
+      "sourceUrl": "https://tvwiki60.net/ent/3529/406791507",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/538bcb36b70b28442eb518eb175d729971c3093d.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 82
+    },
+    {
+      "id": "tvwiki-ent-504",
+      "category": "예능",
+      "title": "톡파원 25시",
+      "tvwikiPage": "https://tvwiki60.net/ent/504/406791505",
+      "sourceUrl": "https://tvwiki60.net/ent/504/406791505",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/27b6735df6cd046d7012754a2464e498b826bee2.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 83
+    },
+    {
+      "id": "tvwiki-ent-2968",
+      "category": "예능",
+      "title": "서장훈의 이웃집 백만장자 시즌2",
+      "tvwikiPage": "https://tvwiki60.net/ent/2968/406791501",
+      "sourceUrl": "https://tvwiki60.net/ent/2968/406791501",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/b1d59d9bfc2b66a5e44c94fa3243114becc3c526.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 84
+    },
+    {
+      "id": "tvwiki-ent-530",
+      "category": "예능",
+      "title": "골 때리는 그녀들",
+      "tvwikiPage": "https://tvwiki60.net/ent/530/406791500",
+      "sourceUrl": "https://tvwiki60.net/ent/530/406791500",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/17726424838186.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 85
+    },
+    {
+      "id": "tvwiki-ent-987",
+      "category": "예능",
+      "title": "유 퀴즈 온 더 블럭 시즌 3",
+      "tvwikiPage": "https://tvwiki60.net/ent/987/406791499",
+      "sourceUrl": "https://tvwiki60.net/ent/987/406791499",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/84df26f5f8e108d0eea479fa270a632d25b4d297.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 86
+    },
+    {
+      "id": "tvwiki-ent-544",
+      "category": "예능",
+      "title": "슈퍼맨이 돌아왔다",
+      "tvwikiPage": "https://tvwiki60.net/ent/544/406791487",
+      "sourceUrl": "https://tvwiki60.net/ent/544/406791487",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/10467041611735.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 87
+    },
+    {
+      "id": "tvwiki-ent-4210",
+      "category": "예능",
+      "title": "내 새끼의 연애 3",
+      "tvwikiPage": "https://tvwiki60.net/ent/4210/406791486",
+      "sourceUrl": "https://tvwiki60.net/ent/4210/406791486",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/05caf0458d911b4a9e261d49dfb41c46d4805018.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 88
+    },
+    {
+      "id": "tvwiki-ent-3738",
+      "category": "예능",
+      "title": "태군노래자랑 시즌 4",
+      "tvwikiPage": "https://tvwiki60.net/ent/3738/406791478",
+      "sourceUrl": "https://tvwiki60.net/ent/3738/406791478",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/3e2d3be467408c0599efaecbb5645cad0d462ac8.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 89
     }
   ],
   "posterSourceNote": "Verified per-title cover URLs from public TVWiki listings, search results, and detail-page bo_v_poster. Missing or unavailable posters fall back to Wikimedia or a text cover; works with no verified match are not guessed.",
   "autoSyncHistory": [
+    {
+      "status": "ok",
+      "checkedAt": "2026-11-16T01:32:28+00:00",
+      "source": [
+        "TVWiki public movie list",
+        "TVWiki public Korean-film list",
+        "TVWiki public drama list",
+        "TVWiki public drama episode index"
+      ],
+      "newTitles": {
+        "영화": 0,
+        "한국영화": 0,
+        "드라마": 0
+      },
+      "newEpisodes": 0,
+      "newEpisodeMetadata": 0,
+      "tvwikiKoreanMovieSync": {
+        "status": "ok",
+        "totalPages": 151,
+        "pagesFetched": 3,
+        "newTitles": 0,
+        "tvwikiLinked": 4507
+      },
+      "tvwikiRecentBoards": {
+        "영화": {
+          "status": "ok",
+          "sort": "recent_broadcast",
+          "pagesFetched": 3,
+          "itemsIndexed": 90,
+          "newTitles": 0
+        },
+        "드라마": {
+          "status": "ok",
+          "sort": "recent_broadcast",
+          "pagesFetched": 3,
+          "itemsIndexed": 90,
+          "newTitles": 0
+        },
+        "예능": {
+          "status": "ok",
+          "sort": "recent_broadcast",
+          "pagesFetched": 3,
+          "itemsIndexed": 90,
+          "newTitles": 90
+        }
+      },
+      "tvwikiEpisodeSync": {
+        "status": "ok",
+        "checkedAt": "2026-11-16T01:32:28+00:00",
+        "detailPagesChecked": 0,
+        "titlesWithEpisodeChanges": 0,
+        "newEpisodes": 0,
+        "episodeScanQueue": 0,
+        "parseWithoutEpisodeList": 0,
+        "fetchErrors": 0,
+        "reason": "",
+        "note": "Public TVWiki drama episode links are checked; no media files or DRM bypass."
+      },
+      "tvwikiLinked": 4814,
+      "totalTitles": 4959,
+      "note": "Titles and episode buttons update only from current TVWiki public list links; failures are surfaced. No media downloads, invented episode URLs, or manual catalog entries."
+    },
     {
       "status": "ok",
       "checkedAt": "2026-11-16T00:22:32+00:00",
@@ -64666,7 +65718,7 @@
   ],
   "autoSync": {
     "status": "ok",
-    "checkedAt": "2026-11-16T00:22:32+00:00",
+    "checkedAt": "2026-11-16T01:32:28+00:00",
     "source": [
       "TVWiki public movie list",
       "TVWiki public Korean-film list",
@@ -64701,11 +65753,18 @@
         "pagesFetched": 3,
         "itemsIndexed": 90,
         "newTitles": 0
+      },
+      "예능": {
+        "status": "ok",
+        "sort": "recent_broadcast",
+        "pagesFetched": 3,
+        "itemsIndexed": 90,
+        "newTitles": 90
       }
     },
     "tvwikiEpisodeSync": {
       "status": "ok",
-      "checkedAt": "2026-11-16T00:22:32+00:00",
+      "checkedAt": "2026-11-16T01:32:28+00:00",
       "detailPagesChecked": 0,
       "titlesWithEpisodeChanges": 0,
       "newEpisodes": 0,
@@ -64715,8 +65774,8 @@
       "reason": "",
       "note": "Public TVWiki drama episode links are checked; no media files or DRM bypass."
     },
-    "tvwikiLinked": 4724,
-    "totalTitles": 4869,
+    "tvwikiLinked": 4814,
+    "totalTitles": 4959,
     "note": "Titles and episode buttons update only from current TVWiki public list links; failures are surfaced. No media downloads, invented episode URLs, or manual catalog entries."
   },
   "tvwikiKorSync": {
@@ -64724,7 +65783,7 @@
     "nextPage": 2,
     "status": "ok",
     "source": "https://tvwiki60.net/kor_movie",
-    "checkedAt": "2026-11-16T00:22:32+00:00",
+    "checkedAt": "2026-11-16T01:32:28+00:00",
     "totalPages": 151,
     "pagesFetched": 3,
     "scanNextPage": 2,
@@ -64752,11 +65811,18 @@
       "pagesFetched": 3,
       "itemsIndexed": 90,
       "newTitles": 0
+    },
+    "예능": {
+      "status": "ok",
+      "sort": "recent_broadcast",
+      "pagesFetched": 3,
+      "itemsIndexed": 90,
+      "newTitles": 90
     }
   },
   "tvwikiEpisodeSync": {
     "status": "ok",
-    "checkedAt": "2026-11-16T00:22:32+00:00",
+    "checkedAt": "2026-11-16T01:32:28+00:00",
     "detailPagesChecked": 0,
     "titlesWithEpisodeChanges": 0,
     "newEpisodes": 0,
