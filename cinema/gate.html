@@ -21,14 +21,14 @@ button:hover{background:#5278c0}button:disabled{opacity:.65;cursor:wait}
 a{color:#c6d8ff}
 </style></head><body>
 <main class="panel"><div class="mark">▶</div><h1>BRO CINEMA</h1>
-<p>초대받은 사용자 전용 공간입니다.<br>공용 입장 비밀번호를 한 번 입력하면<br>30일간 자동 입장할 수 있습니다.</p>
+<p>초대받은 사용자 전용 공간입니다.<br>공용 입장 비밀번호를 한 번 입력하면<br>이후 접속할 때마다 인증이 자동 연장됩니다.</p>
 <form id="gate" autocomplete="on">
 <label for="pass">입장 비밀번호</label>
 <input id="pass" name="password" type="password" autocomplete="current-password" minlength="1" maxlength="128" placeholder="초대 비밀번호를 입력하세요" required autofocus>
 <button id="submit" type="submit">입장하기</button>
 <div id="error" class="err" role="alert" aria-live="polite"></div>
 </form>
-<div class="foot">인증 정보는 안전한 로그인 쿠키로 유지됩니다.<br>공용 비밀번호는 초대받은 사람에게만 공유해 주세요.</div>
+<div class="foot">일반 사용 중에는 다시 입력하지 않아도 됩니다.<br>브라우저 데이터 삭제·로그아웃·비밀번호 변경 시 재인증이 필요합니다.<br>공용 비밀번호는 초대받은 사람에게만 공유해 주세요.</div>
 </main>
 <script>
 document.getElementById('gate').addEventListener('submit',async event=>{
