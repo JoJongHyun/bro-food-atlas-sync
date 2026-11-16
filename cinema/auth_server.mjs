@@ -10,8 +10,11 @@ const scrypt = promisify(scryptCallback);
 const sessionKey = process.env.SESSION_SIGNING_KEY || '';
 let publicHash = process.env.ENTRY_CREDENTIAL_HASH || '';
 let adminHash = process.env.ADMIN_CREDENTIAL_HASH || '';
-const sessionDays = 30;
-const sessionMs = sessionDays * 24 * 60 * 60 * 1000;
+// Browser-enforced cookie caps prevent literally infinite persistence.
+// Rolling 400-day viewer cookies mean continued use never has a fixed logout date.
+// Explicit logout, password rotation, or cleared browser storage still invalidate it.
+const viewerSessionDays = 400;
+const viewerSessionMs = viewerSessionDays * 24 * 60 * 60 * 1000;
 const adminSessionMs = 30 * 60 * 1000;
 const listenPort = Number(process.env.PORT || 10000);
 const maxBody = 4096;
@@ -53,7 +56,8 @@ function validCookie(req, type) {
   if (!payload || !signature || extra || !constantEquals(hmac(payload), signature)) return false;
   try {
     const data = JSON.parse(Buffer.from(payload, 'base64url').toString('utf8'));
-    if (data.type !== type || !Number.isFinite(data.until) || Date.now() >= data.until || data.until > Date.now() + sessionMs) return false;
+    const maxTtl = type === "admin" ? adminSessionMs : viewerSessionMs;
+    if (data.type !== type || !Number.isFinite(data.until) || Date.now() >= data.until || data.until > Date.now() + maxTtl) return false;
     return data.version === hashVersion(type === 'admin' ? adminHash : publicHash);
   } catch {
     return false;
@@ -61,7 +65,7 @@ function validCookie(req, type) {
 }
 function newCookie(type) {
   const name = type === 'admin' ? KEY_ADMIN : KEY_USER;
-  const age = type === 'admin' ? adminSessionMs : sessionMs;
+  const age = type === 'admin' ? adminSessionMs : viewerSessionMs;
   const hash = type === 'admin' ? adminHash : publicHash;
   const signed = b64(JSON.stringify({type, until: Date.now() + age, version: hashVersion(hash), nonce: b64(randomBytes(12))}));
   return name + '=' + signed + '.' + hmac(signed) + '; Path=/; Max-Age=' + Math.floor(age / 1000) +
@@ -149,17 +153,17 @@ function rateLimit(req, key, success = false) {
   }
   return data.count > 8;
 }
-async function staticFile(res, rel, type) {
+async function staticFile(res, rel, type, moreHeaders={}) {
   try {
     const file = await readFile(path.join(directory, rel));
-    res.writeHead(200, headers(type));
+    res.writeHead(200, {...headers(type), ...moreHeaders});
     res.end(file);
   } catch {
     json(res, 404, {ok:false, error:'리소스를 찾을 수 없습니다.'});
   }
 }
 function permittedResource(route) {
-  if (route === '/' || route === '/index.html') return ['index.html', 'text/html; charset=utf-8'];
+  if (route === '/' || route === '/index.html') return ['app.html', 'text/html; charset=utf-8'];
   if (route === '/catalog.json' || route === '/api/data') return ['catalog.json', 'application/json; charset=utf-8'];
   if (route === '/manifest.json') return ['manifest.json', 'application/manifest+json'];
   if (route === '/sw.js') return ['sw-secure.js', 'text/javascript; charset=utf-8'];
@@ -217,7 +221,7 @@ async function handler(req, res) {
       const correct = await verifyPassword(input.password, publicHash);
       rateLimit(req, 'viewer', correct);
       if (!correct) { json(res, 401, {ok:false,error:'입장 비밀번호를 확인해 주세요.'}); return; }
-      json(res, 200, {ok:true,expiresDays:sessionDays}, {'Set-Cookie':newCookie('user')}); return;
+      json(res, 200, {ok:true,sessionPolicy:"rolling",automaticRenewal:true}, {'Set-Cookie':newCookie('user')}); return;
     }
     if (route === '/api/logout') {
       json(res, 200, {ok:true}, {'Set-Cookie':[clearCookie('user'),clearCookie('admin')]}); return;
@@ -268,15 +272,15 @@ async function handler(req, res) {
     }
   }
   if (method === 'GET' && route === '/api/me') {
-    json(res, 200, {authenticated,admin:authenticated && validCookie(req, 'admin')}); return;
+    json(res, 200, {authenticated,admin:authenticated && validCookie(req, 'admin')}, authenticated?{'Set-Cookie':newCookie('user')}:{ }); return;
   }
   if (method === 'GET' && route === '/api/admin/status') {
     if (!authenticated) { restricted(res); return; }
-    json(res, 200, {ok:true,admin:validCookie(req,'admin'),canAutoRotate:Boolean(process.env.RENDER_API_KEY && process.env.RENDER_SERVICE_ID)}); return;
+    json(res, 200, {ok:true,admin:validCookie(req,'admin'),canAutoRotate:Boolean(process.env.RENDER_API_KEY && process.env.RENDER_SERVICE_ID)}, {'Set-Cookie':newCookie('user')}); return;
   }
   if (method === 'GET' && route === '/admin') {
     if (!authenticated) { redirect(res, '/login'); return; }
-    await staticFile(res, 'admin.html', 'text/html; charset=utf-8'); return;
+    await staticFile(res, 'admin.html', 'text/html; charset=utf-8', {'Set-Cookie':newCookie('user')}); return;
   }
   if (method === 'GET' && !authenticated && (route === '/' || route === '/index.html')) {
     await staticFile(res, 'gate.html', 'text/html; charset=utf-8'); return;
@@ -288,7 +292,7 @@ async function handler(req, res) {
     const allow = permittedResource(route);
     if (allow) {
       if (!authenticated) { restricted(res); return; }
-      await staticFile(res, ...allow); return;
+      await staticFile(res, ...allow, {'Set-Cookie':newCookie('user')}); return;
     }
   }
   json(res, 404, {ok:false,error:'페이지를 찾을 수 없습니다.'});
