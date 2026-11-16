@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b101d">
+<title>BRO CINEMA · 초대 입장</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;color-scheme:dark;color:#ecf2ff}
+*{box-sizing:border-box}
+body{min-height:100svh;margin:0;display:grid;place-items:center;background:radial-gradient(ellipse at 50% -10%,#2a4572 0%,#101a2d 43%,#080c15 100%);padding:22px}
+.panel{width:min(100%,410px);border:1px solid #344764;background:#111c2eeb;border-radius:24px;box-shadow:0 25px 100px #0008;padding:34px 27px 29px}
+.mark{width:68px;height:68px;display:grid;place-items:center;margin:0 auto 17px;border:1px solid #526ca8;border-radius:20px;background:#253e69;color:white;font-size:32px}
+h1{text-align:center;margin:0;font-size:27px;letter-spacing:.5px}
+p{color:#aabbdb;text-align:center;font-size:14px;line-height:1.8;margin:13px 0 29px}
+label{display:block;font-size:13px;font-weight:700;color:#d6e4ff;margin-bottom:10px}
+input{width:100%;font-size:17px;border:1px solid #3c506e;border-radius:12px;background:#0c1525;padding:15px;color:#fff;outline:none}
+input:focus{border-color:#84a6ff;box-shadow:0 0 0 3px #84a6ff18}
+button{cursor:pointer;border:0;width:100%;min-height:52px;font-size:16px;font-weight:750;border-radius:12px;color:#fff;background:#4163a5;margin-top:16px}
+button:hover{background:#5278c0}button:disabled{opacity:.65;cursor:wait}
+.err{min-height:22px;margin-top:13px;font-size:13px;color:#ffb8bd;line-height:1.6;text-align:center}
+.foot{border-top:1px solid #2a3b55;margin-top:19px;padding-top:17px;text-align:center;color:#9cb0d2;font-size:12px;line-height:1.75}
+a{color:#c6d8ff}
+</style></head><body>
+<main class="panel"><div class="mark">▶</div><h1>BRO CINEMA</h1>
+<p>초대받은 사용자 전용 공간입니다.<br>공용 입장 비밀번호를 한 번 입력하면<br>30일간 자동 입장할 수 있습니다.</p>
+<form id="gate" autocomplete="on">
+<label for="pass">입장 비밀번호</label>
+<input id="pass" name="password" type="password" autocomplete="current-password" minlength="1" maxlength="128" placeholder="초대 비밀번호를 입력하세요" required autofocus>
+<button id="submit" type="submit">입장하기</button>
+<div id="error" class="err" role="alert" aria-live="polite"></div>
+</form>
+<div class="foot">인증 정보는 안전한 로그인 쿠키로 유지됩니다.<br>공용 비밀번호는 초대받은 사람에게만 공유해 주세요.</div>
+</main>
+<script>
+document.getElementById('gate').addEventListener('submit',async event=>{
+ event.preventDefault();
+ const button=document.getElementById('submit'),error=document.getElementById('error');
+ button.disabled=true;button.textContent='확인 중…';error.textContent='';
+ try{
+  const password=document.getElementById('pass').value;
+  const response=await fetch('/api/login',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({password})});
+  const data=await response.json();
+  if(!response.ok)throw new Error(data.error||'입장에 실패했습니다.');
+  document.getElementById('pass').value='';
+  location.replace('/');
+ }catch(e){error.textContent=e.message||'인터넷 연결 상태를 확인해 주세요.';}
+ finally{button.disabled=false;button.textContent='입장하기';}
+});
+</script>
+</body></html>
