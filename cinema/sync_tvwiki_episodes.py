@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh TVWiki drama episode *index links*, never download video media.
+"""Refresh public TVWiki drama and entertainment episode index links without video downloads.
 
 Only publicly visible list links from #other_list are accepted. Stops on
 access refusal/rate limits and keeps all previously validated episode links.
@@ -18,14 +18,14 @@ import urllib.request
 
 LOG = logging.getLogger("cinema.tvwiki.episodes")
 DOMAIN = "tvwiki60.net"
-URL_RE = re.compile(r"^https://tvwiki60\.net/drama/(\d+)(?:/(\d+))?$")
+URL_RE = re.compile(r"^https://tvwiki60\.net/(?P<route>drama|ent)/(?P<work_id>\d+)(?:/(?P<episode_id>\d+))?$")
 LIST_RE = re.compile(r'<div\s+id=["\']other_list["\'][^>]*>[\s\S]*?<ul[^>]*>([\s\S]*?)</ul>', re.I)
 ANCHOR_RE = re.compile(
     r'<a\b[^>]*href=["\']([^"\']+)["\'][^>]*class=["\'][^"\']*\btitle\b[^"\']*\bep-link\b[^"\']*["\'][^>]*>([\s\S]*?)</a>',
     re.I,
 )
 NUMBER_RE = re.compile(r"(?<!\d)(\d{1,4})\s*(?:화|회)(?!\d)")
-MAX_EPISODES = 250
+MAX_EPISODES = 400
 MAX_SCANS = 110
 MIN_GAP_SECONDS = 0.65
 RECENT_CHECK_HOURS = 3
@@ -49,7 +49,7 @@ def valid_work_url(url):
 
 def fetch_page(url):
     if not valid_work_url(url):
-        raise ValueError("Not a TVWiki drama page URL")
+        raise ValueError("Not a TVWiki drama or variety page URL")
     request = urllib.request.Request(url, headers={
         "User-Agent": "Mozilla/5.0 (compatible; BRO-CINEMA-IndexSync/1.0)",
         "Accept": "text/html,application/xhtml+xml",
@@ -70,7 +70,7 @@ def fetch_page(url):
         raise
 
 
-def parse_episodes(source, work_id):
+def parse_episodes(source, work_id, route="drama"):
     """Return exact public episode links, or None if the source has no episode list."""
     section = LIST_RE.search(source)
     if not section:
@@ -79,7 +79,7 @@ def parse_episodes(source, work_id):
     for anchor in ANCHOR_RE.finditer(section.group(1)):
         href = valid_work_url(html.unescape(anchor.group(1)))
         match = URL_RE.fullmatch(href) if href else None
-        if not match or match.group(1) != str(work_id) or not match.group(2):
+        if not match or match.group("route") != route or match.group("work_id") != str(work_id) or not match.group("episode_id"):
             continue
         label = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", anchor.group(2)))).strip()
         number_match = NUMBER_RE.search(label)
@@ -99,7 +99,7 @@ def _dt_iso(value):
         return None
 
 
-def sync_drama_episodes(catalog, timestamp=None):
+def sync_episodes_for_category(catalog, category, route, timestamp=None):
     items = catalog.get("items") or []
     stamp = timestamp or dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
     now = _dt_iso(stamp)
@@ -107,7 +107,7 @@ def sync_drama_episodes(catalog, timestamp=None):
         raise ValueError("Invalid episode sync timestamp")
     eligible = []
     for item in items:
-        if item.get("category") != "드라마":
+        if item.get("category") != category:
             continue
         url = valid_work_url(item.get("tvwikiPage"))
         # Some manual records contain episode links but no tvwikiPage.
@@ -118,7 +118,10 @@ def sync_drama_episodes(catalog, timestamp=None):
                     break
         if not url:
             continue
-        work_id = URL_RE.fullmatch(url).group(1)
+        matched = URL_RE.fullmatch(url)
+        if matched is None or matched.group("route") != route:
+            continue
+        work_id = matched.group("work_id")
         is_recent = isinstance(item.get("tvwikiRank"), int) and item["tvwikiRank"] < 90
         last = _dt_iso(item.get("tvwikiEpisodeCheckedAt"))
         diff = (now - last).total_seconds() if last else float("inf")
@@ -136,7 +139,7 @@ def sync_drama_episodes(catalog, timestamp=None):
             time.sleep(MIN_GAP_SECONDS)
         try:
             raw = fetch_page(url)
-            current = parse_episodes(raw, work_id)
+            current = parse_episodes(raw, work_id, route=route)
         except SourceBlocked as exc:
             refusal = str(exc)
             LOG.warning("Stopping TVWiki episode sync after source refusal: %s", refusal)
@@ -169,8 +172,8 @@ def sync_drama_episodes(catalog, timestamp=None):
             item["episodes"] = [combined[n] for n in sorted(combined)][-MAX_EPISODES:]
             changed += 1
             new_count += len(set(combined) - before)
-            LOG.info("TVWiki drama %s: %s total verified episodes, +%s new",
-                     item.get("title"), len(item["episodes"]), len(set(combined) - before))
+            LOG.info("TVWiki %s %s: %s total verified episodes, +%s new",
+                     category, item.get("title"), len(item["episodes"]), len(set(combined) - before))
     result = {
         "status": "blocked" if refusal else "partial" if errors else "ok",
         "checkedAt": stamp, "detailPagesChecked": inspected,
@@ -180,9 +183,18 @@ def sync_drama_episodes(catalog, timestamp=None):
         "parseWithoutEpisodeList": skipped_unstructured,
         "fetchErrors": errors,
         "reason": refusal,
-        "note": "Public TVWiki drama episode links are checked; no media files or DRM bypass."
+        "note": "Public TVWiki program episode links are checked; no media files or DRM bypass."
     }
-    catalog["tvwikiEpisodeSync"] = result
-    LOG.info("TVWiki drama episode sync: %s pages checked, %s titles updated, +%s episodes, queue %s, errors %s",
-             inspected, changed, new_count, result["episodeScanQueue"], errors)
+    catalog["tvwikiEntEpisodeSync" if category == "예능" else "tvwikiEpisodeSync"] = result
+    LOG.info("TVWiki %s episode sync: %s pages checked, %s titles updated, +%s episodes, queue %s, errors %s",
+             category, inspected, changed, new_count, result["episodeScanQueue"], errors)
     return result
+
+
+def sync_drama_episodes(catalog, timestamp=None):
+    return sync_episodes_for_category(catalog, "드라마", "drama", timestamp=timestamp)
+
+
+def sync_ent_episodes(catalog, timestamp=None):
+    return sync_episodes_for_category(catalog, "예능", "ent", timestamp=timestamp)
+
