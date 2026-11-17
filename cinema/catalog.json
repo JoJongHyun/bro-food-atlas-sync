@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T01:06:37+00:00",
+  "updatedAt": "2026-11-17T09:17:08+00:00",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -1731,9 +1731,9 @@
       "tvmazeId": 89763,
       "sourceProvider": "TVWiki recent broadcast listing",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12640/406792138",
-      "tvwikiRank": 8
+      "tvwikiRank": 9
     },
     {
       "id": "new-2026-drama-2",
@@ -1760,9 +1760,9 @@
       ],
       "sourceProvider": "TVWiki recent broadcast listing",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12669/406791752",
-      "tvwikiRank": 14
+      "tvwikiRank": 15
     },
     {
       "id": "new-2026-drama-3",
@@ -1789,9 +1789,9 @@
       ],
       "sourceProvider": "TVWiki recent broadcast listing",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12667/406791723",
-      "tvwikiRank": 16
+      "tvwikiRank": 17
     },
     {
       "id": "new-2026-drama-4",
@@ -1847,9 +1847,9 @@
       "tvmazeId": 95084,
       "sourceProvider": "TVWiki recent broadcast listing",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12660/406792179",
-      "tvwikiRank": 5
+      "tvwikiRank": 6
     },
     {
       "id": "new-2026-drama-5",
@@ -1905,9 +1905,9 @@
       ],
       "sourceProvider": "TVWiki recent broadcast listing",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12628/406791825",
-      "tvwikiRank": 13
+      "tvwikiRank": 14
     },
     {
       "id": "new-2026-drama-6",
@@ -1954,9 +1954,9 @@
       ],
       "sourceProvider": "TVWiki recent broadcast listing",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12612/406791314",
-      "tvwikiRank": 17
+      "tvwikiRank": 18
     },
     {
       "id": "new-2026-drama-7",
@@ -2054,9 +2054,9 @@
       "tvmazeId": 94682,
       "sourceProvider": "TVWiki recent broadcast listing",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12555/406792037",
-      "tvwikiRank": 11
+      "tvwikiRank": 12
     },
     {
       "id": "new-2026-drama-8",
@@ -2180,9 +2180,9 @@
       "tvmazeId": 91448,
       "sourceProvider": "TVWiki recent broadcast listing",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12480/406792148",
-      "tvwikiRank": 7
+      "tvwikiRank": 8
     },
     {
       "id": "new-2026-drama-9",
@@ -2311,9 +2311,9 @@
       "tvmazeId": 94124,
       "sourceProvider": "TVWiki recent broadcast listing",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12467/406792196",
-      "tvwikiRank": 1
+      "tvwikiRank": 2
     },
     {
       "id": "new-2026-drama-10",
@@ -2489,9 +2489,9 @@
       "tvmazeId": 90249,
       "sourceProvider": "TVWiki recent broadcast listing",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12417/406792133",
-      "tvwikiRank": 9
+      "tvwikiRank": 10
     },
     {
       "id": "new-2026-drama-11",
@@ -2667,9 +2667,9 @@
       "tvmazeId": 91309,
       "sourceProvider": "TVWiki recent broadcast listing",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12394/406792033",
-      "tvwikiRank": 12
+      "tvwikiRank": 13
     },
     {
       "id": "new-2026-drama-12",
@@ -2736,9 +2736,9 @@
       ],
       "sourceProvider": "TVWiki recent broadcast listing",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12379/406784929",
-      "tvwikiRank": 27
+      "tvwikiRank": 28
     },
     {
       "id": "new-2026-drama-13",
@@ -2785,9 +2785,9 @@
       ],
       "sourceProvider": "TVWiki recent broadcast listing",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12387/406791183",
-      "tvwikiRank": 19
+      "tvwikiRank": 20
     },
     {
       "id": "new-2026-drama-14",
@@ -2864,9 +2864,9 @@
       ],
       "sourceProvider": "TVWiki recent broadcast listing",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12384/406791186",
-      "tvwikiRank": 18
+      "tvwikiRank": 19
     },
     {
       "id": "new-2026-drama-15",
@@ -53959,7 +53959,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/f4b8d2435721f645fe162321118b84bd490022dc.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 0
+      "tvwikiRank": 2
     },
     {
       "id": "tvwiki-movie-36723",
@@ -53970,7 +53970,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/3DbjwrLryE5dac3d03DcPKBTyvf.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 1
+      "tvwikiRank": 3
     },
     {
       "id": "tvwiki-movie-36722",
@@ -53981,7 +53981,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/3EgtiR2ewNQxjJ1qizhDe4IrpPk.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 2
+      "tvwikiRank": 4
     },
     {
       "id": "tvwiki-movie-36716",
@@ -53992,7 +53992,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/9EUMIXSzqui1ugY16Wb3gTeLyQF.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 3
+      "tvwikiRank": 5
     },
     {
       "id": "tvwiki-movie-36715",
@@ -54003,7 +54003,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/398d288cb12c96f5ffa6527c0c4629a80a63ef33.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 4
+      "tvwikiRank": 6
     },
     {
       "id": "tvwiki-movie-36714",
@@ -54014,7 +54014,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/594435566921c6d55e4a6e00b9fcfcc4463952b2.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 5
+      "tvwikiRank": 7
     },
     {
       "id": "tvwiki-movie-36713",
@@ -54025,7 +54025,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/2NoWaSTgKF7FcJ0Lr5NrvDDINOv.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 6
+      "tvwikiRank": 8
     },
     {
       "id": "tvwiki-movie-36712",
@@ -54036,7 +54036,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/uxldr1vzuBF6kg1KTMTUVYpYd0H.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 7
+      "tvwikiRank": 9
     },
     {
       "id": "tvwiki-movie-36711",
@@ -54047,7 +54047,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/je5CQCCvXoAhWAwi6MoCai8IFwC.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 8
+      "tvwikiRank": 10
     },
     {
       "id": "tvwiki-movie-36694",
@@ -54058,7 +54058,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/ziyEHM0P1TgvhVXIqqguoMAD0TJ.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 9
+      "tvwikiRank": 11
     },
     {
       "id": "tvwiki-movie-36693",
@@ -54069,7 +54069,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/ac6bc8c93b4353931845993124fc1f421b7f59f4.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 10
+      "tvwikiRank": 12
     },
     {
       "id": "tvwiki-movie-36692",
@@ -54080,7 +54080,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/c3c79f99e1fd2b3f422954098b3d4114fc3514cc.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 11
+      "tvwikiRank": 13
     },
     {
       "id": "tvwiki-movie-36688",
@@ -54091,7 +54091,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/yEcfFXEWpuXcfsR9nKESVCFneqV.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 12
+      "tvwikiRank": 14
     },
     {
       "id": "tvwiki-movie-36686",
@@ -54102,7 +54102,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/6E4E7wYXw1DE2321F2hVNryLSk7.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 13
+      "tvwikiRank": 15
     },
     {
       "id": "tvwiki-movie-36680",
@@ -54113,7 +54113,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/326fd9142b2e21be80a24d4d34fec9b2d97b6500.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 14
+      "tvwikiRank": 16
     },
     {
       "id": "tvwiki-movie-36679",
@@ -54124,7 +54124,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/xmD4w0BVuxgApr0eKjaXiiID5W0.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 15
+      "tvwikiRank": 17
     },
     {
       "id": "tvwiki-movie-11071",
@@ -54135,7 +54135,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/tv/thumb/tw_49013322780580.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 16
+      "tvwikiRank": 18
     },
     {
       "id": "tvwiki-movie-36667",
@@ -54146,7 +54146,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/rQ2Sidqubi7XiHDScFe1faIz3Uv.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 17
+      "tvwikiRank": 19
     },
     {
       "id": "tvwiki-movie-11686",
@@ -54157,7 +54157,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/tv/thumb/tw_15401408910000.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 18
+      "tvwikiRank": 20
     },
     {
       "id": "tvwiki-movie-36660",
@@ -54168,7 +54168,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/8ze9OcVuFiy94s6FFPvsn4oC2e1.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 19
+      "tvwikiRank": 21
     },
     {
       "id": "tvwiki-movie-36627",
@@ -54179,7 +54179,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/ioogrqn2xtQjZBuHpNXPb8qtaQG.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 20
+      "tvwikiRank": 22
     },
     {
       "id": "tvwiki-movie-36648",
@@ -54190,7 +54190,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/zC4E522V1n3H4SGdYOaiqhF5DnS.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 21
+      "tvwikiRank": 23
     },
     {
       "id": "tvwiki-movie-36646",
@@ -54201,7 +54201,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/tnwFaR8oaRMW85iKmYxRtbuKx09.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 22
+      "tvwikiRank": 24
     },
     {
       "id": "tvwiki-movie-36639",
@@ -54212,7 +54212,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/2QCGC4toQXYuIsWKj5vJQRAdPjd.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 23
+      "tvwikiRank": 25
     },
     {
       "id": "tvwiki-movie-36637",
@@ -54223,7 +54223,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/dXeeDRLGpTX1U97lWBAwQeeplsW.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 24
+      "tvwikiRank": 26
     },
     {
       "id": "tvwiki-movie-32134",
@@ -54234,7 +54234,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/fQX4fRsagskLvCXnvPfdvh62QTG.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 25
+      "tvwikiRank": 27
     },
     {
       "id": "tvwiki-movie-36635",
@@ -54245,7 +54245,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/e0907c5bd059b1df63000c60b35a330530345093.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 26
+      "tvwikiRank": 28
     },
     {
       "id": "tvwiki-movie-36634",
@@ -54256,7 +54256,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/b5143f21a28d99b7ab19308914141ecb572ff3af.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 27
+      "tvwikiRank": 29
     },
     {
       "id": "tvwiki-movie-36633",
@@ -54267,7 +54267,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/9998b052a71edf4cf004d51988d1c577ba6ffca8.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 28
+      "tvwikiRank": 30
     },
     {
       "id": "tvwiki-movie-36632",
@@ -54278,7 +54278,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/rleue0CXFaVemfPnwkjtoe5TK5A.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 29
+      "tvwikiRank": 31
     },
     {
       "id": "tvwiki-movie-36614",
@@ -54289,7 +54289,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/c0cbe187a8c526d78a8290b91e4bb11e2f35c3a6.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 30
+      "tvwikiRank": 32
     },
     {
       "id": "tvwiki-movie-36613",
@@ -54300,7 +54300,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/4f7d01e18ae38c4de9b9eb7b0ece7b67330d2f07.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 31
+      "tvwikiRank": 33
     },
     {
       "id": "tvwiki-movie-36609",
@@ -54311,7 +54311,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/a3lzU19j7WGfyXVDfPMdh8DAkru.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 32
+      "tvwikiRank": 34
     },
     {
       "id": "tvwiki-movie-18507",
@@ -54322,7 +54322,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/72ba64830a6182de09813e671f41c890977fc8d3.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 33
+      "tvwikiRank": 35
     },
     {
       "id": "tvwiki-movie-36605",
@@ -54333,7 +54333,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/rsA2n4F5MdhzXZVK5Gqg3K9bBgP.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 34
+      "tvwikiRank": 36
     },
     {
       "id": "tvwiki-movie-36604",
@@ -54344,7 +54344,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/3c5686ae65d47a1766cf42f933ba9aba11a2bc65.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 35
+      "tvwikiRank": 37
     },
     {
       "id": "tvwiki-movie-36599",
@@ -54355,7 +54355,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/2ca4bbd23cdc00146a2756e5dbdf4f9df7ca3397.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 36
+      "tvwikiRank": 38
     },
     {
       "id": "tvwiki-movie-36596",
@@ -54366,7 +54366,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/L2SDL6pi8jyvMRmh1vWbqfwHtf.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 37
+      "tvwikiRank": 39
     },
     {
       "id": "tvwiki-movie-36595",
@@ -54377,7 +54377,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/dSp528gsiCTMEth1DrJcxIXBXim.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 38
+      "tvwikiRank": 40
     },
     {
       "id": "tvwiki-movie-36594",
@@ -54388,7 +54388,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/de0ad6afc70e4d4a7091f9c51e884cf7da958b85.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 39
+      "tvwikiRank": 41
     },
     {
       "id": "tvwiki-movie-36590",
@@ -54399,7 +54399,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/8b48279b63e5b661d522832b38e6756a2209b0ba.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 40
+      "tvwikiRank": 42
     },
     {
       "id": "tvwiki-movie-36589",
@@ -54410,7 +54410,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/bP787caULIuUgCeAXjsGBQLDMK7.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 41
+      "tvwikiRank": 43
     },
     {
       "id": "tvwiki-movie-36580",
@@ -54421,7 +54421,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/d9ad52556380c671244880bef2ba7b5baf821ad4.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 42
+      "tvwikiRank": 44
     },
     {
       "id": "tvwiki-movie-5705",
@@ -54432,7 +54432,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/18982963070713.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 43
+      "tvwikiRank": 45
     },
     {
       "id": "tvwiki-movie-30432",
@@ -54443,7 +54443,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/ec51517a08570702b7d337009ed72297d1bfb8e2.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 44
+      "tvwikiRank": 46
     },
     {
       "id": "tvwiki-movie-36578",
@@ -54454,7 +54454,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/892514c08923d3ad537aa8ab9a09770b244e00b3.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 45
+      "tvwikiRank": 47
     },
     {
       "id": "tvwiki-movie-31976",
@@ -54465,7 +54465,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/ebcc9b740eaf2c6bb8a29de23a564139a38ae89f.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 46
+      "tvwikiRank": 48
     },
     {
       "id": "tvwiki-movie-36576",
@@ -54476,7 +54476,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/92kAR5VR8XnzhD7S7AlCKAHbJn4.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 47
+      "tvwikiRank": 49
     },
     {
       "id": "tvwiki-movie-36575",
@@ -54487,7 +54487,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/hqzxCqbRS6YmYzgTYHW3dsWGoPD.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 48
+      "tvwikiRank": 50
     },
     {
       "id": "tvwiki-movie-36574",
@@ -54498,7 +54498,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/YkiQDlpMm1Z71RwWAYg07vT0ai.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 49
+      "tvwikiRank": 51
     },
     {
       "id": "tvwiki-movie-36569",
@@ -54509,7 +54509,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/vxkPiWdut20cHrFW57nduhhMR2V.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 50
+      "tvwikiRank": 52
     },
     {
       "id": "tvwiki-movie-9717",
@@ -54520,7 +54520,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/tv/thumb/tw_55293219238815.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 51
+      "tvwikiRank": 53
     },
     {
       "id": "tvwiki-movie-36568",
@@ -54531,7 +54531,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/52Bn5yC6IHQuVxPUza3Q6RZCZTu.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 52
+      "tvwikiRank": 54
     },
     {
       "id": "tvwiki-movie-36566",
@@ -54542,7 +54542,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/mot5NwdjpbQRaKxrQvcx1xCg0Yo.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 53
+      "tvwikiRank": 55
     },
     {
       "id": "tvwiki-movie-36562",
@@ -54553,7 +54553,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/qUNgtb0LEkRcHGanKHO0B3JWsw9.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 54
+      "tvwikiRank": 56
     },
     {
       "id": "tvwiki-movie-36561",
@@ -54564,7 +54564,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/kQ6SdbWStviMhTFt5tatjpGvRGV.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 55
+      "tvwikiRank": 57
     },
     {
       "id": "tvwiki-movie-36560",
@@ -54575,7 +54575,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/rNUdNG7PbIqCLMJtpLYBkbXUqPR.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 56
+      "tvwikiRank": 58
     },
     {
       "id": "tvwiki-movie-36559",
@@ -54586,7 +54586,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/a87c297c1c3af7308fe863e2104c2a76c5a370aa.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 57
+      "tvwikiRank": 59
     },
     {
       "id": "tvwiki-movie-36558",
@@ -54597,7 +54597,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/hv7zKr3cCdOFhNVcqWYj74Ij6KX.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 58
+      "tvwikiRank": 60
     },
     {
       "id": "tvwiki-movie-36557",
@@ -54608,7 +54608,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/cA9cnbD9buT5qfk20XstaVogHch.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 59
+      "tvwikiRank": 61
     },
     {
       "id": "tvwiki-movie-36556",
@@ -54619,7 +54619,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/tQFe8JZ1f1zFx53yJciPszSWXqb.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 60
+      "tvwikiRank": 62
     },
     {
       "id": "tvwiki-movie-36555",
@@ -54630,7 +54630,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/cttXvh438Mqp55loQMDofsd4yiC.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 61
+      "tvwikiRank": 63
     },
     {
       "id": "tvwiki-movie-36552",
@@ -54641,7 +54641,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/oQrAXGkBy84FyGpWrY71ptqs7zD.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 62
+      "tvwikiRank": 64
     },
     {
       "id": "tvwiki-movie-31934",
@@ -54652,7 +54652,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/tfYsOt4sIeN4iIcuMqwLLGm0VJx.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 63
+      "tvwikiRank": 65
     },
     {
       "id": "tvwiki-movie-19247",
@@ -54663,7 +54663,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/260cdf4bb2c3f451fe95a9e22259f2d14f34810e.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 64
+      "tvwikiRank": 66
     },
     {
       "id": "tvwiki-movie-36536",
@@ -54674,7 +54674,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/sUldADqpv2HITwngsM8RKqn15zC.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 65
+      "tvwikiRank": 67
     },
     {
       "id": "tvwiki-movie-23095",
@@ -54685,7 +54685,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/394e46af780f566db7c4f3464078cb4ede8ca67e.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 66
+      "tvwikiRank": 68
     },
     {
       "id": "tvwiki-movie-36527",
@@ -54696,7 +54696,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/53R2XdofnpfR723dwplqXXZddND.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 67
+      "tvwikiRank": 69
     },
     {
       "id": "tvwiki-movie-24779",
@@ -54707,7 +54707,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/ec23cc552cee7975c6df0410b9acaca2c46ba587.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 68
+      "tvwikiRank": 70
     },
     {
       "id": "tvwiki-movie-36524",
@@ -54718,7 +54718,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/19BfIkDHgbgLcHVbi9rKx7KUCgi.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 69
+      "tvwikiRank": 71
     },
     {
       "id": "tvwiki-movie-36523",
@@ -54729,7 +54729,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/lNXeEpg4yLSRwXwOeR5lbPgwbqL.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 70
+      "tvwikiRank": 72
     },
     {
       "id": "tvwiki-movie-36518",
@@ -54740,7 +54740,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/waH2eiMaEW987JUTWyrj4x4d63k.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 71
+      "tvwikiRank": 73
     },
     {
       "id": "tvwiki-movie-36517",
@@ -54751,7 +54751,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/d60eb4addad0497f5ac0d56284eb67b9e0239bfb.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 72
+      "tvwikiRank": 74
     },
     {
       "id": "tvwiki-movie-36516",
@@ -54762,7 +54762,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/1ff1e1c3b2ea381048f170909e0ff992fed3fade.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 73
+      "tvwikiRank": 75
     },
     {
       "id": "tvwiki-movie-30637",
@@ -54773,7 +54773,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/52bb549bab16bdf254397f4a4a85d2fedf41fa46.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 74
+      "tvwikiRank": 76
     },
     {
       "id": "tvwiki-movie-36510",
@@ -54784,7 +54784,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/4K98Uxar2JwQarF7uijSUcHKyhW.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 75
+      "tvwikiRank": 77
     },
     {
       "id": "tvwiki-movie-32085",
@@ -54795,7 +54795,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/etJXeoQovaAcQD8gG0vebtoIlMH.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 76
+      "tvwikiRank": 78
     },
     {
       "id": "tvwiki-movie-32157",
@@ -54806,7 +54806,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/coyrg56aluVoOUS69ciZgnn5FIy.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 77
+      "tvwikiRank": 79
     },
     {
       "id": "tvwiki-movie-36501",
@@ -54817,7 +54817,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/0a6c7d04f924139fc2130769ed5788718396b66c.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 78
+      "tvwikiRank": 80
     },
     {
       "id": "tvwiki-movie-36498",
@@ -54828,7 +54828,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/c6c1846402333f01e085a33836ba1874b230e198.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 79
+      "tvwikiRank": 81
     },
     {
       "id": "tvwiki-movie-36497",
@@ -54839,7 +54839,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/1lQHA18T32JyIonQUkSWhMwinjm.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 80
+      "tvwikiRank": 82
     },
     {
       "id": "tvwiki-movie-30385",
@@ -54850,7 +54850,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/2c9011a82c60b8d9c7e63f0da02970d21ea0e47c.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 81
+      "tvwikiRank": 83
     },
     {
       "id": "tvwiki-movie-36496",
@@ -54861,7 +54861,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/76d71e1b6c03f70e634b3bf7b6575fd8eea24a7b.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 82
+      "tvwikiRank": 84
     },
     {
       "id": "tvwiki-movie-36494",
@@ -54872,7 +54872,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/5e5cdd1b7c8a3a0213743c7a693f3c5f55bc75b6.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 83
+      "tvwikiRank": 85
     },
     {
       "id": "tvwiki-movie-36492",
@@ -54883,7 +54883,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/7DvuwtYmnP9rTCvWRIHMP5NunpH.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 84
+      "tvwikiRank": 86
     },
     {
       "id": "tvwiki-movie-36486",
@@ -54894,7 +54894,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/4tWJdFTBEg0hXHw41ZFCjj3Cvpo.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 85
+      "tvwikiRank": 87
     },
     {
       "id": "tvwiki-movie-36477",
@@ -54905,7 +54905,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/wrsf06e2prOAj8rKqiSq5niH3mX.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 86
+      "tvwikiRank": 88
     },
     {
       "id": "tvwiki-movie-16328",
@@ -54916,7 +54916,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/tv/thumb/tw_77190048398898.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 87
+      "tvwikiRank": 89
     },
     {
       "id": "tvwiki-movie-36475",
@@ -54926,8 +54926,7 @@
       "sourceUrl": "https://tvwiki60.net/movie/36475/406786489",
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/fi88I3TTCY6JVwhEqlJCU2YeDNi.jpg",
-      "tvwikiPageStatus": "episode",
-      "tvwikiRank": 88
+      "tvwikiPageStatus": "episode"
     },
     {
       "id": "tvwiki-movie-30805",
@@ -54937,8 +54936,7 @@
       "sourceUrl": "https://tvwiki60.net/movie/30805/406786487",
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/d8216216ce74033431c4bc51822026bb44c3f6d0.webp",
-      "tvwikiPageStatus": "episode",
-      "tvwikiRank": 89
+      "tvwikiPageStatus": "episode"
     },
     {
       "id": "tvwiki-drama-12484",
@@ -55016,7 +55014,7 @@
         }
       ],
       "tvmazeId": 94429,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12484/406792150",
       "episodes": [
         {
@@ -55060,7 +55058,7 @@
           "pageUrl": "https://tvwiki60.net/drama/12484/406792150"
         }
       ],
-      "tvwikiRank": 6
+      "tvwikiRank": 7
     },
     {
       "id": "tvwiki-drama-4124",
@@ -55322,7 +55320,7 @@
         }
       ],
       "tvmazeId": 93245,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4124/406792128",
       "episodes": [
         {
@@ -55481,7 +55479,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4124/406792128"
         }
       ],
-      "tvwikiRank": 10
+      "tvwikiRank": 11
     },
     {
       "id": "tvwiki-drama-12360",
@@ -55492,7 +55490,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/7e981ba6c56a28b3f593043801b41db8e6c0b5ee.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12360/406792189",
       "episodes": [
         {
@@ -55676,7 +55674,7 @@
           "pageUrl": "https://tvwiki60.net/drama/12360/406792189"
         }
       ],
-      "tvwikiRank": 2
+      "tvwikiRank": 3
     },
     {
       "id": "tvwiki-drama-4132",
@@ -56250,7 +56248,7 @@
         }
       ],
       "tvmazeId": 94372,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4132/406792185",
       "episodes": [
         {
@@ -56544,7 +56542,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4132/406792185"
         }
       ],
-      "tvwikiRank": 3
+      "tvwikiRank": 4
     },
     {
       "id": "tvwiki-drama-4103",
@@ -56555,7 +56553,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/ff1f212b78f87fe3ffbea2738e6740b7c78f3772.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4103/406792182",
       "episodes": [
         {
@@ -56964,7 +56962,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4103/406792182"
         }
       ],
-      "tvwikiRank": 4
+      "tvwikiRank": 5
     },
     {
       "id": "tvwiki-drama-12482",
@@ -57042,7 +57040,7 @@
         }
       ],
       "tvmazeId": 94793,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12482/406791751",
       "episodes": [
         {
@@ -57086,7 +57084,7 @@
           "pageUrl": "https://tvwiki60.net/drama/12482/406791751"
         }
       ],
-      "tvwikiRank": 15
+      "tvwikiRank": 16
     },
     {
       "id": "tvwiki-drama-12535",
@@ -57148,7 +57146,7 @@
         }
       ],
       "tvmazeId": 94650,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12535/406792213",
       "episodes": [
         {
@@ -57187,7 +57185,7 @@
           "pageUrl": "https://tvwiki60.net/drama/12535/406792213"
         }
       ],
-      "tvwikiRank": 0
+      "tvwikiRank": 1
     },
     {
       "id": "tvwiki-drama-12639",
@@ -57198,9 +57196,9 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/267d7d30f4f838ff1405b5d9382e717a81a27c4d.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12639/406790475",
-      "tvwikiRank": 20
+      "tvwikiRank": 21
     },
     {
       "id": "tvwiki-drama-12442",
@@ -57211,7 +57209,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/aGX71DFozG55achSbKd225LHGMj.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12442/406789819",
       "episodes": [
         {
@@ -57265,7 +57263,7 @@
           "pageUrl": "https://tvwiki60.net/drama/12442/406789819"
         }
       ],
-      "tvwikiRank": 21
+      "tvwikiRank": 22
     },
     {
       "id": "tvwiki-drama-12391",
@@ -57276,7 +57274,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/etZ2mRnlt4Rip1011nlb6zm3HoS.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12391/406789621",
       "episodes": [
         {
@@ -57305,7 +57303,7 @@
           "pageUrl": "https://tvwiki60.net/drama/12391/406789621"
         }
       ],
-      "tvwikiRank": 22
+      "tvwikiRank": 23
     },
     {
       "id": "tvwiki-drama-12351",
@@ -57316,7 +57314,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/hLBNb9tUcYnJ879XKxJD68Ort2y.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12351/406788717",
       "episodes": [
         {
@@ -57380,7 +57378,7 @@
           "pageUrl": "https://tvwiki60.net/drama/12351/406788717"
         }
       ],
-      "tvwikiRank": 23
+      "tvwikiRank": 24
     },
     {
       "id": "tvwiki-drama-4144",
@@ -57391,7 +57389,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/2a5a2372a21aadaa1eb13a9a15cd30f1b0b4b4d8.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4144/406788710",
       "episodes": [
         {
@@ -57465,7 +57463,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4144/406788710"
         }
       ],
-      "tvwikiRank": 24
+      "tvwikiRank": 25
     },
     {
       "id": "tvwiki-drama-12556",
@@ -57476,7 +57474,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/yyA9CI8BLNg6LtVRvmVxki4xiGb.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12556/406788432",
       "episodes": [
         {
@@ -57520,7 +57518,7 @@
           "pageUrl": "https://tvwiki60.net/drama/12556/406788432"
         }
       ],
-      "tvwikiRank": 25
+      "tvwikiRank": 26
     },
     {
       "id": "tvwiki-drama-4148",
@@ -57531,7 +57529,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/7e9f80db2f747ba852d5b2ee87b5b1de8b9e804f.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4148/406786530",
       "episodes": [
         {
@@ -57585,7 +57583,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4148/406786530"
         }
       ],
-      "tvwikiRank": 26
+      "tvwikiRank": 27
     },
     {
       "id": "tvwiki-drama-4146",
@@ -57596,7 +57594,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/e7a830d4fdaab4a17cd8a7b369e49e904e7eae18.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4146/406784730",
       "episodes": [
         {
@@ -57650,7 +57648,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4146/406784730"
         }
       ],
-      "tvwikiRank": 28
+      "tvwikiRank": 29
     },
     {
       "id": "tvwiki-drama-4139",
@@ -57661,7 +57659,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/c1953c960c45e1feb39269d2901b95f51082d676.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4139/406784154",
       "episodes": [
         {
@@ -57725,7 +57723,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4139/406784154"
         }
       ],
-      "tvwikiRank": 29
+      "tvwikiRank": 30
     },
     {
       "id": "tvwiki-drama-12371",
@@ -57736,7 +57734,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/34159e553800062bb9cea7ec9d394f5569621ff2.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12371/406783797",
       "episodes": [
         {
@@ -57780,7 +57778,7 @@
           "pageUrl": "https://tvwiki60.net/drama/12371/406783797"
         }
       ],
-      "tvwikiRank": 30
+      "tvwikiRank": 31
     },
     {
       "id": "tvwiki-drama-4136",
@@ -57791,7 +57789,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/29eba3abb73582b4b343bb04c8709ed0e75a5566.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4136/406783509",
       "episodes": [
         {
@@ -57915,7 +57913,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4136/406783509"
         }
       ],
-      "tvwikiRank": 31
+      "tvwikiRank": 32
     },
     {
       "id": "tvwiki-drama-1303",
@@ -57926,7 +57924,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/file/drama/7c18d03b2c7246d3f5308cd1a116f0ec30047fd8.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/1303/406782995",
       "episodes": [
         {
@@ -57990,7 +57988,7 @@
           "pageUrl": "https://tvwiki60.net/drama/1303/405567974"
         }
       ],
-      "tvwikiRank": 32
+      "tvwikiRank": 33
     },
     {
       "id": "tvwiki-drama-4137",
@@ -58001,7 +57999,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/3f15862479fb4cbb625f5876a6e1d39191d0b23d.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4137/406782815",
       "episodes": [
         {
@@ -58055,7 +58053,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4137/406782815"
         }
       ],
-      "tvwikiRank": 33
+      "tvwikiRank": 34
     },
     {
       "id": "tvwiki-drama-4135",
@@ -58066,7 +58064,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/21658cf865a1dd3eb49d8d2dcbaf086c1ba28ed0.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4135/406782808",
       "episodes": [
         {
@@ -58130,7 +58128,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4135/406782808"
         }
       ],
-      "tvwikiRank": 34
+      "tvwikiRank": 35
     },
     {
       "id": "tvwiki-drama-4145",
@@ -58141,7 +58139,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/bfFA25WkfxW228e0xKQxWgZWmku.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4145/406782726",
       "episodes": [
         {
@@ -58175,7 +58173,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4145/406782726"
         }
       ],
-      "tvwikiRank": 35
+      "tvwikiRank": 36
     },
     {
       "id": "tvwiki-drama-3969",
@@ -58186,7 +58184,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/5f673d793dac553e2df954d7e80d01235edac9c6.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3969/406782411",
       "episodes": [
         {
@@ -58220,7 +58218,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3969/406782411"
         }
       ],
-      "tvwikiRank": 36
+      "tvwikiRank": 37
     },
     {
       "id": "tvwiki-drama-4131",
@@ -58231,7 +58229,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/tNqYz2z3rRxNseKcMize9SAp3wS.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4131/406782158",
       "episodes": [
         {
@@ -58305,7 +58303,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4131/406782158"
         }
       ],
-      "tvwikiRank": 37
+      "tvwikiRank": 38
     },
     {
       "id": "tvwiki-drama-4147",
@@ -58316,7 +58314,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/bbeb2f8b9306b9fabdcd62d528742d4569b835af.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4147/406781854",
       "episodes": [
         {
@@ -58360,7 +58358,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4147/406781854"
         }
       ],
-      "tvwikiRank": 38
+      "tvwikiRank": 39
     },
     {
       "id": "tvwiki-drama-3777",
@@ -58371,7 +58369,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/file/drama/1522e779289595684fa70cf0b2fe436c74acf58d.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3777/406781623",
       "episodes": [
         {
@@ -58985,7 +58983,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3777/406781623"
         }
       ],
-      "tvwikiRank": 39
+      "tvwikiRank": 40
     },
     {
       "id": "tvwiki-drama-4126",
@@ -58996,7 +58994,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/3655338f98c78ebe22017601982a6324e8ddeb2e.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4126/406780882",
       "episodes": [
         {
@@ -59070,7 +59068,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4126/406780882"
         }
       ],
-      "tvwikiRank": 40
+      "tvwikiRank": 41
     },
     {
       "id": "tvwiki-drama-3607",
@@ -59081,7 +59079,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/file/drama/8ec4183be2ff257e2a2c24eb32cdd772a0bd4788.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3607/406780199",
       "episodes": [
         {
@@ -59115,7 +59113,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3607/406780199"
         }
       ],
-      "tvwikiRank": 41
+      "tvwikiRank": 42
     },
     {
       "id": "tvwiki-drama-3800",
@@ -59126,7 +59124,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/ca290f7747a0c102312f1c6bb825f670c190eb03.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3800/406780060",
       "episodes": [
         {
@@ -59190,7 +59188,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3800/406780060"
         }
       ],
-      "tvwikiRank": 42
+      "tvwikiRank": 43
     },
     {
       "id": "tvwiki-drama-4129",
@@ -59201,7 +59199,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/8d378b681e4bd114e37101e7faa065c3ac3d2c46.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4129/406779923",
       "episodes": [
         {
@@ -59265,7 +59263,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4129/406779923"
         }
       ],
-      "tvwikiRank": 43
+      "tvwikiRank": 44
     },
     {
       "id": "tvwiki-drama-4125",
@@ -59276,7 +59274,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/dyusVtoZ2h3RV6jbgTeqzRBMV7a.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4125/406779297",
       "episodes": [
         {
@@ -59320,7 +59318,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4125/406779297"
         }
       ],
-      "tvwikiRank": 44
+      "tvwikiRank": 45
     },
     {
       "id": "tvwiki-drama-4141",
@@ -59331,7 +59329,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/2d107d298d1f54ed8285e932f192eaa10384e7ba.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4141/406778981",
       "episodes": [
         {
@@ -59365,7 +59363,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4141/406778981"
         }
       ],
-      "tvwikiRank": 45
+      "tvwikiRank": 46
     },
     {
       "id": "tvwiki-drama-4140",
@@ -59376,7 +59374,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/fc4920bd334c9a190885fefe09caec1775abc011.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4140/406778975",
       "episodes": [
         {
@@ -59410,7 +59408,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4140/406778975"
         }
       ],
-      "tvwikiRank": 46
+      "tvwikiRank": 47
     },
     {
       "id": "tvwiki-drama-4138",
@@ -59421,7 +59419,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/z1xv9CKt7HmXgS6azNB563mU2FB.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4138/406777903",
       "episodes": [
         {
@@ -59475,7 +59473,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4138/406777903"
         }
       ],
-      "tvwikiRank": 47
+      "tvwikiRank": 48
     },
     {
       "id": "tvwiki-drama-4113",
@@ -59486,7 +59484,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/593b7936901c6874752cc22d81dc45e679db8873.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4113/406776847",
       "episodes": [
         {
@@ -59550,7 +59548,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4113/406776847"
         }
       ],
-      "tvwikiRank": 48
+      "tvwikiRank": 49
     },
     {
       "id": "tvwiki-drama-4110",
@@ -59561,7 +59559,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/ec3d20bb954950fcdd8eb916f8b1ff612a225d95.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4110/406775855",
       "episodes": [
         {
@@ -59625,7 +59623,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4110/406775855"
         }
       ],
-      "tvwikiRank": 49
+      "tvwikiRank": 50
     },
     {
       "id": "tvwiki-drama-4105",
@@ -59636,7 +59634,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/wR7y2h0ccbaTnU5KpUjKIesflng.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4105/406775416",
       "episodes": [
         {
@@ -59700,7 +59698,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4105/406775416"
         }
       ],
-      "tvwikiRank": 50
+      "tvwikiRank": 51
     },
     {
       "id": "tvwiki-drama-4133",
@@ -59711,7 +59709,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/a09b4249c2bd702229898e3f7fa4bf57e7e37aba.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4133/406774401",
       "episodes": [
         {
@@ -59765,7 +59763,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4133/406774401"
         }
       ],
-      "tvwikiRank": 51
+      "tvwikiRank": 52
     },
     {
       "id": "tvwiki-drama-4121",
@@ -59776,7 +59774,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/nTBL5NMS5tKt2RxpkyNJbu63Dlm.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4121/406774316",
       "episodes": [
         {
@@ -59820,7 +59818,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4121/406774316"
         }
       ],
-      "tvwikiRank": 52
+      "tvwikiRank": 53
     },
     {
       "id": "tvwiki-drama-4098",
@@ -59831,7 +59829,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/tC7y1Ut98xH8Ovs1KhxRPMkwEmN.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4098/406773745",
       "episodes": [
         {
@@ -59895,7 +59893,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4098/406773745"
         }
       ],
-      "tvwikiRank": 53
+      "tvwikiRank": 54
     },
     {
       "id": "tvwiki-drama-3722",
@@ -59906,7 +59904,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/23d6d6c12a884cbccc1c0c2e8f5ce81a907e99ae.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3722/406773438",
       "episodes": [
         {
@@ -60420,7 +60418,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3722/406773438"
         }
       ],
-      "tvwikiRank": 54
+      "tvwikiRank": 55
     },
     {
       "id": "tvwiki-drama-4130",
@@ -60431,7 +60429,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/a49b7c3a908f6f0681b571fe3fd31724f3c107be.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4130/406773399",
       "episodes": [
         {
@@ -60495,7 +60493,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4130/406773399"
         }
       ],
-      "tvwikiRank": 55
+      "tvwikiRank": 56
     },
     {
       "id": "tvwiki-drama-4127",
@@ -60506,9 +60504,9 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/aLrGyfe2nbfM9PvtSYoKy5jEOJu.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4127/406770847",
-      "tvwikiRank": 56
+      "tvwikiRank": 57
     },
     {
       "id": "tvwiki-drama-4075",
@@ -60519,7 +60517,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/8e7148ed8f600d7c3d11cb75c8a19b5ae2218f42.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4075/406768779",
       "episodes": [
         {
@@ -60583,7 +60581,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4075/406768779"
         }
       ],
-      "tvwikiRank": 57
+      "tvwikiRank": 58
     },
     {
       "id": "tvwiki-drama-4118",
@@ -60594,7 +60592,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/01592bf6e1b785ade724ad68a5d54c6d4fb2a224.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4118/406768285",
       "episodes": [
         {
@@ -60608,7 +60606,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4118/406768285"
         }
       ],
-      "tvwikiRank": 58
+      "tvwikiRank": 59
     },
     {
       "id": "tvwiki-drama-4099",
@@ -60619,7 +60617,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/tFQobZkEwDQGn4n67lLle5p0F7e.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4099/406767973",
       "episodes": [
         {
@@ -60663,7 +60661,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4099/406767973"
         }
       ],
-      "tvwikiRank": 59
+      "tvwikiRank": 60
     },
     {
       "id": "tvwiki-drama-4081",
@@ -60674,7 +60672,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/eKJNWq4akdrviR9qEF6xPhzKQU.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4081/406767532",
       "episodes": [
         {
@@ -60728,7 +60726,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4081/406767532"
         }
       ],
-      "tvwikiRank": 60
+      "tvwikiRank": 61
     },
     {
       "id": "tvwiki-drama-4111",
@@ -60739,7 +60737,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/770a0e93f9493d24dac52227f8bdad544370c1fb.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4111/406766676",
       "episodes": [
         {
@@ -60763,7 +60761,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4111/406766676"
         }
       ],
-      "tvwikiRank": 61
+      "tvwikiRank": 62
     },
     {
       "id": "tvwiki-drama-4079",
@@ -60774,7 +60772,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/841f29b7f5902d0b40b0ac253ff99b5680f07d7d.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4079/406766598",
       "episodes": [
         {
@@ -60828,7 +60826,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4079/406766598"
         }
       ],
-      "tvwikiRank": 62
+      "tvwikiRank": 63
     },
     {
       "id": "tvwiki-drama-3679",
@@ -60839,7 +60837,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/476b14155f11bd34211218b0fba8e276aa6e5f9d.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3679/406764622",
       "episodes": [
         {
@@ -61093,7 +61091,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3679/406764622"
         }
       ],
-      "tvwikiRank": 63
+      "tvwikiRank": 64
     },
     {
       "id": "tvwiki-drama-3973",
@@ -61104,7 +61102,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/8b4931df04303ce86129777e520478fd92337b15.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3973/406764372",
       "episodes": [
         {
@@ -61188,7 +61186,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3973/406764372"
         }
       ],
-      "tvwikiRank": 64
+      "tvwikiRank": 65
     },
     {
       "id": "tvwiki-drama-4112",
@@ -61199,7 +61197,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/7b8YEvnwJGFC35B8VPRPdp8O5Ri.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4112/406764371",
       "episodes": [
         {
@@ -61243,7 +61241,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4112/406764371"
         }
       ],
-      "tvwikiRank": 65
+      "tvwikiRank": 66
     },
     {
       "id": "tvwiki-drama-4109",
@@ -61254,7 +61252,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/f82cf8fabf9c40f20ca9a32259e727590afb85ab.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4109/406763430",
       "episodes": [
         {
@@ -61308,7 +61306,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4109/406763430"
         }
       ],
-      "tvwikiRank": 66
+      "tvwikiRank": 67
     },
     {
       "id": "tvwiki-drama-4106",
@@ -61319,7 +61317,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/hwBQuhP9ntGR7nUL5DOE1vgpwpe.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4106/406763135",
       "episodes": [
         {
@@ -61373,7 +61371,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4106/406763135"
         }
       ],
-      "tvwikiRank": 67
+      "tvwikiRank": 68
     },
     {
       "id": "tvwiki-drama-4078",
@@ -61384,7 +61382,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/48f24018dfd91432ae64af65a584ea707e14156d.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4078/406760701",
       "episodes": [
         {
@@ -61413,7 +61411,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4078/406760701"
         }
       ],
-      "tvwikiRank": 68
+      "tvwikiRank": 69
     },
     {
       "id": "tvwiki-drama-3981",
@@ -61424,7 +61422,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/bd4b5730cc30c712963028ab3704efd1fb949d1b.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3981/406760692",
       "episodes": [
         {
@@ -61488,7 +61486,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3981/406760692"
         }
       ],
-      "tvwikiRank": 69
+      "tvwikiRank": 70
     },
     {
       "id": "tvwiki-drama-3971",
@@ -61499,7 +61497,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/1d5301e12b41c1da018ea0a560fcd0ea17d45cfb.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3971/406759356",
       "episodes": [
         {
@@ -61563,7 +61561,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3971/406759356"
         }
       ],
-      "tvwikiRank": 70
+      "tvwikiRank": 71
     },
     {
       "id": "tvwiki-drama-3592",
@@ -61574,7 +61572,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/file/drama/1f9e0c81eed715177d84a8cfb3460a8d51d0e066.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3592/406758413",
       "episodes": [
         {
@@ -62278,7 +62276,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3592/406758413"
         }
       ],
-      "tvwikiRank": 71
+      "tvwikiRank": 72
     },
     {
       "id": "tvwiki-drama-3956",
@@ -62289,7 +62287,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/96fd03d5acabaf01e500328cbed147d30486a600.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3956/406757119",
       "episodes": [
         {
@@ -62353,7 +62351,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3956/406757119"
         }
       ],
-      "tvwikiRank": 72
+      "tvwikiRank": 73
     },
     {
       "id": "tvwiki-drama-4080",
@@ -62364,7 +62362,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/xSSp3JHoZFxc69aeFtc9JTgVMeu.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4080/406755724",
       "episodes": [
         {
@@ -62398,7 +62396,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4080/406755724"
         }
       ],
-      "tvwikiRank": 73
+      "tvwikiRank": 74
     },
     {
       "id": "tvwiki-drama-4021",
@@ -62409,7 +62407,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/e3ecb9d044f9e5449577da5ffcf57ae88fc5bc91.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4021/406755677",
       "episodes": [
         {
@@ -62453,7 +62451,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4021/406755677"
         }
       ],
-      "tvwikiRank": 74
+      "tvwikiRank": 75
     },
     {
       "id": "tvwiki-drama-3898",
@@ -62464,7 +62462,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/c6b360d424b091db6c84a4d6bdb05d119eb80386.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3898/406754802",
       "episodes": [
         {
@@ -62538,7 +62536,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3898/406754802"
         }
       ],
-      "tvwikiRank": 75
+      "tvwikiRank": 76
     },
     {
       "id": "tvwiki-drama-3916",
@@ -62549,7 +62547,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/75a482b386589dd90e3cb92de326df19c479d1f3.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3916/406753997",
       "episodes": [
         {
@@ -62613,7 +62611,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3916/406753997"
         }
       ],
-      "tvwikiRank": 76
+      "tvwikiRank": 77
     },
     {
       "id": "tvwiki-drama-3773",
@@ -62624,7 +62622,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/44e476ff46b543433880e0de0fe9341cf5e4e2b3.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3773/406753217",
       "episodes": [
         {
@@ -62688,7 +62686,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3773/406753217"
         }
       ],
-      "tvwikiRank": 77
+      "tvwikiRank": 78
     },
     {
       "id": "tvwiki-drama-4022",
@@ -62699,7 +62697,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/0df896e2279199b5912eb0b0104fb7347c493f1f.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/4022/406744764",
       "episodes": [
         {
@@ -62753,7 +62751,7 @@
           "pageUrl": "https://tvwiki60.net/drama/4022/406744764"
         }
       ],
-      "tvwikiRank": 78
+      "tvwikiRank": 79
     },
     {
       "id": "tvwiki-drama-3854",
@@ -62764,7 +62762,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/a6c4439ab1ffc4d2786113e7f4860f5f8edc7010.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3854/406736259",
       "episodes": [
         {
@@ -62828,7 +62826,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3854/406736259"
         }
       ],
-      "tvwikiRank": 79
+      "tvwikiRank": 80
     },
     {
       "id": "tvwiki-drama-3823",
@@ -62839,7 +62837,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/c38bf3d23c677cf12816a196e820df6a868aa99b.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3823/406735577",
       "episodes": [
         {
@@ -62923,7 +62921,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3823/406735577"
         }
       ],
-      "tvwikiRank": 80
+      "tvwikiRank": 81
     },
     {
       "id": "tvwiki-drama-3844",
@@ -62934,7 +62932,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/ef71907c389cc78582e9076ed00ab076e3dc3637.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3844/406735308",
       "episodes": [
         {
@@ -62998,7 +62996,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3844/406735308"
         }
       ],
-      "tvwikiRank": 81
+      "tvwikiRank": 82
     },
     {
       "id": "tvwiki-drama-3947",
@@ -63009,7 +63007,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/2ecffca482ed5bce806da0f038c51540841cd157.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3947/406735294",
       "episodes": [
         {
@@ -63073,7 +63071,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3947/406735294"
         }
       ],
-      "tvwikiRank": 82
+      "tvwikiRank": 83
     },
     {
       "id": "tvwiki-drama-3867",
@@ -63084,7 +63082,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/fa8c1f02b8d3532d63ecca321b3e6948c41687c0.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3867/406735057",
       "episodes": [
         {
@@ -63138,7 +63136,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3867/406735057"
         }
       ],
-      "tvwikiRank": 83
+      "tvwikiRank": 84
     },
     {
       "id": "tvwiki-drama-3918",
@@ -63149,7 +63147,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/73045c40c24343790bd7ff8f1b641e37065387c3.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3918/406734838",
       "episodes": [
         {
@@ -63183,7 +63181,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3918/406734838"
         }
       ],
-      "tvwikiRank": 84
+      "tvwikiRank": 85
     },
     {
       "id": "tvwiki-drama-3840",
@@ -63194,7 +63192,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/4e83d024973a2c832fa28df9752412a87ba89a62.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3840/406734837",
       "episodes": [
         {
@@ -63258,7 +63256,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3840/406734837"
         }
       ],
-      "tvwikiRank": 85
+      "tvwikiRank": 86
     },
     {
       "id": "tvwiki-drama-3827",
@@ -63269,7 +63267,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/c15a574ec54d0bf7568ee7ad4de4336d9d969354.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3827/406734571",
       "episodes": [
         {
@@ -63333,7 +63331,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3827/406734571"
         }
       ],
-      "tvwikiRank": 86
+      "tvwikiRank": 87
     },
     {
       "id": "tvwiki-drama-3903",
@@ -63344,7 +63342,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/3bc529ed6e35710b88f9df3f7440c123897976e1.png",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3903/406733918",
       "episodes": [
         {
@@ -63373,7 +63371,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3903/406733918"
         }
       ],
-      "tvwikiRank": 87
+      "tvwikiRank": 88
     },
     {
       "id": "tvwiki-drama-3943",
@@ -63384,7 +63382,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/1ef456745da1fa0e66c086be8d742237388e05c3.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/3943/406732636",
       "episodes": [
         {
@@ -63493,7 +63491,7 @@
           "pageUrl": "https://tvwiki60.net/drama/3943/406732636"
         }
       ],
-      "tvwikiRank": 88
+      "tvwikiRank": 89
     },
     {
       "id": "tvwiki-drama-859",
@@ -63587,8 +63585,7 @@
           "label": "16화",
           "pageUrl": "https://tvwiki60.net/drama/859/406732537"
         }
-      ],
-      "tvwikiRank": 89
+      ]
     },
     {
       "sourceIndexedAt": "2026-11-15T14:38:36Z",
@@ -63639,8 +63636,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/tv/thumb/tw_15148776030180.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 20,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 24,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1703/406792162",
       "episodes": [
         {
@@ -65654,8 +65651,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/85177534604085.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 21,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 25,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/931/406792156",
       "episodes": [
         {
@@ -66434,8 +66431,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/517cabb8fdf1b8918f6bc50de3aae358680651f4.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 22,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 26,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3761/406792153",
       "episodes": [
         {
@@ -66529,8 +66526,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/904ugLoQib2bzEcD3jhRUwr1BfC.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 23,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 27,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3972/406792149",
       "episodes": [
         {
@@ -66589,8 +66586,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/ca95ae86e5c89ecbb440654324a9cae570155931.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 24,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 28,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3979/406792147",
       "episodes": [
         {
@@ -66659,8 +66656,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/939e34e5ccec6cf1ff64a201e13434333b644f67.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 25,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 29,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4116/406792144",
       "episodes": [
         {
@@ -66704,8 +66701,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/e7a8f57743634cbdc2c3cccc41a8eae6b31363f6.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 26,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 30,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4082/406792142",
       "episodes": [
         {
@@ -66754,8 +66751,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/tv/thumb/tw_58552343199079.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 27,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 31,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1094/406792141",
       "episodes": [
         {
@@ -68769,8 +68766,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/ad1995e197a9be576bc6e9f85014c189b62717e5.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 28,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 32,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1944/406792140",
       "episodes": [
         {
@@ -69174,8 +69171,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/ff48699b6cc2c26c6f4905db188ce24be0b990c4.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 29,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 33,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4072/406792139",
       "episodes": [
         {
@@ -69229,8 +69226,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/202f11f546495fafd59cf3f07a3a193e9b1653a5.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 30,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 34,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3833/406792137",
       "episodes": [
         {
@@ -69729,8 +69726,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/28691571255432.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 31,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 35,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/455/406792134",
       "episodes": [
         {
@@ -70979,8 +70976,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/b9e8fd3f4449d5be6b028fb5050f131b7b53d629.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 32,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 36,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3978/406792127",
       "episodes": [
         {
@@ -71039,8 +71036,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/tv/thumb/tw_52458458864306.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 33,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 37,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1042/406792125",
       "episodes": [
         {
@@ -71729,8 +71726,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/6d3941c302f550097cc5ace0f089a4c2ffdc1adb.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 34,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 38,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1091/406792124",
       "episodes": [
         {
@@ -73494,8 +73491,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/tv/thumb/tw_96854644496866.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 35,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 39,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1067/406792123",
       "episodes": [
         {
@@ -75509,8 +75506,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/obn5tsQKBX1dOEGQv34BPkZ7gH7.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 36,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 40,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4193/406792122",
       "episodes": [
         {
@@ -75534,8 +75531,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/55400990609602b2a84917ba8969daa0f49ea3d6.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 37,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 41,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/468/406792121",
       "episodes": [
         {
@@ -77309,8 +77306,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/13271d8321109e3cf36ae7c67780f89d65a1acbb.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 38,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 42,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/457/406792119",
       "episodes": [
         {
@@ -78554,8 +78551,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/tv/thumb/tw_11664694165591.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 39,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 43,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1106/406792116",
       "episodes": [
         {
@@ -80444,8 +80441,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/018d03ad47f544c36cbd987144aceed1d182057c.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 40,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 44,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3775/406792105",
       "episodes": [
         {
@@ -80574,8 +80571,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/tv/thumb/tw_68050946709721.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 41,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 45,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1109/406792104",
       "episodes": [
         {
@@ -82589,8 +82586,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/38947269876187.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 42,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 46,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/473/406792101",
       "episodes": [
         {
@@ -83804,8 +83801,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/43328107600088.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 43,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 47,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3894/406792095",
       "episodes": [
         {
@@ -84959,8 +84956,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/a443194f5fb065bd735663d7dbe97160d910b717.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 44,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 48,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3571/406792087",
       "episodes": [
         {
@@ -85169,8 +85166,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/ef6a6312356b5fa8e2b1e221079bc05458c8f53e.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 45,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 49,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3830/406792063",
       "episodes": [
         {
@@ -85279,8 +85276,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/eca9ed3bb00244070a8686cfd3aa07e5a274c560.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 46,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 50,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1429/406792062",
       "episodes": [
         {
@@ -85709,8 +85706,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/263db0b8137465785ebe6cb622984efd190582ca.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 47,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 51,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1023/406792057",
       "episodes": [
         {
@@ -86859,8 +86856,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/632b6a203a5ffeee820050e42f18ad2348470432.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 48,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 52,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1088/406792046",
       "episodes": [
         {
@@ -88874,8 +88871,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/e662f147ac2753a968d0c044ff525ad4dbfa26a4.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 49,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 53,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/480/406792044",
       "episodes": [
         {
@@ -90124,8 +90121,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/9621d218d0ccb71824abc651f2ae22ef4fb693f1.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 50,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 54,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4174/406792040",
       "episodes": [
         {
@@ -90154,8 +90151,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/11b8809214a8ffdfbc835b3e302b4236dd30bd9e.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 51,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 55,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3884/406792039",
       "episodes": [
         {
@@ -90464,8 +90461,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/2f19edf6ca7e01ec694a55e13bd1e69129e74068.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 52,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 56,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4172/406792028",
       "episodes": [
         {
@@ -90494,8 +90491,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/27f3f65e350fd38c4bd36fa016db3d6c0fe13ad8.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 53,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 57,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1089/406792027",
       "episodes": [
         {
@@ -92509,8 +92506,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/msKgNBpXJLuM8pa6HSVyXUWJXJm.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 54,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 58,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4188/406792023",
       "episodes": [
         {
@@ -92529,8 +92526,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/963a8ee5f5cb2fbf58959e02845f0314dfa37cc8.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 55,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 59,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4139/406792010",
       "episodes": [
         {
@@ -92564,8 +92561,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/cee6ac9014947963c11f496bc703637855afbfc5.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 56,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 60,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/430/406792003",
       "episodes": [
         {
@@ -94579,8 +94576,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/tv/thumb/tw_42138973213327.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 57,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 61,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1087/406791993",
       "episodes": [
         {
@@ -96594,8 +96591,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/80ec8a15cc0ded6ef410fd5cda6fe5df14de8e78.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 58,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 62,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1085/406791992",
       "episodes": [
         {
@@ -98359,8 +98356,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/bd6b910a6b1970edf87fdc67715d175dfaf14912.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 59,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 63,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3806/406791988",
       "episodes": [
         {
@@ -98494,8 +98491,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/90176092909484.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 60,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 64,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/435/406791987",
       "episodes": [
         {
@@ -99594,8 +99591,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/34704941025119.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 61,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 65,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/436/406791982",
       "episodes": [
         {
@@ -100694,8 +100691,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/27855303006454.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 62,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 66,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/438/406791980",
       "episodes": [
         {
@@ -101314,8 +101311,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/45578754489034.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 63,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 67,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/439/406791978",
       "episodes": [
         {
@@ -101964,8 +101961,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/d7dc74cf7860176b1ffceb395927e979dd5ac18c.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 64,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 68,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1151/406791971",
       "episodes": [
         {
@@ -102459,8 +102456,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/eHE7FtfTRe3V445XLuwpWpd0O2G.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 65,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 69,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4136/406791969",
       "episodes": [
         {
@@ -102499,8 +102496,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/fDR7bSOSCz6N6ouytg9LHtkEQTM.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 66,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 70,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3932/406791966",
       "episodes": [
         {
@@ -102589,8 +102586,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/fa01da60bfc0e0c6f0bf587ee9bbfbb213a3ab94.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 67,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 71,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1090/406791937",
       "episodes": [
         {
@@ -104604,8 +104601,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/6443ccc31b25c71ce7b7a51a0a199dcb404ae2b1.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 68,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 72,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3696/406791936",
       "episodes": [
         {
@@ -104774,8 +104771,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/file/ent/46244835e16e6dd9c6915dbe5e851d36d4d47797.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 69,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 73,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3495/406791933",
       "episodes": [
         {
@@ -105014,8 +105011,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/4b5f965b3dbe4ea14a03693131fbc834939c5e00.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 70,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 74,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4150/406791931",
       "episodes": [
         {
@@ -105049,8 +105046,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/fed32743a6adeb13f22c740e2e0fbe85bec04d9f.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 71,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 75,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4218/406791929",
       "episodes": [
         {
@@ -105069,8 +105066,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/3f1fe766c6f9c2be208967abb7c033802b7a21c5.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 72,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 76,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3695/406791909",
       "episodes": [
         {
@@ -105229,8 +105226,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/file/ent/84e0cd4488ed07272e747ed248b641f95ef0f131.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 73,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 77,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3674/406791898",
       "episodes": [
         {
@@ -105414,8 +105411,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/b87adf33f5675544eb23cf188732b0d43e72c7bf.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 74,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 78,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3871/406791897",
       "episodes": [
         {
@@ -105529,8 +105526,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/ad516434986498261c300bf12a5bbd2f102ab18c.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 75,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 79,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4151/406791896",
       "episodes": [
         {
@@ -105564,8 +105561,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/5fc4fdc9161257e4387d8159e99e51cfc1e9911f.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 76,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 80,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4149/406791893",
       "episodes": [
         {
@@ -105599,8 +105596,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/0655039bd28f858269a8c03cd0a0cedf755cadcb.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 77,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 81,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/550/406791890",
       "episodes": [
         {
@@ -106829,8 +106826,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/9b7c982e6bf7e2b0b8a17f88159c0da1a952164d.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 78,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 82,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/553/406791888",
       "episodes": [
         {
@@ -108844,8 +108841,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/99e5314fd0efd01ce39e24cc1a50ca069ade2822.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 79,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 83,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4169/406791885",
       "episodes": [
         {
@@ -108874,8 +108871,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/37f859c3731262647df5b22164af22489caea22f.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 80,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 84,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/555/406791857",
       "episodes": [
         {
@@ -109959,8 +109956,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/b22d912c35c641c443060fefc00367aa9ad7b090.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 81,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 85,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3784/406791749",
       "episodes": [
         {
@@ -110099,8 +110096,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/983d4ae4a9f65c90a67ca6bc7245f68546357e2d.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 82,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 86,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1687/406791728",
       "episodes": [
         {
@@ -111069,7 +111066,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/18fb110ee3a114ff2516c13c5f6f344a2756a8a7.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 83,
+      "tvwikiRank": 87,
       "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/988/406791727",
       "episodes": [
@@ -112309,8 +112306,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/364da5f4a49f5e83f4fd137ff1c8eff24c5bb81e.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 84,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 88,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1329/406791725",
       "episodes": [
         {
@@ -112859,8 +112856,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/800f4dfda05164c8e4d4b8088efa9683cc1a78f1.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 85,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 89,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/454/406791724",
       "episodes": [
         {
@@ -114035,7 +114032,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/d2ecdca86aa73b296a72e8dec976c5c635f4335f.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 86,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4132/406791722",
       "episodes": [
         {
@@ -114075,7 +114072,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/a4cced9151c7ea61a720b7e74cf1f45834c28cee.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 87,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4163/406791719",
       "episodes": [
         {
@@ -114105,7 +114102,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/57d32784fd0e7a6685c987999f346cf9489a5108.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 88,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4128/406791718",
       "episodes": [
         {
@@ -114145,7 +114142,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/1085bd02dd02a65dbcdbb0c80f6a3516857e65e8.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 89,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/549/406791716",
       "episodes": [
         {
@@ -115335,7 +115332,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/73db5c75f0a32322fd0c35f7cb59e4f20397c1a6.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 72,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4078/406791713",
       "episodes": [
         {
@@ -115385,7 +115382,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/a844e594874725e682262ca6f196185a9901e636.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 73,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4096/406791710",
       "episodes": [
         {
@@ -115430,7 +115427,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/79690636348269.jpg",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 74,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/517/406791702",
       "episodes": [
         {
@@ -116540,7 +116537,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/5347ef97bb58f3f1067ded169e9ff93403255844.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 75,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3818/406791700",
       "episodes": [
         {
@@ -116669,20 +116666,15 @@
       "id": "tvwiki-ent-518",
       "category": "예능",
       "title": "TV 유치원",
-      "tvwikiPage": "https://tvwiki60.net/ent/518/406792180",
-      "sourceUrl": "https://tvwiki60.net/ent/518/406792180",
+      "tvwikiPage": "https://tvwiki60.net/ent/518/406792332",
+      "sourceUrl": "https://tvwiki60.net/ent/518/406792332",
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/54440030978435.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 17,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
-      "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/518/406792180",
+      "tvwikiRank": 0,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
+      "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/518/406792332",
       "episodes": [
-        {
-          "number": 2070,
-          "label": "2070화",
-          "pageUrl": "https://tvwiki60.net/ent/518/405596991"
-        },
         {
           "number": 2071,
           "label": "2071화",
@@ -118677,6 +118669,11 @@
           "number": 2474,
           "label": "2474화",
           "pageUrl": "https://tvwiki60.net/ent/518/406792180"
+        },
+        {
+          "number": 2475,
+          "label": "2475화",
+          "pageUrl": "https://tvwiki60.net/ent/518/406792332"
         }
       ]
     },
@@ -118690,7 +118687,7 @@
       "poster": "https://image.tmdb.org/t/p/w500/u5sT67mvu9FnbvsuCTiRvw0x5IT.jpg",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 77,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4214/406791646"
     },
     {
@@ -118703,7 +118700,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/9a7912a1e403187dcb27fbf918baf00942716720.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 78,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3568/406791628",
       "episodes": [
         {
@@ -118943,7 +118940,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/a82d0357ff482ac0adc44032e0ce38c1cb1f69f5.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 79,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3890/406791558",
       "episodes": [
         {
@@ -119038,7 +119035,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/be40acfef3ef658f1ef043343a4c565b5f8b0d16.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 80,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4077/406791539",
       "episodes": [
         {
@@ -120498,7 +120495,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/a807c3d915bffabfcfae1436f74d6291c481ad2e.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 82,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1068/406791530",
       "episodes": [
         {
@@ -122513,7 +122510,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/18bcd36de5910b62110a6adbdb038c7182890f6d.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 83,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4213/406791510",
       "episodes": [
         {
@@ -122533,7 +122530,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/538bcb36b70b28442eb518eb175d729971c3093d.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 84,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3529/406791507",
       "episodes": [
         {
@@ -122758,7 +122755,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/27b6735df6cd046d7012754a2464e498b826bee2.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 85,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/504/406791505",
       "episodes": [
         {
@@ -123933,7 +123930,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/b1d59d9bfc2b66a5e44c94fa3243114becc3c526.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 86,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/2968/406791501",
       "episodes": [
         {
@@ -124248,7 +124245,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/17726424838186.jpg",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 87,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/530/406791500",
       "episodes": [
         {
@@ -127313,7 +127310,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/10467041611735.jpg",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 89,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/544/406791487",
       "episodes": [
         {
@@ -129023,7 +129020,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/05caf0458d911b4a9e261d49dfb41c46d4805018.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 88,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4210/406791486",
       "episodes": [
         {
@@ -129043,7 +129040,7 @@
       "poster": "https://tvwiki60.net/data/peakl/thumb/3e2d3be467408c0599efaecbb5645cad0d462ac8.webp",
       "tvwikiPageStatus": "episode",
       "tvwikiRank": 89,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3738/406791478",
       "episodes": [
         {
@@ -130146,11 +130143,1286 @@
       "id": "tvwiki-ent-731",
       "category": "예능",
       "title": "스튜디오 K",
-      "tvwikiPage": "https://tvwiki60.net/ent/731/406791199",
-      "sourceUrl": "https://tvwiki60.net/ent/731/406791199",
+      "tvwikiPage": "https://tvwiki60.net/ent/731/406792319",
+      "sourceUrl": "https://tvwiki60.net/ent/731/406792319",
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/04c2ac87c40849171d7654b3744327c63c77b138.jpg",
-      "tvwikiPageStatus": "episode"
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 2,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
+      "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/731/406792319",
+      "episodes": [
+        {
+          "number": 86,
+          "label": "86화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32843"
+        },
+        {
+          "number": 87,
+          "label": "87화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32844"
+        },
+        {
+          "number": 88,
+          "label": "88화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32845"
+        },
+        {
+          "number": 89,
+          "label": "89화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32846"
+        },
+        {
+          "number": 90,
+          "label": "90화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32847"
+        },
+        {
+          "number": 91,
+          "label": "91화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32848"
+        },
+        {
+          "number": 92,
+          "label": "92화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32849"
+        },
+        {
+          "number": 93,
+          "label": "93화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32850"
+        },
+        {
+          "number": 94,
+          "label": "94화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32851"
+        },
+        {
+          "number": 95,
+          "label": "95화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32852"
+        },
+        {
+          "number": 96,
+          "label": "96화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32853"
+        },
+        {
+          "number": 97,
+          "label": "97화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32854"
+        },
+        {
+          "number": 98,
+          "label": "98화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32855"
+        },
+        {
+          "number": 99,
+          "label": "99화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32856"
+        },
+        {
+          "number": 100,
+          "label": "100화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32857"
+        },
+        {
+          "number": 101,
+          "label": "101화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32858"
+        },
+        {
+          "number": 102,
+          "label": "102화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32859"
+        },
+        {
+          "number": 103,
+          "label": "103화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32860"
+        },
+        {
+          "number": 104,
+          "label": "104화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32861"
+        },
+        {
+          "number": 105,
+          "label": "105화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32862"
+        },
+        {
+          "number": 106,
+          "label": "106화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32863"
+        },
+        {
+          "number": 107,
+          "label": "107화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32864"
+        },
+        {
+          "number": 108,
+          "label": "108화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32865"
+        },
+        {
+          "number": 109,
+          "label": "109화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32866"
+        },
+        {
+          "number": 110,
+          "label": "110화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32867"
+        },
+        {
+          "number": 111,
+          "label": "111화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32868"
+        },
+        {
+          "number": 112,
+          "label": "112화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32869"
+        },
+        {
+          "number": 113,
+          "label": "113화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32870"
+        },
+        {
+          "number": 114,
+          "label": "114화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32871"
+        },
+        {
+          "number": 115,
+          "label": "115화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32872"
+        },
+        {
+          "number": 116,
+          "label": "116화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32873"
+        },
+        {
+          "number": 117,
+          "label": "117화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32874"
+        },
+        {
+          "number": 118,
+          "label": "118화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32875"
+        },
+        {
+          "number": 119,
+          "label": "119화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32876"
+        },
+        {
+          "number": 120,
+          "label": "120화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32877"
+        },
+        {
+          "number": 121,
+          "label": "121화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32878"
+        },
+        {
+          "number": 122,
+          "label": "122화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32879"
+        },
+        {
+          "number": 123,
+          "label": "123화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32880"
+        },
+        {
+          "number": 124,
+          "label": "124화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32881"
+        },
+        {
+          "number": 125,
+          "label": "125화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32882"
+        },
+        {
+          "number": 126,
+          "label": "126화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32883"
+        },
+        {
+          "number": 127,
+          "label": "127화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32884"
+        },
+        {
+          "number": 128,
+          "label": "128화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32885"
+        },
+        {
+          "number": 129,
+          "label": "129화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32886"
+        },
+        {
+          "number": 130,
+          "label": "130화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32887"
+        },
+        {
+          "number": 131,
+          "label": "131화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32888"
+        },
+        {
+          "number": 132,
+          "label": "132화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32889"
+        },
+        {
+          "number": 133,
+          "label": "133화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32890"
+        },
+        {
+          "number": 134,
+          "label": "134화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32891"
+        },
+        {
+          "number": 135,
+          "label": "135화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32892"
+        },
+        {
+          "number": 136,
+          "label": "136화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32893"
+        },
+        {
+          "number": 137,
+          "label": "137화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32894"
+        },
+        {
+          "number": 138,
+          "label": "138화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32895"
+        },
+        {
+          "number": 139,
+          "label": "139화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32896"
+        },
+        {
+          "number": 140,
+          "label": "140화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32897"
+        },
+        {
+          "number": 141,
+          "label": "141화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32898"
+        },
+        {
+          "number": 142,
+          "label": "142화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32899"
+        },
+        {
+          "number": 143,
+          "label": "143화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32900"
+        },
+        {
+          "number": 145,
+          "label": "145화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32902"
+        },
+        {
+          "number": 146,
+          "label": "146화",
+          "pageUrl": "https://tvwiki60.net/ent/731/32903"
+        },
+        {
+          "number": 147,
+          "label": "147화",
+          "pageUrl": "https://tvwiki60.net/ent/731/56425"
+        },
+        {
+          "number": 148,
+          "label": "148화",
+          "pageUrl": "https://tvwiki60.net/ent/731/56426"
+        },
+        {
+          "number": 149,
+          "label": "149화",
+          "pageUrl": "https://tvwiki60.net/ent/731/56965"
+        },
+        {
+          "number": 150,
+          "label": "150화",
+          "pageUrl": "https://tvwiki60.net/ent/731/57017"
+        },
+        {
+          "number": 151,
+          "label": "151화",
+          "pageUrl": "https://tvwiki60.net/ent/731/57458"
+        },
+        {
+          "number": 152,
+          "label": "152화",
+          "pageUrl": "https://tvwiki60.net/ent/731/57505"
+        },
+        {
+          "number": 153,
+          "label": "153화",
+          "pageUrl": "https://tvwiki60.net/ent/731/57944"
+        },
+        {
+          "number": 154,
+          "label": "154화",
+          "pageUrl": "https://tvwiki60.net/ent/731/58008"
+        },
+        {
+          "number": 155,
+          "label": "155화",
+          "pageUrl": "https://tvwiki60.net/ent/731/58490"
+        },
+        {
+          "number": 156,
+          "label": "156화",
+          "pageUrl": "https://tvwiki60.net/ent/731/58616"
+        },
+        {
+          "number": 157,
+          "label": "157화",
+          "pageUrl": "https://tvwiki60.net/ent/731/59032"
+        },
+        {
+          "number": 158,
+          "label": "158화",
+          "pageUrl": "https://tvwiki60.net/ent/731/59297"
+        },
+        {
+          "number": 159,
+          "label": "159화",
+          "pageUrl": "https://tvwiki60.net/ent/731/59659"
+        },
+        {
+          "number": 160,
+          "label": "160화",
+          "pageUrl": "https://tvwiki60.net/ent/731/59722"
+        },
+        {
+          "number": 161,
+          "label": "161화",
+          "pageUrl": "https://tvwiki60.net/ent/731/60107"
+        },
+        {
+          "number": 162,
+          "label": "162화",
+          "pageUrl": "https://tvwiki60.net/ent/731/60905"
+        },
+        {
+          "number": 163,
+          "label": "163화",
+          "pageUrl": "https://tvwiki60.net/ent/731/60906"
+        },
+        {
+          "number": 164,
+          "label": "164화",
+          "pageUrl": "https://tvwiki60.net/ent/731/60907"
+        },
+        {
+          "number": 165,
+          "label": "165화",
+          "pageUrl": "https://tvwiki60.net/ent/731/397586"
+        },
+        {
+          "number": 166,
+          "label": "166화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4035542"
+        },
+        {
+          "number": 167,
+          "label": "167화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4036088"
+        },
+        {
+          "number": 168,
+          "label": "168화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4036911"
+        },
+        {
+          "number": 169,
+          "label": "169화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4037966"
+        },
+        {
+          "number": 170,
+          "label": "170화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4039246"
+        },
+        {
+          "number": 171,
+          "label": "171화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4040484"
+        },
+        {
+          "number": 172,
+          "label": "172화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4041386"
+        },
+        {
+          "number": 173,
+          "label": "173화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4042636"
+        },
+        {
+          "number": 174,
+          "label": "174화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4043210"
+        },
+        {
+          "number": 175,
+          "label": "175화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4044622"
+        },
+        {
+          "number": 176,
+          "label": "176화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4045918"
+        },
+        {
+          "number": 177,
+          "label": "177화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4047035"
+        },
+        {
+          "number": 178,
+          "label": "178화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4048207"
+        },
+        {
+          "number": 179,
+          "label": "179화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4048858"
+        },
+        {
+          "number": 180,
+          "label": "180화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4049101"
+        },
+        {
+          "number": 181,
+          "label": "181화",
+          "pageUrl": "https://tvwiki60.net/ent/731/4049893"
+        },
+        {
+          "number": 182,
+          "label": "182화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405020983"
+        },
+        {
+          "number": 183,
+          "label": "183화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405021468"
+        },
+        {
+          "number": 184,
+          "label": "184화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405027027"
+        },
+        {
+          "number": 185,
+          "label": "185화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405110571"
+        },
+        {
+          "number": 186,
+          "label": "186화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405111616"
+        },
+        {
+          "number": 187,
+          "label": "187화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405112937"
+        },
+        {
+          "number": 188,
+          "label": "188화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405124138"
+        },
+        {
+          "number": 189,
+          "label": "189화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405525733"
+        },
+        {
+          "number": 190,
+          "label": "190화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405530441"
+        },
+        {
+          "number": 191,
+          "label": "191화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405530442"
+        },
+        {
+          "number": 192,
+          "label": "192화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405530443"
+        },
+        {
+          "number": 193,
+          "label": "193화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405534060"
+        },
+        {
+          "number": 194,
+          "label": "194화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405538844"
+        },
+        {
+          "number": 195,
+          "label": "195화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405539744"
+        },
+        {
+          "number": 196,
+          "label": "196화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405542327"
+        },
+        {
+          "number": 197,
+          "label": "197화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405547038"
+        },
+        {
+          "number": 198,
+          "label": "198화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405547039"
+        },
+        {
+          "number": 199,
+          "label": "199화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405547040"
+        },
+        {
+          "number": 200,
+          "label": "200화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405547041"
+        },
+        {
+          "number": 201,
+          "label": "201화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405548570"
+        },
+        {
+          "number": 202,
+          "label": "202화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405549735"
+        },
+        {
+          "number": 203,
+          "label": "203화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405550983"
+        },
+        {
+          "number": 204,
+          "label": "204화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405552001"
+        },
+        {
+          "number": 205,
+          "label": "205화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405553220"
+        },
+        {
+          "number": 206,
+          "label": "206화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405554152"
+        },
+        {
+          "number": 207,
+          "label": "207화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405554936"
+        },
+        {
+          "number": 208,
+          "label": "208화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405556088"
+        },
+        {
+          "number": 209,
+          "label": "209화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405556871"
+        },
+        {
+          "number": 210,
+          "label": "210화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405558015"
+        },
+        {
+          "number": 211,
+          "label": "211화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405559332"
+        },
+        {
+          "number": 212,
+          "label": "212화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405561029"
+        },
+        {
+          "number": 213,
+          "label": "213화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405563208"
+        },
+        {
+          "number": 214,
+          "label": "214화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405565175"
+        },
+        {
+          "number": 215,
+          "label": "215화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405566488"
+        },
+        {
+          "number": 216,
+          "label": "216화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405568265"
+        },
+        {
+          "number": 217,
+          "label": "217화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405569845"
+        },
+        {
+          "number": 218,
+          "label": "218화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405571393"
+        },
+        {
+          "number": 219,
+          "label": "219화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405572606"
+        },
+        {
+          "number": 220,
+          "label": "220화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405573975"
+        },
+        {
+          "number": 221,
+          "label": "221화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405575052"
+        },
+        {
+          "number": 222,
+          "label": "222화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405576534"
+        },
+        {
+          "number": 223,
+          "label": "223화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405582925"
+        },
+        {
+          "number": 224,
+          "label": "224화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405582926"
+        },
+        {
+          "number": 225,
+          "label": "225화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405584756"
+        },
+        {
+          "number": 226,
+          "label": "226화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405586381"
+        },
+        {
+          "number": 227,
+          "label": "227화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405587216"
+        },
+        {
+          "number": 228,
+          "label": "228화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405588389"
+        },
+        {
+          "number": 229,
+          "label": "229화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405589532"
+        },
+        {
+          "number": 230,
+          "label": "230화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405590872"
+        },
+        {
+          "number": 231,
+          "label": "231화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405592117"
+        },
+        {
+          "number": 232,
+          "label": "232화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405594153"
+        },
+        {
+          "number": 233,
+          "label": "233화",
+          "pageUrl": "https://tvwiki60.net/ent/731/405596265"
+        },
+        {
+          "number": 234,
+          "label": "234화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406198267"
+        },
+        {
+          "number": 235,
+          "label": "235화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406201519"
+        },
+        {
+          "number": 236,
+          "label": "236화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406379405"
+        },
+        {
+          "number": 237,
+          "label": "237화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406379406"
+        },
+        {
+          "number": 238,
+          "label": "238화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406382521"
+        },
+        {
+          "number": 239,
+          "label": "239화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406387356"
+        },
+        {
+          "number": 240,
+          "label": "240화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406393441"
+        },
+        {
+          "number": 241,
+          "label": "241화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406404579"
+        },
+        {
+          "number": 242,
+          "label": "242화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406415413"
+        },
+        {
+          "number": 243,
+          "label": "243화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406421850"
+        },
+        {
+          "number": 244,
+          "label": "244화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406428635"
+        },
+        {
+          "number": 245,
+          "label": "245화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406438122"
+        },
+        {
+          "number": 246,
+          "label": "246화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406443775"
+        },
+        {
+          "number": 247,
+          "label": "247화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406450756"
+        },
+        {
+          "number": 248,
+          "label": "248화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406458675"
+        },
+        {
+          "number": 249,
+          "label": "249화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406464758"
+        },
+        {
+          "number": 250,
+          "label": "250화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406466237"
+        },
+        {
+          "number": 251,
+          "label": "251화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406472656"
+        },
+        {
+          "number": 252,
+          "label": "252화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406474096"
+        },
+        {
+          "number": 253,
+          "label": "253화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406478813"
+        },
+        {
+          "number": 254,
+          "label": "254화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406479761"
+        },
+        {
+          "number": 255,
+          "label": "255화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406484688"
+        },
+        {
+          "number": 256,
+          "label": "256화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406490335"
+        },
+        {
+          "number": 257,
+          "label": "257화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406495586"
+        },
+        {
+          "number": 258,
+          "label": "258화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406501045"
+        },
+        {
+          "number": 259,
+          "label": "259화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406506997"
+        },
+        {
+          "number": 260,
+          "label": "260화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406511400"
+        },
+        {
+          "number": 261,
+          "label": "261화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406516566"
+        },
+        {
+          "number": 262,
+          "label": "262화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406522636"
+        },
+        {
+          "number": 263,
+          "label": "263화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406526320"
+        },
+        {
+          "number": 264,
+          "label": "264화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406530220"
+        },
+        {
+          "number": 265,
+          "label": "265화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406534456"
+        },
+        {
+          "number": 266,
+          "label": "266화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406538904"
+        },
+        {
+          "number": 267,
+          "label": "267화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406544200"
+        },
+        {
+          "number": 268,
+          "label": "268화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406547715"
+        },
+        {
+          "number": 269,
+          "label": "269화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406553332"
+        },
+        {
+          "number": 270,
+          "label": "270화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406557961"
+        },
+        {
+          "number": 271,
+          "label": "271화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406562525"
+        },
+        {
+          "number": 272,
+          "label": "272화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406566840"
+        },
+        {
+          "number": 273,
+          "label": "273화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406571245"
+        },
+        {
+          "number": 274,
+          "label": "274화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406575648"
+        },
+        {
+          "number": 275,
+          "label": "275화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406580822"
+        },
+        {
+          "number": 276,
+          "label": "276화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406587089"
+        },
+        {
+          "number": 277,
+          "label": "277화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406589921"
+        },
+        {
+          "number": 278,
+          "label": "278화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406594881"
+        },
+        {
+          "number": 279,
+          "label": "279화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406600134"
+        },
+        {
+          "number": 280,
+          "label": "280화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406600650"
+        },
+        {
+          "number": 281,
+          "label": "281화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406604645"
+        },
+        {
+          "number": 282,
+          "label": "282화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406605150"
+        },
+        {
+          "number": 283,
+          "label": "283화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406608931"
+        },
+        {
+          "number": 284,
+          "label": "284화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406609585"
+        },
+        {
+          "number": 285,
+          "label": "285화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406612995"
+        },
+        {
+          "number": 286,
+          "label": "286화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406616506"
+        },
+        {
+          "number": 287,
+          "label": "287화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406620603"
+        },
+        {
+          "number": 288,
+          "label": "288화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406626274"
+        },
+        {
+          "number": 289,
+          "label": "289화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406630150"
+        },
+        {
+          "number": 290,
+          "label": "290화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406633817"
+        },
+        {
+          "number": 291,
+          "label": "291화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406637105"
+        },
+        {
+          "number": 292,
+          "label": "292화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406639120"
+        },
+        {
+          "number": 293,
+          "label": "293화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406642424"
+        },
+        {
+          "number": 294,
+          "label": "294화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406648712"
+        },
+        {
+          "number": 295,
+          "label": "295화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406651770"
+        },
+        {
+          "number": 296,
+          "label": "296화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406654780"
+        },
+        {
+          "number": 297,
+          "label": "297화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406658220"
+        },
+        {
+          "number": 298,
+          "label": "298화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406662358"
+        },
+        {
+          "number": 299,
+          "label": "299화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406665546"
+        },
+        {
+          "number": 300,
+          "label": "300화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406669349"
+        },
+        {
+          "number": 301,
+          "label": "301화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406673048"
+        },
+        {
+          "number": 302,
+          "label": "302화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406676451"
+        },
+        {
+          "number": 303,
+          "label": "303화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406679458"
+        },
+        {
+          "number": 304,
+          "label": "304화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406681696"
+        },
+        {
+          "number": 305,
+          "label": "305화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406694998"
+        },
+        {
+          "number": 306,
+          "label": "306화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406699622"
+        },
+        {
+          "number": 307,
+          "label": "307화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406704177"
+        },
+        {
+          "number": 308,
+          "label": "308화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406707276"
+        },
+        {
+          "number": 309,
+          "label": "309화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406710882"
+        },
+        {
+          "number": 310,
+          "label": "310화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406713764"
+        },
+        {
+          "number": 311,
+          "label": "311화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406717166"
+        },
+        {
+          "number": 312,
+          "label": "312화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406719752"
+        },
+        {
+          "number": 313,
+          "label": "313화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406722241"
+        },
+        {
+          "number": 314,
+          "label": "314화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406725366"
+        },
+        {
+          "number": 315,
+          "label": "315화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406727970"
+        },
+        {
+          "number": 316,
+          "label": "316화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406730966"
+        },
+        {
+          "number": 317,
+          "label": "317화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406732957"
+        },
+        {
+          "number": 318,
+          "label": "318화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406734845"
+        },
+        {
+          "number": 319,
+          "label": "319화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406752676"
+        },
+        {
+          "number": 320,
+          "label": "320화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406754137"
+        },
+        {
+          "number": 321,
+          "label": "321화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406755067"
+        },
+        {
+          "number": 322,
+          "label": "322화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406758245"
+        },
+        {
+          "number": 323,
+          "label": "323화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406760703"
+        },
+        {
+          "number": 324,
+          "label": "324화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406764027"
+        },
+        {
+          "number": 325,
+          "label": "325화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406765718"
+        },
+        {
+          "number": 326,
+          "label": "326화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406768868"
+        },
+        {
+          "number": 327,
+          "label": "327화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406771284"
+        },
+        {
+          "number": 328,
+          "label": "328화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406774176"
+        },
+        {
+          "number": 329,
+          "label": "329화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406775882"
+        },
+        {
+          "number": 330,
+          "label": "330화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406777340"
+        },
+        {
+          "number": 331,
+          "label": "331화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406778761"
+        },
+        {
+          "number": 332,
+          "label": "332화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406779952"
+        },
+        {
+          "number": 333,
+          "label": "333화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406781289"
+        },
+        {
+          "number": 334,
+          "label": "334화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406784454"
+        },
+        {
+          "number": 335,
+          "label": "335화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406785793"
+        },
+        {
+          "number": 336,
+          "label": "336화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406786820"
+        },
+        {
+          "number": 337,
+          "label": "337화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406787924"
+        },
+        {
+          "number": 338,
+          "label": "338화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406789189"
+        },
+        {
+          "number": 339,
+          "label": "339화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406791199"
+        },
+        {
+          "number": 340,
+          "label": "340화",
+          "pageUrl": "https://tvwiki60.net/ent/731/406792319"
+        }
+      ]
     },
     {
       "id": "tvwiki-ent-730",
@@ -130266,11 +131538,66 @@
       "id": "tvwiki-ent-4199",
       "category": "예능",
       "title": "데블스 플랜: 데드 어게인",
-      "tvwikiPage": "https://tvwiki60.net/ent/4199/406791061",
-      "sourceUrl": "https://tvwiki60.net/ent/4199/406791061",
+      "tvwikiPage": "https://tvwiki60.net/ent/4199/406792330",
+      "sourceUrl": "https://tvwiki60.net/ent/4199/406792330",
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/e7c1157024d3e942748f34c42879c3e21f657c50.webp",
-      "tvwikiPageStatus": "episode"
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 1,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
+      "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4199/406792330",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화",
+          "pageUrl": "https://tvwiki60.net/ent/4199/406791057"
+        },
+        {
+          "number": 2,
+          "label": "2화",
+          "pageUrl": "https://tvwiki60.net/ent/4199/406791058"
+        },
+        {
+          "number": 3,
+          "label": "3화",
+          "pageUrl": "https://tvwiki60.net/ent/4199/406791059"
+        },
+        {
+          "number": 4,
+          "label": "4화",
+          "pageUrl": "https://tvwiki60.net/ent/4199/406791060"
+        },
+        {
+          "number": 5,
+          "label": "5화",
+          "pageUrl": "https://tvwiki60.net/ent/4199/406791061"
+        },
+        {
+          "number": 6,
+          "label": "6화",
+          "pageUrl": "https://tvwiki60.net/ent/4199/406792326"
+        },
+        {
+          "number": 7,
+          "label": "7화",
+          "pageUrl": "https://tvwiki60.net/ent/4199/406792327"
+        },
+        {
+          "number": 8,
+          "label": "8화",
+          "pageUrl": "https://tvwiki60.net/ent/4199/406792328"
+        },
+        {
+          "number": 9,
+          "label": "9화",
+          "pageUrl": "https://tvwiki60.net/ent/4199/406792329"
+        },
+        {
+          "number": 10,
+          "label": "10화",
+          "pageUrl": "https://tvwiki60.net/ent/4199/406792330"
+        }
+      ]
     },
     {
       "id": "tvwiki-ent-3877",
@@ -130281,8 +131608,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/2c2b48dcfa20884474bc3ddb7ed9f1e1b7f9053b.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 0,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 5,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3877/406792246",
       "episodes": [
         {
@@ -130526,8 +131853,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/9436019cba4a09f32d8e1ed8a4c88569c02f1717.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 18,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 22,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3756/406792171",
       "episodes": [
         {
@@ -130641,8 +131968,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/c1c312dc222ef8f7bfa490290907595938e46e0c.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 1,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 6,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4084/406792245",
       "episodes": [
         {
@@ -130711,8 +132038,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/fb3f4583e508e44705e6e7a52284e473ebdbe94d.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 2,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 7,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3994/406792214",
       "episodes": [
         {
@@ -130766,7 +132093,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/14529f25b034dc5891bc66f4e096217c5a0b394d.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1110/406792212",
       "episodes": [
         {
@@ -131455,7 +132782,7 @@
           "pageUrl": "https://tvwiki60.net/ent/1110/406792212"
         }
       ],
-      "tvwikiRank": 3
+      "tvwikiRank": 8
     },
     {
       "id": "tvwiki-ent-3857",
@@ -131476,8 +132803,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/3bc8409011630efc4bd68e781003e3f558a5585f.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 4,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 9,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3923/406792211",
       "episodes": [
         {
@@ -132886,8 +134213,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/ab8f33baf93ecb8a88ebab9abe6907d7430c375f.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 5,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 10,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3982/406792208",
       "episodes": [
         {
@@ -132951,8 +134278,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/file/ent/9a12ec19833fee73feb7c65e44293c5d75d73e26.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 6,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 11,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3447/406792207",
       "episodes": [
         {
@@ -133181,8 +134508,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/65787178184998.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 7,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 12,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/502/406792203",
       "episodes": [
         {
@@ -134771,8 +136098,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/94b1b78eeda2ac811514329179d7e7662627b23c.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 8,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 13,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/727/406792202",
       "episodes": [
         {
@@ -135741,8 +137068,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/971c769cbe22bdf3733a3712dda5fc3b856088cc.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 9,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 14,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1315/406792200",
       "episodes": [
         {
@@ -136306,8 +137633,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/53a0324f425dc14d82db277104dc09ea35635772.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 10,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 15,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3898/406792198",
       "episodes": [
         {
@@ -138321,8 +139648,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/38998155349017.jpg",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 11,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 16,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3934/406792197",
       "episodes": [
         {
@@ -139441,8 +140768,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/a1ee284025b9745d15908211fa0545e4b3eac6f1.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 12,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 17,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/2033/406792195",
       "episodes": [
         {
@@ -139791,8 +141118,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/beffad3ddbd682dd94bf188f503dab7afb5adcb8.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 13,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 18,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/507/406792190",
       "episodes": [
         {
@@ -141736,8 +143063,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/23cb3a8a0e70a54446e115cd1263a50bf0b2349f.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 14,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 19,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4187/406792187",
       "episodes": [
         {
@@ -141766,7 +143093,7 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/dbeda7cf6215cea33f7ceee9891ca65763a42e8f.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/1010/406792186",
       "episodes": [
         {
@@ -142980,7 +144307,7 @@
           "pageUrl": "https://tvwiki60.net/ent/1010/406792186"
         }
       ],
-      "tvwikiRank": 15
+      "tvwikiRank": 20
     },
     {
       "id": "tvwiki-ent-3993",
@@ -142991,8 +144318,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/736b0c20ba7d40a31b32533b5df011f4a280d706.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 16,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 21,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3993/406792184",
       "episodes": [
         {
@@ -143266,11 +144593,51 @@
       "id": "tvwiki-ent-3947",
       "category": "예능",
       "title": "숨바꼭질 2",
-      "tvwikiPage": "https://tvwiki60.net/ent/3947/406788668",
-      "sourceUrl": "https://tvwiki60.net/ent/3947/406788668",
+      "tvwikiPage": "https://tvwiki60.net/ent/3947/406792275",
+      "sourceUrl": "https://tvwiki60.net/ent/3947/406792275",
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://image.tmdb.org/t/p/w500/edjzbo3Fi2THVA2FpzRWCqFUhH0.jpg",
-      "tvwikiPageStatus": "episode"
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 4,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
+      "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/3947/406792275",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화",
+          "pageUrl": "https://tvwiki60.net/ent/3947/406775156"
+        },
+        {
+          "number": 2,
+          "label": "2화",
+          "pageUrl": "https://tvwiki60.net/ent/3947/406775157"
+        },
+        {
+          "number": 3,
+          "label": "3화",
+          "pageUrl": "https://tvwiki60.net/ent/3947/406780897"
+        },
+        {
+          "number": 4,
+          "label": "4화",
+          "pageUrl": "https://tvwiki60.net/ent/3947/406780898"
+        },
+        {
+          "number": 6,
+          "label": "6화",
+          "pageUrl": "https://tvwiki60.net/ent/3947/406788667"
+        },
+        {
+          "number": 7,
+          "label": "7화",
+          "pageUrl": "https://tvwiki60.net/ent/3947/406788668"
+        },
+        {
+          "number": 8,
+          "label": "8화",
+          "pageUrl": "https://tvwiki60.net/ent/3947/406792275"
+        }
+      ]
     },
     {
       "id": "tvwiki-ent-4170",
@@ -182321,8 +183688,8 @@
       "sourceProvider": "TVWiki recent broadcast listing",
       "poster": "https://tvwiki60.net/data/peakl/thumb/a4f02230ab5dbcd6921bc8e99f513333c82cc1e9.webp",
       "tvwikiPageStatus": "episode",
-      "tvwikiRank": 19,
-      "tvwikiEpisodeCheckedAt": "2026-11-17T01:06:37+00:00",
+      "tvwikiRank": 23,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
       "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4221/406792166",
       "episodes": [
         {
@@ -182336,10 +183703,160 @@
           "pageUrl": "https://tvwiki60.net/ent/4221/406792166"
         }
       ]
+    },
+    {
+      "id": "tvwiki-ent-4222",
+      "category": "예능",
+      "title": "2026 멜론뮤직어워드",
+      "tvwikiPage": "https://tvwiki60.net/ent/4222/406792282",
+      "sourceUrl": "https://tvwiki60.net/ent/4222/406792282",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/49540f1504eb7181f7396fddda51af428ba24c9c.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 3,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
+      "tvwikiEpisodeLastPage": "https://tvwiki60.net/ent/4222/406792282"
+    },
+    {
+      "id": "tvwiki-movie-36743",
+      "category": "영화",
+      "title": "메이드",
+      "tvwikiPage": "https://tvwiki60.net/movie/36743/406792283",
+      "sourceUrl": "https://tvwiki60.net/movie/36743/406792283",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://image.tmdb.org/t/p/w500/9nK3lfPhbzMJGhkueloRQ56ui8n.jpg",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 0
+    },
+    {
+      "id": "tvwiki-movie-36742",
+      "category": "영화",
+      "title": "어벤져스: 엔드게임 앙코르",
+      "tvwikiPage": "https://tvwiki60.net/movie/36742/406792270",
+      "sourceUrl": "https://tvwiki60.net/movie/36742/406792270",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/4d6a8ed0497bc193a0a31ca0ef03f7c83e0106b2.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 1
+    },
+    {
+      "id": "tvwiki-drama-12699",
+      "category": "드라마",
+      "title": "크래시2 : 분노의 도로",
+      "tvwikiPage": "https://tvwiki60.net/drama/12699/406792318",
+      "sourceUrl": "https://tvwiki60.net/drama/12699/406792318",
+      "sourceProvider": "TVWiki recent broadcast listing",
+      "poster": "https://tvwiki60.net/data/peakl/thumb/be8def1856d3d304aff4e632764958703ee1c638.webp",
+      "tvwikiPageStatus": "episode",
+      "tvwikiRank": 0,
+      "tvwikiEpisodeCheckedAt": "2026-11-17T09:17:08+00:00",
+      "tvwikiEpisodeLastPage": "https://tvwiki60.net/drama/12699/406792318",
+      "episodes": [
+        {
+          "number": 1,
+          "label": "1화",
+          "pageUrl": "https://tvwiki60.net/drama/12699/406792318"
+        }
+      ]
     }
   ],
   "posterSourceNote": "Verified per-title cover URLs from public TVWiki listings, search results, and detail-page bo_v_poster. Missing or unavailable posters fall back to Wikimedia or a text cover; works with no verified match are not guessed.",
   "autoSyncHistory": [
+    {
+      "status": "ok",
+      "checkedAt": "2026-11-17T09:17:08+00:00",
+      "source": [
+        "TVWiki public movie list",
+        "TVWiki public Korean-film list",
+        "TVWiki public drama list",
+        "TVWiki public drama episode index",
+        "TVWiki public entertainment list",
+        "TVWiki public entertainment episode index"
+      ],
+      "newTitles": {
+        "영화": 2,
+        "한국영화": 0,
+        "드라마": 1,
+        "예능": 1
+      },
+      "newEpisodes": 273,
+      "newDramaEpisodes": 1,
+      "newEntertainmentEpisodes": 272,
+      "newEpisodeMetadata": 0,
+      "tvwikiKoreanMovieSync": {
+        "status": "ok",
+        "totalPages": 151,
+        "pagesFetched": 3,
+        "newTitles": 0,
+        "tvwikiLinked": 4507
+      },
+      "tvwikiRecentBoards": {
+        "영화": {
+          "status": "ok",
+          "sort": "recent_broadcast",
+          "pagesFetched": 3,
+          "itemsIndexed": 90,
+          "newTitles": 2
+        },
+        "드라마": {
+          "status": "ok",
+          "sort": "recent_broadcast",
+          "pagesFetched": 3,
+          "itemsIndexed": 90,
+          "newTitles": 1
+        },
+        "예능": {
+          "status": "ok",
+          "sort": "recent_broadcast",
+          "pagesFetched": 3,
+          "itemsIndexed": 90,
+          "newTitles": 0
+        }
+      },
+      "tvwikiEpisodeSync": {
+        "status": "ok",
+        "checkedAt": "2026-11-17T09:17:08+00:00",
+        "detailPagesChecked": 90,
+        "titlesWithEpisodeChanges": 1,
+        "newEpisodes": 1,
+        "episodeScanQueue": 0,
+        "parseWithoutEpisodeList": 0,
+        "fetchErrors": 0,
+        "reason": "",
+        "note": "Public TVWiki program episode links are checked; no media files or DRM bypass."
+      },
+      "tvwikiEntertainmentCatalog": {
+        "nextPage": 2,
+        "fullIndexedAt": "2026-11-16T01:35:31+00:00",
+        "schemaVersion": 1,
+        "status": "ok",
+        "checkedAt": "2026-11-17T09:17:08+00:00",
+        "source": "https://tvwiki60.net/ent",
+        "sort": "recent_broadcast",
+        "totalPages": 68,
+        "pagesFetched": 1,
+        "fullScanComplete": true,
+        "newTitles": 1,
+        "updatedProgramLinks": 4,
+        "totalLinked": 2037,
+        "note": "Only publicly listed TVWiki entertainment program links and posters are indexed."
+      },
+      "tvwikiEntertainmentEpisodes": {
+        "status": "ok",
+        "checkedAt": "2026-11-17T09:17:08+00:00",
+        "detailPagesChecked": 110,
+        "titlesWithEpisodeChanges": 4,
+        "newEpisodes": 272,
+        "episodeScanQueue": 1926,
+        "parseWithoutEpisodeList": 0,
+        "fetchErrors": 0,
+        "reason": "",
+        "note": "Public TVWiki program episode links are checked; no media files or DRM bypass."
+      },
+      "tvwikiLinked": 6764,
+      "totalTitles": 6909,
+      "note": "Titles and episode buttons update only from current TVWiki public list links; failures are surfaced. No media downloads, invented episode URLs, or manual catalog entries."
+    },
     {
       "status": "ok",
       "checkedAt": "2026-11-17T01:06:37+00:00",
@@ -184069,7 +185586,7 @@
   ],
   "autoSync": {
     "status": "ok",
-    "checkedAt": "2026-11-17T01:06:37+00:00",
+    "checkedAt": "2026-11-17T09:17:08+00:00",
     "source": [
       "TVWiki public movie list",
       "TVWiki public Korean-film list",
@@ -184079,14 +185596,14 @@
       "TVWiki public entertainment episode index"
     ],
     "newTitles": {
-      "영화": 0,
+      "영화": 2,
       "한국영화": 0,
-      "드라마": 0,
-      "예능": 0
+      "드라마": 1,
+      "예능": 1
     },
-    "newEpisodes": 2109,
-    "newDramaEpisodes": 7,
-    "newEntertainmentEpisodes": 2102,
+    "newEpisodes": 273,
+    "newDramaEpisodes": 1,
+    "newEntertainmentEpisodes": 272,
     "newEpisodeMetadata": 0,
     "tvwikiKoreanMovieSync": {
       "status": "ok",
@@ -184101,14 +185618,14 @@
         "sort": "recent_broadcast",
         "pagesFetched": 3,
         "itemsIndexed": 90,
-        "newTitles": 0
+        "newTitles": 2
       },
       "드라마": {
         "status": "ok",
         "sort": "recent_broadcast",
         "pagesFetched": 3,
         "itemsIndexed": 90,
-        "newTitles": 0
+        "newTitles": 1
       },
       "예능": {
         "status": "ok",
@@ -184120,10 +185637,10 @@
     },
     "tvwikiEpisodeSync": {
       "status": "ok",
-      "checkedAt": "2026-11-17T01:06:37+00:00",
-      "detailPagesChecked": 105,
-      "titlesWithEpisodeChanges": 6,
-      "newEpisodes": 7,
+      "checkedAt": "2026-11-17T09:17:08+00:00",
+      "detailPagesChecked": 90,
+      "titlesWithEpisodeChanges": 1,
+      "newEpisodes": 1,
       "episodeScanQueue": 0,
       "parseWithoutEpisodeList": 0,
       "fetchErrors": 0,
@@ -184135,31 +185652,31 @@
       "fullIndexedAt": "2026-11-16T01:35:31+00:00",
       "schemaVersion": 1,
       "status": "ok",
-      "checkedAt": "2026-11-17T01:06:37+00:00",
+      "checkedAt": "2026-11-17T09:17:08+00:00",
       "source": "https://tvwiki60.net/ent",
       "sort": "recent_broadcast",
       "totalPages": 68,
       "pagesFetched": 1,
       "fullScanComplete": true,
-      "newTitles": 0,
-      "updatedProgramLinks": 18,
-      "totalLinked": 2036,
+      "newTitles": 1,
+      "updatedProgramLinks": 4,
+      "totalLinked": 2037,
       "note": "Only publicly listed TVWiki entertainment program links and posters are indexed."
     },
     "tvwikiEntertainmentEpisodes": {
       "status": "ok",
-      "checkedAt": "2026-11-17T01:06:37+00:00",
+      "checkedAt": "2026-11-17T09:17:08+00:00",
       "detailPagesChecked": 110,
-      "titlesWithEpisodeChanges": 19,
-      "newEpisodes": 2102,
-      "episodeScanQueue": 1670,
+      "titlesWithEpisodeChanges": 4,
+      "newEpisodes": 272,
+      "episodeScanQueue": 1926,
       "parseWithoutEpisodeList": 0,
       "fetchErrors": 0,
       "reason": "",
       "note": "Public TVWiki program episode links are checked; no media files or DRM bypass."
     },
-    "tvwikiLinked": 6760,
-    "totalTitles": 6905,
+    "tvwikiLinked": 6764,
+    "totalTitles": 6909,
     "note": "Titles and episode buttons update only from current TVWiki public list links; failures are surfaced. No media downloads, invented episode URLs, or manual catalog entries."
   },
   "tvwikiKorSync": {
@@ -184167,7 +185684,7 @@
     "nextPage": 2,
     "status": "ok",
     "source": "https://tvwiki60.net/kor_movie",
-    "checkedAt": "2026-11-17T01:06:37+00:00",
+    "checkedAt": "2026-11-17T09:17:08+00:00",
     "totalPages": 151,
     "pagesFetched": 3,
     "scanNextPage": 2,
@@ -184187,14 +185704,14 @@
       "sort": "recent_broadcast",
       "pagesFetched": 3,
       "itemsIndexed": 90,
-      "newTitles": 0
+      "newTitles": 2
     },
     "드라마": {
       "status": "ok",
       "sort": "recent_broadcast",
       "pagesFetched": 3,
       "itemsIndexed": 90,
-      "newTitles": 0
+      "newTitles": 1
     },
     "예능": {
       "status": "ok",
@@ -184206,10 +185723,10 @@
   },
   "tvwikiEpisodeSync": {
     "status": "ok",
-    "checkedAt": "2026-11-17T01:06:37+00:00",
-    "detailPagesChecked": 105,
-    "titlesWithEpisodeChanges": 6,
-    "newEpisodes": 7,
+    "checkedAt": "2026-11-17T09:17:08+00:00",
+    "detailPagesChecked": 90,
+    "titlesWithEpisodeChanges": 1,
+    "newEpisodes": 1,
     "episodeScanQueue": 0,
     "parseWithoutEpisodeList": 0,
     "fetchErrors": 0,
@@ -184221,24 +185738,24 @@
     "fullIndexedAt": "2026-11-16T01:35:31+00:00",
     "schemaVersion": 1,
     "status": "ok",
-    "checkedAt": "2026-11-17T01:06:37+00:00",
+    "checkedAt": "2026-11-17T09:17:08+00:00",
     "source": "https://tvwiki60.net/ent",
     "sort": "recent_broadcast",
     "totalPages": 68,
     "pagesFetched": 1,
     "fullScanComplete": true,
-    "newTitles": 0,
-    "updatedProgramLinks": 18,
-    "totalLinked": 2036,
+    "newTitles": 1,
+    "updatedProgramLinks": 4,
+    "totalLinked": 2037,
     "note": "Only publicly listed TVWiki entertainment program links and posters are indexed."
   },
   "tvwikiEntEpisodeSync": {
     "status": "ok",
-    "checkedAt": "2026-11-17T01:06:37+00:00",
+    "checkedAt": "2026-11-17T09:17:08+00:00",
     "detailPagesChecked": 110,
-    "titlesWithEpisodeChanges": 19,
-    "newEpisodes": 2102,
-    "episodeScanQueue": 1670,
+    "titlesWithEpisodeChanges": 4,
+    "newEpisodes": 272,
+    "episodeScanQueue": 1926,
     "parseWithoutEpisodeList": 0,
     "fetchErrors": 0,
     "reason": "",
