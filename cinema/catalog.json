@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T09:46:22+00:00",
+  "updatedAt": "2026-11-18T18:12:31+00:00",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -192464,6 +192464,95 @@
   "posterSourceNote": "Verified per-title cover URLs from public TVWiki listings, search results, and detail-page bo_v_poster. Missing or unavailable posters fall back to Wikimedia or a text cover; works with no verified match are not guessed.",
   "autoSyncHistory": [
     {
+      "status": "source_unavailable",
+      "checkedAt": "2026-11-18T18:12:31+00:00",
+      "source": [
+        "TVWiki public movie list",
+        "TVWiki public Korean-film list",
+        "TVWiki public drama list",
+        "TVWiki public drama episode index",
+        "TVWiki public entertainment list",
+        "TVWiki public entertainment episode index"
+      ],
+      "newTitles": {
+        "영화": 0,
+        "한국영화": 2,
+        "드라마": 0,
+        "예능": 1
+      },
+      "tvwikiHost": "tvwiki61.net",
+      "migratedLinks": 0,
+      "newEpisodes": 0,
+      "newDramaEpisodes": 0,
+      "newEntertainmentEpisodes": 0,
+      "newEpisodeMetadata": 0,
+      "tvwikiKoreanMovieSync": {
+        "status": "source_unavailable",
+        "totalPages": 151,
+        "pagesFetched": 151,
+        "newTitles": 2,
+        "tvwikiLinked": 4509
+      },
+      "tvwikiRecentBoards": {
+        "영화": {
+          "status": "source_unavailable",
+          "detail": "Unexpected source redirect"
+        },
+        "드라마": {
+          "status": "source_unavailable",
+          "detail": "Unexpected source redirect"
+        },
+        "예능": {
+          "status": "source_unavailable",
+          "detail": "Unexpected source redirect"
+        }
+      },
+      "tvwikiEpisodeSync": {
+        "status": "partial",
+        "checkedAt": "2026-11-18T18:12:31+00:00",
+        "detailPagesChecked": 0,
+        "titlesWithEpisodeChanges": 0,
+        "newEpisodes": 0,
+        "episodeScanQueue": 90,
+        "parseWithoutEpisodeList": 0,
+        "fetchErrors": 90,
+        "reason": "",
+        "note": "Public TVWiki program episode links are checked; no media files or DRM bypass."
+      },
+      "tvwikiEntertainmentCatalog": {
+        "nextPage": 2,
+        "fullIndexedAt": "2026-11-18T09:46:22+00:00",
+        "schemaVersion": 2,
+        "status": "source_unavailable",
+        "checkedAt": "2026-11-18T18:12:31+00:00",
+        "source": "https://tvwiki61.net/ent",
+        "sort": "recent_broadcast",
+        "totalPages": 68,
+        "pagesFetched": 68,
+        "fullScanComplete": true,
+        "newTitles": 1,
+        "updatedProgramLinks": 13,
+        "totalLinked": 2038,
+        "note": "Only publicly listed TVWiki entertainment program links and posters are indexed.",
+        "reason": "Unexpected source redirect"
+      },
+      "tvwikiEntertainmentEpisodes": {
+        "status": "partial",
+        "checkedAt": "2026-11-18T18:12:31+00:00",
+        "detailPagesChecked": 0,
+        "titlesWithEpisodeChanges": 0,
+        "newEpisodes": 0,
+        "episodeScanQueue": 2018,
+        "parseWithoutEpisodeList": 0,
+        "fetchErrors": 110,
+        "reason": "",
+        "note": "Public TVWiki program episode links are checked; no media files or DRM bypass."
+      },
+      "tvwikiLinked": 6770,
+      "totalTitles": 6915,
+      "note": "Titles and episode buttons update only from current TVWiki public list links; failures are surfaced. No media downloads, invented episode URLs, or manual catalog entries."
+    },
+    {
       "status": "ok",
       "checkedAt": "2026-11-18T09:46:22+00:00",
       "source": [
@@ -194287,140 +194376,11 @@
       "sourceRequestsSucceeded": 48,
       "tvwikiLinked": 74,
       "note": "Public discovery metadata is separate from TVWiki playback. Only verified TVWiki page links are displayed; third-party provider watch links are removed and not regenerated."
-    },
-    {
-      "status": "ok",
-      "checkedAt": "2026-11-15T09:33:35+00:00",
-      "lastFilmSyncAt": "2026-11-15T09:33:35+00:00",
-      "sourceCategoriesChecked": {
-        "ko|한국영화|2026": 0,
-        "en|한국영화|2026": 33,
-        "ko|영화|2026": 99,
-        "en|영화|2026": 100,
-        "ko|드라마|2026": 0,
-        "en|드라마|2026": 0
-      },
-      "source": [
-        "TVmaze public API",
-        "Wikimedia MediaWiki API (ko/en movies and TV)"
-      ],
-      "newTitles": {
-        "영화": 25,
-        "한국영화": 0,
-        "드라마": 0
-      },
-      "newEpisodeMetadata": 0,
-      "titlesAdded": [
-        {
-          "category": "영화",
-          "title": "와이프 (영화)"
-        },
-        {
-          "category": "영화",
-          "title": "올공, 2030 나라를 살리다"
-        },
-        {
-          "category": "영화",
-          "title": "사카모토 데이즈 (영화)"
-        },
-        {
-          "category": "영화",
-          "title": "연옥: 살인마들의 자치구역"
-        },
-        {
-          "category": "영화",
-          "title": "사랑의 가설"
-        },
-        {
-          "category": "영화",
-          "title": "귀객"
-        },
-        {
-          "category": "영화",
-          "title": "오케이 마담2"
-        },
-        {
-          "category": "영화",
-          "title": "베스트 오브 베스트 (영화)"
-        },
-        {
-          "category": "영화",
-          "title": "엘시노어 (영화)"
-        },
-        {
-          "category": "영화",
-          "title": "소실점 (영화)"
-        },
-        {
-          "category": "영화",
-          "title": "유 캔 씨 에브리씽"
-        },
-        {
-          "category": "영화",
-          "title": "Yen Ennai Edho Seidhai"
-        },
-        {
-          "category": "영화",
-          "title": "ENE Repeat"
-        },
-        {
-          "category": "영화",
-          "title": "Love Story Abhimanyu Ki"
-        },
-        {
-          "category": "영화",
-          "title": "Disco (2026 film)"
-        },
-        {
-          "category": "영화",
-          "title": "Marty, Life Is Short"
-        },
-        {
-          "category": "영화",
-          "title": "Deewana (2026 film)"
-        },
-        {
-          "category": "영화",
-          "title": "Mrigaya 1.5: The Hunt Continues"
-        },
-        {
-          "category": "영화",
-          "title": "Ria (film)"
-        },
-        {
-          "category": "영화",
-          "title": "Mission D.D.L.J."
-        },
-        {
-          "category": "영화",
-          "title": "Tomb of Dreams"
-        },
-        {
-          "category": "영화",
-          "title": "Wandance (film)"
-        },
-        {
-          "category": "영화",
-          "title": "Pee Mak (2026 film)"
-        },
-        {
-          "category": "영화",
-          "title": "The Phantom of the Opera (2026 film)"
-        },
-        {
-          "category": "영화",
-          "title": "Khaani (film)"
-        }
-      ],
-      "episodeChanges": [],
-      "duplicatesMerged": [],
-      "sourceRequestsSucceeded": 48,
-      "note": "New movie and drama titles plus official episode metadata are checked automatically. Playback links are never invented; verified existing links are preserved."
     }
   ],
   "autoSync": {
-    "status": "ok",
-    "checkedAt": "2026-11-18T09:46:22+00:00",
+    "status": "source_unavailable",
+    "checkedAt": "2026-11-18T18:12:31+00:00",
     "source": [
       "TVWiki public movie list",
       "TVWiki public Korean-film list",
@@ -194430,19 +194390,19 @@
       "TVWiki public entertainment episode index"
     ],
     "newTitles": {
-      "영화": 3,
+      "영화": 0,
       "한국영화": 2,
       "드라마": 0,
       "예능": 1
     },
     "tvwikiHost": "tvwiki61.net",
-    "migratedLinks": 41663,
-    "newEpisodes": 1002,
-    "newDramaEpisodes": 9,
-    "newEntertainmentEpisodes": 993,
+    "migratedLinks": 0,
+    "newEpisodes": 0,
+    "newDramaEpisodes": 0,
+    "newEntertainmentEpisodes": 0,
     "newEpisodeMetadata": 0,
     "tvwikiKoreanMovieSync": {
-      "status": "ok",
+      "status": "source_unavailable",
       "totalPages": 151,
       "pagesFetched": 151,
       "newTitles": 2,
@@ -194450,36 +194410,27 @@
     },
     "tvwikiRecentBoards": {
       "영화": {
-        "status": "ok",
-        "sort": "recent_broadcast",
-        "pagesFetched": 3,
-        "itemsIndexed": 90,
-        "newTitles": 3
+        "status": "source_unavailable",
+        "detail": "Unexpected source redirect"
       },
       "드라마": {
-        "status": "ok",
-        "sort": "recent_broadcast",
-        "pagesFetched": 3,
-        "itemsIndexed": 90,
-        "newTitles": 0
+        "status": "source_unavailable",
+        "detail": "Unexpected source redirect"
       },
       "예능": {
-        "status": "ok",
-        "sort": "recent_broadcast",
-        "pagesFetched": 3,
-        "itemsIndexed": 90,
-        "newTitles": 0
+        "status": "source_unavailable",
+        "detail": "Unexpected source redirect"
       }
     },
     "tvwikiEpisodeSync": {
-      "status": "ok",
-      "checkedAt": "2026-11-18T09:46:22+00:00",
-      "detailPagesChecked": 106,
-      "titlesWithEpisodeChanges": 8,
-      "newEpisodes": 9,
-      "episodeScanQueue": 0,
+      "status": "partial",
+      "checkedAt": "2026-11-18T18:12:31+00:00",
+      "detailPagesChecked": 0,
+      "titlesWithEpisodeChanges": 0,
+      "newEpisodes": 0,
+      "episodeScanQueue": 90,
       "parseWithoutEpisodeList": 0,
-      "fetchErrors": 0,
+      "fetchErrors": 90,
       "reason": "",
       "note": "Public TVWiki program episode links are checked; no media files or DRM bypass."
     },
@@ -194487,8 +194438,8 @@
       "nextPage": 2,
       "fullIndexedAt": "2026-11-18T09:46:22+00:00",
       "schemaVersion": 2,
-      "status": "ok",
-      "checkedAt": "2026-11-18T09:46:22+00:00",
+      "status": "source_unavailable",
+      "checkedAt": "2026-11-18T18:12:31+00:00",
       "source": "https://tvwiki61.net/ent",
       "sort": "recent_broadcast",
       "totalPages": 68,
@@ -194501,14 +194452,14 @@
       "reason": "Unexpected source redirect"
     },
     "tvwikiEntertainmentEpisodes": {
-      "status": "ok",
-      "checkedAt": "2026-11-18T09:46:22+00:00",
-      "detailPagesChecked": 110,
-      "titlesWithEpisodeChanges": 14,
-      "newEpisodes": 993,
-      "episodeScanQueue": 1928,
+      "status": "partial",
+      "checkedAt": "2026-11-18T18:12:31+00:00",
+      "detailPagesChecked": 0,
+      "titlesWithEpisodeChanges": 0,
+      "newEpisodes": 0,
+      "episodeScanQueue": 2018,
       "parseWithoutEpisodeList": 0,
-      "fetchErrors": 0,
+      "fetchErrors": 110,
       "reason": "",
       "note": "Public TVWiki program episode links are checked; no media files or DRM bypass."
     },
@@ -194519,9 +194470,9 @@
   "tvwikiKorSync": {
     "fullIndexedAt": "2026-11-18T09:46:22+00:00",
     "nextPage": 2,
-    "status": "ok",
+    "status": "source_unavailable",
     "source": "https://tvwiki61.net/kor_movie",
-    "checkedAt": "2026-11-18T09:46:22+00:00",
+    "checkedAt": "2026-11-18T18:12:31+00:00",
     "totalPages": 151,
     "pagesFetched": 151,
     "scanNextPage": 2,
@@ -194530,43 +194481,34 @@
     "updatedLinks": 0,
     "removedNonTVWiki": 0,
     "tvwikiLinked": 4509,
-    "note": "Only public Korean movie list metadata and page links; no player-stream extraction.",
+    "note": "Unexpected redirect away from source category",
     "completedSchemaVersion": 4,
     "schemaVersion": 4,
     "sort": "recent_broadcast"
   },
   "tvwikiRecentSync": {
     "영화": {
-      "status": "ok",
-      "sort": "recent_broadcast",
-      "pagesFetched": 3,
-      "itemsIndexed": 90,
-      "newTitles": 3
+      "status": "source_unavailable",
+      "detail": "Unexpected source redirect"
     },
     "드라마": {
-      "status": "ok",
-      "sort": "recent_broadcast",
-      "pagesFetched": 3,
-      "itemsIndexed": 90,
-      "newTitles": 0
+      "status": "source_unavailable",
+      "detail": "Unexpected source redirect"
     },
     "예능": {
-      "status": "ok",
-      "sort": "recent_broadcast",
-      "pagesFetched": 3,
-      "itemsIndexed": 90,
-      "newTitles": 0
+      "status": "source_unavailable",
+      "detail": "Unexpected source redirect"
     }
   },
   "tvwikiEpisodeSync": {
-    "status": "ok",
-    "checkedAt": "2026-11-18T09:46:22+00:00",
-    "detailPagesChecked": 106,
-    "titlesWithEpisodeChanges": 8,
-    "newEpisodes": 9,
-    "episodeScanQueue": 0,
+    "status": "partial",
+    "checkedAt": "2026-11-18T18:12:31+00:00",
+    "detailPagesChecked": 0,
+    "titlesWithEpisodeChanges": 0,
+    "newEpisodes": 0,
+    "episodeScanQueue": 90,
     "parseWithoutEpisodeList": 0,
-    "fetchErrors": 0,
+    "fetchErrors": 90,
     "reason": "",
     "note": "Public TVWiki program episode links are checked; no media files or DRM bypass."
   },
@@ -194574,8 +194516,8 @@
     "nextPage": 2,
     "fullIndexedAt": "2026-11-18T09:46:22+00:00",
     "schemaVersion": 2,
-    "status": "ok",
-    "checkedAt": "2026-11-18T09:46:22+00:00",
+    "status": "source_unavailable",
+    "checkedAt": "2026-11-18T18:12:31+00:00",
     "source": "https://tvwiki61.net/ent",
     "sort": "recent_broadcast",
     "totalPages": 68,
@@ -194588,14 +194530,14 @@
     "reason": "Unexpected source redirect"
   },
   "tvwikiEntEpisodeSync": {
-    "status": "ok",
-    "checkedAt": "2026-11-18T09:46:22+00:00",
-    "detailPagesChecked": 110,
-    "titlesWithEpisodeChanges": 14,
-    "newEpisodes": 993,
-    "episodeScanQueue": 1928,
+    "status": "partial",
+    "checkedAt": "2026-11-18T18:12:31+00:00",
+    "detailPagesChecked": 0,
+    "titlesWithEpisodeChanges": 0,
+    "newEpisodes": 0,
+    "episodeScanQueue": 2018,
     "parseWithoutEpisodeList": 0,
-    "fetchErrors": 0,
+    "fetchErrors": 110,
     "reason": "",
     "note": "Public TVWiki program episode links are checked; no media files or DRM bypass."
   }
