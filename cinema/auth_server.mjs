@@ -162,6 +162,65 @@ async function staticFile(res, rel, type, moreHeaders={}) {
     json(res, 404, {ok:false, error:'리소스를 찾을 수 없습니다.'});
   }
 }
+// The website keeps an authenticated catalog route, but updates its content
+// from the successful GitHub Actions sync without requiring a Render deploy.
+const remoteCatalogEnabled = process.env.CATALOG_REMOTE_SYNC === 'enabled' && !devMode;
+const remoteCatalogURL = 'https://raw.githubusercontent.com/JoJongHyun/bro-food-atlas-sync/bro-cinema-standalone/cinema/catalog.json';
+const remoteCatalogTtlMs = 3 * 60 * 1000;
+const remoteCatalogMaxBytes = 35 * 1024 * 1024;
+let remoteCatalog = {bytes:null,checkedAt:0,lastAttemptAt:0,error:''};
+let inflightCatalog = null;
+
+async function freshCatalog() {
+  if (!remoteCatalogEnabled) return null;
+  const now=Date.now();
+  if(remoteCatalog.bytes && now-remoteCatalog.checkedAt<remoteCatalogTtlMs)
+    return remoteCatalog.bytes;
+  if(inflightCatalog) return inflightCatalog;
+  // Do not block every user when the public upstream temporarily fails.
+  if(remoteCatalog.error && now-remoteCatalog.lastAttemptAt<60_000)
+    return remoteCatalog.bytes;
+  remoteCatalog.lastAttemptAt=now;
+  inflightCatalog=(async()=>{
+    const response=await fetch(remoteCatalogURL+'?cacheWindow='+Math.floor(now/remoteCatalogTtlMs),{
+      signal:AbortSignal.timeout(18000),redirect:'error',
+      headers:{'Accept':'application/json'}
+    });
+    if(!response.ok)throw new Error('Catalog source HTTP '+response.status);
+    const advertised=Number(response.headers.get('content-length')||0);
+    if(advertised>remoteCatalogMaxBytes)throw new Error('Catalog source over size limit');
+    const bytes=Buffer.from(await response.arrayBuffer());
+    if(bytes.length>remoteCatalogMaxBytes)throw new Error('Catalog source over size limit');
+    const parsed=JSON.parse(bytes.toString('utf8'));
+    if(!Array.isArray(parsed.items)||parsed.items.length<10)
+      throw new Error('Source catalog is missing items');
+    remoteCatalog={bytes,checkedAt:Date.now(),lastAttemptAt:Date.now(),error:''};
+    return bytes;
+  })().catch(error=>{
+    remoteCatalog.error=String(error?.message||error).slice(0,160);
+    console.warn('Remote catalog unavailable, preserving last working snapshot:',remoteCatalog.error);
+    return remoteCatalog.bytes; // Bundle is the final fallback below.
+  }).finally(()=>{inflightCatalog=null;});
+  return inflightCatalog;
+}
+
+async function serveCatalog(res){
+  const bytes=await freshCatalog();
+  if(bytes){
+    res.writeHead(200,{
+      ...headers('application/json; charset=utf-8'),
+      'Set-Cookie':newCookie('user'),
+      'X-Catalog-Source':remoteCatalog.error?'cached-fallback':'github-latest'
+    });
+    res.end(bytes);
+    return;
+  }
+  await staticFile(res,'catalog.json','application/json; charset=utf-8',{
+    'Set-Cookie':newCookie('user'),
+    'X-Catalog-Source':'deployed-fallback'
+  });
+}
+
 function permittedResource(route) {
   if (route === '/' || route === '/index.html') return ['app.html', 'text/html; charset=utf-8'];
   if (route === '/catalog.json' || route === '/api/data') return ['catalog.json', 'application/json; charset=utf-8'];
@@ -206,7 +265,12 @@ async function handler(req, res) {
   const method = req.method || 'GET';
   if (route === '/healthz' && method === 'GET') {
     const sourceHost = process.env.TVWIKI_SOURCE_HOST || 'tvwiki61.net';
-    json(res, 200, {ok:true,metadataSourceHost:/^tvwiki[0-9]+\.net$/.test(sourceHost)?sourceHost:'unknown'});
+    json(res, 200, {
+      ok:true,metadataSourceHost:/^tvwiki[0-9]+\.net$/.test(sourceHost)?sourceHost:'unknown',
+      catalogProxyEnabled:remoteCatalogEnabled,
+      catalogSource:remoteCatalog.error?'cached-or-bundled':remoteCatalog.checkedAt?'github-latest':'not-yet-fetched',
+      catalogRemoteCheckedAt:remoteCatalog.checkedAt?new Date(remoteCatalog.checkedAt).toISOString():null
+    });
     return;
   }
   const authenticated = validCookie(req, 'user');
@@ -300,6 +364,11 @@ async function handler(req, res) {
   }
   if (method === 'GET' && /^\/icons\/icon-(?:192|512)\.png$/.test(route)) {
     await staticFile(res, route.slice(1), 'image/png'); return;
+  }
+  if (method === 'GET' && (route === '/catalog.json' || route === '/api/data')) {
+    if (!authenticated) {restricted(res);return;}
+    await serveCatalog(res);
+    return;
   }
   if (method === 'GET') {
     const allow = permittedResource(route);
