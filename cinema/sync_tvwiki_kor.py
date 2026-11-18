@@ -17,9 +17,9 @@ import urllib.parse
 import urllib.request
 
 LOG = logging.getLogger("cinema.tvwiki.kr")
-SOURCE = "https://tvwiki60.net/kor_movie"
-HOST = "tvwiki60.net"
-WORK_RE = re.compile(r"^https://tvwiki60\.net/kor_movie/(\d+)(?:/(\d+))?$")
+SOURCE = "https://tvwiki61.net/kor_movie"
+HOST = "tvwiki61.net"
+WORK_RE = re.compile(r"^https://tvwiki61\.net/kor_movie/(\d+)(?:/(\d+))?$")
 CARD_RE = re.compile(r'<div\s+class="box"\s*>(.*?)</div>', re.S | re.I)
 TITLE_RE = re.compile(r'<a\s+href="([^"]+)"\s+class="title2"[^>]*>(.*?)</a>', re.S | re.I)
 POSTER_RE = re.compile(r'<img\s+src="([^"]+)"', re.I)
@@ -28,7 +28,7 @@ MAX_PAGES = 250
 MINIMUM_CARDS = 10
 REQUEST_DELAY = 0.7
 MAX_PER_RUN = 160  # page 1 + up to 159 other pages, enough for current 151-page index
-SOURCE_SCHEMA_VERSION = 3  # TVWiki recent-broadcast list, including listing-only titles
+SOURCE_SCHEMA_VERSION = 4  # New tvwiki61 domain and full source-link revalidation
 
 def now_iso():
     return dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
@@ -36,15 +36,15 @@ def now_iso():
 def valid_movie_url(url):
     try:
         parsed = urllib.parse.urlsplit(html.unescape(str(url)))
-        if parsed.scheme != "https" or parsed.hostname != HOST:
+        if parsed.scheme != "https" or parsed.hostname not in (HOST, "tvwiki60.net", "tvwiki59.net"):
             return ""
-        value = urllib.parse.urlunsplit((parsed.scheme, parsed.hostname, parsed.path, "", ""))
+        value = urllib.parse.urlunsplit((parsed.scheme, HOST, parsed.path, "", ""))
         return value if WORK_RE.fullmatch(value) else ""
     except (TypeError, ValueError):
         return ""
 
 def work_id(url):
-    found = WORK_RE.fullmatch(str(url or ""))
+    found = WORK_RE.fullmatch(valid_movie_url(url))
     return found.group(1) if found else None
 
 def fetch_index(page):
@@ -99,7 +99,7 @@ def parse_index(text):
         poster = html.unescape(poster_match.group(1)) if poster_match else ""
         try:
             pu = urllib.parse.urlsplit(poster)
-            if pu.scheme != "https" or pu.hostname not in ("tvwiki60.net", "image.tmdb.org") or pu.path.endswith("/no3.png"):
+            if pu.scheme != "https" or pu.hostname not in ("tvwiki61.net", "image.tmdb.org") or pu.path.endswith("/no3.png"):
                 poster = ""
         except ValueError:
             poster = ""

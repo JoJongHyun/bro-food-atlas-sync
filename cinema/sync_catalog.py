@@ -251,6 +251,55 @@ def read_tvmaze_episodes(show_id, today):
     return sorted(result, key=lambda x: (x["season"], x["number"]))[-MAX_OFFICIAL_EPISODES:]
 
 
+def migrate_tvwiki_hosts(catalog):
+    """Preserve all existing works, episode numbers and media metadata when
+    the public TVWiki index links change hostname. Never synthesize paths.
+    """
+    replaced = 0
+    prefix_old = ("https://tvwiki59.net/", "https://tvwiki60.net/")
+    prefix_new = "https://tvwiki61.net/"
+
+    def canonical(value):
+        if not isinstance(value, str):
+            return value
+        for old in prefix_old:
+            if value.startswith(old):
+                return prefix_new + value[len(old):]
+        return value
+
+    for item in catalog.get("items", []):
+        if not isinstance(item, dict):
+            continue
+        old_page = item.get("tvwikiPage")
+        for key in ("tvwikiPage", "sourceUrl", "tvwikiEpisodeLastPage", "poster"):
+            old = item.get(key)
+            new = canonical(old)
+            if new != old:
+                item[key] = new
+                replaced += 1
+        for episode in item.get("episodes") or []:
+            if not isinstance(episode, dict):
+                continue
+            old = episode.get("pageUrl")
+            new = canonical(old)
+            if new != old:
+                episode["pageUrl"] = new
+                replaced += 1
+        if old_page != item.get("tvwikiPage") and item.get("category") in ("드라마", "예능"):
+            # A newly migrated host should be checked against the current
+            # public episode list rather than waiting for the old scan TTL.
+            item["tvwikiEpisodeCheckedAt"] = ""
+    for key in ("tvwikiKorSync", "tvwikiEntSync"):
+        state = catalog.get(key)
+        if isinstance(state, dict):
+            value = state.get("source")
+            new = canonical(value)
+            if value != new:
+                state["source"] = new
+                replaced += 1
+    return replaced
+
+
 def sync(catalog, today):
     """30-minute, entirely source-driven catalog sync. No title/episode hand entries.
 
@@ -266,6 +315,7 @@ def sync(catalog, today):
         if isinstance(item, dict):
             item.pop("officialLinks", None)
 
+    migrated_links = migrate_tvwiki_hosts(catalog)
     stamp = utc_now().isoformat(timespec="seconds")
     kr = sync_kr_movies(catalog, timestamp=stamp)
     entertainment = sync_ent_catalog(catalog, timestamp=stamp)
@@ -295,6 +345,8 @@ def sync(catalog, today):
                    "TVWiki public drama list", "TVWiki public drama episode index",
                    "TVWiki public entertainment list", "TVWiki public entertainment episode index"],
         "newTitles": new_titles,
+        "tvwikiHost": "tvwiki61.net",
+        "migratedLinks": migrated_links,
         "newEpisodes": int(episodes.get("newEpisodes") or 0) + int(entertainment_episodes.get("newEpisodes") or 0),
         "newDramaEpisodes": int(episodes.get("newEpisodes") or 0),
         "newEntertainmentEpisodes": int(entertainment_episodes.get("newEpisodes") or 0),
@@ -321,6 +373,7 @@ def sync(catalog, today):
     catalog["autoSyncHistory"] = [summary] + history[:23]
     catalog["autoSync"] = summary
     catalog["updatedAt"] = stamp
+    LOG.info("TVWiki link migration: %s old-host references moved to tvwiki61.net", migrated_links)
     LOG.info("New titles %s, TVWiki episodes +%s (drama +%s, entertainment +%s), episode detail pages drama %s + entertainment %s, status %s",
              new_titles, summary["newEpisodes"], summary["newDramaEpisodes"],
              summary["newEntertainmentEpisodes"], episodes.get("detailPagesChecked"),

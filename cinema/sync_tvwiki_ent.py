@@ -19,15 +19,15 @@ from sync_tvwiki_recent import get_page, parse_page, MAX_ENT_PAGES
 
 LOG = logging.getLogger("cinema.tvwiki.ent")
 LAST_RE = re.compile(r'<a\s+href="([^"]+)"\s+class="pg_page pg_end"', re.I)
-WORK_RE = re.compile(r"^https://tvwiki60\.net/ent/(\d+)(?:/\d+)?$")
+WORK_RE = re.compile(r"^https://tvwiki61\.net/ent/(\d+)(?:/\d+)?$")
 MAX_PAGES_PER_RUN = 90
 MIN_CARD_COUNT = 8
 SCAN_PAUSE = 0.7
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 
 def _work_id(url):
-    found = WORK_RE.fullmatch(str(url or ""))
+    found = WORK_RE.fullmatch(str(url or "").replace("https://tvwiki60.net/", "https://tvwiki61.net/").replace("https://tvwiki59.net/", "https://tvwiki61.net/"))
     return found.group(1) if found else None
 
 
@@ -58,7 +58,7 @@ def sync_ent_catalog(catalog, timestamp):
             raise ValueError("TVWiki entertainment page total outside safety cap")
     except (urllib.error.URLError, TimeoutError, OSError, ValueError, KeyError) as exc:
         state.update({"status": "source_unavailable", "checkedAt": timestamp,
-                      "source": "https://tvwiki60.net/ent", "reason": str(exc)[:180]})
+                      "source": "https://tvwiki61.net/ent", "reason": str(exc)[:180]})
         catalog["tvwikiEntSync"] = state
         LOG.warning("TVWiki entertainment catalog unavailable, retaining previous links: %s", exc)
         return state
@@ -131,7 +131,7 @@ def sync_ent_catalog(catalog, timestamp):
     state.update({
         "status": "partial" if failed_at else "ok",
         "checkedAt": timestamp,
-        "source": "https://tvwiki60.net/ent",
+        "source": "https://tvwiki61.net/ent",
         "sort": "recent_broadcast",
         "totalPages": total_pages,
         "pagesFetched": checked,

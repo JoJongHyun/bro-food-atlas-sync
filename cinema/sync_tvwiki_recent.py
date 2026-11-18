@@ -13,7 +13,7 @@ import urllib.parse
 import urllib.request
 
 LOG = logging.getLogger("cinema.tvwiki.recent")
-HOST = "tvwiki60.net"
+HOST = "tvwiki61.net"
 CATEGORIES = (("영화", "movie"), ("드라마", "drama"), ("예능", "ent"))
 MAX_RECENT_PAGES = 3
 MAX_ENT_PAGES = 110  # full variety-program archive used only by weekly importer
@@ -50,7 +50,7 @@ def parse_page(body, category, route):
     found = []
     seen = set()
     pattern = re.compile(
-        r"^https://tvwiki60\.net/" + re.escape(route) + r"/(\d+)(?:/(\d+))?$"
+        r"^https://tvwiki61\.net/" + re.escape(route) + r"/(\d+)(?:/(\d+))?$"
     )
     for card in CARD_RE.findall(section.group(1)):
         link = TITLE_RE.search(card)

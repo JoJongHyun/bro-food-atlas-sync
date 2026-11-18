@@ -433,7 +433,7 @@ function observePoster(item,art){
 }
 const video=$("video"),dlg=$("dlg");
 function validUrl(s){try{const u=new URL(s);return u.protocol==="https:"&&!u.username&&!u.password;}catch{return false;}}
-function validTvwikiPage(s){try{const u=new URL(s);return u.protocol==="https:"&&["tvwiki59.net","tvwiki60.net"].includes(u.hostname)&&/^\/(?:drama|old_drama|movie|kor_movie|ent)\/\d+(?:\/\d+)?$/.test(u.pathname);}catch{return false;}}
+function validTvwikiPage(s){try{const u=new URL(s);return u.protocol==="https:"&&["tvwiki59.net","tvwiki60.net","tvwiki61.net"].includes(u.hostname)&&/^\/(?:drama|old_drama|movie|kor_movie|ent)\/\d+(?:\/\d+)?$/.test(u.pathname);}catch{return false;}}
 function isTvwikiListingOnly(item){return Boolean(item&&item.tvwikiPageStatus==="listing"&&validTvwikiPage(item.tvwikiPage))}
 function el(tag,cls,str){const x=document.createElement(tag);if(cls)x.className=cls;if(str!==undefined)x.textContent=str;return x;}
 
@@ -518,7 +518,26 @@ function sortNewest(a,b){
   if(yearDiff)return yearDiff;
   return a.title.localeCompare(b.title,"ko");
 }
-function normalize(o){if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",embedUrl:verifyMediaURL(o.embedUrl)?.kind==="embed"?o.embedUrl:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350),tvwikiRank:Number.isInteger(o.tvwikiRank)&&o.tvwikiRank>=0?o.tvwikiRank:null,tvwikiPageStatus:o.tvwikiPageStatus==="listing"?"listing":o.tvwikiPageStatus==="episode"?"episode":"",sourceUrl:validUrl(o.sourceUrl)?o.sourceUrl:"",releaseAt:typeof o.releaseAt==="string"&&!Number.isNaN(Date.parse(o.releaseAt))?o.releaseAt:"",releaseDate:validReleaseDate(o.releaseDate||o.premiereDate),tvwikiPage:validTvwikiPage(o.tvwikiPage)?o.tvwikiPage:"",tvmazeId:Number.isInteger(o.tvmazeId)?o.tvmazeId:null,officialEpisodes:Array.isArray(o.officialEpisodes)?o.officialEpisodes.filter(x=>x&&Number.isInteger(x.number)&&Number.isInteger(x.season)&&x.number>0&&x.season>0&&validOfficialEpisodeURL(x.url)).slice(0,200).map(x=>({number:x.number,season:x.season,label:String(x.label||x.number+"화").slice(0,60),airdate:String(x.airdate||"").slice(0,10),url:x.url,mediaUrl:verifyMediaURL(x.mediaUrl)?.url||""})):[],episodes:Array.isArray(o.episodes)?o.episodes.filter(x=>x&&Number.isInteger(x.number)&&x.number>0&&x.number<10000&&validUrl(x.pageUrl)).slice(-400).map(x=>({number:x.number,label:String(x.label||x.number+"화").slice(0,80),pageUrl:x.pageUrl,mediaUrl:verifyMediaURL(x.mediaUrl)?.url||""})):[]};}
+function canonicalTvwikiLink(link){
+  if(typeof link!=="string")return link;
+  try{
+    const u=new URL(link);
+    if(u.protocol==="https:"&&["tvwiki59.net","tvwiki60.net"].includes(u.hostname)){
+      u.hostname="tvwiki61.net";
+      return u.href;
+    }
+  }catch{}
+  return link;
+}
+function normalize(o){
+  if(o&&typeof o==="object"){
+    // Old catalog snapshots and already-saved episode links are moved to the
+    // verified new public host without changing their work/episode IDs.
+    o={...o,tvwikiPage:canonicalTvwikiLink(o.tvwikiPage),
+      sourceUrl:canonicalTvwikiLink(o.sourceUrl),
+      episodes:Array.isArray(o.episodes)?o.episodes.map(e=>e&&typeof e==="object"?{...e,pageUrl:canonicalTvwikiLink(e.pageUrl)}:e):o.episodes};
+  }
+if(!o||!validCats.has(o.category)||typeof o.title!=="string"||!o.title.trim())return null;return{id:String(o.id||o.title).slice(0,90),category:o.category,title:o.title.slice(0,180),year:String(o.year||"").slice(0,16),hls:validUrl(o.hls)?o.hls:"",embedUrl:verifyMediaURL(o.embedUrl)?.kind==="embed"?o.embedUrl:"",poster:validUrl(o.poster)?o.poster:"",description:String(o.description||"").slice(0,350),tvwikiRank:Number.isInteger(o.tvwikiRank)&&o.tvwikiRank>=0?o.tvwikiRank:null,tvwikiPageStatus:o.tvwikiPageStatus==="listing"?"listing":o.tvwikiPageStatus==="episode"?"episode":"",sourceUrl:validUrl(o.sourceUrl)?o.sourceUrl:"",releaseAt:typeof o.releaseAt==="string"&&!Number.isNaN(Date.parse(o.releaseAt))?o.releaseAt:"",releaseDate:validReleaseDate(o.releaseDate||o.premiereDate),tvwikiPage:validTvwikiPage(o.tvwikiPage)?o.tvwikiPage:"",tvmazeId:Number.isInteger(o.tvmazeId)?o.tvmazeId:null,officialEpisodes:Array.isArray(o.officialEpisodes)?o.officialEpisodes.filter(x=>x&&Number.isInteger(x.number)&&Number.isInteger(x.season)&&x.number>0&&x.season>0&&validOfficialEpisodeURL(x.url)).slice(0,200).map(x=>({number:x.number,season:x.season,label:String(x.label||x.number+"화").slice(0,60),airdate:String(x.airdate||"").slice(0,10),url:x.url,mediaUrl:verifyMediaURL(x.mediaUrl)?.url||""})):[],episodes:Array.isArray(o.episodes)?o.episodes.filter(x=>x&&Number.isInteger(x.number)&&x.number>0&&x.number<10000&&validUrl(x.pageUrl)).slice(-400).map(x=>({number:x.number,label:String(x.label||x.number+"화").slice(0,80),pageUrl:x.pageUrl,mediaUrl:verifyMediaURL(x.mediaUrl)?.url||""})):[]};}
 let visibleCatalogCount=60;
 function render(){
   const q=$("search").value.trim().toLocaleLowerCase("ko");

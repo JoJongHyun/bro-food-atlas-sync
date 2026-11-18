@@ -17,8 +17,8 @@ import urllib.parse
 import urllib.request
 
 LOG = logging.getLogger("cinema.tvwiki.episodes")
-DOMAIN = "tvwiki60.net"
-URL_RE = re.compile(r"^https://tvwiki60\.net/(?P<route>drama|ent)/(?P<work_id>\d+)(?:/(?P<episode_id>\d+))?$")
+DOMAIN = "tvwiki61.net"
+URL_RE = re.compile(r"^https://tvwiki61\.net/(?P<route>drama|ent)/(?P<work_id>\d+)(?:/(?P<episode_id>\d+))?$")
 LIST_RE = re.compile(r'<div\s+id=["\']other_list["\'][^>]*>[\s\S]*?<ul[^>]*>([\s\S]*?)</ul>', re.I)
 ANCHOR_RE = re.compile(
     r'<a\b[^>]*href=["\']([^"\']+)["\'][^>]*class=["\'][^"\']*\btitle\b[^"\']*\bep-link\b[^"\']*["\'][^>]*>([\s\S]*?)</a>',
@@ -39,7 +39,7 @@ class SourceBlocked(Exception):
 def valid_work_url(url):
     try:
         parts = urllib.parse.urlsplit(str(url or ""))
-        if parts.scheme != "https" or parts.hostname != DOMAIN:
+        if parts.scheme != "https" or parts.hostname not in (DOMAIN, "tvwiki60.net", "tvwiki59.net"):
             return ""
         clean = urllib.parse.urlunsplit(("https", DOMAIN, parts.path.rstrip("/"), "", ""))
         return clean if URL_RE.fullmatch(clean) else ""
@@ -48,7 +48,8 @@ def valid_work_url(url):
 
 
 def fetch_page(url):
-    if not valid_work_url(url):
+    url = valid_work_url(url)
+    if not url:
         raise ValueError("Not a TVWiki drama or variety page URL")
     request = urllib.request.Request(url, headers={
         "User-Agent": "Mozilla/5.0 (compatible; BRO-CINEMA-IndexSync/1.0)",
