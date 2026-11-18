@@ -204,7 +204,11 @@ async function handler(req, res) {
   const url = new URL(req.url, 'https://local.invalid');
   const route = url.pathname;
   const method = req.method || 'GET';
-  if (route === '/healthz' && method === 'GET') { json(res, 200, {ok:true}); return; }
+  if (route === '/healthz' && method === 'GET') {
+    const sourceHost = process.env.TVWIKI_SOURCE_HOST || 'tvwiki61.net';
+    json(res, 200, {ok:true,metadataSourceHost:/^tvwiki[0-9]+\.net$/.test(sourceHost)?sourceHost:'unknown'});
+    return;
+  }
   const authenticated = validCookie(req, 'user');
   if (method === 'GET' && route === '/login') {
     if (authenticated) { redirect(res, '/'); return; }
