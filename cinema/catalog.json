@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T18:12:31+00:00",
+  "updatedAt": "2026-11-19T00:29:01+00:00",
   "description": "검증한 첫 방송/공개일을 기준으로 정렬하는 작품 목록. 합법적 영상 소스 미연결 작품은 정보만 표시.",
   "items": [
     {
@@ -192465,6 +192465,95 @@
   "autoSyncHistory": [
     {
       "status": "source_unavailable",
+      "checkedAt": "2026-11-19T00:29:01+00:00",
+      "source": [
+        "TVWiki public movie list",
+        "TVWiki public Korean-film list",
+        "TVWiki public drama list",
+        "TVWiki public drama episode index",
+        "TVWiki public entertainment list",
+        "TVWiki public entertainment episode index"
+      ],
+      "newTitles": {
+        "영화": 0,
+        "한국영화": 2,
+        "드라마": 0,
+        "예능": 1
+      },
+      "tvwikiHost": "tvwiki61.net",
+      "migratedLinks": 0,
+      "newEpisodes": 0,
+      "newDramaEpisodes": 0,
+      "newEntertainmentEpisodes": 0,
+      "newEpisodeMetadata": 0,
+      "tvwikiKoreanMovieSync": {
+        "status": "source_unavailable",
+        "totalPages": 151,
+        "pagesFetched": 151,
+        "newTitles": 2,
+        "tvwikiLinked": 4509
+      },
+      "tvwikiRecentBoards": {
+        "영화": {
+          "status": "source_unavailable",
+          "detail": "Unexpected source redirect"
+        },
+        "드라마": {
+          "status": "source_unavailable",
+          "detail": "Unexpected source redirect"
+        },
+        "예능": {
+          "status": "source_unavailable",
+          "detail": "Unexpected source redirect"
+        }
+      },
+      "tvwikiEpisodeSync": {
+        "status": "partial",
+        "checkedAt": "2026-11-19T00:29:01+00:00",
+        "detailPagesChecked": 0,
+        "titlesWithEpisodeChanges": 0,
+        "newEpisodes": 0,
+        "episodeScanQueue": 90,
+        "parseWithoutEpisodeList": 0,
+        "fetchErrors": 90,
+        "reason": "",
+        "note": "Public TVWiki program episode links are checked; no media files or DRM bypass."
+      },
+      "tvwikiEntertainmentCatalog": {
+        "nextPage": 2,
+        "fullIndexedAt": "2026-11-18T09:46:22+00:00",
+        "schemaVersion": 2,
+        "status": "source_unavailable",
+        "checkedAt": "2026-11-19T00:29:01+00:00",
+        "source": "https://tvwiki61.net/ent",
+        "sort": "recent_broadcast",
+        "totalPages": 68,
+        "pagesFetched": 68,
+        "fullScanComplete": true,
+        "newTitles": 1,
+        "updatedProgramLinks": 13,
+        "totalLinked": 2038,
+        "note": "Only publicly listed TVWiki entertainment program links and posters are indexed.",
+        "reason": "Unexpected source redirect"
+      },
+      "tvwikiEntertainmentEpisodes": {
+        "status": "partial",
+        "checkedAt": "2026-11-19T00:29:01+00:00",
+        "detailPagesChecked": 0,
+        "titlesWithEpisodeChanges": 0,
+        "newEpisodes": 0,
+        "episodeScanQueue": 2018,
+        "parseWithoutEpisodeList": 0,
+        "fetchErrors": 110,
+        "reason": "",
+        "note": "Public TVWiki program episode links are checked; no media files or DRM bypass."
+      },
+      "tvwikiLinked": 6770,
+      "totalTitles": 6915,
+      "note": "Titles and episode buttons update only from current TVWiki public list links; failures are surfaced. No media downloads, invented episode URLs, or manual catalog entries."
+    },
+    {
+      "status": "source_unavailable",
       "checkedAt": "2026-11-18T18:12:31+00:00",
       "source": [
         "TVWiki public movie list",
@@ -194246,141 +194335,11 @@
       "sourceRequestsSucceeded": 46,
       "tvwikiLinked": 4478,
       "note": "Public discovery metadata is separate from TVWiki playback. Only verified TVWiki page links are displayed; third-party provider watch links are removed and not regenerated."
-    },
-    {
-      "status": "ok",
-      "checkedAt": "2026-11-15T11:20:19+00:00",
-      "lastFilmSyncAt": "2026-11-15T11:20:19+00:00",
-      "sourceCategoriesChecked": {
-        "ko|한국영화|2026": 0,
-        "en|한국영화|2026": 33,
-        "ko|영화|2026": 99,
-        "en|영화|2026": 100,
-        "ko|드라마|2026": 0,
-        "en|드라마|2026": 0
-      },
-      "source": [
-        "TVmaze public API",
-        "Wikimedia MediaWiki API (ko/en movies and TV)"
-      ],
-      "newTitles": {
-        "영화": 25,
-        "한국영화": 0,
-        "드라마": 0
-      },
-      "newEpisodeMetadata": 0,
-      "titlesAdded": [
-        {
-          "category": "영화",
-          "title": "Inherit (film)"
-        },
-        {
-          "category": "영화",
-          "title": "Proxies (2026 film)"
-        },
-        {
-          "category": "영화",
-          "title": "Titanic (2026 film)"
-        },
-        {
-          "category": "영화",
-          "title": "Party Animals (film)"
-        },
-        {
-          "category": "영화",
-          "title": "Mr. Bhaarath"
-        },
-        {
-          "category": "영화",
-          "title": "A Pagan Party"
-        },
-        {
-          "category": "영화",
-          "title": "Naa Wife Missing"
-        },
-        {
-          "category": "영화",
-          "title": "Christmas & Chaos"
-        },
-        {
-          "category": "영화",
-          "title": "Anfa 8"
-        },
-        {
-          "category": "영화",
-          "title": "Anchors Aweigh (2026 film)"
-        },
-        {
-          "category": "영화",
-          "title": "Mookuthi Amman 2"
-        },
-        {
-          "category": "영화",
-          "title": "Summer Holidays (2026 film)"
-        },
-        {
-          "category": "영화",
-          "title": "A Proud Family Wizmas"
-        },
-        {
-          "category": "영화",
-          "title": "The Editor (2026 film)"
-        },
-        {
-          "category": "영화",
-          "title": "Maatrubhumi: May War Rest in Peace"
-        },
-        {
-          "category": "영화",
-          "title": "Aa Ondu Notu"
-        },
-        {
-          "category": "영화",
-          "title": "Molly (2026 film)"
-        },
-        {
-          "category": "영화",
-          "title": "Lucky Weekend"
-        },
-        {
-          "category": "영화",
-          "title": "Lifeline (2026 film)"
-        },
-        {
-          "category": "영화",
-          "title": "Jersey Boy (film)"
-        },
-        {
-          "category": "영화",
-          "title": "Status: Rejected"
-        },
-        {
-          "category": "영화",
-          "title": "The 12 Dates of Christmas"
-        },
-        {
-          "category": "영화",
-          "title": "Paach Futacha Bachchan"
-        },
-        {
-          "category": "영화",
-          "title": "God Laughs"
-        },
-        {
-          "category": "영화",
-          "title": "The Bride's Chamber"
-        }
-      ],
-      "episodeChanges": [],
-      "duplicatesMerged": [],
-      "sourceRequestsSucceeded": 48,
-      "tvwikiLinked": 74,
-      "note": "Public discovery metadata is separate from TVWiki playback. Only verified TVWiki page links are displayed; third-party provider watch links are removed and not regenerated."
     }
   ],
   "autoSync": {
     "status": "source_unavailable",
-    "checkedAt": "2026-11-18T18:12:31+00:00",
+    "checkedAt": "2026-11-19T00:29:01+00:00",
     "source": [
       "TVWiki public movie list",
       "TVWiki public Korean-film list",
@@ -194424,7 +194383,7 @@
     },
     "tvwikiEpisodeSync": {
       "status": "partial",
-      "checkedAt": "2026-11-18T18:12:31+00:00",
+      "checkedAt": "2026-11-19T00:29:01+00:00",
       "detailPagesChecked": 0,
       "titlesWithEpisodeChanges": 0,
       "newEpisodes": 0,
@@ -194439,7 +194398,7 @@
       "fullIndexedAt": "2026-11-18T09:46:22+00:00",
       "schemaVersion": 2,
       "status": "source_unavailable",
-      "checkedAt": "2026-11-18T18:12:31+00:00",
+      "checkedAt": "2026-11-19T00:29:01+00:00",
       "source": "https://tvwiki61.net/ent",
       "sort": "recent_broadcast",
       "totalPages": 68,
@@ -194453,7 +194412,7 @@
     },
     "tvwikiEntertainmentEpisodes": {
       "status": "partial",
-      "checkedAt": "2026-11-18T18:12:31+00:00",
+      "checkedAt": "2026-11-19T00:29:01+00:00",
       "detailPagesChecked": 0,
       "titlesWithEpisodeChanges": 0,
       "newEpisodes": 0,
@@ -194472,7 +194431,7 @@
     "nextPage": 2,
     "status": "source_unavailable",
     "source": "https://tvwiki61.net/kor_movie",
-    "checkedAt": "2026-11-18T18:12:31+00:00",
+    "checkedAt": "2026-11-19T00:29:01+00:00",
     "totalPages": 151,
     "pagesFetched": 151,
     "scanNextPage": 2,
@@ -194502,7 +194461,7 @@
   },
   "tvwikiEpisodeSync": {
     "status": "partial",
-    "checkedAt": "2026-11-18T18:12:31+00:00",
+    "checkedAt": "2026-11-19T00:29:01+00:00",
     "detailPagesChecked": 0,
     "titlesWithEpisodeChanges": 0,
     "newEpisodes": 0,
@@ -194517,7 +194476,7 @@
     "fullIndexedAt": "2026-11-18T09:46:22+00:00",
     "schemaVersion": 2,
     "status": "source_unavailable",
-    "checkedAt": "2026-11-18T18:12:31+00:00",
+    "checkedAt": "2026-11-19T00:29:01+00:00",
     "source": "https://tvwiki61.net/ent",
     "sort": "recent_broadcast",
     "totalPages": 68,
@@ -194531,7 +194490,7 @@
   },
   "tvwikiEntEpisodeSync": {
     "status": "partial",
-    "checkedAt": "2026-11-18T18:12:31+00:00",
+    "checkedAt": "2026-11-19T00:29:01+00:00",
     "detailPagesChecked": 0,
     "titlesWithEpisodeChanges": 0,
     "newEpisodes": 0,
